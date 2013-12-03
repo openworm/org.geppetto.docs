@@ -41,6 +41,7 @@ Once the simulation has been loaded, you can start, pause and stop the simulatio
 Navigation
 ----------
 The navigation buttons along the left side of Geppetto allow you to change your view of the simulation within Geppetto.  You can reposition, rotate it and zoom in and out.  To reset, just hit the "home" icon to undo rotation or repositioning.  The buttons can be accessed once the simulation has been loaded as well as before, during and after the simulation run. 
+.. navigation:: http://i.imgur.com/A2BngUx.png
 
 In addition to the navigation buttons, you can use a mouse to rotate, drag or zoom the simulation.
 
@@ -49,7 +50,7 @@ Plotting
 --------
 Proof of concept only. This feature is only available on the LEMS Sample Hodgkin-Huxley Neuron simulation. Full plotting features are currently under development.
 *Shortcut Key: Ctl+Alt+P*
-
+.. plotting:: http://i.imgur.com/Q9PDezm.png
 
 
 Console
@@ -57,7 +58,10 @@ Console
 Additionally, you can open a console at the bottom while the simulation is running to make adjustments. 
 *Shortcut Key: Ctl+Alt+J*
 
-View of the open console. 
+.. console:: http://i.imgur.com/d5CLO9F.png
+   View of the open console. 
+   
+.. consoledetail:: http://i.imgur.com/ts859ap.png
 
 A complete list of the simulation commands by typing help() into the console. The following commands are available in the Geppetto console.
 
@@ -137,13 +141,16 @@ From the console, use the following command to open a clipboard and copy the con
       -- G.copyHistoryToClipboard()
          Copies console history to OS clipboard
 
+.. clipboard:: http://i.imgur.com/KijJGhb.png
+
+
 G.runScript(scriptURL) Example
 ------------------------------
-1) type some commands
-2) copy history to clipboard
-3) copy content of the clipboard to a file and put it in the public folder of dropbox (the file could be put anywhere, a gist, github, etc)
-4) get the url of that file through right click
-5) feed that link to this command. the set of operations specified in the url will be executed in geppetto
+* Type some commands
+* Copy history to clipboard
+* Copy content of the clipboard to a file and put the file in a public folder
+* Get the URL of that file
+* Feed that link to this command. The set of operations specified in the URL will be executed in Geppetto.
 
 
 Reference
@@ -151,9 +158,12 @@ Reference
 Keyboard Short Cuts
 -------------------
 
-Keystrokes		Action 
+==========		==========
+Keystrokes		  Action 
+==========		==========
 Ctl + Alt + J	Opens console
 Ctl + Alt + P	Opens plotting feature (currently shows hardcoded variables)
+==========		===========
 
 
 

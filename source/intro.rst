@@ -25,15 +25,18 @@ Using the Graphic Interface Controls
 ====================================
 Loading the Simulation
 ----------------------
+.. loadsimulation:: http://i.imgur.com/1kI749N.png
+
 Select the "Load Simulation" button at the top to open a console to either select a pre-loaded simulation or upload your own simulation file. 
+.. loadsimulation2:: http://i.imgur.com/nMT2vAP.png
 
 Alternatively you can customize the simulation before loading.
-
+.. loadsimulationcustom:: http://i.imgur.com/zxOJ2KG.png
 
 Running the Simulation
 ----------------------
 Once the simulation has been loaded, you can start, pause and stop the simulation at any point. 
-
+.. runsimulation:: http://i.imgur.com/pXEsYDn.png
 
 Navigation
 ----------

@@ -25,23 +25,27 @@ Using the Graphic Interface Controls
 ====================================
 Loading the Simulation
 ----------------------
-.. loadsimulation:: http://i.imgur.com/1kI749N.png
+.. image:: http://i.imgur.com/1kI749N.png
 
 Select the "Load Simulation" button at the top to open a console to either select a pre-loaded simulation or upload your own simulation file. 
-.. loadsimulation2:: http://i.imgur.com/nMT2vAP.png
+
+.. image:: http://i.imgur.com/nMT2vAP.png
 
 Alternatively you can customize the simulation before loading.
-.. loadsimulationcustom:: http://i.imgur.com/zxOJ2KG.png
+
+.. image:: http://i.imgur.com/zxOJ2KG.png
 
 Running the Simulation
 ----------------------
 Once the simulation has been loaded, you can start, pause and stop the simulation at any point. 
-.. runsimulation:: http://i.imgur.com/pXEsYDn.png
+
+.. image:: http://i.imgur.com/pXEsYDn.png
 
 Navigation
 ----------
 The navigation buttons along the left side of Geppetto allow you to change your view of the simulation within Geppetto.  You can reposition, rotate it and zoom in and out.  To reset, just hit the "home" icon to undo rotation or repositioning.  The buttons can be accessed once the simulation has been loaded as well as before, during and after the simulation run. 
-.. navigation:: http://i.imgur.com/A2BngUx.png
+
+.. image:: http://i.imgur.com/A2BngUx.png
 
 In addition to the navigation buttons, you can use a mouse to rotate, drag or zoom the simulation.
 
@@ -50,6 +54,7 @@ Plotting
 --------
 Proof of concept only. This feature is only available on the LEMS Sample Hodgkin-Huxley Neuron simulation. Full plotting features are currently under development.
 *Shortcut Key: Ctl+Alt+P*
+
 .. plotting:: http://i.imgur.com/Q9PDezm.png
 
 
@@ -58,10 +63,10 @@ Console
 Additionally, you can open a console at the bottom while the simulation is running to make adjustments. 
 *Shortcut Key: Ctl+Alt+J*
 
-.. console:: http://i.imgur.com/d5CLO9F.png
+.. image:: http://i.imgur.com/d5CLO9F.png
    View of the open console. 
    
-.. consoledetail:: http://i.imgur.com/ts859ap.png
+.. image:: http://i.imgur.com/ts859ap.png
 
 A complete list of the simulation commands by typing help() into the console. The following commands are available in the Geppetto console.
 
@@ -141,7 +146,7 @@ From the console, use the following command to open a clipboard and copy the con
       -- G.copyHistoryToClipboard()
          Copies console history to OS clipboard
 
-.. clipboard:: http://i.imgur.com/KijJGhb.png
+.. image:: http://i.imgur.com/KijJGhb.png
 
 
 G.runScript(scriptURL) Example

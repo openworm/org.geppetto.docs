@@ -28,19 +28,23 @@ Loading the Simulation
 .. image:: http://i.imgur.com/1kI749N.png
 
 Select the "Load Simulation" button at the top to open a console to either select a pre-loaded simulation or upload your own simulation file. 
+
 .. image:: http://i.imgur.com/nMT2vAP.png
 
 Alternatively you can customize the simulation before loading.
+
 .. image:: http://i.imgur.com/zxOJ2KG.png
 
 Running the Simulation
 ----------------------
 Once the simulation has been loaded, you can start, pause and stop the simulation at any point. 
+
 .. image:: http://i.imgur.com/pXEsYDn.png
 
 Navigation
 ----------
 The navigation buttons along the left side of Geppetto allow you to change your view of the simulation within Geppetto.  You can reposition, rotate it and zoom in and out.  To reset, just hit the "home" icon to undo rotation or repositioning.  The buttons can be accessed once the simulation has been loaded as well as before, during and after the simulation run. 
+
 .. image:: http://i.imgur.com/A2BngUx.png
 
 In addition to the navigation buttons, you can use a mouse to rotate, drag or zoom the simulation.
@@ -50,6 +54,7 @@ Plotting
 --------
 Proof of concept only. This feature is only available on the LEMS Sample Hodgkin-Huxley Neuron simulation. Full plotting features are currently under development.
 *Shortcut Key: Ctl+Alt+P*
+
 .. plotting:: http://i.imgur.com/Q9PDezm.png
 
 

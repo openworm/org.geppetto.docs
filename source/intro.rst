@@ -2,7 +2,7 @@
 Using Geppetto
 **************
 
-* Getting Started
+* Getting Started 
 * Using the Graphic Interface Controls
   - Loading the Simulation
   - Running the Simulation

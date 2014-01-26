@@ -60,13 +60,13 @@ A new Plot widget can be created from the console using the command "G.addWidget
 Alternatively *Shortcut Key: Ctl+Alt+P* - Toggles existing plotting widgets, if none exist it creates a new one. 
 
 Plotting widgets can plot variables straight from the simulation, given you are watching the variables at the time
-you start plotting it. Each variable will have its own line plot, and be accompanied by a label to distinguish 
+you start plotting it. Each variable will have its own line plot, and it's accompanied by a label to distinguish it
 from other variables being drawn. 
 
 .. plotting:: http://i.imgur.com/PigAtLo.png
 
 Other variables can also be plotted, as a two dimensional array  plotted against x and y coordinates. 
-You might have to change the plot options to show the data being plotted accordingly, use the "Commands" section
+You can customize your line plot and change the dimensions of the axis in your plot, use the "Commands" section
 as a reference to see what options you have to modify your plot. 
 
 .. plotting:: http://i.imgur.com/Sf9byfH.png
@@ -255,15 +255,31 @@ From the console, use the following command to open a clipboard and copy the con
 
 .. image:: http://i.imgur.com/f0MLjt6.png
 
+Watching State Variables
+------------------------------
+Simulation states can be watched as the simulation is running, give the user the possibility of drawing their results 
+as part of a Plot, through our Plotting widget interface.  A simulation must be loaded in order to watch variables
+from it. 
+
+Watching State Variables Example
+-----------------------------
+*Load Lems Simulation, first one from drop-down samples menu. 
+*Watch two simulation states by using Simulation.addWatchLists(lists) command
+ *Simulation.addWatchLists([{name:"hhvars",variablePaths:["example1.hhpop[0].v", "example1.hhpop[0].spiking"]}]);*
+ In this case the two states being watched are "hhpop[0].v" and "hhpop[0].spiking". 
+*Once variables have been added to watch list, use command *Simulation.startWatch()* to start  
+ watching these simulation states.
+* When you have started watching these simulation states you can plot them in a widget to see 
+  the different values. Refer to the "Plotting" section for more information on how to do this, and use 
+  "Simulation.help()" for more commands to use with variable watch. 
 
 G.runScript(scriptURL) Example
 ------------------------------
-Withing Geppetto, it's possible to execute a script consisting of Geppetto commands and 
+Within Geppetto, it's possible to execute a script consisting of Geppetto commands and 
 javascript commands. 
 
 Reference a public URL which contains a series of commands, as in this exaple and 
 run the command with that URL. https://raw.github.com/openworm/org.geppetto.testbackend/development/src/main/resources/TestSimulationScript.js
-
 
 To save a series of executed commands from console:
 * Copy history to clipboard

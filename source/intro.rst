@@ -12,6 +12,7 @@ Using Geppetto
   - G object commands
   - Simulation control commands
   - Clipboard
+  - Watching State Variables
 * Reference
   - Keyboard Short Cuts
 
@@ -52,10 +53,23 @@ In addition to the navigation buttons, you can use a mouse to rotate, drag or zo
 
 Plotting
 --------
-Proof of concept only. This feature is only available on the LEMS Sample Hodgkin-Huxley Neuron simulation. Full plotting features are currently under development.
-*Shortcut Key: Ctl+Alt+P*
+Geppetto allows plotting of simulation variables and data using our built in Plot functionality. 
 
-.. plotting:: http://i.imgur.com/Q9PDezm.png
+A new Plot widget can be created from the console using the command "G.addWidget(Widgets.PLOT)".
+
+Alternatively *Shortcut Key: Ctl+Alt+P* - Toggles existing plotting widgets, if none exist it creates a new one. 
+
+Plotting widgets can plot variables straight from the simulation, given you are watching the variables at the time
+you start plotting it. Each variable will have its own line plot, and be accompanied by a label to distinguish 
+from other variables being drawn. 
+
+.. plotting:: http://i.imgur.com/PigAtLo.png
+
+Other variables can also be plotted, as a two dimensional array  plotted against x and y coordinates. 
+You might have to change the plot options to show the data being plotted accordingly, use the "Commands" section
+as a reference to see what options you have to modify your plot. 
+
+.. plotting:: http://i.imgur.com/Sf9byfH.png
 
 
 Console
@@ -78,6 +92,12 @@ Tab twice, to show all the options available.
 
 G object commands 
 -----------------
+	  -- G.addWidget(type)
+
+      -- G.availableWidgets()
+         Gets list of available widgets
+         @returns {List} - List of available widget types
+         
       -- G.clear()
          Clears the console history
 
@@ -133,11 +153,98 @@ Simulation control commands
       -- Simulation.isLoaded()
          Checks status of the simulation, whether it has been loaded or not.
          @returns {Boolean} - True if simulation has been loaded, false if not.
+         
+      -- Simulation.listWatchableVariables()
+         List watchable variables for the simulation.
+         @returns {String} - status after requesting list of watchable variables.
+
+      -- Simulation.listForceableVariables()
+         List forceable variables for the simulation.
+         @returns {String} - status after requesting list of forceable variables.
+
+      -- Simulation.addWatchLists(watchLists)
+
+      -- Simulation.getWatchLists()
+         Retrieve watchlists available the simulation.
+         @returns {String} - status after request.
+
+      -- Simulation.startWatch()
+         Start watching variables for the simulation.
+         @returns {String} - status after request.
+
+      -- Simulation.stopWatch()
+         Stop watching variables for the simulation.
+         @returns {String} - status after request.
+
+      -- Simulation.clearWatchLists()
+         Clears all watch lists for the given simulation
+         @returns {String} - status after request.
+
+      -- Simulation.getWatchTree()
+         Gets tree for variables being watched if any.
+         @returns {String} - status after request.
 
       -- Simulation.help()
          Outputs list of commands with descriptions associated with the Simulation object.
          @returns  Returns list of all commands for the Simulation object"
 
+Plot Commands
+--------
+*Plot1 represents one plot widget instance. Each new plot widget (Plot2, Plot3, Plot4, etc ...) instance has these commands.
+
+      -- Plot1.plotData(newData,options)
+         Takes data series and plots them.
+         To plot array(s) , use it as plotData([[1,2],[2,3]])
+         To plot an object , use it as plotData(objectName)
+         Multiples arrays can be specified at once in this method, but only one object
+         at a time.
+         @param newData - series to plot, can be array or an object
+         @param options - options for the plotting widget, if null uses default
+
+      -- Plot1.removeDataSet(set)
+         Removes the data set from the plot.
+         EX: removeDataSet(dummyDouble)
+         @param set - Data set to be removed from the plot
+
+      -- Plot1.updateDataSet(label,newValue)
+
+      -- Plot1.plotDataFunction(func,data,options)
+
+      -- Plot1.resetPlot()
+         Resets the plot widget, deletes all the data series but does not
+         destroy the widget window.
+
+      -- Plot1.setOptions(options)
+         Set the options for the plotting widget
+         @param options
+
+      -- Plot1.getDataSets()
+
+      -- Plot1.help()
+
+      -- Plot1.destroy()
+         Resets the plot widget, deletes all the data series but does not
+         destroy the widget window.
+
+      -- Plot1.hide()
+
+      -- Plot1.show()
+
+      -- Plot1.getName()
+
+      -- Plot1.setName(name)
+
+      -- Plot1.setPosition(left,top)
+
+      -- Plot1.setSize(h,w)
+
+      -- Plot1.getPosition()
+
+      -- Plot1.getSize()
+
+      -- Plot1.getId()
+
+      -- Plot1.isVisible()"
 
 Clipboard
 ---------
@@ -146,12 +253,19 @@ From the console, use the following command to open a clipboard and copy the con
       -- G.copyHistoryToClipboard()
          Copies console history to OS clipboard
 
-.. image:: http://i.imgur.com/KijJGhb.png
+.. image:: http://i.imgur.com/f0MLjt6.png
 
 
 G.runScript(scriptURL) Example
 ------------------------------
-* Type some commands
+Withing Geppetto, it's possible to execute a script consisting of Geppetto commands and 
+javascript commands. 
+
+Reference a public URL which contains a series of commands, as in this exaple and 
+run the command with that URL. https://raw.github.com/openworm/org.geppetto.testbackend/development/src/main/resources/TestSimulationScript.js
+
+
+To save a series of executed commands from console:
 * Copy history to clipboard
 * Copy content of the clipboard to a file and put the file in a public folder
 * Get the URL of that file
@@ -167,7 +281,7 @@ Keyboard Short Cuts
 Keystrokes		  Action 
 ==========		==========
 Ctl + Alt + J	Opens console
-Ctl + Alt + P	Opens plotting feature (currently shows hardcoded variables)
+Ctl + Alt + P	Toggles Plot widget(s). If none exist at time, it creates one. 
 ==========		===========
 
 

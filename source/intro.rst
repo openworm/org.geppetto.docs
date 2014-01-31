@@ -63,13 +63,13 @@ Plotting widgets can plot variables straight from the simulation, given you are 
 you start plotting it. Each variable will have its own line plot, and it's accompanied by a label to distinguish it
 from other variables being drawn. 
 
-.. plotting:: http://i.imgur.com/PigAtLo.png
+.. image:: http://i.imgur.com/PigAtLo.png
 
 Other variables can also be plotted, as a two dimensional array  plotted against x and y coordinates. 
 You can customize your line plot and change the dimensions of the axis in your plot, use the "Commands" section
 as a reference to see what options you have to modify your plot. 
 
-.. plotting:: http://i.imgur.com/Sf9byfH.png
+.. image:: http://i.imgur.com/Sf9byfH.png
 
 
 Console

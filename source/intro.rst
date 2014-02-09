@@ -58,7 +58,7 @@ Geppetto allows plotting of simulation variables and data using our built in Plo
 A new Plot widget can be created from the console using the command 
 
 .. code-block:: javascript
-G.addWidget(Widgets.PLOT)
+	G.addWidget(Widgets.PLOT)
 
 Alternatively *Shortcut Key: Ctl+Alt+P* - Toggles existing plotting widgets, if none exist it creates a new one. 
 
@@ -76,7 +76,21 @@ as a reference to see what options you have to modify your plot.
 
 Setting Options
 ----------
-Object used to modify the plot widget settings. User can modify: x and y axis, line plot’s visibility of points and lines. 
+User can modify a Plot Widget settings, including: x and y axis, line plot’s visibility of points and lines.
+Create a javascript object in the console specifying the options, and use setOptions() with the created object
+to set the options for the Plot Widget. 
+
+The following values can be used to modify a Plot settings.
+
+- yaxis - Object that sets a minimimum and maximum value for the Y axis of the graph. 
+  Use {yaxis : { min : 'value', max : 'value'}} to set yaxis.  
+  
+- xaxis - Object that sets a minimimum and maximum value for the X axis of the graph. 
+  Use {xaxis : { min : 'value', max : 'value'}} to set xaxis. 
+  
+- series - Object that turns on/off lines and points in the graph. 
+ 
+Example: 
 
 .. code-block:: javascript
  
@@ -245,10 +259,10 @@ Plot Commands
       -- Plot1.destroy()
          Resets the plot widget, deletes all the data series but does not
          destroy the widget window.
+ 
+Check our JS documentation for more 'plot commands'_
 
  .. _plot commands: http://54.200.254.75:8080/org.geppetto.frontend/jsdocs/global.html#Plot
- 
-Check our JS documentation more 'plot commands'_
 
 Clipboard
 ---------
@@ -270,14 +284,14 @@ Watching State Variables Example
 *Load Lems Simulation, first one from drop-down samples menu. 
 
 Watch two simulation states by using Simulation.addWatchLists(lists) command
-.. code-block:: none
- Simulation.addWatchLists([{name:"hhvars",variablePaths:["example1.hhpop[0].v", "example1.hhpop[0].spiking"]}]);
+.. code-block:: javascript
+	Simulation.addWatchLists([{name:"hhvars",variablePaths:["example1.hhpop[0].v", "example1.hhpop[0].spiking"]}]);
   
 In this case the two states being watched are "hhpop[0].v" and "hhpop[0].spiking". 
 
 Once variables have been added to watch list, use command
-.. code-block:: none
-Simulation.startWatch()
+.. code-block:: javascript
+	Simulation.startWatch()
 
  to start  watching these simulation states.
 

@@ -301,12 +301,14 @@ In this case the two states being watched are "hhpop[0].v" and "hhpop[0].spiking
 
 Once variables have been added to watch list, use command
 .. code-block:: javascript
+	
 	Simulation.startWatch()
 to start  watching these simulation states.
 
 When you have started watching these simulation states you can plot them in a widget to see 
 the different values. Refer to the "Plotting" section for more information on how to do this, and use 
 .. code-block:: javascript
+	
 	Simulation.help()
 for more commands to use with variable watch. 
 

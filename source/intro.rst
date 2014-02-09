@@ -52,10 +52,13 @@ In addition to the navigation buttons, you can use a mouse to rotate, drag or zo
 
 
 Plotting
---------
+=======
 Geppetto allows plotting of simulation variables and data using our built in Plot functionality. 
 
-A new Plot widget can be created from the console using the command "G.addWidget(Widgets.PLOT)".
+A new Plot widget can be created from the console using the command 
+
+.. code-block:: none
+G.addWidget(Widgets.PLOT)
 
 Alternatively *Shortcut Key: Ctl+Alt+P* - Toggles existing plotting widgets, if none exist it creates a new one. 
 
@@ -71,6 +74,29 @@ as a reference to see what options you have to modify your plot.
 
 .. image:: http://i.imgur.com/Sf9byfH.png
 
+Setting Options
+----------
+Object used to modify the plot widget settings. User can modify: x and y axis, line plot’s visibility of points and lines. 
+
+.. code-block:: javascript
+ 
+ 		var linePlotOptions ={
+				yaxis: { min : 0,max : 15},
+				xaxis: {min : 0, max : 15},
+				series: {
+       		 			lines: { show: true },
+        				points: { show: true }
+				}, 
+		}
+
+		//set the options for the plot
+		plot1.setPlotOptions(plotOptions);
+
+Commands
+---------- 
+Check our 'Console'_ section for Plot Commands
+
+ .. _Console: 
 
 Console
 =======
@@ -84,7 +110,7 @@ Additionally, you can open a console at the bottom while the simulation is runni
 
 A complete list of the simulation commands by typing help() into the console. The following commands are available in the Geppetto console.
 
-Autocompletion
+AutoCompletion
 --------------
 Within the console, the Tab button assists with entering commands.
 Tab once, to autocomplete the current word of the command.
@@ -206,9 +232,6 @@ Plot Commands
          EX: removeDataSet(dummyDouble)
          @param set - Data set to be removed from the plot
 
-      -- Plot1.updateDataSet(label,newValue)
-
-      -- Plot1.plotDataFunction(func,data,options)
 
       -- Plot1.resetPlot()
          Resets the plot widget, deletes all the data series but does not
@@ -218,33 +241,13 @@ Plot Commands
          Set the options for the plotting widget
          @param options
 
-      -- Plot1.getDataSets()
-
-      -- Plot1.help()
-
       -- Plot1.destroy()
          Resets the plot widget, deletes all the data series but does not
          destroy the widget window.
 
-      -- Plot1.hide()
-
-      -- Plot1.show()
-
-      -- Plot1.getName()
-
-      -- Plot1.setName(name)
-
-      -- Plot1.setPosition(left,top)
-
-      -- Plot1.setSize(h,w)
-
-      -- Plot1.getPosition()
-
-      -- Plot1.getSize()
-
-      -- Plot1.getId()
-
-      -- Plot1.isVisible()"
+ .. _plot commands: http://54.200.254.75:8080/org.geppetto.frontend/jsdocs/global.html#Plot
+ 
+Check our JS documentation more 'plot commands'_
 
 Clipboard
 ---------
@@ -266,11 +269,16 @@ Watching State Variables Example
 *Load Lems Simulation, first one from drop-down samples menu. 
 
 Watch two simulation states by using Simulation.addWatchLists(lists) command
- *Simulation.addWatchLists([{name:"hhvars",variablePaths:["example1.hhpop[0].v", "example1.hhpop[0].spiking"]}]);*
- In this case the two states being watched are "hhpop[0].v" and "hhpop[0].spiking". 
+.. code-block:: none
+ Simulation.addWatchLists([{name:"hhvars",variablePaths:["example1.hhpop[0].v", "example1.hhpop[0].spiking"]}]);
+  
+In this case the two states being watched are "hhpop[0].v" and "hhpop[0].spiking". 
 
-Once variables have been added to watch list, use command *Simulation.startWatch()* to start  
-watching these simulation states.
+Once variables have been added to watch list, use command
+.. code-block:: none
+Simulation.startWatch()
+
+ to start  watching these simulation states.
 
 When you have started watching these simulation states you can plot them in a widget to see 
 the different values. Refer to the "Plotting" section for more information on how to do this, and use 
@@ -281,14 +289,15 @@ G.runScript(scriptURL) Example
 Within Geppetto, it's possible to execute a script consisting of Geppetto commands and 
 javascript commands. 
 
-Reference a public URL which contains a series of commands, as in this exaple and 
-run the command with that URL. https://raw.github.com/openworm/org.geppetto.testbackend/development/src/main/resources/TestSimulationScript.js
+Reference a public URL which contains a series of commands, as in the link in this example and 
+run the command with that URL.
+https://raw.github.com/openworm/org.geppetto.testbackend/development/src/main/resources/TestSimulationScript.js
 
 To save a series of executed commands from console:
-* Copy history to clipboard
-* Copy content of the clipboard to a file and put the file in a public folder
-* Get the URL of that file
-* Feed that link to this command. The set of operations specified in the URL will be executed in Geppetto.
+* Copy history to clipboard *
+* Copy content of the clipboard to a file and put the file in a public folder *
+* Get the URL of that file *
+* Feed that link to this command. The set of operations specified in the URL will be executed in Geppetto. *
 
 
 Reference

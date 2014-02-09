@@ -90,7 +90,7 @@ The following values can be used to modify a Plot settings.
   
 - series - Object that turns on/off lines and points in the graph. 
  
-Example: 
+**Example:** 
 
 .. code-block:: javascript
  
@@ -233,6 +233,8 @@ Plot Commands
 --------
 *Plot1 represents one plot widget instance. Each new plot widget (Plot2, Plot3, Plot4, etc ...) instance has these commands.
 
+.. code-block:: javascript
+
       -- Plot1.plotData(newData,options)
          Takes data series and plots them.
          To plot array(s) , use it as plotData([[1,2],[2,3]])
@@ -284,13 +286,17 @@ Watching State Variables Example
 *Load Lems Simulation, first one from drop-down samples menu. 
 
 Watch two simulation states by using Simulation.addWatchLists(lists) command
+
 .. code-block:: javascript
-	Simulation.addWatchLists([{name:"hhvars",variablePaths:["example1.hhpop[0].v", "example1.hhpop[0].spiking"]}]);
+	
+   Simulation.addWatchLists([{name:"hhvars",variablePaths:["example1.hhpop[0].v", "example1.hhpop[0].spiking"]}]);
   
 In this case the two states being watched are "hhpop[0].v" and "hhpop[0].spiking". 
 
 Once variables have been added to watch list, use command
+
 .. code-block:: javascript
+	
 	Simulation.startWatch()
 
  to start  watching these simulation states.

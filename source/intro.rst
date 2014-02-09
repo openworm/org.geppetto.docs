@@ -57,7 +57,7 @@ Geppetto allows plotting of simulation variables and data using our built in Plo
 
 A new Plot widget can be created from the console using the command 
 
-.. code-block:: none
+.. code-block:: javascript
 G.addWidget(Widgets.PLOT)
 
 Alternatively *Shortcut Key: Ctl+Alt+P* - Toggles existing plotting widgets, if none exist it creates a new one. 
@@ -94,9 +94,8 @@ Object used to modify the plot widget settings. User can modify: x and y axis, l
 
 Commands
 ---------- 
-Check our 'Console'_ section for Plot Commands
-
- .. _Console: 
+Plots can be created using console commands. For a complete list of commands 
+take a look at our :ref:`Console Commands section`
 
 Console
 =======
@@ -213,6 +212,8 @@ Simulation control commands
       -- Simulation.help()
          Outputs list of commands with descriptions associated with the Simulation object.
          @returns  Returns list of all commands for the Simulation object"
+
+.. _Console Commands section:
 
 Plot Commands
 --------

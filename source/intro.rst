@@ -134,7 +134,7 @@ G object commands
 -----------------
 .. code-block:: javascript
 	
-	  -- G.addWidget(type)
+	-- G.addWidget(type)
 
       -- G.availableWidgets()
          Gets list of available widgets

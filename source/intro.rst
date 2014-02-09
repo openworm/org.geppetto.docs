@@ -58,6 +58,7 @@ Geppetto allows plotting of simulation variables and data using our built in Plo
 A new Plot widget can be created from the console using the command 
 
 .. code-block:: javascript
+
 	G.addWidget(Widgets.PLOT)
 
 Alternatively *Shortcut Key: Ctl+Alt+P* - Toggles existing plotting widgets, if none exist it creates a new one. 
@@ -131,6 +132,8 @@ Tab twice, to show all the options available.
 
 G object commands 
 -----------------
+.. code-block:: javascript
+
 	  -- G.addWidget(type)
 
       -- G.availableWidgets()
@@ -167,6 +170,8 @@ G object commands
 
 Simulation control commands 
 ---------------------------
+.. code-block:: javascript
+
       -- Simulation.start()
          Start the simulation.
          @returns {String} - Simulation status after starting it.
@@ -270,6 +275,8 @@ Clipboard
 ---------
 From the console, use the following command to open a clipboard and copy the console history.
 
+.. code-block:: javascript
+
       -- G.copyHistoryToClipboard()
          Copies console history to OS clipboard
 
@@ -299,7 +306,7 @@ Once variables have been added to watch list, use command
 	
 	Simulation.startWatch()
 
- to start  watching these simulation states.
+to start  watching these simulation states.
 
 When you have started watching these simulation states you can plot them in a widget to see 
 the different values. Refer to the "Plotting" section for more information on how to do this, and use 
@@ -312,7 +319,7 @@ javascript commands.
 
 Reference a public URL which contains a series of commands, as in the link in this example and 
 run the command with that URL_.
- .. _URL: https://raw.github.com/openworm/org.geppetto.testbackend/development/src/main/resources/TestSimulationScript.js
+ .. _URL: https: http//raw.github.com/openworm/org.geppetto.testbackend/development/src/main/resources/TestSimulationScript.js
 
 To save a series of executed commands from console:
 * Copy history to clipboard *

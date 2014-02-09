@@ -133,7 +133,7 @@ Tab twice, to show all the options available.
 G object commands 
 -----------------
 .. code-block:: javascript
-
+	
 	  -- G.addWidget(type)
 
       -- G.availableWidgets()
@@ -319,7 +319,7 @@ javascript commands.
 
 Reference a public URL which contains a series of commands, as in the link in this example and 
 run the command with that URL_.
- .. _URL: https: http//raw.github.com/openworm/org.geppetto.testbackend/development/src/main/resources/TestSimulationScript.js
+ .. _URL: http://raw.github.com/openworm/org.geppetto.testbackend/development/src/main/resources/TestSimulationScript.js
 
 To save a series of executed commands from console:
 * Copy history to clipboard *

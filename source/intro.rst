@@ -262,9 +262,9 @@ Plot Commands
          Resets the plot widget, deletes all the data series but does not
          destroy the widget window.
  
-Check our JS documentation for more 'plot commands'_
+Check our JS documentation for more plot commands_
 
- .. _plot commands: http://54.200.254.75:8080/org.geppetto.frontend/jsdocs/global.html#Plot
+ .. _commands: http://54.200.254.75:8080/org.geppetto.frontend/jsdocs/global.html#Plot
 
 Clipboard
 ---------
@@ -311,8 +311,8 @@ Within Geppetto, it's possible to execute a script consisting of Geppetto comman
 javascript commands. 
 
 Reference a public URL which contains a series of commands, as in the link in this example and 
-run the command with that URL.
-https://raw.github.com/openworm/org.geppetto.testbackend/development/src/main/resources/TestSimulationScript.js
+run the command with that URL_.
+ .. _URL: https://raw.github.com/openworm/org.geppetto.testbackend/development/src/main/resources/TestSimulationScript.js
 
 To save a series of executed commands from console:
 * Copy history to clipboard *

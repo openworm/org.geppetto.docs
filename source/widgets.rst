@@ -11,9 +11,9 @@ Creating a Widget
 
 This tutorial will describe the steps needed start creating your own Geppetto Widget. To begin, you will want to set up a specific file and folder structure. Let’s say you are interested in creating a Geppetto Widget that can plot one or multiple Simulation Variables values in a chart. For example, let’s call it a “Chart” Widget. The first step would be to create the folder structure, which consists of a parent folder named after the Widget and multiple folders inside it for the controllers and vendor libraries.  Your folder structure should look something like this:
 
-   --/chart
-      /controllers
-      /vendor
+  | /chart
+  |   /controllers
+  |   /vendor
 
 The widget will use a combination of Javascript and CSS files, consisting of a main class, configuration script, controller class and a styling CSS file. Below is a brief explanation of the purpose of each of these files. 
 

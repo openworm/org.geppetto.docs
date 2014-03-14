@@ -81,7 +81,7 @@ The folder named “chart” holds the main widget file “Chart.js” and the r
 
 Adding Widget to Geppetto
 =========================
-If you have structured your folder using the recommended structure from the <a href="https://docs.google.com/a/metacell.us/document/d/160pXT0CProgY2xs5Y8zdHnVGZuV_X-A6ZWvYWnAIYDQ/edit#heading=h.5ncyvsoawo2">previous section</a>, you can then drop them inside the “widgets” folder located in the frontend bundle under “src/main/webapp/js”. 
+If you have structured your folder using the recommended structure from the `previous section <https://docs.google.com/a/metacell.us/document/d/160pXT0CProgY2xs5Y8zdHnVGZuV_X-A6ZWvYWnAIYDQ/edit#heading=h.5ncyvsoawo2>`_, you can then drop them inside the “widgets” folder located in the frontend bundle under “src/main/webapp/js”. 
 
 Locate the file “src/main/webapp/js/main.js” and import your widget by adding the location of the script using requireJS. Using our widget example above, we would add the following line to the config.js file. ::
 
@@ -112,5 +112,5 @@ Follow the same logic for WidgetFactory.removeWidget(widgetType): ::
 
 Doing this will allow you to create new widgets from the console using the following commands: ::
 
-G.addWidget(Widgets.CHART);
-G.removeWidget(Widgets.CHART);
+  G.addWidget(Widgets.CHART);
+  G.removeWidget(Widgets.CHART);

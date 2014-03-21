@@ -53,9 +53,9 @@ Creating the config.js Class
 The purpose of having a config.js class inside your widget folder is to specify the libraries for the widget and be able to export them via this script. To export the libraries, use `requireJS library <http://requirejs.org/>`_, which allows scripts to load dynamically. If you want to add the files for the widget you just created, include the following lines in the config.js file. ::
 
    var chartModule = [];
-       chartModule("chart/vendor/chartsplugin-1.0");
-       chartModule("chart/Chart");
-       chartModule.push("chart/controllers/ChartController");
+   chartModule.push("chart/vendor/chartsplugin-1.0");
+   chartModule.push("chart/Chart");
+   chartModule.push("chart/controllers/ChartController");
 
 Where the array chartModule holds the path of all the JS libraries needed for the widget, the “.js” extension can be omitted when adding the scripts to the array, however, the omission is not required.  
 When you have finished populating your chartModule array with your scripts, add them to Geppetto using requireJS as in the example below. The function($) will be called once the scripts have been loaded successfully, at which time you will be able to load the CSS files for the widget. ::

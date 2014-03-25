@@ -343,6 +343,7 @@ an interface to share via Facebook or Twitter. The second opens a contact form t
 
 Reference
 =========
+
 Keyboard Short Cuts
 -------------------
 
@@ -352,7 +353,7 @@ Keyboard Short Cuts
 | Ctl + Alt + J                       | Opens console                                                    | 
 +-------------------------------------+------------------------------------------------------------------+
 | Ctl + Alt + P                       | Toggles Plot widget(s). If none exist at time, it creates one.   |   
-+-------------------------------------+----------------------------+-------------------------------------+
++-------------------------------------+------------------------------------------------------------------+
 
 
 

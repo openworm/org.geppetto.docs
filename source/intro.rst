@@ -77,7 +77,7 @@ as a reference to see what options you have to modify your plot.
 
 Setting Options
 ----------
-User can modify a Plot Widget settings, including: x and y axis, line plot’s visibility of points and lines.
+User can modify a Plot Widget settings, including: x and y axis, line plotï¿½s visibility of points and lines.
 Create a javascript object in the console specifying the options, and use setOptions() with the created object
 to set the options for the Plot Widget. 
 
@@ -122,7 +122,7 @@ Additionally, you can open a console at the bottom while the simulation is runni
    
 .. image:: http://i.imgur.com/ts859ap.png
 
-A complete list of the simulation commands by typing help() into the console. The following commands are available in the Geppetto console.
+A complete list of the simulation commands will display by typing help() into the console. The following commands are available in the Geppetto console.
 
 AutoCompletion
 --------------
@@ -335,12 +335,14 @@ Reference
 Keyboard Short Cuts
 -------------------
 
-==========		==========
-Keystrokes		  Action 
-==========		==========
-Ctl + Alt + J	Opens console
-Ctl + Alt + P	Toggles Plot widget(s). If none exist at time, it creates one. 
-==========		===========
++-------------------------------------+------------------------------------------------------------------+
+| Key Strokes                         | Action                                                           |                                                                                                            |
++=====================================+==================================================================+
+| Ctl + Alt + J                       | Opens console                                                    | 
++-------------------------------------+------------------------------------------------------------------+
+| Ctl + Alt + P                       | Toggles Plot widget(s). If none exist at time, it creates one.   |   
++-------------------------------------+----------------------------+-------------------------------------+
+
 
 
 

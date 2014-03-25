@@ -30,7 +30,7 @@ Loading the Simulation
 
 Select the "Load Simulation" button at the top to open a console to either select a pre-loaded simulation or upload your own simulation file. 
 
-.. image:: http://i.imgur.com/nMT2vAP.png
+.. image:: http://i.imgur.com/DRaae8U.png
 
 Alternatively you can customize the simulation before loading.
 
@@ -328,6 +328,17 @@ To save a series of executed commands from console:
 * Copy content of the clipboard to a file and put the file in a public folder *
 * Get the URL of that file *
 * Feed that link to this command. The set of operations specified in the URL will be executed in Geppetto. *
+
+
+Connecting with Geppetto
+========================
+There are two ways to connect with Geppetto.  In the lower right hand screen are two expandable areas. Click on the first will open 
+an interface to share via Facebook or Twitter. The second opens a contact form to reach the Geppetto team with questions or comments.
+
+.. image:: http://i.imgur.com/mQAcCxf.png
+
+.. image:: http://i.imgur.com/Y3SbmmQ.png
+
 
 
 Reference

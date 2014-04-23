@@ -144,8 +144,7 @@ The tags used to describe an entity are the following:
 
 - **aspect**: Defines the model and simulator of an entity, multiples aspects can be specified within an entity. Each aspect specifies a simulator and a model, which are used for the simulation. 
 
-- **simulator** : Defines the simulator use to run the entity via `<simulatorid>` inside the <simulator>
-tag.
+- **simulator** : Defines the simulator use to run the entity via `<simulatorid>` inside the <simulator> tag.
 
 - **model** : The model that defines the entity, points to an external URL for the model. Two tags are used for the model, `<modelURL>` which points to the URL and `<modelInterpreterId>` which is used to load the model.
 

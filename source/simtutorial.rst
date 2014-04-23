@@ -15,8 +15,8 @@ Simulations used within Geppetto are specified within an XML file, which follows
 .. code-block:: xml
 
     <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.openworm.org/simulationSchema"
-	xmlns:tns="http://www.openworm.org/simulationSchema" elementFormDefault="qualified" 
-	xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.0">
+		xmlns:tns="http://www.openworm.org/simulationSchema" elementFormDefault="qualified" 
+		xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.0">
 	<complexType name="Model">
 		<sequence>
 			<element name="modelInterpreterId" type="string" maxOccurs="1" minOccurs="1"></element>
@@ -140,11 +140,14 @@ As explained in previous section, a Simulation can have multiple entities, and e
 
 The tags used to describe an entity are the following:
 
-**ID** : Use to locate the entity, can be the name of entity as well
-**aspect**: Defines the model and simulator of an entity, multiples aspects can be specified within an entity. Each aspect specifies a simulator and a model, which are used for the simulation. 
-**simulator** : Defines the simulator use to run the entity via `<simulatorid>` inside the <simulator>
+- **ID** : Use to locate the entity, can be the name of entity as well
+
+- **aspect**: Defines the model and simulator of an entity, multiples aspects can be specified within an entity. Each aspect specifies a simulator and a model, which are used for the simulation. 
+
+- **simulator** : Defines the simulator use to run the entity via `<simulatorid>` inside the <simulator>
 tag.
-**model** : The model that defines the entity, points to an external URL for the model. Two tags are used for the model, `<modelURL>` which points to the URL and `<modelInterpreterId>` which is used to load the model.
+
+- **model** : The model that defines the entity, points to an external URL for the model. Two tags are used for the model, `<modelURL>` which points to the URL and `<modelInterpreterId>` which is used to load the model.
 
 .. code-block:: xml
 

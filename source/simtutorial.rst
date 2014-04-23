@@ -15,8 +15,8 @@ Simulations used within Geppetto are specified within an XML file, which follows
 .. code-block:: xml
 
     <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.openworm.org/simulationSchema"
-xmlns:tns="http://www.openworm.org/simulationSchema" elementFormDefault="qualified" 
-xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.0">
+	xmlns:tns="http://www.openworm.org/simulationSchema" elementFormDefault="qualified" 
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.0">
 	<complexType name="Model">
 		<sequence>
 			<element name="modelInterpreterId" type="string" maxOccurs="1" minOccurs="1"></element>

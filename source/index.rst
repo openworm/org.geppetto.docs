@@ -13,6 +13,7 @@ Contents:
    
    intro
    widgets
+   simtutorial
 
 
 

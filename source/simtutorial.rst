@@ -10,6 +10,8 @@ Getting Started
 ---------
 Simulations used within Geppetto are specified within an XML file, which follows a specific [schema][1]
 
+.. code-block:: xml
+
     <schema xmlns="http://www.w3.org/2001/XMLSchema"                            targetNamespace="http://www.openworm.org/simulationSchema"
 	xmlns:tns="http://www.openworm.org/simulationSchema"
 	elementFormDefault="qualified" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"

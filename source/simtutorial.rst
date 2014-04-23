@@ -14,11 +14,9 @@ Simulations used within Geppetto are specified within an XML file, which follows
 
 .. code-block:: xml
 
-    <schema xmlns="http://www.w3.org/2001/XMLSchema"                            targetNamespace="http://www.openworm.org/simulationSchema"
-	xmlns:tns="http://www.openworm.org/simulationSchema"
-	elementFormDefault="qualified" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
-	jxb:version="2.0">
-
+    <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.openworm.org/simulationSchema"
+			xmlns:tns="http://www.openworm.org/simulationSchema" elementFormDefault="qualified" 
+			xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.0">
 	<complexType name="Model">
 		<sequence>
 			<element name="modelInterpreterId" type="string" maxOccurs="1"
@@ -126,9 +124,8 @@ The Simulation file starts with the head tag pointing to the different schema lo
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8"?>
-    <tns:simulation xmlns:tns="http://www.openworm.org/simulationSchema" 
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		xsi:schemaLocation="http://www.openworm.org/simulationSchema                      ../../src/main/resources/schema/simulationSchema.xsd ">
+    <tns:simulation xmlns:tns="http://www.openworm.org/simulationSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.openworm.org/simulationSchema ../../src/main/resources/schema/simulationSchema.xsd ">
     </tns:simulation>
 
 Then, inside the Simulation tag, you need to define; the configuration type of the file, name and entities. The configuration tag is used to define the output format of the Simulation, typically RAW format, the name does as the word suggests, and the entities define the different models for the simulation. A Simulation file must have at least one entity, but there’s no cap on the maximum amount it can have.
@@ -136,9 +133,8 @@ Then, inside the Simulation tag, you need to define; the configuration type of t
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8"?>
-    <tns:simulation xmlns:tns="http://www.openworm.org/simulationSchema" 
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		xsi:schemaLocation="http://www.openworm.org/simulationSchema                      ../../src/main/resources/schema/simulationSchema.xsd ">
+    <tns:simulation xmlns:tns="http://www.openworm.org/simulationSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.openworm.org/simulationSchema ../../src/main/resources/schema/simulationSchema.xsd ">
         <tns:configuration>
             <tns:outputFormat>RAW</tns:outputFormat>
         </tns:configuration>
@@ -165,9 +161,8 @@ tag.
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8"?>
-    <tns:simulation xmlns:tns="http://www.openworm.org/simulationSchema" 
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		xsi:schemaLocation="http://www.openworm.org/simulationSchema                      ../../src/main/resources/schema/simulationSchema.xsd ">
+    <tns:simulation xmlns:tns="http://www.openworm.org/simulationSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.openworm.org/simulationSchema ../../src/main/resources/schema/simulationSchema.xsd ">
         <tns:configuration>
             <tns:outputFormat>RAW</tns:outputFormat>
         </tns:configuration>
@@ -207,8 +202,7 @@ You can specify a `<script>` tag within the root `<simulation>` tag. This tag sh
 
     <tns:scripts>
       <tns:script>
-        <tns:URL>https://dl.dropboxusercontent.com/u/7538688/
-                 electrofluid.py</tns:scriptURL>
+        <tns:URL>https://dl.dropboxusercontent.com/u/7538688/electrofluid.py</tns:scriptURL>
        </tns:script>
     </tns:scripts>
     

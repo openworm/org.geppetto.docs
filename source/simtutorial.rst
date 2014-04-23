@@ -8,7 +8,9 @@ This aim of this tutorial is to guide you through the process of creating a Simu
 
 Getting Started
 ---------
-Simulations used within Geppetto are specified within an XML file, which follows a specific [schema][1]
+Simulations used within Geppetto are specified within an XML file, which follows a specific schema_
+
+.. _schema: https://github.com/openworm/org.geppetto.simulation/blob/master/src/main/resources/schema/simulationSchema.xsd
 
 .. code-block:: xml
 
@@ -121,6 +123,8 @@ Simulations used within Geppetto are specified within an XML file, which follows
 
 The Simulation file starts with the head tag pointing to the different schema location that will be used to describe the file as seen below. 
 
+.. code-block:: xml
+
     <?xml version="1.0" encoding="UTF-8"?>
     <tns:simulation xmlns:tns="http://www.openworm.org/simulationSchema" 
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -128,6 +132,8 @@ The Simulation file starts with the head tag pointing to the different schema lo
     </tns:simulation>
 
 Then, inside the Simulation tag, you need to define; the configuration type of the file, name and entities. The configuration tag is used to define the output format of the Simulation, typically RAW format, the name does as the word suggests, and the entities define the different models for the simulation. A Simulation file must have at least one entity, but there’s no cap on the maximum amount it can have.
+
+.. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8"?>
     <tns:simulation xmlns:tns="http://www.openworm.org/simulationSchema" 
@@ -155,6 +161,8 @@ The tags used to describe an entity are the following:
 **simulator** : Defines the simulator use to run the entity via `<simulatorid>` inside the <simulator>
 tag.
 **model** : The model that defines the entity, points to an external URL for the model. Two tags are used for the model, `<modelURL>` which points to the URL and `<modelInterpreterId>` which is used to load the model.
+
+.. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8"?>
     <tns:simulation xmlns:tns="http://www.openworm.org/simulationSchema" 
@@ -191,7 +199,11 @@ tag.
     </tns:simulation>
 Scripts
 ---------------
-You can specify a `<script>` tag within the root `<simulation>` tag. This tag should point to an external URL containing a javascript files with a set of [Geppetto Commands][2]. The script will be executed right after the simulation is loaded, and the commands within the script executed in order one after another.
+You can specify a `<script>` tag within the root `<simulation>` tag. This tag should point to an external URL containing a javascript files with a set of Geppetto Commands_. The script will be executed right after the simulation is loaded, and the commands within the script executed in order one after another.
+
+.. _Commands: http://docs.geppetto.org/en/latest/intro.html#g-object-commands
+  
+.. code-block:: xml
 
     <tns:scripts>
       <tns:script>
@@ -199,7 +211,4 @@ You can specify a `<script>` tag within the root `<simulation>` tag. This tag sh
                  electrofluid.py</tns:scriptURL>
        </tns:script>
     </tns:scripts>
-
-
-  [1]: https://github.com/openworm/org.geppetto.simulation/blob/master/src/main/resources/schema/simulationSchema.xsd
-  [2]:http://docs.geppetto.org/en/latest/intro.html#g-object-commands
+    

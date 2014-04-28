@@ -8,8 +8,7 @@ Geppetto Widgets Tutorial
 
 Creating a Widget
 =================
-
-This tutorial will describe the steps needed start creating your own Geppetto Widget. To begin, you will want to set up a specific file and folder structure. Letâ€™s say you are interested in creating a Geppetto Widget that can plot one or multiple Simulation Variables values in a chart. For example, letâ€™s call it a â€œChartâ€� Widget. The first step would be to create the folder structure, which consists of a parent folder named after the Widget and multiple folders inside it for the controllers and vendor libraries. Â Your folder structure should look something like this. ::
+This tutorial will describe the steps needed start creating your own Geppetto Widget. To begin, you will want to set up a specific file and folder structure. Let’s say you are interested in creating a Geppetto Widget that can plot one or multiple Simulation Variables values in a chart. For example, let’s call it a “Chart” Widget. The first step would be to create the folder structure, which consists of a parent folder named after the Widget and multiple folders inside it for the controllers and vendor libraries.  Your folder structure should look something like this:
 
  /chart                  
     /controllers        
@@ -33,11 +32,11 @@ Recommended files needed for creating a widget:
 | [NameofWidget]Controller.js          | ChartController.js         | Use to bind Geppetto with your widgets: tells your widget what to do when Geppetto tells it to do it.                    |  
 +--------------------------------------+----------------------------+--------------------------------------------------------------------------------------------------------------------------+
 
-External libraries and existing plugins can be used as part of your widget. Your newly-created widget class should be the one communicating and using the external libraries/plugins. For example, if wanted to create a widget to chart things in Geppetto, and you know of a javascript library that does charting, you can use that library as a dependency for your widget and build on top of it rather than having to write charting from scratch.
+External libraries and existing plugins can be used as part of your widget. Your newly-created widget class should be the one communicating and using the external librarie's plugins. For example, if wanted to create a widget to chart things in Geppetto, and you know of a javascript library that does charting, you can use that library as a dependency for your widget and build on top of it rather than having to write charting from scratch.
 
 Creating the Main Widget Class
 ------------------------------
-A superclass called `Widget.js <https://github.com/openworm/org.geppetto.frontend/blob/development/src/main/webapp/js/widgets/Widget.js#L43>`_ exists and this contains getters, setters and other global methods for properties that all widgets have, including name, position, id, size, and visibility. The widget class you will be creating extends this superclass. ::
+A superclass called `Widget.js <https://github.com/openworm/org.geppetto.frontend/blob/development/src/main/webapp/js/widgets/Widget.js#L43>`_ exists and this contains getters, setters and other global methods for properties that all widgets have, including name, position, id, size, and visibility. The widget class you will be creating extends this superclass.
 
 .. code-block:: javascript
 
@@ -54,21 +53,19 @@ The Controller class regulates the handling of events received from Geppetto and
 
 	define(function(require) {
 	return function(GEPPETTO) {
-	
 		//Rest of Controller code
 		}	
 	}
 	
 Creating the config.js Class
 ----------------------------
-The purpose of having a config.js class inside your widget folder is to specify the libraries for the widget and be able to export them via this script. To export the libraries, use `requireJS library <http://requirejs.org/>`_, which allows scripts to load dynamically. If you want to add the files for the widget you just created, include the following lines in the config.js file. ::
+The purpose of having a config.js class inside your widget folder is to specify the libraries for the widget and be able to export them via this script. To export the libraries, use `requireJS library <http://requirejs.org/>`_, which allows scripts to load dynamically. If you want to add the files for the widget you just created, include the following lines in the config.js file.
 
 .. code-block:: javascript
 
    var chartModule = [];
-	chartModule("widgets/chart/vendor/chartsplugin-1.0");
-	chartModule("widgets/chart/Chart");
-
+   chartModule("widgets/chart/vendor/chartsplugin-1.0");
+   chartModule("widgets/chart/Chart");
 
 Where the array chartModule holds the path of all the JS libraries needed for the widget, the “.js” extension can be omitted when adding the scripts to the array, however, the omission is not required.  Notice that the controller class has been omitted for now, we will be adding that class as an AMD Module which is explained in the next section. 
 
@@ -78,7 +75,7 @@ When you have finished populating your chartModule array with your scripts, add 
 
    require(chartModule, function($) {
       loadCss("js/widgets/chart/Chart.css");
-      }); 
+   }); 
   
 Folder Structure
 ----------------
@@ -109,7 +106,7 @@ Using a Widget Inside Geppetto
 ==============================
 If you would like to use your widget from the console within Geppetto, there are a few additional steps. First, you will need to expand the â€œWidgetFactory.jsâ€� class inside the frontend bundle to handle adding and removing your new widget via the console. 
 
-To do this, first add the type of your new widget to the global â€œWidgetsâ€� variable. Simply add the name of your widget followed by the next number from the sequence of previously added widget types. The example â€œCHART,â€� would look like this, ::
+To do this, first add the type of your new widget to the global “Widgets” variable. Simply add the name of your widget followed by the next number from the sequence of previously added widget types. The example “CHART,” would look like this:
 
 .. code-block:: javascript
 
@@ -118,7 +115,7 @@ To do this, first add the type of your new widget to the global â€œWidgetsâ
   		 CHART : 1
        };
 
-Inside the WidgetFactory.addWidget(widgetType) method, add a case inside the switch statement that connects it to your controllerâ€™s new widget method. For example: ::
+Inside the WidgetFactory.addWidget(widgetType) method, add a case inside the switch statement that connects it to your controllerâ€™s new widget method. For example:
 
 .. code-block:: javascript
 
@@ -126,7 +123,7 @@ Inside the WidgetFactory.addWidget(widgetType) method, add a case inside the swi
        widget = ChartController.addChartWidget();
        break;
 
-Follow the same logic for WidgetFactory.removeWidget(widgetType): ::
+Follow the same logic for WidgetFactory.removeWidget(widgetType):
 
 .. code-block:: javascript
 
@@ -134,7 +131,7 @@ Follow the same logic for WidgetFactory.removeWidget(widgetType): ::
        widget = ChartController.removeChartWidget();
        break;
 
-Doing this will allow you to create new widgets from the console using the following commands: ::
+Doing this will allow you to create new widgets from the console using the following commands:
 
 .. code-block:: javascript
 

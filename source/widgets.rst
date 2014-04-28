@@ -8,7 +8,7 @@ Geppetto Widgets Tutorial
 
 Creating a Widget
 =================
-This tutorial will describe the steps needed start creating your own Geppetto Widget. To begin, you will want to set up a specific file and folder structure. Let’s say you are interested in creating a Geppetto Widget that can plot one or multiple Simulation Variables values in a chart. For example, let’s call it a “Chart” Widget. The first step would be to create the folder structure, which consists of a parent folder named after the Widget and multiple folders inside it for the controllers and vendor libraries.  Your folder structure should look something like this:
+This tutorial will describe the steps needed start creating your own Geppetto Widget. To begin, you will want to set up a specific file and folder structure. Let’s say you are interested in creating a Geppetto Widget that can plot one or multiple Simulation Variables values in a chart. For example, let’s call it a “Chart” Widget. The first step would be to create the folder structure, which consists of a parent folder named after the Widget and multiple folders inside it for the controllers and vendor libraries.  Your folder structure should look something like this: ::
 
  /chart                  
     /controllers        
@@ -79,7 +79,7 @@ When you have finished populating your chartModule array with your scripts, add 
   
 Folder Structure
 ----------------
-As an example, you have finished creating that widget named â€œChartâ€� for which you used an external library named â€œchartsplugin-1.0â€�. The folder structure of the widget should look like this. ::
+As an example, you have finished creating that widget named “Chart” for which you used an external library named “chartsplugin-1.0”. The folder structure of the widget should look like this: ::
 
     /chart
        -Chart.js
@@ -115,7 +115,7 @@ To do this, first add the type of your new widget to the global “Widgets” va
   		 CHART : 1
        };
 
-Inside the WidgetFactory.addWidget(widgetType) method, add a case inside the switch statement that connects it to your controllerâ€™s new widget method. For example:
+Inside the WidgetFactory.addWidget(widgetType) method, add a case inside the switch statement that connects it to your controller’s new widget method. For example:
 
 .. code-block:: javascript
 

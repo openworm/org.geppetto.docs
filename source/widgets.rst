@@ -104,7 +104,7 @@ Locate the file “src/main/webapp/js/main.js” and import your widget by addin
 
 Using a Widget Inside Geppetto
 ==============================
-If you would like to use your widget from the console within Geppetto, there are a few additional steps. First, you will need to expand the â€œWidgetFactory.jsâ€� class inside the frontend bundle to handle adding and removing your new widget via the console. 
+If you would like to use your widget from the console within Geppetto, there are a few additional steps. First, you will need to expand the “WidgetFactory.js” class inside the frontend bundle to handle adding and removing your new widget via the console. 
 
 To do this, first add the type of your new widget to the global “Widgets” variable. Simply add the name of your widget followed by the next number from the sequence of previously added widget types. The example “CHART,” would look like this:
 

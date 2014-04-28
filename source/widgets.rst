@@ -9,7 +9,7 @@ Geppetto Widgets Tutorial
 Creating a Widget
 =================
 
-This tutorial will describe the steps needed start creating your own Geppetto Widget. To begin, you will want to set up a specific file and folder structure. Let’s say you are interested in creating a Geppetto Widget that can plot one or multiple Simulation Variables values in a chart. For example, let’s call it a “Chart” Widget. The first step would be to create the folder structure, which consists of a parent folder named after the Widget and multiple folders inside it for the controllers and vendor libraries.  Your folder structure should look something like this. ::
+This tutorial will describe the steps needed start creating your own Geppetto Widget. To begin, you will want to set up a specific file and folder structure. Letâ€™s say you are interested in creating a Geppetto Widget that can plot one or multiple Simulation Variables values in a chart. For example, letâ€™s call it a â€œChartâ€� Widget. The first step would be to create the folder structure, which consists of a parent folder named after the Widget and multiple folders inside it for the controllers and vendor libraries. Â Your folder structure should look something like this. ::
 
  /chart                  
     /controllers        
@@ -39,6 +39,8 @@ Creating the Main Widget Class
 ------------------------------
 A superclass called `Widget.js <https://github.com/openworm/org.geppetto.frontend/blob/development/src/main/webapp/js/widgets/Widget.js#L43>`_ exists and this contains getters, setters and other global methods for properties that all widgets have, including name, position, id, size, and visibility. The widget class you will be creating extends this superclass. ::
 
+.. code-block:: javascript
+
    var Chart = Widget.View.extend({
    })
   
@@ -46,19 +48,33 @@ Next you will need to populate the class with methods corresponding to the funct
 
 Creating the Controller Class
 -----------------------------
-The Controller class regulates the handling of events received from Geppetto and how they interact with your widget. The WidgetsListener class, located in the “Widgets” folder, will already handle many of the event types shared among all widgets (e.g., those implemented in Widget.js superclass) including notifying all widgets about new updates. However, you should add an update method to your controller class to handle how updates are sent to the widgets. Other methods that can be added to the controller class are “addWidget()” and “removeWidget()”, which control the creation of your widgets. Take a look at the `PlotsController <https://github.com/openworm/org.geppetto.frontend/blob/development/src/main/webapp/js/widgets/plot/controllers/PlotsController.js#L49>`_ for an example of how to do this. 
+The Controller class regulates the handling of events received from Geppetto and how they interact with your widget. The WidgetsListener class, located in the “Widgets” folder, will already handle many of the event types shared among all widgets (e.g., those implemented in Widget.js superclass) including notifying all widgets about new updates. However, you should add an update method to your controller class to handle how updates are sent to the widgets. Other methods that can be added to the controller class are “addWidget()” and “removeWidget()”, which control the creation of your widgets. Take a look at the PlotsController for an example of how to do this. 
 
+.. code-block:: javascript
+
+	define(function(require) {
+	return function(GEPPETTO) {
+	
+		//Rest of Controller code
+		}	
+	}
+	
 Creating the config.js Class
 ----------------------------
 The purpose of having a config.js class inside your widget folder is to specify the libraries for the widget and be able to export them via this script. To export the libraries, use `requireJS library <http://requirejs.org/>`_, which allows scripts to load dynamically. If you want to add the files for the widget you just created, include the following lines in the config.js file. ::
 
-   var chartModule = [];
-   chartModule.push("chart/vendor/chartsplugin-1.0");
-   chartModule.push("chart/Chart");
-   chartModule.push("chart/controllers/ChartController");
+.. code-block:: javascript
 
-Where the array chartModule holds the path of all the JS libraries needed for the widget, the “.js” extension can be omitted when adding the scripts to the array, however, the omission is not required.  
-When you have finished populating your chartModule array with your scripts, add them to Geppetto using requireJS as in the example below. The function($) will be called once the scripts have been loaded successfully, at which time you will be able to load the CSS files for the widget. ::
+   var chartModule = [];
+	chartModule("widgets/chart/vendor/chartsplugin-1.0");
+	chartModule("widgets/chart/Chart");
+
+
+Where the array chartModule holds the path of all the JS libraries needed for the widget, the “.js” extension can be omitted when adding the scripts to the array, however, the omission is not required.  Notice that the controller class has been omitted for now, we will be adding that class as an AMD Module which is explained in the next section. 
+
+When you have finished populating your chartModule array with your scripts, add them to Geppetto using requireJS as in the example below. The function($) will be called once the scripts have been loaded successfully, at which time you will be able to load the CSS files for the widget. 
+
+.. code-block:: javascript
 
    require(chartModule, function($) {
       loadCss("js/widgets/chart/Chart.css");
@@ -66,7 +82,7 @@ When you have finished populating your chartModule array with your scripts, add 
   
 Folder Structure
 ----------------
-As an example, you have finished creating that widget named “Chart” for which you used an external library named “chartsplugin-1.0”. The folder structure of the widget should look like this. ::
+As an example, you have finished creating that widget named â€œChartâ€� for which you used an external library named â€œchartsplugin-1.0â€�. The folder structure of the widget should look like this. ::
 
     /chart
        -Chart.js
@@ -75,7 +91,7 @@ As an example, you have finished creating that widget named “Chart” for whic
        /controllers
          -ChartController.js
        /vendor
-         -chartsplugin-1.0.js</p></td>
+         -chartsplugin-1.0.j
   
 The folder named “chart” holds the main widget file “Chart.js” and the related CSS file. The “controllers” folder contains the class binding Geppetto with the widgets. Tthe “vendor” folder contains the external libraries used to create this widget.
 
@@ -83,22 +99,28 @@ Adding Widget to Geppetto
 =========================
 If you have structured your folder using the recommended structure from the `previous section <https://docs.google.com/a/metacell.us/document/d/160pXT0CProgY2xs5Y8zdHnVGZuV_X-A6ZWvYWnAIYDQ/edit#heading=h.5ncyvsoawo2>`_, you can then drop them inside the “widgets” folder located in the frontend bundle under “src/main/webapp/js”. 
 
-Locate the file “src/main/webapp/js/main.js” and import your widget by adding the location of the script using requireJS. Using our widget example above, we would add the following line to the config.js file. ::
+Locate the file “src/main/webapp/js/main.js” and import your widget by adding the location of the script using requireJS. Using our widget example above, we would add the following line to the config.js file.
 
-   require(“widgets/chart/config.js”, function($) {}); 
+.. code-block:: javascript
+
+	require(“widgets/chart/config.js”, function($) {});
 
 Using a Widget Inside Geppetto
 ==============================
-If you would like to use your widget from the console within Geppetto, there are a few additional steps. First, you will need to expand the “WidgetFactory.js” class inside the frontend bundle to handle adding and removing your new widget via the console. 
+If you would like to use your widget from the console within Geppetto, there are a few additional steps. First, you will need to expand the â€œWidgetFactory.jsâ€� class inside the frontend bundle to handle adding and removing your new widget via the console. 
 
-To do this, first add the type of your new widget to the global “Widgets” variable. Simply add the name of your widget followed by the next number from the sequence of previously added widget types. The example “CHART,” would look like this, ::
+To do this, first add the type of your new widget to the global â€œWidgetsâ€� variable. Simply add the name of your widget followed by the next number from the sequence of previously added widget types. The example â€œCHART,â€� would look like this, ::
+
+.. code-block:: javascript
 
    var Widgets = {
-       PLOT : 0,
-       CHART : 1
+  		 PLOT : 0,
+  		 CHART : 1
        };
 
-Inside the WidgetFactory.addWidget(widgetType) method, add a case inside the switch statement that connects it to your controller’s new widget method. For example: ::
+Inside the WidgetFactory.addWidget(widgetType) method, add a case inside the switch statement that connects it to your controllerâ€™s new widget method. For example: ::
+
+.. code-block:: javascript
 
   case Widgets.CHART:
        widget = ChartController.addChartWidget();
@@ -106,11 +128,15 @@ Inside the WidgetFactory.addWidget(widgetType) method, add a case inside the swi
 
 Follow the same logic for WidgetFactory.removeWidget(widgetType): ::
 
+.. code-block:: javascript
+
   case Widgets.CHART:
        widget = ChartController.removeChartWidget();
        break;
 
 Doing this will allow you to create new widgets from the console using the following commands: ::
+
+.. code-block:: javascript
 
   G.addWidget(Widgets.CHART);
   G.removeWidget(Widgets.CHART);

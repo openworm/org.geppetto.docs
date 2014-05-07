@@ -1,16 +1,17 @@
 
 
 
-Simulation File Document
+Geppetto Simulation File 
 =====================
 
+A Simulation file in Geppetto defines the entities, the models and the simulators for a specific simulation.
 This aim of this tutorial is to guide you through the process of creating a Simulation file that can be loaded in Geppetto.
 
 Getting Started
 ---------
 Simulations used within Geppetto are specified within an XML file, which follows a specific schema_
 
-.. _schema: https://github.com/openworm/org.geppetto.simulation/blob/master/src/main/resources/schema/simulationSchema.xsd
+.. _schema: https://github.com/openworm/org.geppetto.core/blob/master/src/main/resources/schema/simulation/simulationSchema.xsd
 
 .. code-block:: xml
 
@@ -116,37 +117,60 @@ The Simulation file starts with the head tag pointing to the different schema lo
 		    xsi:schemaLocation="http://www.openworm.org/simulationSchema ../../src/main/resources/schema/simulationSchema.xsd ">
     </tns:simulation>
 
-Then, inside the Simulation tag, you need to define; the configuration type of the file, name and entities. The configuration tag is used to define the output format of the Simulation, typically RAW format, the name does as the word suggests, and the entities define the different models for the simulation. A Simulation file must have at least one entity, but there’s no cap on the maximum amount it can have.
+The rest of the simulation file defines what entity exist in the project.
+
+An Entity is the basic building block of the simulated world and represents an instance of something which needs to be simulated. 
+An Entity can aggregate other Entities and can contain one or multiple Aspects. 
+Examples of entities are for instance a cell, a tissue, an organ, etc.
+
+An Aspect defines a particular characterization of an entity which is specified through a Model and a Simulator.
+Aspects can be thought of as domain specific descriptions of an Entity.
+A muscle cell for instance can be described by multiple aspects, one defining its electrical properties, one defining its mechanical structure, one for thermodynamics, etc.
+
+An Aspect is defined through a Model and a Simulator.
+A Model contains a URL which points to a specific domain model, e.g. a NeuroML file, and the id of the model interpreter which is capable of loading and visualizing it.
+A Simulator specifies the id of the Geppetto simulator which should be used to simulate the model.
+
+Entities are logical containers which make possible to describe the hierarchy that describe the system which we want to simulate.
+Geppetto is not strongly typed and an entity is solely described by its models and aggregated entities.
+
+A Simulation file must have at least one entity, but there’s no cap on the maximum amount it can have.
 
 .. code-block:: xml
 
     <?xml version="1.0" encoding="UTF-8"?>
     <tns:simulation xmlns:tns="http://www.openworm.org/simulationSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 		    xsi:schemaLocation="http://www.openworm.org/simulationSchema ../../src/main/resources/schema/simulationSchema.xsd ">
-        <tns:configuration>
-            <tns:outputFormat>RAW</tns:outputFormat>
-        </tns:configuration>
-        <tns:entities>
-            <tns:entity>
-            </tns:entity>
-        <tns:entities>
-        <tns:name>example1</tns:name>
+
+	<tns:entity>
+		<tns:id>hhcell</tns:id>
+		<tns:aspect>
+			<tns:id>electrical</tns:id>
+			<tns:simulator>
+				<tns:simulatorId>jLemsSimulator</tns:simulatorId>
+			</tns:simulator>
+			<tns:model>
+    				<tns:modelInterpreterId>lemsModelInterpreter</tns:modelInterpreterId>
+    				<tns:modelURL>https://raw.github.com/openworm/org.geppetto.samples/master/LEMS/SingleComponentHH/LEMS_NML2_Ex5_DetCell.xml</tns:modelURL>
+			</tns:model>
+		</tns:aspect>		
+	</tns:entity>
     </tns:simulation>
 
 
 Using Entities
 ---------------
-As explained in previous section, a Simulation can have multiple entities, and each entity can define multiple entities, they will form a tree structure. 
+As explained in previous section, a Simulation can have multiple entities, and each entity can contain multiple entities, forming a hierarchical tree structure. 
 
-The tags used to describe an entity are the following:
+The elements used to describe an entity are the following:
 
-- **ID** : Use to locate the entity, can be the name of entity as well
+- **ID** : Entity identifier
 
-- **aspect**: Defines the model and simulator of an entity, multiples aspects can be specified within an entity. Each aspect specifies a simulator and a model, which are used for the simulation. 
+- **aspect**: An Aspect specifies the Model and Simulator of an entity, multiples aspects can be specified within an entity. 
 
-- **simulator** : Defines the simulator use to run the entity via `<simulatorid>` inside the <simulator> tag.
+- **simulator** : Defines the simulator used to execute the Model associated to this aspect via `<simulatorid>` inside the <simulator> tag.
 
-- **model** : The model that defines the entity, points to an external URL for the model. Two tags are used for the model, `<modelURL>` which points to the URL and `<modelInterpreterId>` which is used to load the model.
+- **model** : The model that defines the entity, points to an external URL for the model. Two tags are used for the model, `<modelURL>` which points to the URL and `<modelInterpreterId>` which specifies the Geppetto module that will be used to load and visualize it.
 
 .. code-block:: xml
 

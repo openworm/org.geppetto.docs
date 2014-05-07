@@ -119,15 +119,15 @@ The Simulation file starts with the head tag pointing to the different schema lo
 
 The rest of the simulation file defines what entity exist in the project.
 
-An Entity is the basic building block of the simulated world and represents an instance of something which needs to be simulated. 
+An **Entity** is the basic building block of the simulated world and represents an instance of something which needs to be simulated. 
 An Entity can aggregate other Entities and can contain one or multiple Aspects. 
 Examples of entities are for instance a cell, a tissue, an organ, etc.
 
-An Aspect defines a particular characterization of an entity which is specified through a Model and a Simulator.
+An **Aspect** defines a particular characterization of an entity which is specified through a Model and a Simulator.
 Aspects can be thought of as domain specific descriptions of an Entity.
 A muscle cell for instance can be described by multiple aspects, one defining its electrical properties, one defining its mechanical structure, one for thermodynamics, etc.
 
-An Aspect is defined through a Model and a Simulator.
+An Aspect is defined through a **Model** and a **Simulator**.
 A Model contains a URL which points to a specific domain model, e.g. a NeuroML file, and the id of the model interpreter which is capable of loading and visualizing it.
 A Simulator specifies the id of the Geppetto simulator which should be used to simulate the model.
 
@@ -166,48 +166,77 @@ The elements used to describe an entity are the following:
 
 - **ID** : Entity identifier
 
-- **aspect**: An Aspect specifies the Model and Simulator of an entity, multiples aspects can be specified within an entity. 
+- **Aspect**: An Aspect specifies the Model and Simulator of an entity, multiples aspects can be specified within an entity. 
 
-- **simulator** : Defines the simulator used to execute the Model associated to this aspect via `<simulatorid>` inside the <simulator> tag.
+- **Simulator** : Defines the simulator used to execute the Model associated to this aspect via `<simulatorid>` inside the <simulator> tag.
 
-- **model** : The model that defines the entity, points to an external URL for the model. Two tags are used for the model, `<modelURL>` which points to the URL and `<modelInterpreterId>` which specifies the Geppetto module that will be used to load and visualize it.
+- **Model** : The Model that defines the specific aspect for a given entity. Two tags are used for the model, `<modelURL>` which points to the URL and `<modelInterpreterId>` which specifies the Geppetto module that will be used to load and visualize it.
+
+Below an example of nested entities where a Simulator is specified in the parent Entity, resulting in only one instance of the simulator responsible for executing all the models associated to the same aspect of the contained children entities.
 
 .. code-block:: xml
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <tns:simulation xmlns:tns="http://www.openworm.org/simulationSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-		    xsi:schemaLocation="http://www.openworm.org/simulationSchema ../../src/main/resources/schema/simulationSchema.xsd ">
-        <tns:configuration>
-            <tns:outputFormat>RAW</tns:outputFormat>
-        </tns:configuration>
-        <tns:entities>
-            <tns:entity>
-                <tns:id>muscle_cell</tns:id>
-                <tns:aspects>
-                    <tns:aspect>
-                        <tns:modelInterpreter>lemsModelInterpreter</tns:modelInterpreter>                                 
-                        <tns:modelURL>https://dl.dropboxusercontent.com/u/7538688/GeppettoSimulations/SingleComponentHH/LEMS_NML2_Ex5_DetCell.xml?dl=1</tns:modelURL>
-                        <tns:simulator>jLemsSimulator</tns:simulator>
-                        <tns:id>example1</tns:id>
-                        <tns:group>group1</tns:group>
-                    </tns:aspect>
-                    <tns:aspect>
-                        <tns:modelInterpreter>lemsModelInterpreter
-                        </tns:modelInterpreter>
-                        <tns:modelURL>https://dl.dropboxusercontent.com/u/7538688/GeppettoSimulations/SingleComponentHH/LEMS_NML2_Ex5_DetCell.xml?dl=1</tns:modelURL>
-                        <tns:simulator>jLemsSimulator</tns:simulator>
-                        <tns:id>example1</tns:id>
-                        <tns:group>group1</tns:group>
-                    </tns:aspect>
-                </tns:aspects>
-            </tns:entity>   
-        <tns:entities>
-        <tns:name>example1</tns:name>
-    </tns:simulation>
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:simulation xmlns:tns="http://www.openworm.org/simulationSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="../../main/resources/schema/simulationSchema.xsd">
+
+	<tns:entity>
+		<tns:id>network</tns:id>
+		<tns:aspect>
+			<tns:id>electrical</tns:id>
+			<tns:simulator>
+				<tns:simulatorId>jLemsSimulator</tns:simulatorId>
+			</tns:simulator>
+		</tns:aspect>
+		<tns:aspect>
+			<tns:id>mechanical</tns:id>
+			<tns:simulator>
+				<tns:simulatorId>sphSimulator</tns:simulatorId>
+			</tns:simulator>
+		</tns:aspect>
+		<tns:entity>
+			<tns:id>neuron1</tns:id>
+			<tns:aspect>
+				<tns:id>electrical</tns:id>
+				<tns:model>
+	    				<tns:modelInterpreter>lemsModelInterpreter</tns:modelInterpreter>
+	    				<tns:modelURL>https://raw.github.com/openworm/org.geppetto.samples/master/LEMS/SingleComponentHH/LEMS_NML2_Ex5_DetCell.xml</tns:modelURL>
+				</tns:model>
+			</tns:aspect>
+			<tns:aspect>
+				<tns:id>mechanical</tns:id>
+				<tns:model>
+	    				<tns:modelInterpreter>sphModelInterpreter</tns:modelInterpreter>
+	    				<tns:modelURL>https://raw.github.com/openworm/org.geppetto.samples/master/LEMS/SingleComponentHH/LEMS_NML2_Ex5_DetCell.xml</tns:modelURL>
+				</tns:model>
+			</tns:aspect>
+		</tns:entity>
+		<tns:entity>
+			<tns:id>neuron2</tns:id>
+			<tns:aspect>
+				<tns:id>mechanical</tns:id>
+				<tns:model>
+	    				<tns:modelInterpreter>sphModelInterpreter</tns:modelInterpreter>
+	    				<tns:modelURL>https://raw.github.com/openworm/org.geppetto.samples/master/LEMS/SingleComponentHH/LEMS_NML2_Ex5_DetCell.xml</tns:modelURL>
+				</tns:model>
+			</tns:aspect>
+			<tns:aspect>
+				<tns:id>electrical</tns:id>
+				<tns:model>
+	    				<tns:modelInterpreter>lemsModelInterpreter</tns:modelInterpreter>
+	    				<tns:modelURL>https://raw.github.com/openworm/org.geppetto.samples/master/LEMS/SingleComponentHH/LEMS_NML2_Ex5_DetCell.xml</tns:modelURL>
+				</tns:model>
+			</tns:aspect>
+
+		</tns:entity>
+	</tns:entity>
+</tns:simulation>
+
 Scripts
 ---------------
-You can specify a `<script>` tag within the root `<simulation>` tag. This tag should point to an external URL containing a javascript files with a set of Geppetto Commands_. The script will be executed right after the simulation is loaded, and the commands within the script executed in order one after another.
+You can specify a `<script>` element within the root `<simulation>` element which allows to specify an external URL containing a javascript file with a set of Geppetto Commands_. 
+The script will be executed right after the simulation is loaded, and the commands within the script executed in order one after another, see a Sample_ here.
 
+.. _Sample: https://github.com/openworm/org.geppetto.samples/blob/master/LEMS/SingleComponentHH/HH_Geppetto_Script.js
 .. _Commands: http://docs.geppetto.org/en/latest/intro.html#g-object-commands
   
 .. code-block:: xml

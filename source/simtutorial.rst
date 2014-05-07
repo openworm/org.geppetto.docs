@@ -117,7 +117,7 @@ The Simulation file starts with the head tag pointing to the different schema lo
 		    xsi:schemaLocation="http://www.openworm.org/simulationSchema ../../src/main/resources/schema/simulationSchema.xsd ">
     </tns:simulation>
 
-The rest of the simulation file defines what entity exist in the project.
+The rest of the simulation file defines what entities exist in the project.
 
 An **Entity** is the basic building block of the simulated world and represents an instance of something which needs to be simulated. 
 An Entity can aggregate other Entities and can contain one or multiple Aspects. 

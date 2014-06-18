@@ -7,19 +7,17 @@ These steps presume you have Java installed and have set your JAVA_HOME correctl
 Java 7 is required to run the latest version of Geppetto.
 
 Install OpenCL drivers:
-On Linux
-On Mac OS X (Should already be installed)
-On Windows (Should already be installed)
-Download Geppetto release and unpack the downloaded archive to a directory (${GEPPETTO_HOME} from here on)
-Start Geppetto ./${GEPPETTO_HOME}/bin/startup.sh (or .bat on Windows)
-Wait. After starting the Kernel there are a lot of things that have to happen to get the server started up. It could take few minutes. Watch the console output until it stops. Geppetto is now running on your machine.
-Point your browser to http://localhost:8080/org.geppetto.frontend/
-
+* On Linux
+  - On Mac OS X (Should already be installed)
+  - On Windows (Should already be installed)
+  - Download Geppetto release and unpack the downloaded archive to a directory (${GEPPETTO_HOME} from here on)
+* Start Geppetto ./${GEPPETTO_HOME}/bin/startup.sh (or .bat on Windows)
+* Wait. After starting the Kernel there are a lot of things that have to happen to get the server started up. It could take few minutes. Watch the console output until it stops. Geppetto is now running on your machine.
+* Point your browser to http://localhost:8080/org.geppetto.frontend/
 
 You can try loading any of the sample simulations, for instance:
-
-Small Fluid Hydrodynamics simulation consisting of 780 particles of liquid matter
-Single Hodgkin-Huxley neuron model described in NeuroML and simulated through jLEMS (plotting of two variables is automatically displayed, more can be plotted interacting with the console)
+* Small Fluid Hydrodynamics simulation consisting of 780 particles of liquid matter
+* Single Hodgkin-Huxley neuron model described in NeuroML and simulated through jLEMS (plotting of two variables is automatically displayed, more can be plotted interacting with the console)
 
 Common Issues
 =============

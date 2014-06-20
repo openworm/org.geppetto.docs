@@ -2,7 +2,7 @@
 Geppetto Installation Instructions
 **********************************
 
-These steps presume you have Java installed and have set your JAVA_HOME correctly to point at it. To set JAVA_HOME, you can use the following instructions: .. _Windows: https://confluence.atlassian.com/display/DOC/Setting+the+JAVA_HOME+Variable+in+Windows / .. _Linux: http://www.cyberciti.biz/faq/linux-unix-set-java_home-path-variable/
+These steps presume you have Java installed and have set your JAVA_HOME correctly to point at it. To set JAVA_HOME, you can use the following instructions: `Windows <https://confluence.atlassian.com/display/DOC/Setting+the+JAVA_HOME+Variable+in+Windows>`__ / `Linux <http://www.cyberciti.biz/faq/linux-unix-set-java_home-path-variable/>`__
 
 *Java 7* is required to run the latest version of Geppetto.
 

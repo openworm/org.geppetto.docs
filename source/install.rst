@@ -7,7 +7,7 @@ These steps presume you have Java installed and have set your JAVA_HOME correctl
 *Java 7* is required to run the latest version of Geppetto.
 
 Install OpenCL drivers:
-* On .. _Linux: https://github.com/openworm/org.geppetto.solver.sph/blob/master/INSTALL
+* On 'Linux <https://github.com/openworm/org.geppetto.solver.sph/blob/master/INSTALL>'_
   - On Mac OS X (Should already be installed)
   - On .. _Windows: https://software.intel.com/en-us/vcsource/tools/opencl-sdk (Should already be installed)
   - Download .. _Geppetto release: https://github.com/openworm/org.geppetto/releases/ and unpack the downloaded archive to a directory (${GEPPETTO_HOME} from here on)

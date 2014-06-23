@@ -136,7 +136,7 @@ Virgo can be shutdown using the command:
 	
 	virgo shutdown.sh
 
-For more info on Virgo's control scripts, see this [page](http://eclipse.org/virgo/documentation/virgo-documentation-2.1.1.RELEASE/docs/virgo-user-guide/htmlsingle/virgo-user-guide.html)
+For more info on Virgo's control scripts, see this `page <http://eclipse.org/virgo/documentation/virgo-documentation-2.1.1.RELEASE/docs/virgo-user-guide/htmlsingle/virgo-user-guide.html>`__
 
 If the startup is successful, you will be able to access Geppetto in your web browser at:
 

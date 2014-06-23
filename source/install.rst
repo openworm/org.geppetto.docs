@@ -10,7 +10,7 @@ Install OpenCL drivers:
 
 * On `Linux <https://github.com/openworm/org.geppetto.solver.sph/blob/master/INSTALL>`__
 * On Mac OS X (Should already be installed)
-* On `Windows <https://software.intel.com/en-us/vcsource/tools/opencl-sdk>__ (Should already be installed)
+* On `Windows <https://software.intel.com/en-us/vcsource/tools/opencl-sdk>`__ (Should already be installed)
 * Download `Geppetto release <https://github.com/openworm/org.geppetto/releases/>`__ and unpack the downloaded archive to a directory (${GEPPETTO_HOME} from here on)
 * Start Geppetto ./${GEPPETTO_HOME}/bin/startup.sh (or .bat on Windows)
 * Wait. After starting the Kernel there are a lot of things that have to happen to get the server started up. It could take few minutes. Watch the console output until it stops. Geppetto is now running on your machine.

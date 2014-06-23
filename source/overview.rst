@@ -125,7 +125,7 @@ The design artifacts of Geppetto are captured.
 Status
 ======
 
-Geppetto is currently in development. A version is 'released every month <https://github.com/openworm/org.geppetto/releases/>`__ with new added features.
+Geppetto is currently in development. A version is `released every month <https://github.com/openworm/org.geppetto/releases/>`__ with new added features.
 
 Feedback
 ========

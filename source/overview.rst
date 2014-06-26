@@ -42,7 +42,7 @@ A short tutorial explaining how to implement your own "Hello World" Geppetto bun
 Get the source
 ==============
 
-Here's an article that lists the different bundles (and relative repositories), and available demos as a combination of given bundles. `Instructions are available <https://dl.dropboxusercontent.com/u/6318167/GeppettoEclipseSetup.pdf>`__ for settin
+Here's an article that lists the different bundles (and relative repositories), and available demos as a combination of given bundles. `Instructions are available <https://dl.dropboxusercontent.com/u/6318167/GeppettoEclipseSetup.pdf>`__ for setting up an Eclipse-based development environment to build and run the contents of the `open source repositories <https://github.com/openworm/org.geppetto/blob/master/README.md>`__.
 
 Neuronal and fluid mechanics simulators
 =======================================
@@ -52,7 +52,7 @@ While the Geppetto platform is engineered with a generic framework capable of en
 Background
 ==========
 
-The decision to build Geppetto came after an analysis of the requirements for a platform to support a full-scale simulation of the C. elegans and potentially even more complex organisms in times to come.  Beside the functional requirements, Geppetto's goal is to move away from the common monolithic approach usually found in academic software projects.  Geppetto is an open source project and engineers, scientists and developers are welcome to contribute to its development by adding functionalities to existing plugins or writing new ones without having to deal with millions of lines of code with no clearly defined boundaries.
+The decision to build Geppetto came after an analysis of the requirements for a platform to support a full-scale simulation of the C. elegans and potentially even more complex organisms in times to come.  Beside the functional requirements, Geppetto's goal is to move away from the common monolithic approach usually found in academic software projects.  Geppetto is an `open source project <https://github.com/openworm/org.geppetto/blob/master/README.md>`__  and engineers, scientists and developers are welcome to contribute to its development by adding functionalities to existing plugins or writing new ones without having to deal with millions of lines of code with no clearly defined boundaries.
 
 Computational neuroscience has produced software systems, including NEURON and Genesis, that are extremely useful for simulating systems of neurons that include biophysical details (`Brette et al, 2007 <http://arxiv.org/abs/q-bio.NC/0611089>`__).  There also exist a range of other algorithms devised in other areas of computational biology (`Barnes & Chu, 2010 <http://g.ua/MhoV>`__) for which simulators have been produced (`Takahashi, 2004 <http://web.sfc.keio.ac.jp/~shafi/takahashi-thesis.pdf>`__).  Several investigations have pointed to the challenges in building a single system that integrates multiple simulation algorithms together into a single biological model (`Takahashi et al., 2002 <http://g.ua/Mhx1>`__, `Dada and Mendes, 2007 <http://dx.doi.org/10.1007/978-3-642-02879-3>`__ , `Cornelis et al., 2012 <http://g.ua/Mhxa>`__ ).  
 
@@ -115,12 +115,12 @@ Geppetto OSGi based bundles are deployed on the `Eclipse Virgo <http://www.eclip
 Architectural Concepts
 ======================
 
-You can check out this article for more information on Geppetto's architectural concepts.
+You can check out this article for more information on Geppetto's `architectural concepts <https://github.com/openworm/org.geppetto/blob/master/README.md>`__.
 
 Geppetto Design
 ===============
 
-The design artifacts of Geppetto are captured.
+The design artifacts of Geppetto are captured `here <https://github.com/openworm/org.geppetto/blob/master/README.md>`__.
 
 Status
 ======

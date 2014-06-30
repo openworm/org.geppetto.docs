@@ -14,6 +14,12 @@ Contents:
    intro
    widgets
    simtutorial
+   overview
+   concepts
+   osxlinuxsetup
+   install
+   designdocs
+   contribute
 
 
 

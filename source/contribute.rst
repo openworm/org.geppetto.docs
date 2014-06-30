@@ -1,3 +1,13 @@
+**********
+Contribute
+**********
+
+* Before reporting a bug
+* Where to report a bug
+* How to report a bug
+* How to contribute code to Geppetto
+* Geppetto contribution guidelines
+
 Before reporting a bug
 ======================
 

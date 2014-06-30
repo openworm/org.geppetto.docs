@@ -1,6 +1,6 @@
-
-List of Diagrams
-
+***********
+Design docs
+************
 
 * Overview of Geppetto components
 * Class diagram for the core meta-model in Geppetto

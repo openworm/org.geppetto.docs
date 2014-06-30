@@ -1,3 +1,15 @@
+*****************
+OSX / Linux Setup
+*****************
+
+* Install prerequisite software
+* Setup environment variables
+* Setup geppetto repositories
+* Using gitall.py
+* Building geppetto
+* Deploying geppetto
+* Starting / stopping Virgo
+
 Install prerequisite software
 =============================
 

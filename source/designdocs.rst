@@ -1,6 +1,6 @@
 ***********
 Design docs
-************
+***********
 
 * Overview of Geppetto components
 * Class diagram for the core meta-model in Geppetto
@@ -8,6 +8,9 @@ Design docs
 * Activity diagram illustrating the observer mode.
 * Sequence diagram illustrating the interactions during observer mode.
 * Sequence diagram illustrating the interactions between the frontend and the backend using the websockets protocol
+
+Diagrams
+========
 
 Note: All the diagrams are a work in progress!
 

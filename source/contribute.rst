@@ -1,8 +1,8 @@
 Before reporting a bug
 ======================
 
-# Search issue tracker for similar issues.
-# If you are running a local install check against `deployed version <live.geppetto.org>`__ to know if it's a local problem.
+#. Search issue tracker for similar issues.
+#. If you are running a local install check against `deployed version <live.geppetto.org>`__ to know if it's a local problem.
 
 Where to report a bug
 =====================
@@ -14,20 +14,20 @@ Where to report a bug
 How to report a bug
 ===================
 
-# Specify the version number of Geppetto where the bug occurred (the version number is written at the top of the console)
-# Specify your browser version, operating system, and graphics card. (for example, Chrome 23.0.1271.95, Windows 7, Nvidia Quadro 2000M)
-# Describe the problem in detail. Explain what happened, and what you expected would happen.
-# If applicable provide a small test-case in the form of console commands that lead to the issue. To get the list of the commands that have been issued to Geppetto type in the console at any time `G.copyHistoryToClipboard()`
-# If helpful, include a screenshot. Annotate the screenshot for clarity.
+#. Specify the version number of Geppetto where the bug occurred (the version number is written at the top of the console)
+#. Specify your browser version, operating system, and graphics card. (for example, Chrome 23.0.1271.95, Windows 7, Nvidia Quadro 2000M)
+#. Describe the problem in detail. Explain what happened, and what you expected would happen.
+#. If applicable provide a small test-case in the form of console commands that lead to the issue. To get the list of the commands that have been issued to Geppetto type in the console at any time `G.copyHistoryToClipboard()`
+#. If helpful, include a screenshot. Annotate the screenshot for clarity.
 
 How to contribute code to Geppetto
 ==================================
 
-# Make sure you have a GitHub account.
-# Fork the repository you want to contribute to on GitHub.
-# Make changes to your clone of the repository.
-# Ensure Geppetto contribution guidelines below are respected.
-# Submit a pull request.
+#. Make sure you have a GitHub account.
+#. Fork the repository you want to contribute to on GitHub.
+#. Make changes to your clone of the repository.
+#. Ensure Geppetto contribution guidelines below are respected.
+#. Submit a pull request.
 
 Geppetto contribution guidelines
 ================================

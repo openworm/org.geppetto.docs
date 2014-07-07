@@ -15,8 +15,8 @@ Prerequisite software
 
 You need a bunch of other software to run Geppetto. The good news: You probably have some of this on your machine already!
 
-Both
-----
+OSX and Linux
+-------------
 
 * Java SE Development Kit 7
 
@@ -31,10 +31,7 @@ Both
 OSX
 ---
 
-* *`homebrew <http://brew.sh/>`_*:
-    ```bash
-    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-    ```
+* *homebrew* (see `here <http://brew.sh/>`_): ``bash ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"``
 
 * *Maven*: ``brew install maven``
 
@@ -72,11 +69,11 @@ Create variables with the following names and values, or look if they already ex
 
 You can do this for example in .bashrc with:
 
-	``export MVN_HOME="$(brew --prefix maven)/libexec"
+	``export MVN_HOME="$(brew --prefix maven)/libexec"``
 
-	export JAVA_HOME="$(/usr/libexec/java_home)"
+	``export JAVA_HOME="$(/usr/libexec/java_home)"``
 
-	export SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server-3.6.2.RELEASE)"``
+	``export SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server-3.6.2.RELEASE)"``
 
 Maven needs to build with Java 7. If you want to point your JAVA_HOME variable to a different version, create a file *.mavenrc* in your home directory that contains: 
 
@@ -142,11 +139,11 @@ This will copy all of the built jars and wars over to %SERVER_HOME%/repository/u
 Starting and Stopping Virgo
 ===========================
 
-The Virgo server is started and stopped via shell scripts in $SERVER_HOME/bin. To run these in the terminal, it is easiest to create a function in *.bashrc* that proxies commands to the scripts:
+The Virgo server is started and stopped via shell scripts in $SERVER_HOME/bin. To run these in the terminal, it is easiest to create a function in *.bashrc* that proxies commands to the scripts::
 
-	``function virgo() {
+	function virgo() {
     		bash $SERVER_HOME/bin/$1
-	}``
+	}
 
 Then Virgo can be started using the command:
 	

@@ -1,4 +1,3 @@
-****************************************************
 Instructions for setting up Geppetto on Eclipse Juno
 ****************************************************
 
@@ -7,12 +6,12 @@ Last Update: July 26th 2013
 If you have any problems following this documentation please email openworm-discuss@googlegroups.com
 
 BLUE PILL
-=========
+---------
 
 We created `eclipse distributions <http://blog.openworm.org/post/31859097261/openworm-eclipse-distributions-released>`__ for the OpenWorm project with all the plugins already installed. You can download this, skip all the plugin install steps below (except source control plugin EGit) and go straight to `Now you can install Geppetto sources <https://docs.google.com/a/metacell.us/document/d/1UPfS5UbQ9z61EJ4Uf6saivSy8IR4JHoyQO38FY66ifE/edit#bookmark=id.4hjcg1t9izg0>`__.
 
 RED PILL
-========
+--------
 
 * Install Eclipse Juno for J2EE
 

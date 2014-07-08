@@ -59,5 +59,45 @@ search for “m2e” and install it
 Now you can install Geppetto Sources
 
 
+Install Geppetto Sources
+************************
+
+BLUE PILL
+---------
+
+We created a Python script to download Virgo Tomcat and clone all the repositories from Git automatically, the script is available here. If you use the script you can skip to here once you have created your Eclipse workspace and manually imported all the bundles into it one by one (File->Import-> “Import Existing project into workspace” and follow the instructions).
+
+RED PILL
+--------
+
+Install Virgo Tomcat Server (skip if you have taken the red pill to install Eclipse)
+
+* `http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.czip <http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.czip>`__
+
+
+After all the tools are installed you can import the geppetto bundles you are interested in from GitHub (`https://github.com/openworm <https://github.com/openworm>`__).
+
+To do so go to File -> Import -> Git -> Projects from GitHub repository and type “org.geppetto”, select the bundles and click Finish, this will add all the Geppetto repositories to your workspace.  (Unfortunately it is not possible to select all the bundles at once so they will have to be clones one by one). The bundles needed for Geppetto are:
+
+* Essential
+
+  * org.geppetto.core 
+  * org.geppetto.simulation 
+  * org.geppetto.frontend 
+
+* Domain Specific
+
+  * Neuronal simulation
+
+    * org.geppetto.model.neuroml 
+    * org.geppetto.simulator.jlems 
+
+  * Fluid mechanics simulation
+
+    * org.geppetto.model.sph 
+    * org.geppetto.solver.sph 
+    * org.geppetto.simulator.sph
+    
+
 
 

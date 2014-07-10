@@ -38,3 +38,6 @@ Figure 5 - Sequence diagram illustrating the interactions during observer mode.
 
 Figure 6 - Sequence diagram illustrating the interactions between the frontend and the backend using the websockets protocol.
 
+.. image:: https://www.lucidchart.com/publicSegments/view/53bd1f09-3f80-4669-98c4-4cc40a00d13f/image.png
+
+Figure 7 - Sequence diagram illustrating the event (context menu) framework

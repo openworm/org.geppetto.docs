@@ -81,7 +81,7 @@ In Windows Explorer, navigate to <source directory>\\org.geppetto\\utilities\\al
 
 Go back to your command prompt and enter:
 
-	``cd org.geppetto\\utilities\\all_os_utils``
+	``cd org.geppetto\utilities\all_os_utils``
 
 You are now in the all_os_utils folder, which contains some handy scripts. First, run the setup.py script:
 
@@ -109,7 +109,7 @@ Deploying Geppetto
 
 To deploy Geppetto to the Virgo server, navigate your command prompt again to the all_os_utils directory by typing:
 
-	``cd utilities\\all_os_utils``
+	``cd utilities\all_os_utils``
 
 Then run:
 

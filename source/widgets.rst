@@ -5,6 +5,8 @@ Geppetto Widgets Tutorial
  * Creating a Widget
  * Adding Widget to Geppetto
  * Using a Widget Inside Geppetto
+ * Contributing to other widgets
+ * Allow other widgets to contribute to my widget
 
 Creating a Widget
 =================

@@ -16,6 +16,7 @@ Contents:
    simtutorial
    overview
    concepts
+   windowssetup
    osxlinuxsetup
    install
    designdocs

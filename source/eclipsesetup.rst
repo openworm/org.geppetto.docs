@@ -131,7 +131,7 @@ You now need to create an instance of a Virgo Tomcat Webserver. Here’s how:
 
 That’s it folks, right click on the server and choose start, you will see in the console all the bundles getting loaded up and you should see no errors. At the end of the process your server will be up and running, so just point your browser to: 
 
-`127.0.0.1:8080/org.geppetto.frontend/ <127.0.0.1:8080/org.geppetto.frontend/>`__ 
+`127.0.0.1:8080/org.geppetto.frontend/ <http://127.0.0.1:8080/org.geppetto.frontend/>`__ 
 
 Click the load simulation button and copy-pasting one of the following URLs in the text box (or pick one of the available samples from the drop-down) and then hit load (these are sample fluid dynamics simulations):
 

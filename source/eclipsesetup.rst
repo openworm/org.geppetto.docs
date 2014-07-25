@@ -118,14 +118,14 @@ Create Virgo Server using Eclipse Virgo tooling
 
 You now need to create an instance of a Virgo Tomcat Webserver. Here’s how:
 
-# Help -> Install New Software
-# Work With -> “Virgo Tooling”
-# Select all the packages and install them
-# Windows -> Show View -> Servers
-# From the new view create a new Virgo Runtime server (New Servers Wizard -> EclipseRT ->Virgo runtime)
-# Name it anything you like
-# For installation directory use the “ virgo-tomcat-server” folder that was downloaded by the python script (if you used the python script to get it). If not, point to your virgo tomcat server install, eg /opt/virgo-tomcat-serve-VERSION-NUMBER
-# Once the server is created right click on it and choose add, select all the bundles you wish to deploy and that’s it, at the end of this step you should have no errors on the bundles.
+* Help -> Install New Software
+* Work With -> “Virgo Tooling”
+* Select all the packages and install them
+* Windows -> Show View -> Servers
+* From the new view create a new Virgo Runtime server (New Servers Wizard -> EclipseRT ->Virgo runtime)
+* Name it anything you like
+* For installation directory use the “ virgo-tomcat-server” folder that was downloaded by the python script (if you used the python script to get it). If not, point to your virgo tomcat server install, eg /opt/virgo-tomcat-serve-VERSION-NUMBER
+* Once the server is created right click on it and choose add, select all the bundles you wish to deploy and that’s it, at the end of this step you should have no errors on the bundles.
 
 .. image:: http://i.imgur.com/mucT88s.png?1
 

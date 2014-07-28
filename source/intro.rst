@@ -270,6 +270,40 @@ Check our JS documentation for more plot commands_
 
  .. _commands: http://54.200.254.75:8080/org.geppetto.frontend/jsdocs/global.html#Plot
 
+Entity Commands
+--------
+*EntityNode represents a general case, to use commands on own entity replace "EntityNode" by the name 
+of the entity, you will be able to access commands this way.
+
+.. code-block:: javascript
+      
+      -- EntityNode.hide()
+         Hides the entity
+
+      -- EntityNode.show()
+         Shows the entity
+
+      -- EntityNode.unselect()
+         Unselects the entity
+
+      -- EntityNode.select()
+         Selects the entity
+
+      -- EntityNode.zoomTo()
+         Zooms to entity
+
+      -- EntityNode.getId()
+         Get the id associated with entity
+         @returns {String} - ID of entity
+
+      -- EntityNode.getAspects()
+         Get this entity's aspects
+         @returns {List<Aspect>} - List of aspects
+
+      -- EntityNode.getEntities()
+         Get this entity's children entities
+         @returns {List<Aspect>} - List of aspects         
+
 Clipboard
 ---------
 From the console, use the following command to open a clipboard and copy the console history.

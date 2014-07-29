@@ -8,12 +8,25 @@ Welcome to Geppetto's documentation!
 
 Contents:
 
+##################
+User Documentation
+##################
+
 .. toctree::
    :maxdepth: 2
    
-   intro
+   usinggeppetto
    widgets
    simtutorial
+   install
+
+#######################
+Developer Documentation
+#######################
+
+.. toctree::
+   :maxdepth: 2
+   
    overview
    concepts
    windowssetup
@@ -22,7 +35,6 @@ Contents:
    install
    designdocs
    contribute
-
 
 
 Indices and tables

@@ -18,6 +18,7 @@ Contents:
    concepts
    windowssetup
    osxlinuxsetup
+   eclipsesetup
    install
    designdocs
    contribute

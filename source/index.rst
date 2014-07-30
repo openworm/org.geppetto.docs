@@ -6,6 +6,9 @@
 Welcome to Geppetto's documentation!
 ====================================
 
+If you are looking for instructions on how to use Geppetto, check out our documentation for users.
+
+If you are looking to contribute as a developer to Geppetto, check out our documentation for developers.
 
 .. toctree::
    :maxdepth: 3

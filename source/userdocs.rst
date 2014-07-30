@@ -1,6 +1,6 @@
-##################
-User Documentation
-##################
+#########
+For Users
+#########
 
 .. toctree::
    :maxdepth: 2

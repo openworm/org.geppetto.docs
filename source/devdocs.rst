@@ -1,15 +1,15 @@
-#######################
-Developer Documentation
-#######################
+##############
+For developers
+##############
 
 .. toctree::
    :maxdepth: 2
    
    overview
    concepts
+   designdocs
+   contribute
    windowssetup
    osxlinuxsetup
    eclipsesetup
-   install
-   designdocs
-   contribute
+

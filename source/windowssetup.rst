@@ -2,13 +2,13 @@
 Source Setup on Windows
 ***********************
 
-This will tell you how to get the Geppetto source code and build it on a Windows machine. 
+This will tell you how to get the Geppetto source code and build it on a Windows machine (`Windows? I'm on OSX/Linux! <http://docs.geppetto.org/en/latest/osxlinuxsetup.html>`_). 
 
-You might also want to have a look at the install instructions for the `release version <http://docs.geppetto.org/en/latest/install.html>`_ of Geppetto or at the instructions for `OSX and Linux <http://docs.geppetto.org/en/latest/osxlinuxsetup.html>`_.
+It might be a good idea to test the `release version <http://docs.geppetto.org/en/latest/install.html>`_ of Geppetto on your system before you move on.
 
-Still here? Cool, let's get started!
+Already did that? Cool, let's get started!
 
-Psst: If you get stuck at any point, drop us a line at the `OpenWorm-discuss mailing list <https://groups.google.com/forum/#!forum/openworm-discuss>`_ or the contact formular on the `Geppetto website <http://www.geppetto.org/>`_.
+Psst: If you get stuck at any point, drop us a line at the `OpenWorm-discuss mailing list <https://groups.google.com/forum/#!forum/openworm-discuss>`_ or the contact formular on the `Geppetto website <http://www.geppetto.org/>`_. You can also send us screenshots and log files!
 
 Prerequisite software
 =====================
@@ -25,9 +25,9 @@ You need a bunch of other software to run Geppetto. The good news: You probably 
 
 * *OpenCL*: You can use `GPU Caps viewer <http://www.softpedia.com/get/Tweak/Video-Tweak/GPU-Caps-Viewer.shtml>`_ to check whether OpenCL (version 1.2) is already installed (tip: you can run some nice demos at the bottom of the OpenCL tab). If it is not there, update the driver of your graphics card to the newest version (`Intel <http://www.intel.com/p/en_US/support/detect/graphics>`_ and `Nvidia <http://www.nvidia.com/Download/index.aspx?lang=en-us>`_). Then, install the Intel SDK for OpenCL Applications (`Installer <https://software.intel.com/en-us/vcsource/tools/opencl-sdk>`_). Use GPU Caps viewer again to check that everything works. 
 
-* *Maven*: `ZIP file <http://maven.apache.org/download.cgi>`_, follow these `instructions <http://maven.apache.org/download.cgi#Installation>`_ and set the environment variables accordingly (more information on environment variables below)
+* *Maven*: `ZIP file <http://maven.apache.org/download.cgi>`_, please follow `these instructions <http://maven.apache.org/download.cgi#Installation>`_ - particularly, you have to set the M2 environment variable accordingly (What are environment variables? See below)
 
-* *git*: `Installer <http://git-scm.com/download/win>`_
+* *git*: `Installer <http://git-scm.com/download/win>`_, make sure to select "Use Git from the Windows Command Prompt" during the installation
 
 * *Apache Tomcat*: `All Downloads <http://tomcat.apache.org/index.html>`_, use the 32-bit/64-bit Windows Service Installer
 
@@ -52,9 +52,9 @@ Create variables with the following names and values, or look if they already ex
 
 Maven needs to build with Java 7. If you want to point your JAVA_HOME variable to a different version, create a file *mavenrc_pre.bat* in your home directory that contains: 
 
-	``JAVA_HOME=<path to Java 7>``
+	``JAVA_HOME=path\to\Java7``
 
-Next, you have to modify the PATH variable. This will allow you and Geppetto to run several programs from the command prompt. You may see that the PATH variable exist twice: Once as a user variable, once as a system variable. Use the one where the variables above belong to. Select it and click on edit. Append the following strings to the value field, seperated by semicolons:
+Next, you have to modify the PATH variable. This will allow you and Geppetto to run several programs from the command prompt. You may see that the PATH variable exists twice: Once as a user variable, once as a system variable. Use the one where the variables above belong to (and if it doesn't exist, create it). Select it and click on edit. Append the following strings to the value field, seperated by semicolons:
 
 * %JAVA_HOME%
 
@@ -64,30 +64,30 @@ Next, you have to modify the PATH variable. This will allow you and Geppetto to 
 
 * %PYTHON_HOME%\\Scripts
 
-OK, that was everything you need, let's get the source code now.
+Make sure that there is no semicolon at the end of the path variable. OK, that was everything you need, let's get the source code now.
 
 Setup Geppetto Repositories
 ===========================
 
-First, create a directory where you want the Geppetto source code to live (<source directory> from now on). Open up the command prompt (cmd.exe) and navigate to it by typing:
+First, create a directory where you want the Geppetto source code to live (geppetto-sources from here on). Open up the command prompt (cmd.exe) and navigate to it by typing:
 
-	``cd <source directory>``
+	``cd geppetto-sources``
 
 Once there, clone the org.geppetto repository from GitHub by entering:
 
 	``git clone https://github.com/openworm/org.geppetto.git``
 
-In Windows Explorer, navigate to <source directory>\\org.geppetto\\utilities\\all_os_utils. Open the *config.json* file in a text editor and change the value of the *sourcesdir* field to the path of your source directory (use \\\\ as separators).
+In Windows Explorer, navigate to geppetto-sources\\org.geppetto\\utilities\\source_setup. Open the *config.json* file in a text editor and change the value of the *sourcesdir* field to the path of your source directory (use \\\\ as separators).
 
 Go back to your command prompt and enter:
 
-	``cd org.geppetto\utilities\all_os_utils``
+	``cd org.geppetto\utilities\source_setup``
 
-You are now in the all_os_utils folder, which contains some handy scripts. First, run the setup.py script:
+You are now in the source_setup folder, which contains some handy scripts. First, run the setup.py script:
 
 	``python setup.py``
 
-This will copy all of the required repositories to your source directory. Make sure that you have writing permissions for it. If a repository is missing, check that it is entered correctly in *config.json*.
+This will copy all of the required repositories to geppetto-sources. Make sure that you have writing permissions for it. If a repository is missing, check that it is entered correctly in *config.json*.
 
 Building Geppetto
 =================
@@ -107,9 +107,9 @@ This will build all of the Geppetto modules at once. As you do development, you 
 Deploying Geppetto
 ==================
 
-To deploy Geppetto to the Virgo server, navigate your command prompt again to the all_os_utils directory by typing:
+To deploy Geppetto to the Virgo server, navigate your command prompt again to the source_setup directory by typing:
 
-	``cd utilities\all_os_utils``
+	``cd utilities\source_setup``
 
 Then run:
 
@@ -137,7 +137,7 @@ Using gitall.py
 
 The gitall.py script allows you to perform git commands on all repositories at once. This makes it easier to maintain the state of the many repos required by Geppetto.
 
-To use it, navigate your command prompt to the all_os_utils folder and type:
+To use it, navigate your command prompt to the source_setup folder and type:
 
 	``python gitall.py branches``:
 		print the current branch of each repo

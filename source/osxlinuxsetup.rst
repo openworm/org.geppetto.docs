@@ -2,13 +2,13 @@
 Source Setup on OSX and Linux
 *****************************
 
-This will tell you how to get the Geppetto source code and build it on a Linux and OS X machine. 
+This will tell you how to get the Geppetto source code and build it on a OSX and Linux machine (`OSX? Linux? I'm on Windows! <http://docs.geppetto.org/en/latest/osxlinuxsetup.html>`_). 
 
-You might also want to have a look at the install instructions for the `release version <http://docs.geppetto.org/en/latest/install.html>`_ of Geppetto or at the instructions for `Windows <http://docs.geppetto.org/en/latest/windowssetup.html>`_.
+It might be a good idea to test the `release version <http://docs.geppetto.org/en/latest/install.html>`_ of Geppetto on your system before you move on.
 
-Still here? Cool, let's get started!
+Already did that? Cool, let's get started!
 
-Psst: If you get stuck at any point, drop us a line at the `OpenWorm-discuss mailing list <https://groups.google.com/forum/#!forum/openworm-discuss>`_ or the contact formular on the `Geppetto website <http://www.geppetto.org/>`_.
+Psst: If you get stuck at any point, drop us a line at the `OpenWorm-discuss mailing list <https://groups.google.com/forum/#!forum/openworm-discuss>`_ or the contact formular on the `Geppetto website <http://www.geppetto.org/>`_. You can also send us screenshots and log files!
 
 Prerequisite software
 =====================
@@ -84,29 +84,29 @@ OK, that was everything you need, let's get the source code now.
 Setup Geppetto Repositories
 ===========================
 
-First, create a directory where you want the Geppetto source code to live (<source directory> from now on). Open up the shell and navigate to it by typing:
+First, create a directory where you want the Geppetto source code to live (geppetto-sources from now on). Open up the shell and navigate to it by typing:
 
-	``cd <source directory>``
+	``cd geppetto-sources``
 
 Once there, clone the org.geppetto repository from GitHub by entering:
 
 	``git clone https://github.com/openworm/org.geppetto.git``
 
-Navigate your shell to the osx_utils directory by typing:
+Navigate your shell to the source_setup directory by typing:
 
-	``cd org.geppetto/utilities/osx_utils``
+	``cd org.geppetto/utilities/source_setup``
 
-Alternatively, copy the contents of osx_utils to a convenient directory of your choice:
+Alternatively, copy the contents of source_setup to a convenient directory of your choice:
 
-	``cp -r org.geppetto/utilities/osx_utils/* <some other location>``
+	``cp -r org.geppetto/utilities/source_setup/* <some other location>``
 
 Open the *config.json* file in a text editor and change the value of the *sourcesdir* field to the path of your source directory.
 
-The osx_utils folder contains some handy scripts. First, run the setup.py script:
+The source_setup folder contains some handy scripts. First, run the setup.py script:
 
 	``./setup``
 
-This will copy all of the required repositories to your source directory. Make sure that you have writing permissions for it. If a repository is missing, check that it is entered correctly in *config.json*.
+This will copy all of the required repositories to geppetto-sources. Make sure that you have writing permissions for it. If a repository is missing, check that it is entered correctly in *config.json*.
 
 Building Geppetto
 =================
@@ -126,9 +126,9 @@ This will build all of the Geppetto modules at once. As you do development, you 
 Deploying Geppetto
 ==================
 
-To deploy Geppetto to the Virgo server, navigate your shell again to the osx_utils directory by typing:
+To deploy Geppetto to the Virgo server, navigate your shell again to the source_setup directory by typing:
 
-	``cd utilities/osx_utils``
+	``cd utilities/source_setup``
 
 Then run:
 
@@ -168,7 +168,7 @@ Using gitall.py
 
 The gitall.py script allows you to perform git commands on all repositories at once. This makes it easier to maintain the state of the many repos required by Geppetto.
 
-To use it, navigate your shell to the osx_utils folder and type:
+To use it, navigate your shell to the source_setup folder and type:
 
 	``./gitall branches``:
 		print the current branch of each repo

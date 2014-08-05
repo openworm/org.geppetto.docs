@@ -11,16 +11,7 @@ If you are looking for instructions on how to use Geppetto, check out our docume
 If you are looking to contribute as a developer to Geppetto, check out our documentation for developers.
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    
    userdocs
    devdocs
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-

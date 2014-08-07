@@ -6,7 +6,7 @@
 Welcome to Geppetto's documentation
 ===================================
 
-.. image:: images/widgets/geppettologo.png
+.. image:: images/geppettologo.png
 
 Geppetto is a web-based multi-algorithm, multi-scale simulation platform engineered to support the simulation of complex biological systems and their surrounding environment.
 

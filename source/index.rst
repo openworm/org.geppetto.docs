@@ -17,7 +17,7 @@ Geppetto is a **web-based** multi-algorithm, multi-scale simulation platform eng
 `Download the latest version <https://github.com/openworm/org.geppetto/releases/>`__
 
 .. image:: images/ornament.png
-   :align: right
+   :align: center
 
 If you are looking for instructions on how to use Geppetto, check out our user documentation.
 

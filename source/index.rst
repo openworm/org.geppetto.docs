@@ -13,6 +13,7 @@ Introduction
 Geppetto is a **web-based** multi-algorithm, multi-scale simulation platform engineered to support the simulation of **complex biological systems** and their surrounding environment. Geppetto's integrative approach to biological modeling is at the heart of the `Open Worm project <http://www.openworm.org/>`__.
 
 `Live deployment <https://live.geppetto.org>`__
+
 `Download the latest version <https://github.com/openworm/org.geppetto/releases/>`__
 
 If you are looking for instructions on how to use Geppetto, check out our user documentation.
@@ -28,21 +29,25 @@ If you are a developer interested in contributing to Geppetto, check out our dev
 Screenshots
 ===========
 
-.. image:: https://dl.dropboxusercontent.com/u/7538688/GeppettoSShots/Screen%20Shot%202013-09-09%20at%2013.56.38.png
+.. image:: images/sshots/ss1.png
 
 Screenshot 1 - Simulation of a single compartment Hodgkin-Huxley neuronal model in `NeuroML <http://neuroml.org/>`__ using the `jLEMS <http://www.neuroml.org/lems/>`__ based neuronal module
 
-.. image:: https://dl.dropboxusercontent.com/u/7538688/GeppettoSShots/Screen%20Shot%202013-09-02%20at%2015.02.28.png
+.. image:: images/sshots/ss2.png
 
 Screenshot 2 - Particle visualisation of a liquid in Geppetto simulated using the fluid dynamics module.
 
-.. image:: https://dl.dropboxusercontent.com/u/7538688/GeppettoSShots/Screen%20Shot%202013-09-16%20at%2013.44.53.png
+.. image:: images/sshots/ss3.png
 
-Screenshot 3 - Visualisation of a Purkinje cell in `NeuroML <http://neuroml.org/>`__ from `Open Source Brain <http://opensourcebrain.org/projects/purkinjecell>`__
+Screenshot 3 - Simulation of a network of single compartment neurons for the C.elegans built by the OpenWorm project.
 
-.. image:: https://dl.dropboxusercontent.com/u/7538688/GeppettoSShots/Screen%20Shot%202013-09-16%20at%2016.38.09.png
+.. image:: images/sshots/ss4.png
 
-Screenshot 4 - Visualisation of a `Neuromorpho project <http://neuromorpho.org/neuroMorpho/neuron_info.jsp?neuron_name=dCH-cobalt>`__ converted in in `NeuroML <http://neuroml.org/>`__ from `Open Source Brain <http://opensourcebrain.org/projects/purkinjecell>`__
+Screenshot 4 - Visualisation of the realistic morphology of a Ganglion cell reconstructed using `EyeWire <https://eyewire.org>`__.
+
+.. image:: images/sshots/ss5.png
+
+Screenshot 5 - Visualisation of a Purkinje cell in `NeuroML <http://neuroml.org/>`__ from `Open Source Brain <http://opensourcebrain.org/projects/purkinjecell>`__
 
 Users
 =====

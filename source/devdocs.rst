@@ -6,10 +6,11 @@ For Developers
    :maxdepth: 2
    
    overview
-   concepts
-   designdocs
    contribute
    windowssetup
    osxlinuxsetup
    eclipsesetup
+   concepts
+   designdocs
+   widgets
 

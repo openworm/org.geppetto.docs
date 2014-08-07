@@ -65,5 +65,5 @@ Geppetto is currently used and contributed to by the following groups:
 
 .. image:: images/ornament.png
    :align: center
-
+|
 

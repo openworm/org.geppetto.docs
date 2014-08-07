@@ -65,7 +65,8 @@ Contact us
 ==========
 
 You can reach out to us at info@geppetto.org.
-Follow us on `Twitter <https://twitter.com/GeppettoEngine>`__
+
+Follow us on `Twitter <https://twitter.com/GeppettoEngine>`__!
 
 .. image:: images/symbol.png
    :align: center

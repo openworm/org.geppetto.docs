@@ -7,8 +7,8 @@ For Developers
    
    overview
    contribute
-   windowssetup
    osxlinuxsetup
+   windowssetup
    eclipsesetup
    concepts
    designdocs

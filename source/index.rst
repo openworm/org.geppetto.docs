@@ -31,23 +31,23 @@ Screenshots
 
 .. image:: images/sshots/ss1.png
 
-Screenshot 1 - Simulation of a single compartment Hodgkin-Huxley neuronal model in `NeuroML <http://neuroml.org/>`__ using the `jLEMS <http://www.neuroml.org/lems/>`__ based neuronal module
+**Screenshot 1** - Simulation of a single compartment Hodgkin-Huxley neuronal model in `NeuroML <http://neuroml.org/>`__ using the `jLEMS <http://www.neuroml.org/lems/>`__ based neuronal module
 
 .. image:: images/sshots/ss2.png
 
-Screenshot 2 - Particle visualisation of a liquid in Geppetto simulated using the fluid dynamics module.
+**Screenshot 2** - Particle visualisation of a liquid in Geppetto simulated using the fluid dynamics module.
 
 .. image:: images/sshots/ss3.png
 
-Screenshot 3 - Simulation of a network of single compartment neurons for the C.elegans built by the OpenWorm project.
+**Screenshot 3** - Simulation of a network of single compartment neurons for the C.elegans built by the OpenWorm project.
 
 .. image:: images/sshots/ss4.png
 
-Screenshot 4 - Visualisation of the realistic morphology of a Ganglion cell reconstructed using `EyeWire <https://eyewire.org>`__.
+**Screenshot 4** - Visualisation of the realistic morphology of a Ganglion cell reconstructed using `EyeWire <https://eyewire.org>`__.
 
 .. image:: images/sshots/ss5.png
 
-Screenshot 5 - Visualisation of a Purkinje cell in `NeuroML <http://neuroml.org/>`__ from `Open Source Brain <http://opensourcebrain.org/projects/purkinjecell>`__
+**Screenshot 5** - Visualisation of a Purkinje cell in `NeuroML <http://neuroml.org/>`__ from `Open Source Brain <http://opensourcebrain.org/projects/purkinjecell>`__
 
 Users
 =====

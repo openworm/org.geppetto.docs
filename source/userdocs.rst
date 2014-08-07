@@ -6,6 +6,5 @@ For Users
    :maxdepth: 2
    
    usinggeppetto
-   widgets
    simtutorial
    install

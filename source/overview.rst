@@ -2,70 +2,13 @@
 Overview
 ********
 
- * Introduction
- * Screenshots
- * Users
- * Developers: Getting started
- * Get the source
- * Neuronal and fluid mechanics simulators
  * Background
  * The architecture
  * Technology stack
- * Architectural concepts
- * Geppetto design
  * Status
  * Feedback
 
-Introduction
-============
 
-Geppetto is a **web-based** multi-algorithm, multi-scale simulation platform engineered to support the simulation of **complex biological systems** and their surrounding environment. Geppetto's integrative approach to biological modeling is at the heart of the `Open Worm project <http://www.openworm.org/>`__.
-
-`Download the latest version <https://github.com/openworm/org.geppetto/releases/>`__
-
-Screenshots
-===========
-
-.. image:: https://dl.dropboxusercontent.com/u/7538688/GeppettoSShots/Screen%20Shot%202013-09-09%20at%2013.56.38.png
-
-Screenshot 1 - Simulation of a single compartment Hodgkin-Huxley neuronal model in `NeuroML <http://neuroml.org/>`__ using the `jLEMS <http://www.neuroml.org/lems/>`__ based neuronal module
-
-.. image:: https://dl.dropboxusercontent.com/u/7538688/GeppettoSShots/Screen%20Shot%202013-09-02%20at%2015.02.28.png
-
-Screenshot 2 - Particle visualisation of a liquid in Geppetto simulated using the fluid dynamics module.
-
-.. image:: https://dl.dropboxusercontent.com/u/7538688/GeppettoSShots/Screen%20Shot%202013-09-16%20at%2013.44.53.png
-
-Screenshot 3 - Visualisation of a Purkinje cell in `NeuroML <http://neuroml.org/>`__ from `Open Source Brain <http://opensourcebrain.org/projects/purkinjecell>`__
-
-.. image:: https://dl.dropboxusercontent.com/u/7538688/GeppettoSShots/Screen%20Shot%202013-09-16%20at%2016.38.09.png
-
-Screenshot 4 - Visualisation of a `Neuromorpho project <http://neuromorpho.org/neuroMorpho/neuron_info.jsp?neuron_name=dCH-cobalt>`__ converted in in `NeuroML <http://neuroml.org/>`__ from `Open Source Brain <http://opensourcebrain.org/projects/purkinjecell>`__
-
-Users
-=====
-
-Geppetto is currently used and contributed to by the following groups:
-
-* `OpenWorm <http://www.openworm.org/>`__
-* `Open Source Brain <http://www.opensourcebrain.org/>`__ (`Silver Lab, UCL <http://www.ucl.ac.uk/silverlab/>`__ )
-* `MetaCell <http://metacell.us>`__
-* `Orion Bionetworks <http://www.orionbionetworks.org/>`__
-
-Developers: Getting started
-===========================
-
-A short tutorial explaining how to implement your own "Hello World" Geppetto bundle is `available online <https://dl.dropboxusercontent.com/u/6318167/GeppettoBundleTutorial.pdf>`__ .
-
-Get the source
-==============
-
-Here's an article that lists the different bundles (and relative repositories), and available demos as a combination of given bundles. `Instructions are available <https://dl.dropboxusercontent.com/u/6318167/GeppettoEclipseSetup.pdf>`__ for setting up an Eclipse-based development environment to build and run the contents of the `open source repositories <https://github.com/openworm/org.geppetto/blob/master/README.md>`__.
-
-Neuronal and fluid mechanics simulators
-=======================================
-
-While the Geppetto platform is engineered with a generic framework capable of encapsulating any algorithm into a module, the `OpenWorm project <http://www.openworm.org>`__ has begun implementing specific modules to meet the particular challenges of its domain. The OpenWorm case study has led to the development of one module to simulate the electrophysiology of neuronal cells and networks, and another to simulate fluid-mechanics based on the smoothed particle hydrodynamics (SPH) algorithm (`Solenthaler 2011 <http://www.zora.uzh.ch/29724/1/Barbara.pdf>`__ ). SPH provides the ability to simulate soft tissues and their interface to liquids of varying viscosities, which in turn allows for the simulation of forces created by muscles pulling on a non-rigid body.
 
 Background
 ==========
@@ -130,22 +73,18 @@ Geppetto OSGi based bundles are deployed on the `Eclipse Virgo <http://www.eclip
 
 `Virgo <http://www.eclipse.org/virgo/images/virgo-logo.png>`__
 
-Architectural Concepts
-======================
-
-You can check out this article for more information on Geppetto's `architectural concepts <https://github.com/openworm/org.geppetto/blob/master/README.md>`__.
-
-Geppetto Design
-===============
-
-The design artifacts of Geppetto are captured `here <https://github.com/openworm/org.geppetto/blob/master/README.md>`__.
 
 Status
 ======
 
 Geppetto is currently in development. A version is `released every month <https://github.com/openworm/org.geppetto/releases/>`__ with new added features.
+While the Geppetto platform is engineered with a generic framework capable of encapsulating any algorithm into a module, the `OpenWorm project <http://www.openworm.org>`__ has begun implementing specific modules to meet the particular challenges of its domain. The OpenWorm case study has led to the development of one module to simulate the electrophysiology of neuronal cells and networks, and another to simulate fluid-mechanics based on the smoothed particle hydrodynamics (SPH) algorithm (`Solenthaler 2011 <http://www.zora.uzh.ch/29724/1/Barbara.pdf>`__ ). SPH provides the ability to simulate soft tissues and their interface to liquids of varying viscosities, which in turn allows for the simulation of forces created by muscles pulling on a non-rigid body.
 
 Feedback
 ========
 
 Geppetto is being developed to combine cutting edge science into an industry grade software platform. The open source nature is essential in this process and so is your feedback. If you have any question please `email us <mailto:info@geppetto.org>`__ . If you wish to raise a bug, request a feature or an enhancement please do so by logging an `issue <https://github.com/openworm/org.geppetto/issues>`__ . If the issues is related to a specific module (e.g. `frontend <https://github.com/openworm/org.geppetto.frontend/issues>`__ , `fluid mechanics simulator <https://github.com/openworm/org.geppetto.simulator.sph/issues>`__ , etc.) you can log it directly on it.
+
+
+
+

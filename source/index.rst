@@ -5,7 +5,7 @@
 
 
 .. image:: images/geppettologo.png
-
+   :align: center
 
 Introduction
 ============

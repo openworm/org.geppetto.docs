@@ -16,10 +16,8 @@ Geppetto is a **web-based** multi-algorithm, multi-scale simulation platform eng
 
 `Download the latest version <https://github.com/openworm/org.geppetto/releases/>`__
 
-.. image:: images/ornament.png
-   :align: center
+------------
 
-|
 If you are looking for instructions on how to use Geppetto, check out our user documentation.
 
 If you are a developer interested in contributing to Geppetto, check out our developers documentation.
@@ -63,7 +61,7 @@ Geppetto is currently used and contributed to by the following groups:
 * `MetaCell <http://metacell.us>`__
 * `Orion Bionetworks <http://www.orionbionetworks.org/>`__
 
-.. image:: images/ornament.png
+.. image:: images/symbol.png
    :align: center
 |
 

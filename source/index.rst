@@ -19,7 +19,7 @@ Geppetto is a **web-based** multi-algorithm, multi-scale simulation platform eng
 .. image:: images/ornament.png
    :align: center
 
-
+|
 If you are looking for instructions on how to use Geppetto, check out our user documentation.
 
 If you are a developer interested in contributing to Geppetto, check out our developers documentation.

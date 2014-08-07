@@ -57,10 +57,15 @@ Users
 Geppetto is currently used and contributed to by the following groups:
 
 * `OpenWorm <http://www.openworm.org/>`__
-* `Open Source Brain <http://www.opensourcebrain.org/>`__ (`Silver Lab, UCL <http://www.ucl.ac.uk/silverlab/>`__ )
+* `Open Source Brain <http://www.opensourcebrain.org/>`__ (`Silver Lab, University College London <http://www.ucl.ac.uk/silverlab/>`__ )
 * `MetaCell <http://metacell.us>`__
 * `Orion Bionetworks <http://www.orionbionetworks.org/>`__
 
+Contact us
+==========
+
+You can reach out to us at info@geppetto.org.
+Follow us on `Twitter <https://twitter.com/GeppettoEngine>`__
 .. image:: images/symbol.png
    :align: center
 |

@@ -5,6 +5,7 @@ For Users
 .. toctree::
    :maxdepth: 2
    
+   install
    usinggeppetto
    simtutorial
-   install
+   recordingandreplaying

@@ -56,8 +56,11 @@ Selection
 .. code-block:: javascript
 
 	-- Entity.select()
+	
 	-- Entity.Aspect.select()
+	
 	-- Entity.unselect()
+	
 	-- Entity.Aspect.unselect()
 
 Plotting

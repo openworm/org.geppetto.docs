@@ -55,10 +55,10 @@ Selection
 3D objects in GEPPETTO consist of Entities or Aspects, and can be selected/unselected by using the select command of the entity as such:
 .. code-block:: javascript
 
-	Entity.select()
-	Entity.Aspect.select()
-	Entity.unselect()
-	Entity.Aspect.unselect()
+	-- Entity.select()
+	-- Entity.Aspect.select()
+	-- Entity.unselect()
+	-- Entity.Aspect.unselect()
 
 Plotting
 =======

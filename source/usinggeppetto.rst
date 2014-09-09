@@ -50,6 +50,15 @@ The navigation buttons along the left side of Geppetto allow you to change your 
 
 In addition to the navigation buttons, you can use a mouse to rotate, drag or zoom the simulation.
 
+Selection
+----------
+3D objects in GEPPETTO consist of Entities or Aspects, and can be selected/unselected by using the select command of the entity as such:
+.. code-block:: javascript
+
+	Entity.select()
+	Entity.Aspect.select()
+	Entity.unselect()
+	Entity.Aspect.unselect()
 
 Plotting
 =======
@@ -67,6 +76,14 @@ Plotting widgets can plot variables straight from the simulation, given you are 
 you start plotting it. Each variable will have its own line plot, and it's accompanied by a label to distinguish it
 from other variables being drawn. 
 
+In order to plot a Simulation variable, you can use the command 
+
+.. code-block:: javascript
+
+	Plot1.plotData(variable);
+
+Where "Plot1" is the name of the plotting widget that was returned after creation. 
+
 .. image:: http://i.imgur.com/PigAtLo.png
 
 Other variables can also be plotted, as a two dimensional array  plotted against x and y coordinates. 
@@ -74,6 +91,20 @@ You can customize your line plot and change the dimensions of the axis in your p
 as a reference to see what options you have to modify your plot. 
 
 .. image:: http://i.imgur.com/Sf9byfH.png
+
+Setting Legend for Variables
+----------
+User can modify the legend that is displayed for a variable being plotted using the following command: 
+
+.. code-block:: javascript
+
+	Plot1.setLegend(variable, legend);
+
+Where variable represents the object being plotted, and legend is a string with the new legend to be displayed for corresponding variable. 
+
+If user fails to specify a legend, the instance path of the variable being plotted will be used. 
+However, it will only be partially displayed to save space inside the widget. To view the full name of the variable 
+user can hover over the legend and a tooltip with full name will appear.
 
 Setting Options
 ----------
@@ -129,6 +160,7 @@ AutoCompletion
 Within the console, the Tab button assists with entering commands.
 Tab once, to autocomplete the current word of the command.
 Tab twice, to show all the options available.
+If autocompletion detected a command with parameters, it will autocomplete the command and place the cursor in between the parentheses where the variables are located.
 
 G object commands 
 -----------------
@@ -265,6 +297,9 @@ Plot Commands
       -- Plot1.destroy()
          Resets the plot widget, deletes all the data series but does not
          destroy the widget window.
+         
+      -- Plot1.setLegend(variable, legend)
+         Sets the legend for a variable
  
 Check our JS documentation for more plot commands_
 
@@ -304,6 +339,29 @@ of the entity, you will be able to access commands this way.
          Get this entity's children entities
          @returns {List<Aspect>} - List of aspects         
 
+Aspect Commands
+--------
+*AspectNode represents a general case, to use commands on own aspect replace "AspectNode" by the name 
+of the aspect, you will be able to access commands this way.
+
+.. code-block:: javascript
+      
+      -- AspectNode.hide()
+         Hides the aspect
+
+      -- AspectNode.show()
+         Shows the aspect
+
+      -- AspectNode.unselect()
+         Unselects the aspect
+
+      -- AspectNode.select()
+         Selects the aspect
+
+      -- AspectNode.getId()
+         Get the id associated with aspect
+         @returns {String} - ID of aspect
+         
 Clipboard
 ---------
 From the console, use the following command to open a clipboard and copy the console history.

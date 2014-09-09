@@ -52,7 +52,8 @@ In addition to the navigation buttons, you can use a mouse to rotate, drag or zo
 
 Selection
 ----------
-3D objects in GEPPETTO consist of Entities or Aspects, and can be selected/unselected by using the select command of the entity as such:
+3D objects in GEPPETTO consist of Entities or Aspects, and can be selected/unselected by clicking on them or 
+using the select command of the entity as such:
 
 .. code-block:: javascript
 
@@ -63,6 +64,13 @@ Selection
 	-- Entity.unselect()
 	
 	-- Entity.Aspect.unselect()
+	
+	-- Simulation.selectEntity()
+	
+To retrieve those entities that are selected, you can use the command: 
+.. code-block:: javascript
+
+	-- Simulation.getSelection()
 
 Plotting
 =======
@@ -108,7 +116,7 @@ Where variable represents the object being plotted, and legend is a string with 
 
 If user fails to specify a legend, the instance path of the variable being plotted will be used. 
 However, it will only be partially displayed to save space inside the widget. To view the full name of the variable 
-user can hover over the legend and a tooltip with full name will appear.
+user can hover over the legend and a tool-tip with full name will appear.
 
 Setting Options
 ----------
@@ -362,9 +370,33 @@ of the aspect, you will be able to access commands this way.
       -- AspectNode.select()
          Selects the aspect
 
+      -- AspectNode.getModelTreee()
+         Get the Model Tree for the aspect
+         @returns {Object} - ID of aspect
+         
+      -- AspectNode.getSimulationTree()
+         Get the Simulation Tree for the aspect
+         @returns {Object} - ID of aspect
+         
+      -- AspectNode.getVisualizationTree()
+         Get the Visualization Tree for the Aspect
+         @returns {Object} - ID of aspect
+         
       -- AspectNode.getId()
          Get the id associated with aspect
          @returns {String} - ID of aspect
+         
+The Print Command
+---------
+The print() command can be called on objects for printing it out nicely formatted. 
+
+For example, to print out the simulation variables that an entity has you can do:
+
+.. code-block:: javascript
+
+      -- AspectNode.SimulationTree.print()
+
+You can do the same for the VisualizationTree and the ModelTree. 
          
 Clipboard
 ---------

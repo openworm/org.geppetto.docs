@@ -10,7 +10,7 @@ Geppetto Widgets Tutorial
 
 Creating a Widget
 =================
-This tutorial will describe the steps needed start creating your own Geppetto Widget. To begin, you will want to set up a specific file and folder structure. Let’s say you are interested in creating a Geppetto Widget that can plot one or multiple Simulation Variables values in a chart. For example, let’s call it a “Chart” Widget. The first step would be to create the folder structure, which consists of a parent folder named after the Widget and multiple folders inside it for the controllers and vendor libraries.  Your folder structure should look something like this: ::
+This tutorial will describe the steps needed start creating your own Geppetto Widget. To begin, you will want to set up a specific file and folder structure. Letâ€™s say you are interested in creating a Geppetto Widget that can plot one or multiple Simulation Variables values in a chart. For example, letâ€™s call it a â€œChartâ€� Widget. The first step would be to create the folder structure, which consists of a parent folder named after the Widget and multiple folders inside it for the controllers and vendor libraries.  Your folder structure should look something like this: ::
 
  /chart                  
     /controllers        
@@ -49,7 +49,7 @@ Next you will need to populate the class with methods corresponding to the funct
 
 Creating the Controller Class
 -----------------------------
-The Controller class regulates the handling of events received from Geppetto and how they interact with your widget. The WidgetsListener class, located in the “Widgets” folder, will already handle many of the event types shared among all widgets (e.g., those implemented in Widget.js superclass) including notifying all widgets about new updates. However, you should add an update method to your controller class to handle how updates are sent to the widgets. Other methods that can be added to the controller class are “addWidget()” and “removeWidget()”, which control the creation of your widgets. Take a look at the PlotsController for an example of how to do this. 
+The Controller class regulates the handling of events received from Geppetto and how they interact with your widget. The WidgetsListener class, located in the â€œWidgetsâ€� folder, will already handle many of the event types shared among all widgets (e.g., those implemented in Widget.js superclass) including notifying all widgets about new updates. However, you should add an update method to your controller class to handle how updates are sent to the widgets. Other methods that can be added to the controller class are â€œaddWidget()â€� and â€œremoveWidget()â€�, which control the creation of your widgets. Take a look at the PlotsController for an example of how to do this. 
 
 .. code-block:: javascript
 
@@ -69,7 +69,7 @@ The purpose of having a config.js class inside your widget folder is to specify 
    chartModule("widgets/chart/vendor/chartsplugin-1.0");
    chartModule("widgets/chart/Chart");
 
-Where the array chartModule holds the path of all the JS libraries needed for the widget, the “.js” extension can be omitted when adding the scripts to the array, however, the omission is not required.  Notice that the controller class has been omitted for now, we will be adding that class as an AMD Module which is explained in the next section. 
+Where the array chartModule holds the path of all the JS libraries needed for the widget, the â€œ.jsâ€� extension can be omitted when adding the scripts to the array, however, the omission is not required.  Notice that the controller class has been omitted for now, we will be adding that class as an AMD Module which is explained in the next section. 
 
 When you have finished populating your chartModule array with your scripts, add them to Geppetto using requireJS as in the example below. The function($) will be called once the scripts have been loaded successfully, at which time you will be able to load the CSS files for the widget. 
 
@@ -81,7 +81,7 @@ When you have finished populating your chartModule array with your scripts, add 
   
 Folder Structure
 ----------------
-As an example, you have finished creating that widget named “Chart” for which you used an external library named “chartsplugin-1.0”. The folder structure of the widget should look like this: ::
+As an example, you have finished creating that widget named â€œChartâ€� for which you used an external library named â€œchartsplugin-1.0â€�. The folder structure of the widget should look like this: ::
 
     /chart
        -Chart.js
@@ -92,32 +92,32 @@ As an example, you have finished creating that widget named “Chart” for whic
        /vendor
          -chartsplugin-1.0.j
   
-The folder named “chart” holds the main widget file “Chart.js” and the related CSS file. The “controllers” folder contains the class binding Geppetto with the widgets. Tthe “vendor” folder contains the external libraries used to create this widget.
+The folder named â€œchartâ€� holds the main widget file â€œChart.jsâ€� and the related CSS file. The â€œcontrollersâ€� folder contains the class binding Geppetto with the widgets. Tthe â€œvendorâ€� folder contains the external libraries used to create this widget.
 
 Adding Widget to Geppetto
 =========================
-If you have structured your folder using the recommended structure from the `previous section <https://docs.google.com/a/metacell.us/document/d/160pXT0CProgY2xs5Y8zdHnVGZuV_X-A6ZWvYWnAIYDQ/edit#heading=h.5ncyvsoawo2>`_, you can then drop them inside the “widgets” folder located in the frontend bundle under “src/main/webapp/js”. 
+If you have structured your folder using the recommended structure from the `previous section <https://docs.google.com/a/metacell.us/document/d/160pXT0CProgY2xs5Y8zdHnVGZuV_X-A6ZWvYWnAIYDQ/edit#heading=h.5ncyvsoawo2>`_, you can then drop them inside the â€œwidgetsâ€� folder located in the frontend bundle under â€œsrc/main/webapp/jsâ€�. 
 
-Locate the file “src/main/webapp/js/main.js” and import your widget by adding the location of the script using requireJS. Using our widget example above, we would add the following line to the config.js file.
+Locate the file â€œsrc/main/webapp/js/main.jsâ€� and import your widget by adding the location of the script using requireJS. Using our widget example above, we would add the following line to the config.js file.
 
 .. code-block:: javascript
 
-	require(“widgets/chart/config.js”, function($) {});
+	require(â€œwidgets/chart/config.jsâ€�, function($) {});
 
 Using a Widget Inside Geppetto
 ==============================
-If you would like to use your widget from the console within Geppetto, there are a few additional steps. First, you will need to expand the “WidgetFactory.js” class inside the frontend bundle to handle adding and removing your new widget via the console. 
+If you would like to use your widget from the console within Geppetto, there are a few additional steps. First, you will need to expand the â€œWidgetFactory.jsâ€� class inside the frontend bundle to handle adding and removing your new widget via the console. 
 
-To do this, first add the type of your new widget to the global “Widgets” variable. Simply add the name of your widget followed by the next number from the sequence of previously added widget types. The example “CHART,” would look like this:
+To do this, first add the type of your new widget to the global â€œWidgetsâ€� variable. Simply add the name of your widget followed by the next number from the sequence of previously added widget types. The example â€œCHART,â€� would look like this:
 
 .. code-block:: javascript
 
    var Widgets = {
   		 PLOT : 0,
-  		 CHART : 1
+  		Â CHART : 1
        };
 
-Inside the WidgetFactory.addWidget(widgetType) method, add a case inside the switch statement that connects it to your controller’s new widget method. For example:
+Inside the WidgetFactory.addWidget(widgetType) method, add a case inside the switch statement that connects it to your controllerâ€™s new widget method. For example:
 
 .. code-block:: javascript
 
@@ -144,7 +144,7 @@ Contributing to other widgets
 =============================
 Geppetto provides a framework for contributing to other widgets through specific actions. The widget may register a/some commands provider to a data type. Any time the user right-click on an object of this data type, a context menu will display the actions generated by the command provider. These actions can be generated dynamically depending by the commands provider depending on the data selected by the user.
 
-To contribute with actions to any widget, firstly we have to register in “Geppetto.MenuManager“ the data type and the related commands provider. This needs to be done in the config.js file of the widget. Keep in mind the commands providers should be in the Widget Controller. The registration process in the example "CHART" would look like this:
+To contribute with actions to any widget, firstly we have to register in â€œGeppetto.MenuManagerâ€œ the data type and the related commands provider. This needs to be done in the config.js file of the widget. Keep in mind the commands providers should be in the Widget Controller. The registration process in the example "CHART" would look like this:
 
 .. code-block:: javascript
 
@@ -201,6 +201,18 @@ The menu layout would look like:
 .. image:: images/widgets/ContextMenuScreenshot.png
 
 If the user clicks on any menu item the framework will call back the corresponding action providing as a parameter the data related to the element right-clicked. The developer has to implement the logic inside this method.  				          
+
+Selection Event
+=============================
+Selecting and entity or aspect inside Geppetto generates an events, that all subscribing listeners can detect. 
+In order to detect selection changes, the update method in your controller must look for the 
+SELECTION_CHANGED event. Then you can call; 
+
+.. code-block:: javascript
+
+    -- Simulation.getSelection() 
+
+which will return an array of the entities that are currently selected.
 
 Allow other widgets to contribute to my widget 
 ==============================================

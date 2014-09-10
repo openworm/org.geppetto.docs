@@ -13,7 +13,15 @@ Subtrees of AspectNode. Each aspect has three of these; one for the ModelTree, V
 
 CompositeNode
 =========
-A node that can have many children. Used to store tree hierarchies in AspectNode subtrees
+A node that can have many children. Used to store tree hierarchies in AspectNode subtrees. 
+
+One can access this node's children by using the following command.
+
+.. code-block:: javascript
+
+	CompositeNode.getChildren()
+
+Calling the 
 
 VariableNode
 ======
@@ -22,3 +30,18 @@ A node used to represent a Simulation state variable. It stores a value, unit an
 Node
 ======
 The parent class of all nodes. This is the class that all nodes extend, has the properties that all nodes have in common; name, id, instancepath. 
+
+Printing Node's content
+======
+The content's of each node can be printed by using the following command: 
+
+.. code-block:: javascript
+
+	Node.print()
+	
+For instance, let's say you an Entity named "hhcell" and within an aspect called "electrical". To print out the contents
+of the SimulationTree of the this aspect you will type in the console:
+
+.. code-block:: javascript
+
+	hhcell.electrical.SimulationTree.print()

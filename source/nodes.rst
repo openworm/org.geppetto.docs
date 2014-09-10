@@ -24,9 +24,9 @@ To retrieve each of the subtrees objects used the following commands:
 
 .. code-block:: javascript
 
-	-- AspectNode.getModelTree()
+    -- AspectNode.getModelTree()
 	
-	-- AspectNode.getVisualizationTree()
+    -- AspectNode.getVisualizationTree()
 
     -- AspectNode.getSimulationTree()
     

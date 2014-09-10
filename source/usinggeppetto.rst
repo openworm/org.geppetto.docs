@@ -409,7 +409,7 @@ Simulation Variables Commands
          Get value of quantity
          @returns {String} - Value of quantity
          
-	  -- VariableNode.getUnit()
+      -- VariableNode.getUnit()
          Get unit of quantity
          @returns {String} - Unit of quantity
          

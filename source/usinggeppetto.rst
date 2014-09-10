@@ -387,6 +387,36 @@ of the aspect, you will be able to access commands this way.
          Get the id associated with aspect
          @returns {String} - ID of aspect
          
+Simulation Variables Commands
+---------
+*VariableNode should be replaced by the full path of the variable to use the commands below.
+
+.. code-block:: javascript
+
+      -- VariableNode.getId()
+         Get the id associated with the VariableNode
+         @returns {String} - ID of variableNode
+
+      -- VariableNode.getName()
+         Get the name associated with the VariableNode
+         @returns {String} - Name of variableNode
+         
+      -- VariableNode.getInstancePath()
+         Get the instance path of the variable
+         @returns {String} - InstancePath of variableNode
+         
+      -- VariableNode.getValue()
+         Get value of quantity
+         @returns {String} - Value of quantity
+         
+	  -- VariableNode.getUnit()
+         Get unit of quantity
+         @returns {String} - Unit of quantity
+         
+      -- VariableNode.getScalingFactor()
+         Get scaling factor
+         @returns {String} - Scaling Factor for value and unit
+         
 The Print Command
 ---------
 The print() command can be called on objects for printing it out nicely formatted. 

@@ -1,12 +1,35 @@
+*****************
+Geppetto Nodes
+*****************
+
 EntityNode
 ======
 An EntityNode is the client side representation of an entity. It can contain any amount of entities, and aspects.
+
+To retrieve the entities and aspects use the following commands respectively:
+
+.. code-block:: javascript
+
+	-- EntityNode.getEntities()
+	
+	-- EntityNode.getAspects()
+	
 
 AspectNode
 =====
 The node that contains the simulator and model interpreter references. It contains three subtrees for visualization, the model 
 and simulation variables. 
 
+To retrieve each of the subtrees objects used the following commands: 
+
+.. code-block:: javascript
+
+	-- AspectNode.getModelTree()
+	
+	-- AspectNode.getVisualizationTree()
+
+    -- AspectNode.getSimulationTree()
+    
 AspectSubTreeNode
 ==========
 Subtrees of AspectNode. Each aspect has three of these; one for the ModelTree, VisualizationTree and the SimulationTree.
@@ -20,8 +43,6 @@ One can access this node's children by using the following command.
 .. code-block:: javascript
 
 	CompositeNode.getChildren()
-
-Calling the 
 
 VariableNode
 ======

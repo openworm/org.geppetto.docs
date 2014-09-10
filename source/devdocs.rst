@@ -11,6 +11,7 @@ For Developers
    windowssetup
    eclipsesetup
    concepts
+   nodes
    designdocs
    widgets
 

@@ -68,9 +68,10 @@ using the select command of the entity as such:
 	-- Simulation.selectEntity()
 	
 To retrieve those entities that are selected, you can use the command: 
+
 .. code-block:: javascript
 
-	-- Simulation.getSelection()
+	Simulation.getSelection()
 
 Plotting
 =======

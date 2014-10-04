@@ -13,5 +13,6 @@ For Developers
    concepts
    nodes
    designdocs
+   jsdocs
    widgets
 

@@ -15,4 +15,4 @@ For Developers
    designdocs
    jsdocs
    widgets
-
+   components

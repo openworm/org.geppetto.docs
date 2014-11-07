@@ -1,8 +1,8 @@
 *************************
 Visual Groups
 *************************
-   Visual Groups in Geppetto allows grouping of visual objects. Each Visual Group can contain multiple Visual Group Elements,
-   which specify a default color and/or parameter to determine color of group. 
+Visual Groups in Geppetto allows grouping of visual objects. Each Visual Group can contain multiple Visual Group Elements,
+which specify a default color and/or parameter to determine color of group. 
    
 Visualizing Groups
 =================

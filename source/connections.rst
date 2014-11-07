@@ -1,10 +1,10 @@
-*************************
-Entity Connections within Geppetto
-*************************
-   An entity can specify multiple connections, input or output, to other entities and sub-entities. Extra properties 
-   that tell more about the kind of connection it is can be found inside the Connections. Along with these extra properties, 
-   a connection may also contain a list of visual references, which are used to store references to specific 
-   parts of entities. 
+**************
+Visualizing Connections
+**************
+An entity can specify multiple connections, input or output, to other entities and sub-entities. Extra properties 
+that tell more about the kind of connection it is can be found inside the Connections. Along with these extra properties, 
+a connection may also contain a list of visual references, which are used to store references to specific 
+parts of entities. 
 
 Visualizing Connections
 =================
@@ -19,7 +19,7 @@ will change to orange, entities that have input connections to selected entity w
 and those entities that have both input and output connections will become green.The picture below shows the 
 different colors of connections.
 
-.. image:: images/connections/connections_colors.png
+.. image:: images/connections/connection_colors.png
 
 Using the picture above, let's say we have a simulation with three entities; One, Two and Three where entity One
 has input connection to entity Two and output connection to entity Three. If entity One was selected it will change

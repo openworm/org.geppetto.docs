@@ -9,3 +9,5 @@ For Users
    usinggeppetto
    simtutorial
    recordingandreplaying
+   connections
+   visualgroups

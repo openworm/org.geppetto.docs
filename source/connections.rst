@@ -36,6 +36,25 @@ Console Commands
 ---------
 The whole set of commands for Connection are:
 
+.. code-block:: javascript
+	
+	  -- Connection.getEntityInstancePath()
+
+      -- Connection.getType()
+         Gets type of connection
+         
+      -- Connection.highlight(mode)
+         Highlights the connection
+
+      -- Connection.getChildren()
+         Gets all children of this connection 
+
+      -- Connection.getCustomNodes()
+         Gets all custom nodes for connection
+
+      -- Connection.getVisualObjectReferenceNodes()
+         Returns array of visual object reference nodes for this connection
+
 Changing Selection Options
 ---------
 By default, selecting an entity shows the connections it has to other entities. This can be changed
@@ -81,3 +100,10 @@ If you wish to see all the visual references highlight for a connection, you'll 
  
 Console Commands
 ---------
+.. code-block:: javascript
+	
+	  -- VisualObjectReferenceNode.getAspectInstancePath()
+
+      -- VisualObjectReferenceNode.getVisualObjectID()
+         
+      -- VisualObjectReferenceNode.highlight(mode)

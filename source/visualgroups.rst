@@ -1,10 +1,10 @@
 *************************
-Visual Groups
+Visualizing Groups 
 *************************
-Visual Groups in Geppetto allows grouping of visual objects. Each Visual Group can contain multiple Visual Group Elements,
+Visual Groups in Geppetto allow grouping of visual objects. Each Visual Group can contain multiple Visual Group Elements,
 which specify a default color and/or parameter to determine color of group. 
    
-Visualizing Groups
+Getting Started
 =================
 Visual Groups reside inside the Visualization Tree, which is inside the subtrees of Aspects.
 Visualizing these groups within Geppetto requires using the console, typing up to VisualizationTree

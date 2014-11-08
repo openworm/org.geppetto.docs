@@ -6,7 +6,7 @@ that tell more about the kind of connection it is can be found inside the Connec
 a connection may also contain a list of visual references, which are used to store references to specific 
 parts of entities. 
 
-Visualizing Connections
+Getting Started
 =================
 First step to visualize connections is to load a Simulation that contains some, from our current 
 samples list the "C302 Experimental Network of integrate and fire neurons" model is a good model to run 

@@ -39,4 +39,21 @@ Visual group elements can also be visualized individually with the "show(visible
 	
 Console Commands
 ---------
+The whole set of commands for Connection are:
+
+.. code-block:: javascript
 	
+      -- VisualGroup.getType()
+         Gets type of visual grup
+         
+      -- VisualGroup.show(mode)
+         Shows the visual group
+
+      -- VisualGroup.getChildren()
+         Gets all children of this visual group 
+         
+      -- VisualGroup.getVisualGroupElements()
+
+      -- VisualGroup.getLowSpectrumColor()
+
+      -- VisualGroup.getHighSpectrumColor()

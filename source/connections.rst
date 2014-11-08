@@ -38,7 +38,7 @@ The whole set of commands for Connection are:
 
 .. code-block:: javascript
 	
-	  -- Connection.getEntityInstancePath()
+   -- Connection.getEntityInstancePath()
 
       -- Connection.getType()
          Gets type of connection
@@ -102,7 +102,7 @@ Console Commands
 ---------
 .. code-block:: javascript
 	
-	  -- VisualObjectReferenceNode.getAspectInstancePath()
+	-- VisualObjectReferenceNode.getAspectInstancePath()
 
       -- VisualObjectReferenceNode.getVisualObjectID()
          

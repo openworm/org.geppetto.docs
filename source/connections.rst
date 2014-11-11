@@ -24,6 +24,7 @@ The picture below shows the color coding for the different kinds of connection:
 
 .. image:: images/connections/connection_colors.png
 
+
 Referencing the picture above, let's say we load a simulation with three entities; One, Two and Three where entity One
 has input connection to entity Two and output connection to entity Three. If entity One was selected its color will change 
 to yellow, entity Two will change color to light pink and entity Three will be represented as orange colored. 

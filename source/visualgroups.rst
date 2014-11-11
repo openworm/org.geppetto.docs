@@ -1,35 +1,38 @@
 *************************
 Visualizing Groups 
 *************************
-Visual Groups in Geppetto allow grouping of visual objects. Each Visual Group can contain multiple Visual Group Elements,
-which specify a default color and/or parameter to determine color of group. 
+The user might want group entities in a simulation and display this grouping in a visual way. 
+The concept of "Visual Groups" in Geppetto serves exactly this purpose and enables the user to group of visual objects.
+Each Visual Group can contain multiple Visual Group Elements, which specify a default color and/or parameter to determine color of group. 
    
 Getting Started
 =================
-Visual Groups reside inside the Visualization Tree, which is inside the subtrees of Aspects.
-Visualizing these groups within Geppetto requires using the console, typing up to VisualizationTree
-path on the console and doing a getChildren() on it returns all visual group elements that it has. Alternatively
-doing a double tab after typing up to VisualizationTree shows all element inside. 
+In the runtime tree that stores the simulation information, Visual Groups reside in the Visualization Tree, 
+which is one of the subtrees contained in the Aspect tree.
+Highlighting visual groups in the Geppetto UI requires using the Geppetto console. 
+Navigating the up to the VisualizationTree for a given entity via cnsole commands and doing a getChildren() on it returns all 
+visual group elements for that entity. Alternatively doing a "double tab" after typing up to VisualizationTree 
+shows all elements contained inside the tree: 
 
 .. code-block:: javascript
 
 	Entity.Aspect.VisualizationTree
 
-Once you find the groups, navigate inside one of them and use the "show(visible)" command to visualize 
-all visual objects that belong to this group, where "visible" must be true or false.
+Once the groups are revealed, the user can navigate to any of them and use the "show(visible)" command to visualize 
+all visual objects that belong to this group, where "visible" must be true or false:
 
 .. code-block:: javascript
 
 	Entity.Aspect.VisualizationTree.Group1.show(true);
 
-The above command shows all the visual objects that belong to group by coloring using the color specify in the Visual Group Element 
-node or by parameter. 
-	
+The above command shows all the visual objects that belong to the group in object by coloring. 
+The color is specified in the Visual Group Element node or by parameter. 
+
+The command below hides all visual objects that belong to Group 1 if they are being displayed: 	
+
 .. code-block:: javascript
 
 	Entity.Aspect.VisualizationTree.Group1.show(false);
-
-Above command hides all visual objects that belong to Group 1 if they are being displayed. 
 
 Visual group elements can also be visualized individually with the "show(visible)" command.
 
@@ -39,7 +42,7 @@ Visual group elements can also be visualized individually with the "show(visible
 	
 Console Commands
 ---------
-The whole set of commands for Connection are:
+The whole set of commands for visual groups are:
 
 .. code-block:: javascript
 	

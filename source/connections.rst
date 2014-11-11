@@ -103,9 +103,11 @@ If the user wants to highlight all visual references for a connection, the follo
  
 Console Commands
 ---------
+The whole set of commands for visual references are:
+
 .. code-block:: javascript
 	
-	-- VisualObjectReferenceNode.getAspectInstancePath()
+      -- VisualObjectReferenceNode.getAspectInstancePath()
 
       -- VisualObjectReferenceNode.getVisualObjectID()
          

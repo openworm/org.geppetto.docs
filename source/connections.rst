@@ -1,36 +1,38 @@
 **************
 Visualizing Connections
 **************
-An entity can specify multiple connections, input or output, to other entities and sub-entities. Extra properties 
-that tell more about the kind of connection it is can be found inside the Connections. Along with these extra properties, 
-a connection may also contain a list of visual references, which are used to store references to specific 
-parts of entities. 
+An entity can specify multiple connections, input or output, to other entities and sub-entities. 
+Being able to connect entities with a specific orientation allows for any orientend graph to be represented in Geppetto.
+Extra custom properties can be found inside the Connections and can be used to store domain specific data. 
+Along with these custom properties, a connection may also contain a list of visual references, which are used 
+to store references to specific parts of entities that could for instance visually represent a connection. 
 
 Getting Started
 =================
-First step to visualize connections is to load a Simulation that contains some, from our current 
-samples list the "C302 Experimental Network of integrate and fire neurons" model is a good model to run 
-to seem them in action. 
+First step to visualize connections is to load a Simulation that has connected entities, from our current 
+samples list the "C302 Experimental Network of integrate and fire neurons" model is a good model to see
+connections in action. 
 
-Once you have a model loaded, you can click on the entities in the scene to see any connections
-that it has. Clicking on an entity will select it, which will then display any connections to other entities
-it has. The selected entity color will change to yellow, entities that have output connections to selected entity
-will change to orange, entities that have input connections to selected entity will change to a light pink color, 
-and those entities that have both input and output connections will become green.The picture below shows the 
-different colors of connections.
+Once you have a model loaded, you can click on the entities in the scene (3D picking) 
+to see any connections associated to the selected entity. 
+Clicking on an entity will select it - upon selection any connections to/from other entities will be shown via entity color coding. 
+The selected entity color will change to yellow, entities that have output connections to selected entity
+will change to orange while entities that have input connections to selected entity will change to a light pink color, 
+and those entities that have both input and output connections will become green.
+
+The picture below shows the color coding for the different kinds of connection:
 
 .. image:: images/connections/connection_colors.png
 
-Using the picture above, let's say we have a simulation with three entities; One, Two and Three where entity One
-has input connection to entity Two and output connection to entity Three. If entity One was selected it will change
-color to yellow, entity Two will change color to light pink and entity Three will become orange. 
+Referencing the picture above, let's say we load a simulation with three entities; One, Two and Three where entity One
+has input connection to entity Two and output connection to entity Three. If entity One was selected its color will change 
+to yellow, entity Two will change color to light pink and entity Three will be represented as orange colored. 
 
-The above can also be accomplished by selecting the entity via console.
+Entity selection and connections visualization can also be accomplished via console.
 To visualize connections select the entity by using the "select()" command on it. To return entity to normal look use 
 the "unselect()" command. Refer to :ref:`Console Commands` for the rest of available commands for connections.
 
-By default, input and output connections are shown, but this can be modified as explained in
-our :ref:`Changing Selection Options`.
+By default, input and output connections are shown, but this can be modified as explained in :ref:`Changing Selection Options`.
 
 Console Commands
 ---------
@@ -73,26 +75,27 @@ The options flags that can be given to the "Simulation.setOnSelectionOptions()" 
  
 Highlighting Visual References
 =================
-Connections can specify visual references, which are references to 3D objects in the scene. 
+Connections can specify visual references. Visual References are a way to associate a connection to to 3D objects in the scene, 
+usually used to provide a visual representation of a connection in the 3D scene, but this decision is left to the developer.
 
-Visual references can be used by interacting with the console. Navigate inside an entity, then connection and you'll find 
-the visual references inside. You can highlight each one of them individually.
+Visual references can be explored via console. Once the user navigates to an entity connection, 
+visual references can be found inside and can be highlighted individually.
 
-For example, let's say you wanted to highlight a single visual reference. You will type in the 
-console.
+Let's say the user wanted to highlight a single visual reference associated to a given connection, this can be achieved
+by typing the following in the Geppetto console:
 
 .. code-block:: javascript
 
 	Entity.Connection.VisualReference.highlight(true);
  
 This will highlight, by changing color to red, the specific part of the entity that is noted in the visual reference. 
-To undo highlight of visual reference you'll use same command, but passing the false flag inside.
+To undo highlight of a visual reference the user can use same function passing the false flag instead:
 
 .. code-block:: javascript
 
 	Entity.Connection.VisualReference.highlight(false);
  
-If you wish to see all the visual references highlight for a connection, you'll use:
+If the user wants to highlight all visual references for a connection, the following command will be entered in the Geppetto console:
 
 .. code-block:: javascript
 

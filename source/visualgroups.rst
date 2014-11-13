@@ -9,7 +9,7 @@ Getting Started
 =================
 In the runtime tree that stores the simulation information, Visual Groups reside in the Visualization Tree, 
 which is one of the subtrees contained in the Aspect tree.
-To highlight visual groups in the Geppetto UI the Geppetto console must be used. 
+To highlight visual groups in the Geppetto UI, the Geppetto console must be used. 
 To show all visual group elements for that entity, navigate the up to the VisualizationTree for a given entity via console 
 commands and run the getChildren() command on it. Alternatively, entering a "double tab" after typing up to VisualizationTree 
 shows all elements contained inside the tree: 

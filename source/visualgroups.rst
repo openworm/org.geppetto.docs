@@ -1,17 +1,17 @@
 *************************
 Visualizing Groups 
 *************************
-The user might want group entities in a simulation and display this grouping in a visual way. 
-The concept of "Visual Groups" in Geppetto serves exactly this purpose and enables the user to group of visual objects.
-Each Visual Group can contain multiple Visual Group Elements, which specify a default color and/or parameter to determine color of group. 
+For users that want to group entities in a simulation and display this grouping in a visual way, 
+the concept of "Visual Groups" in Geppetto serves exactly this purpose and enables the user to group of visual objects.
+Each Visual Group can contain multiple Visual Group Elements, which specify a default color and/or parameter to determine the color of a group. 
    
 Getting Started
 =================
 In the runtime tree that stores the simulation information, Visual Groups reside in the Visualization Tree, 
 which is one of the subtrees contained in the Aspect tree.
-Highlighting visual groups in the Geppetto UI requires using the Geppetto console. 
-Navigating the up to the VisualizationTree for a given entity via cnsole commands and doing a getChildren() on it returns all 
-visual group elements for that entity. Alternatively doing a "double tab" after typing up to VisualizationTree 
+To highlight visual groups in the Geppetto UI the Geppetto console must be used. 
+To show all visual group elements for that entity, navigate the up to the VisualizationTree for a given entity via console 
+commands and run the getChildren() command on it. Alternatively, entering a "double tab" after typing up to VisualizationTree 
 shows all elements contained inside the tree: 
 
 .. code-block:: javascript
@@ -42,7 +42,7 @@ Visual group elements can also be visualized individually with the "show(visible
 	
 Console Commands
 ---------
-The whole set of commands for visual groups are:
+The entire set of commands for visual groups are:
 
 .. code-block:: javascript
 	

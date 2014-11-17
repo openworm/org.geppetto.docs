@@ -1,5 +1,6 @@
+***********************
 Recording and replaying
-=======================
+***********************
 
 Note: This is work in progress, input and feedback are very welcome!
 

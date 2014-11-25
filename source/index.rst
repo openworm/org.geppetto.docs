@@ -57,7 +57,7 @@ Users
 Geppetto is currently used and contributed to by the following groups:
 
 * `OpenWorm <http://www.openworm.org/>`__
-* `Open Source Brain <http://www.opensourcebrain.org/>`__ (`Silver Lab, University College London <http://www.ucl.ac.uk/silverlab/>`__ )
+* `Wellcome Trust <http://www.wellcome.ac.uk/>`__ via the `Open Source Brain <http://www.opensourcebrain.org/>`__ initiative (`Silver Lab, University College London <http://www.ucl.ac.uk/silverlab/>`__ )
 * `MetaCell <http://metacell.us>`__
 * `Orion Bionetworks <http://www.orionbionetworks.org/>`__
 

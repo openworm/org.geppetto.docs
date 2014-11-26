@@ -10,6 +10,7 @@ For Developers
    osxlinuxsetup
    windowssetup
    eclipsesetup
+   build
    concepts
    nodes
    designdocs

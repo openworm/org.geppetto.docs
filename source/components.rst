@@ -20,6 +20,7 @@ Components live in the /js/components directory. The default contents of this di
 |       /**dist**
 |       components.js
 |       install_components.py
+|       publish_components.py
 |       bower.json
 
 
@@ -71,6 +72,13 @@ install_components.py
 ---------------------
 
 The install_components script runs the command *bower install*, then generates the **components.js** file to load components from the **dist/** directory. The install_components script is meant to be run on the server, not in a development environment.
+
+publish_components.py
+---------------------
+
+Usage: ./publish_components -v <version>
+
+The publish components script attempts to publish the contents of the **dev** directory to a local git repository called org.geppetto.bower. This folder is created at the source root (parrellel to org.geppetto.frontend). Each component directory is zipped and copied to org.geppetto.bower/<version>/<component>.zip. The origin of this repository on github is at https://github.com/openworm/org.geppetto.bower.
 
 Developing Components
 =====================

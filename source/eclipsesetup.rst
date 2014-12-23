@@ -33,8 +33,7 @@ RED PILL
 
 * Install Maven m2e plugin (now it is part of the Eclipse project) 
 
-  * Select the default Juno update site from Install new Software
-search for “m2e” and install it
+  * Select the default Juno update site from Install new Software, search for “m2e” and install it
 
 * Install Virgo Tomcat Server
   * `http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.czip <http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.czip>`__

@@ -17,3 +17,4 @@ For Developers
    jsdocs
    widgets
    components
+   devtips

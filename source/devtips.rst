@@ -14,10 +14,17 @@ This section provides tips to solve some problems regarding Geppetto deploying i
 
   These three comands are the key tools you will be using during the configuration phase. Usually a mvn install from the org.geppetto project will be enough but sometimes you have to mvn clean/install each project independently. If you don't manage to mvn install all the projects from org.geppetto root project, try to mvn clean/install the one that is causing the error. Regarding the third command, tipically a maven project has a folder structure like this:
 
-	main -> java
-	     -> resources
-	test -> java
-	     -> resources
+	main
+	
+	  java
+	  
+	  resources
+	  
+	test
+	
+	  java
+	  
+	  resources
 
   However, sometimes this folder structure is "corrupted". Therefore, some compilation errors, which make no sense (Eclipse is complaining about a file although the file is in the right path), are reported. Execute a Maven Update to the project and then mvn clean/ install. After executing a mvn update, remember to unclick the Maven Project Builder (**Eclipse command**: Right click Project > Properties > Builders > Unclick Maven Project Builder). Otherwise it can slow down and, eventually, crash your Eclipse.
 

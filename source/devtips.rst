@@ -31,13 +31,13 @@ This section provides tips to solve some problems regarding Geppetto deploying i
 
 * When starting the Virgo server, the Eclipse console shows information about the process. Every time a new module is deployed properly a message like this one is displayed:
 
-.. code-block:: none
+  .. code-block:: none
 
-   Installed bundle 'org.geppetto.model.neuroml' version '0.2.0'. 
-   Starting bundle 'org.geppetto.model.neuroml' version '0.2.0'. 
-   Started bundle 'org.geppetto.model.neuroml' version '0.2.0'. 
+     Installed bundle 'org.geppetto.model.neuroml' version '0.2.0'. 
+     Starting bundle 'org.geppetto.model.neuroml' version '0.2.0'. 
+     Started bundle 'org.geppetto.model.neuroml' version '0.2.0'. 
 
-However if the module hasn't been deployed properly the version you will see is 0.0.0.0. Double check any compilation or configuration error with the project or the dependencies. Execute mvn install to the project. This command can be executed while the server running.
+  However if the module hasn't been deployed properly the version you will see is 0.0.0.0. Double check any compilation or configuration error with the project or the dependencies. Execute mvn install to the project. This command can be executed while the server running.
 
 * From time to time, the Eclipse Virgo connector doesn't copy some resources properly. Everything seems to run properly but some actions are not working fine. You will have to copy the resources files into the server (virgo/stage/[projectname]). This error could be tricky to solve as the symptons can be totally diferent depending on the resource that hasn't been copied to the server. Note that although the resources are located at /src/main/resources in your project folder, in the Virgo Server they can be found in virgo/stage/[projectname] folder outside any subfolders.
 

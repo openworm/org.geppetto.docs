@@ -18,7 +18,7 @@ RED PILL
   * `http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/junor <http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/junor>`__
   * Taking eclipse from any other repository is discouraged
   
-* Install Spring Source Studio	**(Optional)**
+* Install Spring Source Studio
 
   * Download this file to your local disk `http://dist.springsource.com/snapshot/TOOLS/composite/e4.2/bookmarks.xml <http://dist.springsource.com/snapshot/TOOLS/composite/e4.2/bookmarks.xml>`__
   * Go To Help -> Install New Software -> Available Software Sites -> Import and point to the downloaded file to add the required update sites.

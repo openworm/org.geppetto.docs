@@ -1,7 +1,7 @@
 Instructions for setting up Geppetto on Eclipse Juno
 ****************************************************
 
-Last Update: July 26th 2013
+Last Update: Jan 5 2015
 
 If you have any problems following this documentation please email openworm-discuss@googlegroups.com
 

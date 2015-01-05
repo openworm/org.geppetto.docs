@@ -63,7 +63,7 @@ Geppetto components can be deployed, re-deployed, and un-deployed without a syst
 Technology stack
 ================
 
-Geppetto is written in JAVA on top of the 'OSGi framework <http://en.wikipedia.org/wiki/OSGi>`__. This enables us to build modules as “OSGi bundles”, independent components that allow for clean separations between functional areas that are simulating different aspects of a bio-physical system. 
+Geppetto is written in JAVA on top of the `OSGi framework <http://en.wikipedia.org/wiki/OSGi>`__. This enables us to build modules as “OSGi bundles”, independent components that allow for clean separations between functional areas that are simulating different aspects of a bio-physical system. 
 
 On top of OSGi, `Spring <http://www.springsource.org/about>`__ has been chosen as the glue-framework to assemble a complex system from a set of loosely-coupled components (POJOs) in a consistent and transparent fashion.
 

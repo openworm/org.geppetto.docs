@@ -1,7 +1,7 @@
 Instructions for setting up Geppetto on Eclipse Juno
 ****************************************************
 
-Last Update: July 26th 2013
+Last Update: Jan 5 2015
 
 If you have any problems following this documentation please email openworm-discuss@googlegroups.com
 
@@ -18,7 +18,7 @@ RED PILL
   * `http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/junor <http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/junor>`__
   * Taking eclipse from any other repository is discouraged
   
-* Install Spring Source Studio	**(Optional)**
+* Install Spring Source Studio
 
   * Download this file to your local disk `http://dist.springsource.com/snapshot/TOOLS/composite/e4.2/bookmarks.xml <http://dist.springsource.com/snapshot/TOOLS/composite/e4.2/bookmarks.xml>`__
   * Go To Help -> Install New Software -> Available Software Sites -> Import and point to the downloaded file to add the required update sites.
@@ -36,7 +36,7 @@ RED PILL
   * Select the default Juno update site from Install new Software, search for “m2e” and install it
 
 * Install Virgo Tomcat Server
-  * `http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.czip <http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.czip>`__
+  * `http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.zip <http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.zip>`__
   * This will depend on your OS, for Ubuntu: download the zip file and do: “sudo unzip virgo-tomcat-server-3.6.2.RELEASE.zip -d /opt/”
 
 * Install EGit
@@ -71,7 +71,7 @@ RED PILL
 
 Install Virgo Tomcat Server (skip if you have taken the red pill to install Eclipse)
 
-* `http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.czip <http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.czip>`__
+* `http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.zip <http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.zip>`__
 
 After all the tools are installed you can import the geppetto bundles you are interested in from GitHub (`https://github.com/openworm <https://github.com/openworm>`__).
 

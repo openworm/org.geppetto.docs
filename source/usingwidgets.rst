@@ -23,8 +23,12 @@ In order to instantiate a widget the user can use the command
 
 .. code-block:: javascript
 
-	G.addWidget(TREEVISUALISERDAT)
-  or
+  G.addWidget(TREEVISUALISERDAT)
+
+or
+
+.. code-block:: javascript
+
   G.addWidget(3)
 
 For more information see the documentation related to each individual widget.

@@ -10,17 +10,20 @@ Users can move widgets across the screen, resize them and interact with their fu
 To see what widgets are available in Geppetto the user can type in the console the command
 
 .. code-block:: javascript
-  G.availableWidgets()
+
+	G.availableWidgets()
 
 which would return a list like this:
 
 .. code-block:: javascript
-  {"PLOT":0,"POPUP":1,"SCATTER3D":2,"TREEVISUALISERDAT":3,"TREEVISUALISERD3":4,"VARIABLEVISUALISER":5,"CONNECTIVITY":6}
+
+	{"PLOT":0,"POPUP":1,"SCATTER3D":2,"TREEVISUALISERDAT":3,"TREEVISUALISERD3":4,"VARIABLEVISUALISER":5,"CONNECTIVITY":6}
 
 In order to instantiate a widget the user can use the command
 
 .. code-block:: javascript
-  G.addWidget(TREEVISUALISERDAT)
+
+	G.addWidget(TREEVISUALISERDAT)
   or
   G.addWidget(3)
 

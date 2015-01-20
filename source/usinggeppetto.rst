@@ -2,25 +2,24 @@
 Using Geppetto
 **************
 
-* Getting Started 
+* Getting Started
 * Using the Graphic Interface Controls
   - Loading the Simulation
   - Running the Simulation
   - Navigation
-  - Plotting
 * Console
   - G object commands
   - Simulation control commands
   - Clipboard
-  - Watching State Variables
+  - Watching Variables
 * Reference
-  - Keyboard Short Cuts
+  - Keyboard Shortcuts
 
 Getting Started
 ===============
-Once the Geppetto dev instances has been opened, you can begin to load a simulation.  There are two ways to interact with the Geppetto platform:
+Once Geppetto is loaded in your browser, you can load a simulation. There are two ways to interact with Geppetto:
 * Use the GUI buttons to load, control and interact with the simulations.
-* Use the console and enter commands to load, control and interact with the simulations.
+* Use the API through the Javascript console and enter commands to load, control and interact with the simulations.
 
 Using the Graphic Interface Controls
 ====================================
@@ -28,7 +27,7 @@ Loading the Simulation
 ----------------------
 .. image:: http://i.imgur.com/1kI749N.png
 
-Select the "Load Simulation" button at the top to open a console to either select a pre-loaded simulation or upload your own simulation file. 
+Select the "Load Simulation" button at the top to open a console to either select a pre-loaded simulation or upload your own simulation file.
 
 .. image:: http://i.imgur.com/DRaae8U.png
 
@@ -38,13 +37,13 @@ Alternatively you can customize the simulation before loading.
 
 Running the Simulation
 ----------------------
-Once the simulation has been loaded, you can start, pause and stop the simulation at any point. 
+Once the simulation has been loaded, you can start, pause and stop the simulation at any point.
 
 .. image:: http://i.imgur.com/pXEsYDn.png
 
 Navigation
 ----------
-The navigation buttons along the left side of Geppetto allow you to change your view of the simulation within Geppetto.  You can reposition, rotate it and zoom in and out.  To reset, just hit the "home" icon to undo rotation or repositioning.  The buttons can be accessed once the simulation has been loaded as well as before, during and after the simulation run. 
+The navigation buttons along the left side of Geppetto allow you to change your view of the simulation within Geppetto.  You can reposition, rotate it and zoom in and out.  To reset, just hit the "home" icon to undo rotation or repositioning.  The buttons can be accessed once the simulation has been loaded as well as before, during and after the simulation run.
 
 .. image:: http://i.imgur.com/A2BngUx.png
 
@@ -52,118 +51,35 @@ In addition to the navigation buttons, you can use a mouse to rotate, drag or zo
 
 Selection
 ----------
-3D objects in GEPPETTO consist of Entities or Aspects, and can be selected/unselected by clicking on them or 
+3D objects in GEPPETTO consist of Entities or Aspects, and can be selected/unselected by clicking on them or
 using the select command of the entity as such:
 
 .. code-block:: javascript
 
 	-- Entity.select()
-	
+
 	-- Entity.Aspect.select()
-	
+
 	-- Entity.unselect()
-	
+
 	-- Entity.Aspect.unselect()
-	
+
 	-- Simulation.selectEntity()
-	
-To retrieve those entities that are selected, you can use the command: 
+
+To retrieve those entities that are selected, you can use the command:
 
 .. code-block:: javascript
 
 	Simulation.getSelection()
 
-Plotting
-=======
-Geppetto allows plotting of simulation variables and data using our built in Plot functionality. 
-
-A new Plot widget can be created from the console using the command 
-
-.. code-block:: javascript
-
-	G.addWidget(Widgets.PLOT)
-
-Alternatively *Shortcut Key: Ctl+Alt+P* - Toggles existing plotting widgets, if none exist it creates a new one. 
-
-Plotting widgets can plot variables straight from the simulation, given you are watching the variables at the time
-you start plotting it. Each variable will have its own line plot, and it's accompanied by a label to distinguish it
-from other variables being drawn. 
-
-In order to plot a Simulation variable, you can use the command 
-
-.. code-block:: javascript
-
-	Plot1.plotData(variable);
-
-Where "Plot1" is the name of the plotting widget that was returned after creation. 
-
-.. image:: http://i.imgur.com/PigAtLo.png
-
-Other variables can also be plotted, as a two dimensional array  plotted against x and y coordinates. 
-You can customize your line plot and change the dimensions of the axis in your plot, use the "Commands" section
-as a reference to see what options you have to modify your plot. 
-
-.. image:: http://i.imgur.com/Sf9byfH.png
-
-Setting Legend for Variables
-----------
-User can modify the legend that is displayed for a variable being plotted using the following command: 
-
-.. code-block:: javascript
-
-	Plot1.setLegend(variable, legend);
-
-Where variable represents the object being plotted, and legend is a string with the new legend to be displayed for corresponding variable. 
-
-If user fails to specify a legend, the instance path of the variable being plotted will be used. 
-However, it will only be partially displayed to save space inside the widget. To view the full name of the variable 
-user can hover over the legend and a tool-tip with full name will appear.
-
-Setting Options
-----------
-User can modify a Plot Widget settings, including: x and y axis, line plot�s visibility of points and lines.
-Create a javascript object in the console specifying the options, and use setOptions() with the created object
-to set the options for the Plot Widget. 
-
-The following values can be used to modify a Plot settings.
-
-- yaxis - Object that sets a minimimum and maximum value for the Y axis of the graph. 
-  Use {yaxis : { min : 'value', max : 'value'}} to set yaxis.  
-  
-- xaxis - Object that sets a minimimum and maximum value for the X axis of the graph. 
-  Use {xaxis : { min : 'value', max : 'value'}} to set xaxis. 
-  
-- series - Object that turns on/off lines and points in the graph. 
- 
-**Example:** 
-
-.. code-block:: javascript
- 
- 		var linePlotOptions ={
-				yaxis: { min : 0,max : 15},
-				xaxis: {min : 0, max : 15},
-				series: {
-       		 			lines: { show: true },
-        				points: { show: true }
-				}, 
-		}
-
-		//set the options for the plot
-		plot1.setPlotOptions(plotOptions);
-
-Commands
----------- 
-Plots can be created using console commands. For a complete list of commands 
-take a look at our :ref:`Console Commands section`
-
 Console
 =======
-Additionally, you can open a console at the bottom while the simulation is running to make adjustments. 
+Additionally, you can open a console at the bottom while the simulation is running to make adjustments.
 *Shortcut Key: Ctl+Alt+J*
 
 .. image:: http://i.imgur.com/d5CLO9F.png
-   View of the open console. 
-   
+   View of the open console.
+
 .. image:: http://i.imgur.com/ts859ap.png
 
 A complete list of the simulation commands will display by typing help() into the console. The following commands are available in the Geppetto console.
@@ -175,16 +91,16 @@ Tab once, to autocomplete the current word of the command.
 Tab twice, to show all the options available.
 If autocompletion detected a command with parameters, it will autocomplete the command and place the cursor in between the parentheses where the variables are located.
 
-G object commands 
+G object commands
 -----------------
 .. code-block:: javascript
-	
+
 	-- G.addWidget(type)
 
       -- G.availableWidgets()
          Gets list of available widgets
          @returns {List} - List of available widget types
-         
+
       -- G.clear()
          Clears the console history
 
@@ -213,7 +129,7 @@ G object commands
          @param commands - commands to execute
          @param ms - milliseconds to wait before executing commands
 
-Simulation control commands 
+Simulation control commands
 ---------------------------
 .. code-block:: javascript
 
@@ -242,7 +158,7 @@ Simulation control commands
       -- Simulation.isLoaded()
          Checks status of the simulation, whether it has been loaded or not.
          @returns {Boolean} - True if simulation has been loaded, false if not.
-         
+
       -- Simulation.listWatchableVariables()
          List watchable variables for the simulation.
          @returns {String} - status after requesting list of watchable variables.
@@ -310,21 +226,21 @@ Plot Commands
       -- Plot1.destroy()
          Resets the plot widget, deletes all the data series but does not
          destroy the widget window.
-         
+
       -- Plot1.setLegend(variable, legend)
          Sets the legend for a variable
- 
+
 Check our JS documentation for more plot commands_
 
  .. _commands: http://54.200.254.75:8080/org.geppetto.frontend/jsdocs/global.html#Plot
 
 Entity Commands
 --------
-*EntityNode represents a general case, to use commands on own entity replace "EntityNode" by the name 
+*EntityNode represents a general case, to use commands on own entity replace "EntityNode" by the name
 of the entity, you will be able to access commands this way.
 
 .. code-block:: javascript
-      
+
       -- EntityNode.hide()
          Hides the entity
 
@@ -350,15 +266,15 @@ of the entity, you will be able to access commands this way.
 
       -- EntityNode.getEntities()
          Get this entity's children entities
-         @returns {List<Aspect>} - List of aspects         
+         @returns {List<Aspect>} - List of aspects
 
 Aspect Commands
 --------
-*AspectNode represents a general case, to use commands on own aspect replace "AspectNode" by the name 
+*AspectNode represents a general case, to use commands on own aspect replace "AspectNode" by the name
 of the aspect, you will be able to access commands this way.
 
 .. code-block:: javascript
-      
+
       -- AspectNode.hide()
          Hides the aspect
 
@@ -374,19 +290,19 @@ of the aspect, you will be able to access commands this way.
       -- AspectNode.getModelTreee()
          Get the Model Tree for the aspect
          @returns {Object} - ID of aspect
-         
+
       -- AspectNode.getSimulationTree()
          Get the Simulation Tree for the aspect
          @returns {Object} - ID of aspect
-         
+
       -- AspectNode.getVisualizationTree()
          Get the Visualization Tree for the Aspect
          @returns {Object} - ID of aspect
-         
+
       -- AspectNode.getId()
          Get the id associated with aspect
          @returns {String} - ID of aspect
-         
+
 Simulation Variables Commands
 ---------
 *VariableNode should be replaced by the full path of the variable to use the commands below.
@@ -400,26 +316,26 @@ Simulation Variables Commands
       -- VariableNode.getName()
          Get the name associated with the VariableNode
          @returns {String} - Name of variableNode
-         
+
       -- VariableNode.getInstancePath()
          Get the instance path of the variable
          @returns {String} - InstancePath of variableNode
-         
+
       -- VariableNode.getValue()
          Get value of quantity
          @returns {String} - Value of quantity
-         
+
       -- VariableNode.getUnit()
          Get unit of quantity
          @returns {String} - Unit of quantity
-         
+
       -- VariableNode.getScalingFactor()
          Get scaling factor
          @returns {String} - Scaling Factor for value and unit
-         
+
 The Print Command
 ---------
-The print() command can be called on objects for printing it out nicely formatted. 
+The print() command can be called on objects for printing it out nicely formatted.
 
 For example, to print out the simulation variables that an entity has you can do:
 
@@ -427,8 +343,8 @@ For example, to print out the simulation variables that an entity has you can do
 
       -- AspectNode.SimulationTree.print()
 
-You can do the same for the VisualizationTree and the ModelTree. 
-         
+You can do the same for the VisualizationTree and the ModelTree.
+
 Clipboard
 ---------
 From the console, use the following command to open a clipboard and copy the console history.
@@ -442,43 +358,43 @@ From the console, use the following command to open a clipboard and copy the con
 
 Watching State Variables
 ------------------------------
-Simulation states can be watched as the simulation is running, give the user the possibility of drawing their results 
+Simulation states can be watched as the simulation is running, give the user the possibility of drawing their results
 as part of a Plot, through our Plotting widget interface.  A simulation must be loaded in order to watch variables
-from it. 
+from it.
 
 Watching State Variables Example
 -----------------------------
-*Load Lems Simulation, first one from drop-down samples menu. 
+*Load Lems Simulation, first one from drop-down samples menu.
 
 Watch two simulation states by using Simulation.addWatchLists(lists) command
 
 .. code-block:: javascript
-	
+
    Simulation.addWatchLists([{name:"hhvars",variablePaths:["example1.hhpop[0].v", "example1.hhpop[0].spiking"]}]);
-  
-In this case the two states being watched are "hhpop[0].v" and "hhpop[0].spiking". 
+
+In this case the two states being watched are "hhpop[0].v" and "hhpop[0].spiking".
 
 Once variables have been added to watch list, use command
 
 .. code-block:: javascript
-	
+
 	Simulation.startWatch()
 to start  watching these simulation states.
 
-When you have started watching these simulation states you can plot them in a widget to see 
-the different values. Refer to the "Plotting" section for more information on how to do this, and 
- 
+When you have started watching these simulation states you can plot them in a widget to see
+the different values. Refer to the "Plotting" section for more information on how to do this, and
+
 .. code-block:: javascript
-	
+
 	Simulation.help()
-for more commands to use with variable watch. 
+for more commands to use with variable watch.
 
 G.runScript(scriptURL) Example
 ------------------------------
-Within Geppetto, it's possible to execute a script consisting of Geppetto commands and 
-javascript commands. 
+Within Geppetto, it's possible to execute a script consisting of Geppetto commands and
+javascript commands.
 
-Reference a public URL which contains a series of commands, as in the link in this example and 
+Reference a public URL which contains a series of commands, as in the link in this example and
 run the command with that URL_.
  .. _URL: http://raw.github.com/openworm/org.geppetto.testbackend/development/src/main/resources/TestSimulationScript.js
 
@@ -491,7 +407,7 @@ To save a series of executed commands from console:
 
 Connecting with Geppetto
 ========================
-There are two ways to connect with Geppetto.  In the lower right hand screen are two expandable areas. Click on the first will open 
+There are two ways to connect with Geppetto.  In the lower right hand screen are two expandable areas. Click on the first will open
 an interface to share via Facebook or Twitter. The second opens a contact form to reach the Geppetto team with questions or comments.
 
 .. image:: http://i.imgur.com/mQAcCxf.png
@@ -505,17 +421,9 @@ Reference
 
 Keyboard Short Cuts
 -------------------
-=================  ================================================================ 
-   Key Strokes      Action 
 =================  ================================================================
-  Ctl - Alt - J     Opens console 
-  Ctl - Alt - P     Toggles Plot widget(s). If none exist at time, it creates one. 
+   Key Strokes      Action
 =================  ================================================================
-
-
-
-
-
-
-
-
+  Ctl - Alt - J     Opens console
+  Ctl - Alt - P     Toggles Plot widget(s). If none exist at time, it creates one.
+=================  ================================================================

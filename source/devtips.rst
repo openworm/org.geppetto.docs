@@ -50,7 +50,7 @@ This section provides tips to solve some problems regarding Geppetto deploying i
 
   **Examples**
 
-  * There is no connection between the client and the server. For instance, you can't see the geppetto version in the console when the main page is loaded. Also if you try to load a simulation it keeps loading forever. -> The spring configuration (META-INF/spring) in the org.geppetto.front resources hasn't been copied in the server.
+  * There is no connection between the client and the server. For instance, you can't see the geppetto version in the console when the main page is loaded. Also if you try to load a simulation it keeps loading forever. -> The spring configuration (META-INF/spring) in the org.geppetto.frontend resources hasn't been copied in the server.
   * When executing aspect.getModel() an exception is raised. In the log you will see a trace that says "FileNotFound" -> You will have to copy the main/resources files of the org.geppetto.model.neuroml project.
   
 

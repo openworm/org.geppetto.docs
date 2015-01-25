@@ -1,4 +1,4 @@
-Tips for developer to configure/deploy Eclipse + Virgo
+Styling the Geppetto Frontend using LESS and CSS
 ********************************************************
 
 Last Update: January 24th 2015
@@ -7,7 +7,7 @@ This section provides information on how to style the geppetto frontend using CS
 Currently, GEPPETTO uses LESS styling sheets to give the frontend components their current look. 
 Each component has a corresponding LESS file, which is also referenced from inside the main.less file.
 During development stages, the LESS files will be used, but CSS files will be used during production.
-Building the frontend using "mvn clean install -P master" will create a file css file from the LESS components.
+Building the frontend using "mvn clean install -P master" will create a file CSS file from the LESS components.
 
 The structure of CSS and LESS files looks something like this, and this is how you can expect to 
 find the files inside the frontend bundle. 

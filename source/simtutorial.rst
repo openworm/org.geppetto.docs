@@ -18,6 +18,21 @@ Simulations used within Geppetto are specified within an XML file, which follows
     <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.openworm.org/simulationSchema"
 		xmlns:tns="http://www.openworm.org/simulationSchema" elementFormDefault="qualified" 
 		xmlns:jxb="http://java.sun.com/xml/ns/jaxb" jxb:version="2.0">
+	<element name="simulation">
+		<complexType>
+			<sequence>
+				<element name="entity" type="tns:Entity" maxOccurs="unbounded" minOccurs="1">
+					<annotation>
+						<appinfo>
+							<jxb:property name="entities" />
+						</appinfo>
+					</annotation>
+				</element>
+				<element name="script" type="string" maxOccurs="unbounded" minOccurs="0"></element>
+			</sequence>
+		</complexType>
+	</element>
+		
 	<complexType name="Model">
 		<sequence>
 			<element name="modelInterpreterId" type="string" maxOccurs="1" minOccurs="1"></element>
@@ -64,8 +79,8 @@ Simulations used within Geppetto are specified within an XML file, which follows
 		<sequence>
 			<element name="id" type="string" maxOccurs="1" minOccurs="1"></element>
 			<element name="instancePath" type="string" maxOccurs="1" minOccurs="0"></element>
-			<element name="model" type="tns:Model" maxOccurs="1" minOccurs="1"></element>
 			<element name="simulator" type="tns:Simulator" maxOccurs="1" minOccurs="0"></element>
+			<element name="model" type="tns:Model" maxOccurs="1" minOccurs="1"></element>
 			<element name="parentEntity" type="tns:Entity" maxOccurs="1" minOccurs="0"></element>
 		</sequence>
 	</complexType>
@@ -92,21 +107,6 @@ Simulations used within Geppetto are specified within an XML file, which follows
 			<element name="position" type="tns:Point3D" minOccurs="0" maxOccurs="1"></element>
 		</sequence>
 	</complexType>
-
-	<element name="simulation">
-		<complexType>
-			<sequence>
-				<element name="entity" type="tns:Entity" maxOccurs="unbounded" minOccurs="1">
-					<annotation>
-						<appinfo>
-							<jxb:property name="entities" />
-						</appinfo>
-					</annotation>
-				</element>
-				<element name="script" type="string" maxOccurs="unbounded" minOccurs="0"></element>
-			</sequence>
-		</complexType>
-	</element>
     </schema>
 
 The Simulation file starts with the head tag pointing to the different schema location that will be used to describe the file as seen below. 

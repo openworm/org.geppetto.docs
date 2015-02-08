@@ -19,6 +19,16 @@ which would return a list like this:
 
 	{"PLOT":0,"POPUP":1,"SCATTER3D":2,"TREEVISUALISERDAT":3,"TREEVISUALISERD3":4,"VARIABLEVISUALISER":5,"CONNECTIVITY":6}
 
+Specific documentation on different widget types are available below:
+
+* A plot widget shows a line graph of data tied to variables that are changing in a simulation
+* A popup widget can display arbitrary text to annotate / document a model
+* A Scatter 3D widget shows a scatter plot
+* A TreeVisualizer DAT widget shows model properties in a hierarchical tree view.
+* A Variable visualizer widget displays the changing values of a variable
+* A Connectivity widget displays connections between neurons in a network.
+
+
 In order to instantiate a widget the user can use the command
 
 .. code-block:: javascript
@@ -38,8 +48,9 @@ If you are interested in contributing a new widget to Geppetto you can follow th
    :maxdepth: 2
 
    plotW
+   popupW
    scatter3DW
    treevisualizerW
-   connectivityW
    variablevizW
-   popupW
+   connectivityW
+

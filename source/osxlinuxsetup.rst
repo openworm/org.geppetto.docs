@@ -134,7 +134,13 @@ Then run:
 
 	``./update_server``
 
-This will copy all of the built jars and wars over to %SERVER_HOME%/repository/usr and the *geppetto.plan* file in org.geppetto to %SERVER_HOME%/pickup.
+This will copy all of the built jars, wars and dependencies over to %SERVER_HOME%/repository/usr and the *geppetto.plan* file in org.geppetto to %SERVER_HOME%/pickup.
+
+If you plan to start the server from the eclipse environment run the update_server script with the "eclipse" flag:
+
+	``./update_server eclipse``
+
+This will copy only dependencies over to %SERVER_HOME%/repository/usr. Geppetto JARs and WARs will be copied by Eclipse in the Virgo stage folder upon deployment.
 
 Starting and Stopping Virgo
 ===========================

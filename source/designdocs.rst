@@ -7,11 +7,13 @@ Note that there can be multiple tabs in each document as shown in the screenshot
 
 .. image:: images/designdocs.png
 
+**Common** 
+
 `Overview <https://www.lucidchart.com/documents/view/4666b850-512b-5184-8a79-20de0a000fde>`_
 
 `Use Cases <https://www.lucidchart.com/documents/view/d2b4631c-da56-4b80-9bdb-28c2a6d75c8c>`_
 
-### Backend 
+**Backend** 
 
 `Data Model <https://www.lucidchart.com/documents/view/ae8bd4d6-2226-4aee-9d56-774e323188a6/0>`_
 
@@ -39,5 +41,5 @@ Note that there can be multiple tabs in each document as shown in the screenshot
 
 `Simulator Sequence Diagram <https://www.lucidchart.com/documents/view/425b6548-51de-ecd5-827e-073d0a009bd7>`_
 
-### Frontend
+**Frontend** 
 

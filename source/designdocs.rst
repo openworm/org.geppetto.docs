@@ -7,13 +7,13 @@ Note that there can be multiple tabs in each document as shown in the screenshot
 
 .. image:: images/designdocs.png
 
-*Common* 
+**Common**
 
 `Overview <https://www.lucidchart.com/documents/view/4666b850-512b-5184-8a79-20de0a000fde>`_
 
 `Use Cases <https://www.lucidchart.com/documents/view/d2b4631c-da56-4b80-9bdb-28c2a6d75c8c>`_
 
-*Backend* 
+**Backend** 
 
 `Data Model <https://www.lucidchart.com/documents/view/ae8bd4d6-2226-4aee-9d56-774e323188a6/0>`_
 
@@ -41,13 +41,13 @@ Note that there can be multiple tabs in each document as shown in the screenshot
 
 `Simulator Sequence Diagram <https://www.lucidchart.com/documents/view/425b6548-51de-ecd5-827e-073d0a009bd7>`_
 
-**Multiple Aspect Integration**
+*Multiple Aspect Integration*
 
 `Multiple Aspect Integration <https://www.lucidchart.com/documents/view/f66e90ca-9c2d-4f16-9f79-d3f83f5d654a>`_
 
 `Integration Activity Flow <https://www.lucidchart.com/documents/view/4b794838-521e-00a5-98c1-649e0a00c900>`_
 
-*Frontend* 
+**Frontend**
 
 `Geppetto Frontend <https://www.lucidchart.com/documents/view/675f119b-3923-4ada-bbfb-ea8d571fd01a>`_
 
@@ -55,7 +55,7 @@ Note that there can be multiple tabs in each document as shown in the screenshot
 
 `Events framework <https://www.lucidchart.com/documents/view/f976cc20-5f29-4c57-9070-e7b97b415521>`_
 
-**Widgets**
+*Widgets*
 
 `Widgets class diagram <https://www.lucidchart.com/documents/view/43905d5c-5268-ab60-9ff5-2b5d0a00d543>`_
 
@@ -67,7 +67,7 @@ Note that there can be multiple tabs in each document as shown in the screenshot
 
 `Install Widgets <https://www.lucidchart.com/documents/view/b5e67ca3-cde7-4ad9-9810-edeccc9e1548>`_
 
-**Plotting Widget**
+*Plotting Widget*
 
 `Plotting Activity Diagram <https://www.lucidchart.com/documents/view/4f06a058-5251-8aa8-878e-3a890a0050f4>`_
 

@@ -17,11 +17,13 @@ Note that there can be multiple tabs in each document as shown in the screenshot
 
 `Data Model <https://www.lucidchart.com/documents/view/ae8bd4d6-2226-4aee-9d56-774e323188a6/0>`_
 
-`Simulator pipeline for neuronal domain <https://www.lucidchart.com/documents/view/441da30d-df65-4001-8809-2a796c80460b>`_
-
 `Services <https://www.lucidchart.com/documents/view/59066315-98d7-488e-b0cb-18f4c2a4cf65>`_
 
-`Data Model <https://www.lucidchart.com/documents/view/ae8bd4d6-2226-4aee-9d56-774e323188a6>`_
+`Simulators <https://www.lucidchart.com/documents/view/425b6548-51de-ecd5-827e-073d0a009bd7>`_
+
+`Simulator pipeline for neuronal domain <https://www.lucidchart.com/documents/view/441da30d-df65-4001-8809-2a796c80460b>`_
+
+`Runtime Tree population <https://www.lucidchart.com/documents/view/7c2e3ca2-f11f-4051-b115-a921cf31863b>`_
 
 `WebSockets Backend API <https://www.lucidchart.com/documents/view/4ba99a20-5217-1f53-82f4-4f420a004d28>`_
 
@@ -31,29 +33,28 @@ Note that there can be multiple tabs in each document as shown in the screenshot
 
 `Simulation time <https://www.lucidchart.com/documents/view/412c0624-52f7-032a-a083-22670a00c5f0>`_
 
-`Runtime Tree population <https://www.lucidchart.com/documents/view/7c2e3ca2-f11f-4051-b115-a921cf31863b>`_
-
 `External process from OSGi <https://www.lucidchart.com/documents/view/bc5b6fe7-0722-4055-b557-e95b9511f85e>`_
 
 `Geppetto API Design Draft (Old) <https://www.lucidchart.com/documents/edit/48520f68-5227-2452-a0e1-2db80a004e94>`_
 
 `Geppetto Observer Mode <https://www.lucidchart.com/documents/view/4a8ed5f0-51c4-ccda-9e42-26a20a004538>`_
 
-`Simulator Sequence Diagram <https://www.lucidchart.com/documents/view/425b6548-51de-ecd5-827e-073d0a009bd7>`_
 
 *Multiple Aspect Integration*
 
-`Multiple Aspect Integration <https://www.lucidchart.com/documents/view/f66e90ca-9c2d-4f16-9f79-d3f83f5d654a>`_
+`Design (in progress) <https://www.lucidchart.com/documents/view/f66e90ca-9c2d-4f16-9f79-d3f83f5d654a>`_
 
-`Integration Activity Flow <https://www.lucidchart.com/documents/view/4b794838-521e-00a5-98c1-649e0a00c900>`_
+`Integration Activity Flow (in progress) <https://www.lucidchart.com/documents/view/4b794838-521e-00a5-98c1-649e0a00c900>`_
 
 **Frontend**
 
 `Geppetto Frontend <https://www.lucidchart.com/documents/view/675f119b-3923-4ada-bbfb-ea8d571fd01a>`_
 
-`Visualization tree and 3D objects <https://www.lucidchart.com/documents/view/c860c683-55c7-4864-b28d-9cdf444b5150>`_
-
 `Events framework <https://www.lucidchart.com/documents/view/f976cc20-5f29-4c57-9070-e7b97b415521>`_
+
+`Visualization tree and 3D objects (Refactoring) <https://www.lucidchart.com/documents/view/c860c683-55c7-4864-b28d-9cdf444b5150>`_
+
+
 
 *Widgets*
 

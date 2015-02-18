@@ -67,7 +67,7 @@ Note that there can be multiple tabs in each document as shown in the screenshot
 
 `Install Widgets <https://www.lucidchart.com/documents/view/b5e67ca3-cde7-4ad9-9810-edeccc9e1548>`_
 
-***Plotting Widget***
+**Plotting Widget**
 
 `Plotting Activity Diagram <https://www.lucidchart.com/documents/view/4f06a058-5251-8aa8-878e-3a890a0050f4>`_
 

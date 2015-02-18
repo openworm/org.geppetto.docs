@@ -7,6 +7,8 @@ Note that there can be multiple tabs in each document as shown in the screenshot
 
 .. image:: images/designdocs.png
 
+All diagrams are constantly evolving (some more than others) to reflect the latest structure and drive the development of the new features.
+
 **Common**
 
 `Overview <https://www.lucidchart.com/documents/view/4666b850-512b-5184-8a79-20de0a000fde>`_

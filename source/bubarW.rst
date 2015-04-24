@@ -2,15 +2,19 @@
 Button Bar Widget
 =================
 
-This widget allows the user to define a custom button bar. Each button has customizable label, icon, tooltip, and can fire any sequence of Geppetto commands when pressed.  Buttons are also grouped in groups.
+This widget allows the user to define a custom button bar. Each button has customizable label,
+icon, tooltip, and can fire any sequence of Geppetto commands when pressed. Buttons can also 
+grouped in *button groups*.
 
-Button bars can either be read from external *json* files, or explicitly through javascript objects.
+Button bars can either be read from external *json* files, or defined explicitly from the console
+through javascript objects.
 
 
 Reading a Button Bar defined in an external configuration *json* file
 =====================================================================
 
-In order to load an externally defined button bar (i. e. defined in a self-contained file), run the following command:
+In order to load an externally defined button bar (i. e. defined in a self-contained remote file),
+run the following command:
 
 .. code-block:: javascript
 
@@ -81,16 +85,17 @@ This configuration file gives rise to the following button bar:
 
 The syntax of the configuration file is meant to be intuitive:
 
-1. rd level : the name of the toolbar (only one)
-2. rd level : button group definitions (any number)
-3. rd level : definition (any number)
+* 1st level : the name of the toolbar (only one)
+* 2nd level : button group definitions (any number)
+* 3rd level : button definition (any number)
 
 
 Each button has the following attributes:
 
-
-* label: text displayes inside the actual button
-* icon:  button icon displayed alongside the label. See the `Geppetto Icons <https://github.com/borismarin/org.geppetto.frontend.icons>`_ project for
-  custom icons
-* action: a list of Geppetto commands to be executed sequentially *exactly as if being typed from the console*.
+* label: text displayed inside the actual button
+* icon:  icon displayed alongside the label. See the 
+  `Geppetto Icons <https://github.com/borismarin/org.geppetto.frontend.icons>`_ 
+  project for icon names (Fontawesome should also work).
+* action: a list of Geppetto commands to be executed sequentially,
+  *exactly as they would have been typed in the console*.
 * tooltip: text displayed when the mouse is hovered over the button.

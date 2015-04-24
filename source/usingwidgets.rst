@@ -17,7 +17,7 @@ which would return a list like this:
 
 .. code-block:: javascript
 
-	{"PLOT":0,"POPUP":1,"SCATTER3D":2,"TREEVISUALISERDAT":3,"TREEVISUALISERD3":4,"VARIABLEVISUALISER":5,"CONNECTIVITY":6}
+	{"PLOT":0,"POPUP":1,"SCATTER3D":2,"TREEVISUALISERDAT":3,"TREEVISUALISERD3":4,"VARIABLEVISUALISER":5,"CONNECTIVITY":6, "BUTTONBAR":7}
 
 Specific documentation on different widget types are available below:
 
@@ -27,7 +27,7 @@ Specific documentation on different widget types are available below:
 * A TreeVisualizer DAT widget shows model properties in a hierarchical tree view.
 * A Variable visualizer widget displays the changing values of a variable
 * A Connectivity widget displays connections between neurons in a network.
-
+* A Button Bar widget that allows the user to define a bar with any number of custom buttons.
 
 In order to instantiate a widget the user can use the command
 
@@ -53,4 +53,5 @@ If you are interested in contributing a new widget to Geppetto you can follow th
    treevisualizerW
    variablevizW
    connectivityW
+   bubarW
 

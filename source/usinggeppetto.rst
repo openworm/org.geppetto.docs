@@ -353,14 +353,6 @@ This command will populate the simulation tree (hhcell.electrical.SimulationTree
    
 These commands can be executed before we start running the simulation. However if it is an interactive simulation (e.g. JLems Simulator), not an asynchronous one, we can also modified the variables we are watching on run time using the commands aforementioned.
 
-When you have started watching these simulation states you can plot them in a widget to see
-the different values. Refer to the "Plotting" section for more information on how to do this, and
-
-.. code-block:: javascript
-
-	Simulation.help()
-for more commands to use with variable watch.
-
 G.runScript(scriptURL) Example
 ------------------------------
 Within Geppetto, it's possible to execute a script consisting of Geppetto commands and

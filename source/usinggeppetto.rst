@@ -340,35 +340,18 @@ Simulation states can be watched as the simulation is running. It brings the use
 Once the model has been loaded and before starting the simulation we can set the variables to be watched. In order to do this, firstly we need to populate the simulation tree. Assuming our entity is hhcell and the aspect is electrical we will have to execute the following command:
 
 .. code-block:: javascript
+
    hhcell.electrical.getSimulationTree();
    
 This command will populate the simulation tree (hhcell.electrical.SimulationTree) with all the watchable variables. By default the variables are not being watched. To start watching a/some variable/s there are two commands:
+
 .. code-block:: javascript
+
    hhcell.electrical.SimulationTree.hhpop[0].v.setWatched(true);
    
    Simulation.setWatchedVariables([hhcell.electrical.SimulationTree.hhpop[0].v, hhcell.electrical.SimulationTree.hhpop[0].spiking]);
    
 These commands can be executed before we start running the simulation. However if it is an interactive simulation (e.g. JLems Simulator), not an asynchronous one, we can also modified the variables we are watching on run time using the commands aforementioned.
-
-
-Watching State Variables Example
------------------------------
-*Load Lems Simulation, first one from drop-down samples menu.
-
-Watch two simulation states by using Simulation.addWatchLists(lists) command
-
-.. code-block:: javascript
-
-   Simulation.addWatchLists([{name:"hhvars",variablePaths:["example1.hhpop[0].v", "example1.hhpop[0].spiking"]}]);
-
-In this case the two states being watched are "hhpop[0].v" and "hhpop[0].spiking".
-
-Once variables have been added to watch list, use command
-
-.. code-block:: javascript
-
-	Simulation.startWatch()
-to start  watching these simulation states.
 
 When you have started watching these simulation states you can plot them in a widget to see
 the different values. Refer to the "Plotting" section for more information on how to do this, and

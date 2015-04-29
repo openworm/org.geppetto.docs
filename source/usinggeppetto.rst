@@ -159,34 +159,12 @@ Simulation control commands
          Checks status of the simulation, whether it has been loaded or not.
          @returns {Boolean} - True if simulation has been loaded, false if not.
 
-      -- Simulation.listWatchableVariables()
-         List watchable variables for the simulation.
-         @returns {String} - status after requesting list of watchable variables.
-
-      -- Simulation.listForceableVariables()
-         List forceable variables for the simulation.
-         @returns {String} - status after requesting list of forceable variables.
-
-      -- Simulation.addWatchLists(watchLists)
-
-      -- Simulation.getWatchLists()
-         Retrieve watchlists available the simulation.
-         @returns {String} - status after request.
-
-      -- Simulation.startWatch()
-         Start watching variables for the simulation.
-         @returns {String} - status after request.
-
-      -- Simulation.stopWatch()
-         Stop watching variables for the simulation.
-         @returns {String} - status after request.
+      -- Simulation.setWatchedVariables(watchLists)
+         Add watchlists to the simulation.
+         @param {Array} watchLists - Array listing variables to be watched.
 
       -- Simulation.clearWatchLists()
          Clears all watch lists for the given simulation
-         @returns {String} - status after request.
-
-      -- Simulation.getWatchTree()
-         Gets tree for variables being watched if any.
          @returns {String} - status after request.
 
       -- Simulation.help()
@@ -292,7 +270,7 @@ of the aspect, you will be able to access commands this way.
          @returns {Object} - ID of aspect
 
       -- AspectNode.getSimulationTree()
-         Get the Simulation Tree for the aspect
+         Get formatted simulation watch tree for this aspect.
          @returns {Object} - ID of aspect
 
       -- AspectNode.getVisualizationTree()
@@ -358,9 +336,20 @@ From the console, use the following command to open a clipboard and copy the con
 
 Watching State Variables
 ------------------------------
-Simulation states can be watched as the simulation is running, give the user the possibility of drawing their results
-as part of a Plot, through our Plotting widget interface.  A simulation must be loaded in order to watch variables
-from it.
+Simulation states can be watched as the simulation is running. It brings the user the possibility to access the value of the variable client side, i.e. drawing their results as part of a Plot, through our Plotting widget interface, showing the information in a tree visualiser widget, etc.
+Once the model has been loaded and before starting the simulation we can set the variables to be watched. In order to do this, firstly we need to populate the simulation tree. Assuming our entity is hhcell and the aspect is electrical we will have to execute the following command:
+
+.. code-block:: javascript
+   hhcell.electrical.getSimulationTree();
+   
+This command will populate the simulation tree (hhcell.electrical.SimulationTree) with all the watchable variables. By default the variables are not being watched. To start watching a/some variable/s there are two commands:
+.. code-block:: javascript
+   hhcell.electrical.SimulationTree.hhpop[0].v.setWatched(true);
+   
+   Simulation.setWatchedVariables([hhcell.electrical.SimulationTree.hhpop[0].v, hhcell.electrical.SimulationTree.hhpop[0].spiking]);
+   
+These commands can be executed before we start running the simulation. However if it is an interactive simulation (e.g. JLems Simulator), not an asynchronous one, we can also modified the variables we are watching on run time using the commands aforementioned.
+
 
 Watching State Variables Example
 -----------------------------

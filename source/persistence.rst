@@ -25,10 +25,11 @@ Getting started with database
 * You can now checkout the org.geppetto.persistence bundle and make sure Virgo deploys it as well at runtime
 * A file like the one below will need to be added to the {user.home}/geppetto/db.properties
 
-javax.jdo.option.ConnectionURL=jdbc:mysql://localhost/geppetto
-javax.jdo.option.ConnectionDriverName=com.mysql.jdbc.Driver
-javax.jdo.option.ConnectionUserName=user_name
-javax.jdo.option.ConnectionPassword=password
+    javax.jdo.option.ConnectionURL=jdbc:mysql://localhost/geppetto
+    javax.jdo.option.ConnectionDriverName=com.mysql.jdbc.Driver
+    javax.jdo.option.ConnectionUserName=user_name
+    
+    javax.jdo.option.ConnectionPassword=password
 
 * Now, when starting Virgo, if the persistence bundle is deployed then there will be database support available
 

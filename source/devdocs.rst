@@ -19,3 +19,4 @@ For Developers
    components
    styling
    devtips
+   persistence

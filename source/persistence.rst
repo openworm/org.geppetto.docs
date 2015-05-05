@@ -19,6 +19,7 @@ Getting started with database
 * Start MySQL Workbench (or other management UI client) and create a new database and a new database user. You can use the script below for this
 
     create database geppetto;
+    
     create user user_name identified by 'password';
 
 * Once you have created the database, you will have to grant rights to the user for the database. You can do this in the Users and Priviledges tool in MySQL Workbench

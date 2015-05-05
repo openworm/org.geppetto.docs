@@ -42,6 +42,7 @@ Setting up for Amazon S3 support
 * Ask for the GeppettoDBAdmin user credentials and save them into a file located in {user.home}/geppetto/aws.credentials having a structure like the one below:
 
     accessKey=...
+    
     secretKey=...
     
 * The APIs for handling S3 persistence operations are located in the S3Manager class in the org.geppetto.persistence bundle

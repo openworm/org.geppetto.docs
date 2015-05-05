@@ -16,4 +16,26 @@ Getting started with database
 
 * Download and install MySQL. You can download the appropriate version of MySQL here: http://dev.mysql.com/downloads/mysql/
 * Once downloaded, start the MySQL server installation and follow the instructions. When asked about the setup type, you can select a "Custom" installation and manually select what extra tools may be needed. There will be some configuration steps as well and you will be asked to provide a password for the server admin user. The installation package includes the "MySQL Workbench" as well which is a client tool for managing MySQL servers. However, developers may want to choose another tool for this.
-* 
+* Start MySQL Workbench (or other management UI client) and create a new database and a new database user. You can use the script below for this
+
+    create database geppetto;
+    create user user_name identified by 'password';
+
+* Once you have created the database, you will have to grant rights to the user for the database. You can do this in the Users and Priviledges tool in MySQL Workbench
+* You can now checkout the org.geppetto.persistence bundle and make sure Virgo deploys it as well at runtime
+* A file like the one below will need to be added to the {user.home}/geppetto/db.properties
+
+javax.jdo.option.ConnectionURL=jdbc:mysql://localhost/geppetto
+javax.jdo.option.ConnectionDriverName=com.mysql.jdbc.Driver
+javax.jdo.option.ConnectionUserName=user_name
+javax.jdo.option.ConnectionPassword=password
+
+* Now, when starting Virgo, if the persistence bundle is deployed then there will be database support available
+
+The biggest issue with all this is related to DataNucleus. There is an "enhance" goal in the persistence pom.xml that, when running, it enhances the model classes for being supported by DataNucleus. However, sometimes mvn clean install, Maven Update are not sufficient. A right-click on the Virgo Runtime server, followed by "Clean..." usually fixes the issue with the classes.
+
+Setting up for Amazon S3 support
+********************************
+
+TODO
+

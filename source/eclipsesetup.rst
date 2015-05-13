@@ -98,11 +98,16 @@ To do so go to File -> Import -> Git -> Projects from GitHub repository and type
     
 .. image:: http://i.imgur.com/bYJFHgw.png?1
 
-All the repositories added will be visible  going to the view “Git Repositories” which was installed by EGit (Windows -> Show View -> Other -> Git Repositories). 
 
-.. image:: http://i.imgur.com/PmGmt5M.png?1
+Now you need to import your projects into Eclipse.
 
-By right clicking on each project it is possible to choose “import” to add the project to your workspace.
+Make sure you have the head repository (org.geppetto) in the 'git' folder that you will find located on your local drive, probably in your home directory. You will also find the other repositories you have imported located there.
+
+Now from Eclipse click, File -> Import -> Mavern -> Existing Mavern Projects, and point it to the 'git' folder. 
+
+Eclipse will now be able to install all the projects in one go with the correct classpaths and structure in place.
+
+
 
 We are **almost** there. 
 

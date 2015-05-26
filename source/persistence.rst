@@ -34,9 +34,11 @@ Getting started with database
 
 * Now, when starting Virgo, if the persistence bundle is deployed then there will be database support available
 
-The biggest issue with all this is related to DataNucleus. There is an "enhance" goal in the persistence pom.xml that, when running, it enhances the model classes for being supported by DataNucleus. However, sometimes mvn clean install, Maven Update are not sufficient. A right-click on the Virgo Runtime server, followed by "Clean..." usually fixes the issue with the classes. It turns out that not even "Clean..." helps, so the remaining approach is to stop the server, run mvn clean install on the persistence bundle, overwrite the stage/org.geppetoo.persistence.jar/org in Virgo with the org directory in org.geppetto.persistence/target/classes and try again.
+The biggest issue with all this is related to DataNucleus. There is an "enhance" goal in the persistence pom.xml that, when running, it enhances the model classes for being supported by DataNucleus. However, sometimes mvn clean install, Maven Update are not sufficient. A right-click on the Virgo Runtime server, followed by "Clean..." usually fixes the issue with the classes.
 
-Probably a longer term solution would be to find the way to make sure that the enhancer runs as part of the Maven / Update Project.
+It turns out that not even "Clean..." helps, so the remaining approach is to stop the server, run mvn clean install on the persistence bundle, overwrite the stage/org.geppetoo.persistence.jar/org in Virgo with the org directory in org.geppetto.persistence/target/classes and try again.
+
+A longer term solution would be to find the way to make sure that the enhancer runs as part of the Maven / Update Project.
 
 Setting up for Amazon S3 support
 ********************************

@@ -34,6 +34,8 @@ Getting started with database
 
 * Now, when starting Virgo, if the persistence bundle is deployed then there will be database support available
 
+* In order to have some test data in the database, there is a DBTestData class available in the org.geppetto.persistence bundle which can be run as a standalone Java application and which will handle the population of test data.
+
 The biggest issue with all this is related to DataNucleus. There is an "enhance" goal in the persistence pom.xml that, when running, it enhances the model classes for being supported by DataNucleus. However, sometimes mvn clean install, Maven Update are not sufficient. A right-click on the Virgo Runtime server, followed by "Clean..." usually fixes the issue with the classes.
 
 It turns out that not even "Clean..." helps, so the remaining approach is to stop the server, run mvn clean install on the persistence bundle, overwrite the stage/org.geppetoo.persistence.jar/org in Virgo with the org directory in org.geppetto.persistence/target/classes and try again.
@@ -50,5 +52,3 @@ Setting up for Amazon S3 support
     secretKey=the GeppettoDBAdmin secret key
     
 * The APIs for handling S3 persistence operations are located in the S3Manager class in the org.geppetto.persistence bundle
-
-

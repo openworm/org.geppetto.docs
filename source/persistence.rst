@@ -34,7 +34,7 @@ Getting started with database
 
 * Now, when starting Virgo, if the persistence bundle is deployed then there will be database support available
 
-* In order to have some test data in the database, there is a DBTestData class available in the org.geppetto.persistence bundle which can be run as a standalone Java application and which will handle the population of test data.
+* In order to have some test data in the database, there is a DBTestData class available in the org.geppetto.persistence.util package in the org.geppetto.persistence bundle which can be run as a standalone Java application and which will handle the population of test data.
 
 The biggest issue with all this is related to DataNucleus. There is an "enhance" goal in the persistence pom.xml that, when running, it enhances the model classes for being supported by DataNucleus. However, sometimes mvn clean install, Maven Update are not sufficient. A right-click on the Virgo Runtime server, followed by "Clean..." usually fixes the issue with the classes.
 

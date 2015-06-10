@@ -13,3 +13,4 @@ For Users
    visualgroups
    usingwidgets
    events
+   dropbox

@@ -21,8 +21,9 @@ Getting started with database
     create database geppetto;
     
     create user user_name identified by 'password';
+    
+    grant all privileges on geppetto.* to 'user_name'@'localhost' identified by 'password';
 
-* Once you have created the database, you will have to grant rights to the user for the database. You can do this in the Users and Priviledges tool in MySQL Workbench
 * You can now checkout the org.geppetto.persistence bundle and make sure Virgo deploys it as well at runtime
 * A file like the one below will need to be added to the {user.home}/geppetto/db.properties
 

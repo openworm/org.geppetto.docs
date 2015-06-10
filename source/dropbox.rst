@@ -19,8 +19,6 @@ A new tab/window will be open asking you to grant Geppetto privileges to access 
 DropBox folder, which is needed to upload experiment results.
 
 .. figure:: images/dropbox.png
-            :height: 500 px
-            :width: 660 px	
 
 After clicking "Allow", you will be presented with a code. Copy and paste that code, 
 and run command G.linkDropBox() again. This time put the key code inside the command as 

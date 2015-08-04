@@ -24,9 +24,9 @@ OSX and Linux
 
 * OpenCL (version 1.2)
 
-* Virgo Server for Apache Tomcat: `ZIP file <http://www.eclipse.org/virgo/download/>`_, unpack it to your desired location by:
+* Virgo Server for Apache Tomcat: `ZIP file <https://dl.dropboxusercontent.com/u/7538688/virgo-tomcat-server-3.6.3.RELEASE.zip?dl=1>`_, unpack it to your desired location by:
 
-	``gunzip -a virgo.zip -d <desired directory>``
+	``gunzip -a virgo-tomcat-server-3.6.3.RELEASE.zip -d <desired directory>``
 
 OSX
 ---

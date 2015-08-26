@@ -41,11 +41,26 @@ Project
 The bar at the top allows you to filter the list of projects, just type in it to search for a specific one.
 The right pane shows which experiments are available in the selected project.
 
-Experiment
-----------
+Experiments
+-----------
 
 Experiment
-	A computational experiment in Geppetto lets you specify what value you want to assign to the parameters available in your model and which variables you wish to record when a simulation is executed. Recorded variables are called **watched variables** while the parameters are called **model parameters**.
+	A computational experiment in Geppetto lets you specify what value you want to assign to the parameters available in your model and which variables you wish to record when you run a simulation of your model. Recorded variables are called **watched variables** while the parameters are called **model parameters**. An experiment also allows you to specify the **simulation parameters** such as timestep, simulation length and which simulator to use in the given experiment.
+
+An experiment can be in multiple states indicated by a different colour:
+
+Design (Orange)
+	The experiment is editable, it is possible to change the variables and parameters associated with it.
+Queued (Blue)
+	The experiment simulation has been queued and will be executed by the geppetto scheduler soon, from now on the parameters are read only.
+Running (Yellow)
+	The experiment simulation is currently being executed.
+Complete (Green)
+	The experiment simulation is completed. It is now possible to replay it and visualize the simulation results.
+Error (Red)
+	An error occurred while executing the experiment simulation.
+
+
 
 Project explorer
 ================

@@ -10,11 +10,17 @@
 Introduction
 ============
 
-Geppetto is a **web-based** multi-algorithm, multi-scale simulation platform engineered to support the simulation of **complex biological systems** and their surrounding environment. Geppetto's integrative approach to biological modeling is at the heart of the `Open Worm project <http://www.openworm.org/>`__.
+Geppetto is a platform made to empower you to explore, visualize and simulate complex biological models. 
+The documentation is split into two main sections: a guide to help you learn how to use Geppetto and the developers documentation to learn how Geppetto is engineered and how to contribute to it.
 
-`Live deployment <https://live.geppetto.org>`__
+Geppetto is a web application and the end user won't generally require to install it in their local system to use it. 
 
-`Download the latest version <https://github.com/openworm/org.geppetto/releases/>`__
+A demo deployment of the latest release of Geppetto is available `here <https://live.geppetto.org>`__ while the binaries are available to `download here <https://github.com/openworm/org.geppetto/releases/>`__.
+
+The following is a list of the websites currently using a custom deployment of Geppetto available on the web:
+
+- `Open Source Brain <http://opensourcebrain.org>`__
+- `WormSim <http://wormsim.org>`__
 
 ------------
 

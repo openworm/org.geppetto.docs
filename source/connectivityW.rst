@@ -135,7 +135,7 @@ Draws populations as arcs of a circle, with connections represented as "chords" 
 Example 1
 ---------
 
-Default force layout for the `auditory cortex model`_. ::
+Default chord layout for the `auditory cortex model`_. ::
 
   G.addWidget(6).setData(acnet2, {layout: 'chord'})
 

@@ -56,7 +56,7 @@ Connectivity widget for a cerebellar `granule cell layer model`_. It defaults to
 
 Example 2
 ---------
-Using the *linkType* option to colour links (synapses) by neurotransmitter in a model of the `auditory cortex`_. The *linkType* function leverages the *getSubNodesOfDomainType()* utility method, in order to get NeuroML synaptic properties, which in turn have and id attribute which indicates the neuromodulator (and the population, which is irrelevant in this case). The name is finally split the underscore to get only AMPA/GABA. ::
+Using the *linkType* option to colour links (synapses) by neurotransmitter in a model of the `auditory cortex`_. The *linkType* function leverages the *getSubNodesOfDomainType()* utility method, in order to get NeuroML synaptic properties, which in turn have and id attribute which indicates the neuromodulator (and the population, which is irrelevant in this case). The name is finally split at the underscore to get only AMPA/GABA. ::
 
   G.addWidget(6).setData(acnet2,
          {layout: 'matrix',
@@ -109,7 +109,7 @@ Full usage of fore-layout customizations in the `granule cell layer model`_. Usi
 Hive Plot
 =========
 
-Depicts connectivity using a `hive`_ plot. Nodes are segragated by type into axes arranged radially, and edges are represented by lines. The position of a node in each of the axis is given by the node degree (indegree + outdegree for directed graphs, which is always the case in Geppetto).
+Depicts connectivity using a `hive`_ plot. Nodes are segregated by type into axes arranged radially, and edges are represented by lines. The position of a node in each of the axis is given by the node degree (indegree + outdegree for directed graphs, which is always the case in Geppetto).
 
 Example 1
 ---------

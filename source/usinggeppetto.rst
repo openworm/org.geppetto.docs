@@ -8,7 +8,7 @@ When you are finished reading this section, you will understand how Geppetto wor
 
 * Learning the interface
 * Dashboard
-* Project explorer
+* Project workspace
 
 Learning the interface
 ======================
@@ -62,8 +62,13 @@ Error (Red)
 
 
 
-Project explorer
-================
+Project workspace
+=================
+
+Double clicking a project from the dashboard will open the project in the project workspace. The project workspace allows the user to visualize the models associated to the project, to create experiments and to simulate them with different available simulators.
+
+Visualize model
+---------------
 
 New experiment
 --------------

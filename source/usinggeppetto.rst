@@ -65,10 +65,17 @@ Error (Red)
 Project workspace
 =================
 
-Double clicking a project from the dashboard will open the project in the project workspace. The project workspace allows the user to visualize the models associated to the project, to create experiments and to simulate them with different available simulators.
+Double clicking a project from the dashboard will open the project in the project workspace. The project workspace allows the user to visualize the models associated to the project, to create experiments and to simulate them with different available simulators. The deault experiment will be loaded when the project is opened, and it will be highlighted in the "experiments" tab of the console at the bottom of the screen. 
+
+Console interaction
+-------------------
+
+The environment is completely scriptable anb any action performed via UI interaction can be reproduced via console commands. Whenever the user interacts with the UI in the project workspace, the corresponding API commands will be printed in the console at the bottom of the screen (collapsed by default). The console history can be easily exported to text file. 
 
 Visualize model
 ---------------
+
+When an experiment is loaded, if a 3D representation of the model is available it will be visulized in the 3D canvas, the main area of the screen. The user can interact with the model with intuitive mouse movements, dragging around with left button for rotation, right button for paninng and mouse wheel for zooming. The camera controls are also available on the top-left bar, including buttons for rotation, panning and zooming.
 
 New experiment
 --------------

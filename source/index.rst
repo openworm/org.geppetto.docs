@@ -8,18 +8,16 @@ Geppetto is a web based platform made to empower you to **explore, visualize and
 
 Geppetto's goal is to make it easy to work in an integrated fashion with different types of data, whether they come from a simulation, an experiment or a clinical study.
 
-Since Geppetto is a web application a users doesn't need to install it in order to use it, however private and local deployments are also possible.
+Since Geppetto is a web application users doesn't need to install it in order to use it, however private and local deployments are also possible.
 
 A demo deployment of the latest release of Geppetto is available `here <https://live.geppetto.org>`__ while the binaries are available to `download here <https://github.com/openworm/org.geppetto/releases/>`__.
 
 The documentation is split into two main sections: a guide to help you learn how to use Geppetto and the developers documentation to learn how Geppetto is engineered and how to contribute to it.
-If you are looking for instructions on how to use Geppetto, check out our :ref:`user documentation <userdocs>`.
-If you are a developer interested in contributing to Geppetto, check out our :ref:`developers documentation <devdocs>`.
 
 ------------
 
 .. image:: images/usr_btn.png
-   :target: ./userdocs.html
+   :target: ./usinggeppetto.html
    :align: center
 
 ------------

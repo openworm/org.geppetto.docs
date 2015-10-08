@@ -92,6 +92,15 @@ Model visualization
 
 **Model metadata**: Model metadata can be visualized with various Geppetto widgets. The tree widget is particularly useful to visualize Geppetto entity hierarchies. How to use Geppetto widgets is covered in detail :ref:`here <usingwidgets>`.  
 
+Working with Geppetto entities
+------------------------------
+
+* Entities
+* Aspects
+* Variables
+* Instance path
+* Entity selection 
+
 New experiment
 --------------
 

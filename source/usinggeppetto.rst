@@ -79,10 +79,22 @@ The console can be opened by clicing on the at the bottom of the screen and is c
 Model visualization
 -------------------
 
-When an experiment is loaded (upon opening a project the default expriment is loaded), if a 3D representation of the model morphology is available it will be immediately visualized in the 3D canvas, the main area of the screen. The user can interact with the 3D canvas and the scene in it representing the model with intuitive mouse movements, dragging around with left button for rotation, right button for paninng and mouse wheel for zooming. The camera controls are also available on the top-left bar, including buttons for rotation, panning and zooming. Upon loading Geppetto will make an attempt at centering hte model based on its initial geometries. The control bar also has a "home" button that will bring the model back to the initial centered position.
+When an experiment is loaded (upon opening a project the default experiment is loaded), if a 3D representation of the model morphology is available it will be immediately visualized in the 3D canvas, the main area of the screen. The user can interact with the 3D canvas and the scene in it representing the model with intuitive mouse movements, dragging around with left button for rotation, right button for paninng and mouse wheel for zooming. The camera controls are also available on the top-left bar, including buttons for rotation, panning and zooming. Upon loading Geppetto will make an attempt at centering hte model based on its initial geometries. The control bar also has a "home" button that will bring the model back to the initial centered position.
 
 New experiment
 --------------
+
+New experiments can only be created if the persistence bundle of Geppetto is installed ina given deployment (note: this is not the case on the live.geppetto.org demo). 
+
+A new experiment can be created clicking on the "+" button visible at the top right of the experiments tab, and a row will be added to the experiments table. Editable fields can be edited by clicking on them. 
+
+Once the experiment is created the user can:
+* Edit the experiment name by clicking on it
+* Expand experiment details by clicking onthe experiment row
+* Edit simulation parameter from the experiment details (by clicking on the fields, same as the name), once the row is expanded
+* Add simulation variables to the watch list
+
+At the moment the only way to add variables to the watch list is via the console, using the Geppetto javascript API. 
 
 Simulate experiment
 -------------------

@@ -8,7 +8,7 @@ A visual group can for instance allow the user to see the different cell regions
 .. image:: images/groups/cellregion.png
 	:align: center
 
-.. image:: images/density.png
+.. image:: images/groups/density.png
 	:align: center
 
 Getting Started

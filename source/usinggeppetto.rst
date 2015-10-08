@@ -108,7 +108,7 @@ Once the experiment is created the user can:
 
 (*) At the moment the only way to add variables to the watch list is via the console, using the Geppetto javascript API.
 
-Simulate experiment
+Simulate experiment 
 -------------------
 
 Once parameters have been set, the experiment can be run by clicking the "run" button, the button with cogs in the top-right control bar. This will cause the experiment simulation to be placed on the Geppetto scheduler queue. The colored circle onthe experiment table will indicated the experiment status. Statuses are explained in the "Experiments" section above.

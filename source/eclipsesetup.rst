@@ -104,6 +104,18 @@ All the repositories added will be visible  going to the view “Git Repositorie
 
 By right clicking on each project it is possible to choose “import” to add the project to your workspace.
 
+
+
+Alternatively you can do it like this:
+
+Make sure you have the head repository (org.geppetto) in the 'git' folder that you will find located on your local drive, probably in your home directory. You will also find the other repositories you have imported located there.
+
+Now from Eclipse click, File -> Import -> Mavern -> Existing Mavern Projects, and point it to the 'git' folder. 
+
+Eclipse will now be able to install all the projects in one go with the correct classpaths and structure already in place.
+
+
+
 We are **almost** there. 
 
 You now have all the Geppetto bundles on your workspace. All the bundles use Maven so we need now to install them so that all dependencies are downloaded and the JAR files created and deployed to the local Maven repository. To do so right click on each one of the project and choose Run As -> Maven install.

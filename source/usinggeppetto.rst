@@ -20,7 +20,7 @@ The purpose of the dashboard is to easily view at a glance all the projects that
 
 **Dashboard** - In the demo deployment of Geppetto the dashboard shows some sample projects for a guest user.
 
-Selecting a project in the left pane of the dashboard will reveal its details in the right pane. Double clicking on a project in the left pane will open the selected project in a new browser tab.
+Selecting a project in the left pane of the dashboard will reveal project details in the right pane. Double clicking on a project in the left pane will open the selected project in a new browser tab.
 
 .. image:: images/sshots/explorer.png
 
@@ -30,7 +30,7 @@ Selecting a project in the left pane of the dashboard will reveal its details in
 Dashboard
 =========
 
-The dashboard is the main entry point to a geppetto based application. The dashboard shows you which projects are available to you. The top right corner indicates which user is logged in for the current session. In the demo deployment of Geppetto this will read "Guest".
+The dashboard is the main entry point to a geppetto based application. The dashboard shows you which projects are available to you. The top right corner indicates which user is logged in for the current session. In the demo deployment of Geppetto this will read "Guest" because there is no peristence database behind it. Geppetto can be configured to work with user accounts. 
 
 Projects
 --------

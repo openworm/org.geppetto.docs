@@ -95,7 +95,10 @@ Model visualization
 Working with Geppetto entities
 ------------------------------
 
+TODO - Concepts to cover: 
+
 * Entities
+* Entities hierarchy
 * Aspects
 * Variables
 * Instance path

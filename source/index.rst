@@ -21,6 +21,7 @@ The following is a list of the websites currently using a custom deployment of G
 
 - `Open Source Brain <http://opensourcebrain.org>`__
 - `WormSim <http://wormsim.org>`__
+- `Virtual Fly Brain <http://virtualflybrain.org>`__
 
 ------------
 

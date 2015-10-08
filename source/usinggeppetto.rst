@@ -91,12 +91,14 @@ A new experiment can be created clicking on the "+" button visible at the top ri
 Once the experiment is created the user can:
 
 * Edit the experiment name by clicking on it
-* Expand experiment details by clicking onthe experiment row
-* Edit simulation parameter from the experiment details (by clicking on the fields, same as the name), once the row is expanded
-* Add simulation variables to the watch list
+* Expand experiment details by clicking on the experiment row
+* Edit simulation parameter from the experiment details (by clicking on the fields, same as the name), once the row is expanded. (i.e. Simulator --> neuronSimulator Time step --> 0.00005s Length --> 0.3s)
+* Add simulation variables to the watch list (*)
 
-At the moment the only way to add variables to the watch list is via the console, using the Geppetto javascript API. 
+(*) At the moment the only way to add variables to the watch list is via the console, using the Geppetto javascript API. 
 
 Simulate experiment
 -------------------
 
+Replay experiment
+-----------------

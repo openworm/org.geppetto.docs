@@ -24,7 +24,7 @@ Selecting a project in the left pane of the dashboard will reveal project detail
 
 .. image:: images/sshots/explorer.png
 
-**Project workspace** - The project workspace shows the morphologies, meta-data and simulation data associated with a given project.
+**Project workspace** - The project workspace is opened by double clicking on a given project in the dashboard. This view shows the morphologies, meta-data and simulation data associated with a given project.
 
 
 Dashboard
@@ -79,12 +79,14 @@ The console can be opened by clicing on the at the bottom of the screen and is c
 Model visualization
 -------------------
 
-When an experiment is loaded (upon opening a project the default experiment is loaded), if a 3D representation of the model morphology is available it will be immediately visualized in the 3D canvas, the main area of the screen. The user can interact with the 3D canvas and the scene in it representing the model with intuitive mouse movements, dragging around with left button for rotation, right button for paninng and mouse wheel for zooming. The camera controls are also available on the top-left bar, including buttons for rotation, panning and zooming. Upon loading Geppetto will make an attempt at centering hte model based on its initial geometries. The control bar also has a "home" button that will bring the model back to the initial centered position.
+**Morphologies**: When an experiment is loaded (upon opening a project the default experiment is loaded), if a 3D representation of the model morphology is available it will be immediately visualized in the 3D canvas, the main area of the screen. The user can interact with the 3D canvas and the scene in it representing the model with intuitive mouse movements, dragging around with left button for rotation, right button for paninng and mouse wheel for zooming. The camera controls are also available on the top-left bar, including buttons for rotation, panning and zooming. Upon loading Geppetto will make an attempt at centering hte model based on its initial geometries. The control bar also has a "home" button that will bring the model back to the initial centered position.
+
+**Model metadata**:
 
 New experiment
 --------------
 
-New experiments can only be created if the persistence bundle of Geppetto is installed ina given deployment (note: this is not the case on the live.geppetto.org demo). 
+New experiments can only be created if the persistence bundle of Geppetto is installed in a given deployment (note: this is not the case on the live.geppetto.org demo). 
 
 A new experiment can be created clicking on the "+" button visible at the top right of the experiments tab, and a row will be added to the experiments table. Editable fields can be edited by clicking on them. 
 
@@ -93,12 +95,14 @@ Once the experiment is created the user can:
 * Edit the experiment name by clicking on it
 * Expand experiment details by clicking on the experiment row
 * Edit simulation parameter from the experiment details (by clicking on the fields, same as the name), once the row is expanded. (i.e. Simulator --> neuronSimulator Time step --> 0.00005s Length --> 0.3s)
-* Add simulation variables to the watch list (*)
+* Add simulation variables to the watch list (*). This will cause simulation values to be recorded. Without watching any variables nothing will be recorded, so it is useless to run an experiment without any watched variables.
 
 (*) At the moment the only way to add variables to the watch list is via the console, using the Geppetto javascript API. 
 
 Simulate experiment
 -------------------
+
+Once parameters have been set, the experiment can be run by clicking the "run" button, the button with cogs in the top-right control bar. This will cause the experiment simulation to be placed on the Geppetto scheduler queue. The colored circle onthe experiment table will indicated the experiment status. Statuses are explained in the "Experiments" section above.
 
 Replay experiment
 -----------------

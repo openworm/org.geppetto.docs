@@ -17,15 +17,15 @@ Geppetto is a web application and the end user won't generally require to instal
 
 A demo deployment of the latest release of Geppetto is available `here <https://live.geppetto.org>`__ while the binaries are available to `download here <https://github.com/openworm/org.geppetto/releases/>`__.
 
+If you are looking for instructions on how to use Geppetto, check out our :ref:`user documentation <userdocs>`..
+
+If you are a developer interested in contributing to Geppetto, check out our :ref:`developers documentation <devdocs>`..
+
 .. image:: images/usr_btn.png
 :target: userdocs_
 
 .. image:: images/dev_btn.png
 :target: devdocs_
-
-If you are looking for instructions on how to use Geppetto, check out our :ref:`user documentation <userdocs>`..
-
-If you are a developer interested in contributing to Geppetto, check out our :ref:`developers documentation <devdocs>`..
 
 The following is a list of the websites currently using a custom deployment of Geppetto available on the web:
 
@@ -73,8 +73,9 @@ Users
 
 Geppetto is currently used and contributed to by the following groups:
 
-* `OpenWorm <http://www.openworm.org/>`__
 * `Wellcome Trust <http://www.wellcome.ac.uk/>`__ via the `Open Source Brain <http://www.opensourcebrain.org/>`__ initiative (`Silver Lab, University College London <http://www.ucl.ac.uk/silverlab/>`__ )
+* `Wellcome Trust <http://www.wellcome.ac.uk/>`__ via `Virtual Fly Brain <http://www.virtualflybrain.org/>`__  (`Institute for Adaptive and Neural Computation, University of Edinburgh <http://http://www.anc.ed.ac.uk/>`__ , `Department of Genetics, University of Cambridge <http://www.gen.cam.ac.uk/>`__ , `MRC Laboratory of Molecular Biology, Cambridge <http://www2.mrc-lmb.cam.ac.uk/>`__ , `European Bioinformatics Institute (EMBL-EBI)<http://www.ebi.ac.uk/>`__)
+* `OpenWorm <http://www.openworm.org/>`__
 * `MetaCell <http://metacell.us>`__
 * `Orion Bionetworks <http://www.orionbionetworks.org/>`__
 

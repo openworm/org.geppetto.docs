@@ -17,6 +17,16 @@ Geppetto is a web application and the end user won't generally require to instal
 
 A demo deployment of the latest release of Geppetto is available `here <https://live.geppetto.org>`__ while the binaries are available to `download here <https://github.com/openworm/org.geppetto/releases/>`__.
 
+.. image:: images/usr_btn.png
+:target: userdocs_
+
+.. image:: images/dev_btn.png
+:target: devdocs_
+
+If you are looking for instructions on how to use Geppetto, check out our :ref:`user documentation <userdocs>`..
+
+If you are a developer interested in contributing to Geppetto, check out our :ref:`developers documentation <devdocs>`..
+
 The following is a list of the websites currently using a custom deployment of Geppetto available on the web:
 
 - `Open Source Brain <http://opensourcebrain.org>`__
@@ -24,10 +34,6 @@ The following is a list of the websites currently using a custom deployment of G
 - `Virtual Fly Brain <http://virtualflybrain.org>`__
 
 ------------
-
-If you are looking for instructions on how to use Geppetto, check out our user documentation.
-
-If you are a developer interested in contributing to Geppetto, check out our developers documentation.
 
 .. toctree::
    :maxdepth: 2
@@ -56,11 +62,11 @@ Screenshots
 
 .. image:: images/sshots/ss5.png
 
-**Screenshot 5** - Visualisation of the realistic morphology of a Ganglion cell reconstructed using `EyeWire <https://eyewire.org>`__.
+**Screenshot 5** - Visualisation of a Purkinje cell in `NeuroML <http://neuroml.org/>`__ from `Open Source Brain <http://opensourcebrain.org/projects/purkinjecell>`__
 
 .. image:: images/sshots/ss6.png
 
-**Screenshot 6** - Visualisation of a Purkinje cell in `NeuroML <http://neuroml.org/>`__ from `Open Source Brain <http://opensourcebrain.org/projects/purkinjecell>`__
+**Screenshot 6** - Visualisation of the realistic morphology of a Ganglion cell reconstructed using `EyeWire <https://eyewire.org>`__.
 
 Users
 =====

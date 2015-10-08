@@ -67,17 +67,19 @@ Error (Red)
 Project workspace
 =================
 
-Double clicking a project from the dashboard will open the project in the project workspace. The project workspace allows the user to visualize the models associated to the project, to create experiments and to simulate them with different available simulators. The deault experiment will be loaded when the project is opened, and it will be highlighted in the "experiments" tab of the console at the bottom of the screen. 
+Double clicking a project from the dashboard will open the project in the project workspace. The project workspace allows the user to visualize the models associated with the project, to create experiments and to simulate them with different available simulators. 
+
+The default experiment will be loaded when the project is opened, and it will be highlighted in the "experiments" tab of the console at the bottom of the screen. If there is more than one expriment for the current project multiple rows will appear in the experiments tab. Clicking on the row will reveal experiment details and will let the user edit parameters. 
 
 Console interaction
 -------------------
 
-The environment is completely scriptable anb any action performed via UI interaction can be reproduced via console commands. Whenever the user interacts with the UI in the project workspace, the corresponding API commands will be printed in the console at the bottom of the screen (collapsed by default). The console history can be easily exported to text file. 
+The console can be opened by clicing on the at the bottom of the screen and is collapsed by default (once opened, clicling the bar header will function as an expand/collapse toggle). The environment is completely javascript scriptable and any action performed via UI interaction can be reproduced via the javascript console commands. Whenever the user interacts with the UI in the project workspace, the corresponding API commands will be printed in the console at the bottom of the screen (collapsed by default). Playing witht he UI and the looking at the console is an easy practical way to learn more about the Geppetto Javascript API. The console history can be easily exported to text file. 
 
-Visualize model
----------------
+Model visualization
+-------------------
 
-When an experiment is loaded, if a 3D representation of the model is available it will be visulized in the 3D canvas, the main area of the screen. The user can interact with the model with intuitive mouse movements, dragging around with left button for rotation, right button for paninng and mouse wheel for zooming. The camera controls are also available on the top-left bar, including buttons for rotation, panning and zooming.
+When an experiment is loaded (upon opening a project the default expriment is loaded), if a 3D representation of the model morphology is available it will be immediately visualized in the 3D canvas, the main area of the screen. The user can interact with the 3D canvas and the scene in it representing the model with intuitive mouse movements, dragging around with left button for rotation, right button for paninng and mouse wheel for zooming. The camera controls are also available on the top-left bar, including buttons for rotation, panning and zooming. Upon loading Geppetto will make an attempt at centering hte model based on its initial geometries. The control bar also has a "home" button that will bring the model back to the initial centered position.
 
 New experiment
 --------------

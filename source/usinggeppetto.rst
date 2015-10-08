@@ -115,3 +115,5 @@ Once parameters have been set, the experiment can be run by clicking the "run" b
 
 Replay experiment
 -----------------
+
+Once the experiment status goes to green, the experiment can be replayed clicking the "play" button on the top right control bar. When the experiment is replayed, simulation results for the watched variables are streamed to the client in the form of a Geppetto recording, but this is entirely transparent to the user. A common way to visualize simulation results are plot widgets, tree widgets and value widgets, so the user will typically add the desired widgets to the Geppetto frontend and set the desired "data sources" before hitting "play". More on widgets and how to instantiate them :ref:`here <usingwidgets>`.   

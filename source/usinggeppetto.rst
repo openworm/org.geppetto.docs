@@ -89,6 +89,7 @@ New experiments can only be created if the persistence bundle of Geppetto is ins
 A new experiment can be created clicking on the "+" button visible at the top right of the experiments tab, and a row will be added to the experiments table. Editable fields can be edited by clicking on them. 
 
 Once the experiment is created the user can:
+
 * Edit the experiment name by clicking on it
 * Expand experiment details by clicking onthe experiment row
 * Edit simulation parameter from the experiment details (by clicking on the fields, same as the name), once the row is expanded

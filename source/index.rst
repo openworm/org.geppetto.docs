@@ -74,7 +74,7 @@ Users
 Geppetto is currently used and contributed to by the following groups:
 
 * `Wellcome Trust <http://www.wellcome.ac.uk/>`__ via the `Open Source Brain <http://www.opensourcebrain.org/>`__ initiative (`Silver Lab, University College London <http://www.ucl.ac.uk/silverlab/>`__ )
-* `Wellcome Trust <http://www.wellcome.ac.uk/>`__ via `Virtual Fly Brain <http://www.virtualflybrain.org/>`__  (`Institute for Adaptive and Neural Computation, University of Edinburgh <http://http://www.anc.ed.ac.uk/>`__ , `Department of Genetics, University of Cambridge <http://www.gen.cam.ac.uk/>`__ , `MRC Laboratory of Molecular Biology, Cambridge <http://www2.mrc-lmb.cam.ac.uk/>`__ , `European Bioinformatics Institute (EMBL-EBI)<http://www.ebi.ac.uk/>`__)
+* `Wellcome Trust <http://www.wellcome.ac.uk/>`__ via `Virtual Fly Brain <http://www.virtualflybrain.org/>`__  (`Institute for Adaptive and Neural Computation, University of Edinburgh <http://http://www.anc.ed.ac.uk/>`__ , `Department of Genetics, University of Cambridge <http://www.gen.cam.ac.uk/>`__ , `MRC Laboratory of Molecular Biology, Cambridge <http://www2.mrc-lmb.cam.ac.uk/>`__ , `European Bioinformatics Institute (EMBL-EBI) <http://www.ebi.ac.uk/>`__ )
 * `OpenWorm <http://www.openworm.org/>`__
 * `MetaCell <http://metacell.us>`__
 * `Orion Bionetworks <http://www.orionbionetworks.org/>`__

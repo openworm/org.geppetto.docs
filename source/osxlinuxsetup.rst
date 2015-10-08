@@ -24,9 +24,9 @@ OSX and Linux
 
 * OpenCL (version 1.2)
 
-* Virgo Server for Apache Tomcat: `ZIP file <http://www.eclipse.org/virgo/download/>`_, unpack it to your desired location by:
+* Virgo Server for Apache Tomcat: `ZIP file <https://dl.dropboxusercontent.com/u/7538688/virgo-tomcat-server-3.6.3.RELEASE.zip?dl=1>`_, unpack it to your desired location by:
 
-	``gunzip -a virgo.zip -d <desired directory>``
+	``gunzip -a virgo-tomcat-server-3.6.3.RELEASE.zip -d <desired directory>``
 
 OSX
 ---
@@ -105,36 +105,50 @@ Open the *config.json* file in a text editor and change the value of the *source
 The source_setup folder contains some handy scripts. First, run the setup.py script:
 
 	``./setup``
+	
+	or
+	
+	``python setup.py``
 
 This will copy all of the required repositories to geppetto-sources. Make sure that you have writing permissions for it. If a repository is missing, check that it is entered correctly in *config.json*.
 
 Building Geppetto
 =================
 	
-To build Geppetto, navigate your command prompt back to the org.geppetto directory. You can do this simply by entering twice:
+To build Geppetto, navigate your command prompt back to the org.geppetto directory. You can do this simply by entering:
 
-	``cd ..``
+	``cd ../..``
 
 Once there, run:
 
 	``mvn install``
 
-This will build all of the Geppetto modules at once. As you do development, you probably don't want to re-build all modules if you only worked on a few ones. In this case, you can build the modules individually and then re-deploy. To prevent problems caused by old build files, you may want to clean before reinstalling by:
+This will build all of the Geppetto modules at once. As you do development, you probably don't want to re-build all modules if you only worked on a few. In this case, you can build the modules individually and then re-deploy. To prevent problems caused by old build files, you may want to clean before reinstalling by:
 
 	``mvn clean install``
 
 Deploying Geppetto
 ==================
 
-To deploy Geppetto to the Virgo server, navigate your shell again to the source_setup directory by typing:
+To deploy Geppetto to the Virgo server, navigate your shell to the source_setup directory again by typing:
 
 	``cd utilities/source_setup``
 
 Then run:
 
 	``./update_server``
+	
+	or
+	
+	``python update_server.py``
 
-This will copy all of the built jars and wars over to %SERVER_HOME%/repository/usr and the *geppetto.plan* file in org.geppetto to %SERVER_HOME%/pickup.
+This will copy all of the built jars, wars and dependencies over to %SERVER_HOME%/repository/usr and the *geppetto.plan* file in org.geppetto to %SERVER_HOME%/pickup.
+
+If you plan to start the server from the eclipse environment run the update_server script with the "eclipse" flag:
+
+	``./update_server eclipse``
+
+This will copy only dependencies over to %SERVER_HOME%/repository/usr. Geppetto JARs and WARs will be copied by Eclipse in the Virgo stage folder upon deployment.
 
 Starting and Stopping Virgo
 ===========================

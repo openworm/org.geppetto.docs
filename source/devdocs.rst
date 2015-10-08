@@ -13,9 +13,11 @@ For Developers
    eclipsesetup
    build
    concepts
-   nodes
    designdocs
+   nodes
    jsdocs
    widgets
    components
+   styling
    devtips
+   persistence

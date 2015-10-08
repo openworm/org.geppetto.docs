@@ -13,3 +13,5 @@ For Users
    connections
    visualgroups
    usingwidgets
+   events
+   dropbox

@@ -55,3 +55,10 @@ This section provides tips to solve some problems regarding Geppetto deploying i
 
 
 * Maven libraries that are downloaded when a mvn install is executed for the first time or after a mvn clean, are stored typically in a folder called .m2 inside your home folder. If the version of any library changes maven automatically download it again. However, if the lib content has changed but the lib version remains the same, you will have to remove the lib in .m2 manually. Note that this is a very uncommon case.
+
+* You cannot deploy org.geppetto.frontend on your server. This can be due to an Eclipse distribution that is missing some components. From update site, install the below item:
+
+  .. code-block:: none
+
+     Web, XML, Java EE and OSGi Enterprise Development -> Eclipse Java EE Developer Tools
+

@@ -1,43 +1,78 @@
 ***********
-Design docs
+Design documents
 ***********
 
-* Overview of Geppetto components
-* Class diagram for the core meta-model in Geppetto
-* Sequence diagram showing interactions between the frontend and the backend.
-* Activity diagram illustrating the observer mode.
-* Sequence diagram illustrating the interactions during observer mode.
-* Sequence diagram illustrating the interactions between the frontend and the backend using the websockets protocol
+This section contains all the Geppetto design documents. The links below will open a Lucid Chart page where the different documents are published.
+Note that there can be multiple tabs in each document as shown in the screenshot below:
 
-Diagrams
-========
+.. image:: images/designdocs.png
 
-Note: All the diagrams are a work in progress!
+All diagrams are constantly evolving (some more than others) to reflect the latest structure and drive the development of the new features.
 
-.. image:: https://www.lucidchart.com/publicSegments/view/51b05c65-13a4-457c-ba4c-3de70a008629/image.png
+**Common**
 
-Figure 1 - Overview of Geppetto components
+`Overview <https://www.lucidchart.com/documents/view/4666b850-512b-5184-8a79-20de0a000fde>`_
 
-.. image:: https://www.lucidchart.com/publicSegments/view/523c9101-8c58-4968-bf67-5b070a0046c3/image.png
+`Use Cases <https://www.lucidchart.com/documents/view/d2b4631c-da56-4b80-9bdb-28c2a6d75c8c>`_
 
-Figure 2 - Class diagram for the core meta-model in Geppetto
+**Backend** 
 
-.. image:: https://www.lucidchart.com/publicSegments/view/520537bd-0438-4af1-8b4e-7c7d0a008e8e/image.png
+`Data Model <https://www.lucidchart.com/documents/view/ae8bd4d6-2226-4aee-9d56-774e323188a6/0>`_
 
-Figure 3 - Sequence diagram showing interactions between the frontend and the backend
+`Services <https://www.lucidchart.com/documents/view/59066315-98d7-488e-b0cb-18f4c2a4cf65>`_
 
-.. image:: https://www.lucidchart.com/publicSegments/view/520d3271-eac8-4879-91b8-2e580a000de9/image.png
+`Simulators <https://www.lucidchart.com/documents/view/425b6548-51de-ecd5-827e-073d0a009bd7>`_
 
-Figure 4 - Activity diagram illustrating the observer mode.
+`Simulator pipeline for neuronal domain <https://www.lucidchart.com/documents/view/441da30d-df65-4001-8809-2a796c80460b>`_
 
-.. image:: https://www.lucidchart.com/publicSegments/view/523c9329-4594-4132-b30d-13e10a0049c4/image.png
+`Runtime Tree population <https://www.lucidchart.com/documents/view/7c2e3ca2-f11f-4051-b115-a921cf31863b>`_
 
-Figure 5 - Sequence diagram illustrating the interactions during observer mode.
+`WebSockets Backend API <https://www.lucidchart.com/documents/view/4ba99a20-5217-1f53-82f4-4f420a004d28>`_
 
-.. image:: https://www.lucidchart.com/publicSegments/view/523c9559-a0d4-4285-8ad3-0be40a00ce54/image.png
+`List State Variables <https://www.lucidchart.com/documents/view/480b4e2c-5237-2970-a88a-249d0a008a0d>`_
 
-Figure 6 - Sequence diagram illustrating the interactions between the frontend and the backend using the websockets protocol.
+`Watch State Variables <https://www.lucidchart.com/documents/view/4c3283a4-527c-cb68-bb8d-14570a009e11>`_
 
-.. image:: https://www.lucidchart.com/publicSegments/view/53bd1f09-3f80-4669-98c4-4cc40a00d13f/image.png
+`Simulation time <https://www.lucidchart.com/documents/view/412c0624-52f7-032a-a083-22670a00c5f0>`_
 
-Figure 7 - Sequence diagram illustrating the event (context menu) framework
+`External process from OSGi <https://www.lucidchart.com/documents/view/bc5b6fe7-0722-4055-b557-e95b9511f85e>`_
+
+`Geppetto API Design Draft (Old) <https://www.lucidchart.com/documents/edit/48520f68-5227-2452-a0e1-2db80a004e94>`_
+
+`Geppetto Observer Mode <https://www.lucidchart.com/documents/view/4a8ed5f0-51c4-ccda-9e42-26a20a004538>`_
+
+
+*Multiple Aspect Integration*
+
+`Design (in progress) <https://www.lucidchart.com/documents/view/f66e90ca-9c2d-4f16-9f79-d3f83f5d654a>`_
+
+`Integration Activity Flow (in progress) <https://www.lucidchart.com/documents/view/4b794838-521e-00a5-98c1-649e0a00c900>`_
+
+**Frontend**
+
+`Geppetto Frontend <https://www.lucidchart.com/documents/view/675f119b-3923-4ada-bbfb-ea8d571fd01a>`_
+
+`Events framework <https://www.lucidchart.com/documents/view/f976cc20-5f29-4c57-9070-e7b97b415521>`_
+
+`Visualization tree and 3D objects (Refactoring) <https://www.lucidchart.com/documents/view/c860c683-55c7-4864-b28d-9cdf444b5150>`_
+
+
+
+*Widgets*
+
+`Widgets class diagram <https://www.lucidchart.com/documents/view/43905d5c-5268-ab60-9ff5-2b5d0a00d543>`_
+
+`Widgets high level design <https://www.lucidchart.com/documents/view/40fbf410-5261-c088-85e0-0a190a005787>`_
+
+`Geppetto Widgets update mechanism <https://www.lucidchart.com/documents/view/45eb65fc-5293-9670-a570-31530a004b21>`_
+
+`Widget diagrams <https://www.lucidchart.com/documents/view/4d3c7284-525a-8e5d-ad6b-4d9c0a00c5b3>`_
+
+`Install Widgets <https://www.lucidchart.com/documents/view/b5e67ca3-cde7-4ad9-9810-edeccc9e1548>`_
+
+*Plotting Widget*
+
+`Plotting Activity Diagram <https://www.lucidchart.com/documents/view/4f06a058-5251-8aa8-878e-3a890a0050f4>`_
+
+`Plotting Class Diagram <https://www.lucidchart.com/documents/view/4959c19c-5251-7c38-8d03-1fb70a0050f4>`_
+

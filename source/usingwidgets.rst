@@ -1,6 +1,8 @@
-#########
+.. _usingwidgets:
+
+#######
 Widgets
-#########
+#######
 
 Geppetto has a modular architecture that allows to visualize and interact with the data through different widgets.
 Widgets are an essential aspect of the user interface of Geppetto.

@@ -1,393 +1,131 @@
-**************
-Using Geppetto
-**************
+.. _userdocs:
 
-* Getting Started
-* Using the Graphic Interface Controls
-  - Loading the Simulation
-  - Running the Simulation
-  - Navigation
-* Console
-  - G object commands
-  - Simulation control commands
-  - Clipboard
-  - Watching Variables
-* Reference
-  - Keyboard Shortcuts
+***************
+Geppetto basics
+***************
 
-Getting Started
-===============
-Once Geppetto is loaded in your browser, you can load a simulation. There are two ways to interact with Geppetto:
-* Use the GUI buttons to load, control and interact with the simulations.
-* Use the API through the Javascript console and enter commands to load, control and interact with the simulations.
 
-Using the Graphic Interface Controls
-====================================
-Loading the Simulation
-----------------------
-.. image:: http://i.imgur.com/1kI749N.png
+This section is your key to getting started with Geppetto. It will explain the Geppetto interface, loading projects, opening widgets, and running simulations.
+When you are finished reading this section, you will understand how Geppetto works and how to use it to explore a computational model.
 
-Select the "Load Simulation" button at the top to open a console to either select a pre-loaded simulation or upload your own simulation file.
+* Learning the interface
+* Dashboard
+* Project workspace
 
-.. image:: http://i.imgur.com/DRaae8U.png
+Learning the interface
+======================
 
-Alternatively you can customize the simulation before loading.
+Geppetto has two main interfaces: the **Dashboard** and the **Project workspace**.
+The purpose of the dashboard is to easily view at a glance all the projects that are available to the user.
 
-.. image:: http://i.imgur.com/zxOJ2KG.png
+.. image:: images/sshots/dashboard.png
 
-Running the Simulation
-----------------------
-Once the simulation has been loaded, you can start, pause and stop the simulation at any point.
+**Dashboard** - In the demo deployment of Geppetto the dashboard shows some sample projects for a guest user.
 
-.. image:: http://i.imgur.com/pXEsYDn.png
+Selecting a project in the left pane of the dashboard will reveal project details in the right pane. Double clicking on a project in the left pane will open the selected project in a new browser tab.
 
-Navigation
-----------
-The navigation buttons along the left side of Geppetto allow you to change your view of the simulation within Geppetto.  You can reposition, rotate it and zoom in and out.  To reset, just hit the "home" icon to undo rotation or repositioning.  The buttons can be accessed once the simulation has been loaded as well as before, during and after the simulation run.
+.. image:: images/sshots/workspace.png
 
-.. image:: http://i.imgur.com/A2BngUx.png
+**Project workspace** - The project workspace is opened by double clicking on a given project in the dashboard. This view shows the morphologies, meta-data and simulation data associated with a given project.
 
-In addition to the navigation buttons, you can use a mouse to rotate, drag or zoom the simulation.
 
-Selection
-----------
-3D objects in GEPPETTO consist of Entities or Aspects, and can be selected/unselected by clicking on them or
-using the select command of the entity as such:
-
-.. code-block:: javascript
-
-	-- Entity.select()
-
-	-- Entity.Aspect.select()
-
-	-- Entity.unselect()
-
-	-- Entity.Aspect.unselect()
-
-	-- Simulation.selectEntity()
-
-To retrieve those entities that are selected, you can use the command:
-
-.. code-block:: javascript
-
-	Simulation.getSelection()
-
-Console
-=======
-Additionally, you can open a console at the bottom while the simulation is running to make adjustments.
-*Shortcut Key: Ctl+Alt+J*
-
-.. image:: http://i.imgur.com/d5CLO9F.png
-   View of the open console.
-
-.. image:: http://i.imgur.com/ts859ap.png
-
-A complete list of the simulation commands will display by typing help() into the console. The following commands are available in the Geppetto console.
-
-AutoCompletion
---------------
-Within the console, the Tab button assists with entering commands.
-Tab once, to autocomplete the current word of the command.
-Tab twice, to show all the options available.
-If autocompletion detected a command with parameters, it will autocomplete the command and place the cursor in between the parentheses where the variables are located.
-
-G object commands
------------------
-.. code-block:: javascript
-
-	-- G.addWidget(type)
-
-      -- G.availableWidgets()
-         Gets list of available widgets
-         @returns {List} - List of available widget types
-
-      -- G.clear()
-         Clears the console history
-
-      -- G.copyHistoryToClipboard()
-         Copies console history to OS clipboard
-
-      -- G.debug(toggle)
-         Toggles debug statement on/off
-         @param toggle - toggles debug statements
-
-      -- G.getCurrentSimulation()
-         Gets the object for the current Simulation, if any.
-         @returns Returns current Simulation object if it exists
-
-      -- G.help()
-         Get all commands and descriptions available for object G.
-         @returns {String} - All commands and descriptions for G.
-
-      -- G.runScript(scriptURL)
-         Takes the URL corresponding to a script, executes
-         commands inside the script. (see example)
-         @param scriptURL - URL of script to execute
-
-      -- G.wait(commands,ms)
-         Waits some amount of time before executing a set of commands
-         @param commands - commands to execute
-         @param ms - milliseconds to wait before executing commands
-
-Simulation control commands
----------------------------
-.. code-block:: javascript
-
-      -- Simulation.start()
-         Start the simulation.
-         @returns {String} - Simulation status after starting it.
-
-      -- Simulation.pause()
-         Pauses the simulation
-         @returns {String} - Status of Simulation after pausing it.
-
-      -- Simulation.stop()
-         Stops the simulation.
-         @returns {String} - Status of simulation after stopping it.
-
-      -- Simulation.load(simulationURL)
-         Loads a simulation from a URL.
-         @param simulationURL - URL of simulation file to be loaded.
-         @returns {String} - Status of attempt to load simulation using url.
-
-      -- Simulation.loadFromContent(content)
-         Loads a simulation using the content's from the simulation file editor.
-         @param content - Content of simulation to be loaded.
-         @returns {String} - Status of attempt to load simulation from content window.
-
-      -- Simulation.isLoaded()
-         Checks status of the simulation, whether it has been loaded or not.
-         @returns {Boolean} - True if simulation has been loaded, false if not.
-
-      -- Simulation.setWatchedVariables(watchLists)
-         Add watchlists to the simulation.
-         @param {Array} watchLists - Array listing variables to be watched.
-
-      -- Simulation.clearWatchLists()
-         Clears all watch lists for the given simulation
-         @returns {String} - status after request.
-
-      -- Simulation.help()
-         Outputs list of commands with descriptions associated with the Simulation object.
-         @returns  Returns list of all commands for the Simulation object"
-
-.. _Console Commands section:
-
-Plot Commands
---------
-*Plot1 represents one plot widget instance. Each new plot widget (Plot2, Plot3, Plot4, etc ...) instance has these commands.
-
-.. code-block:: javascript
-
-      -- Plot1.plotData(newData,options)
-         Takes data series and plots them.
-         To plot array(s) , use it as plotData([[1,2],[2,3]])
-         To plot an object , use it as plotData(objectName)
-         Multiples arrays can be specified at once in this method, but only one object
-         at a time.
-         @param newData - series to plot, can be array or an object
-         @param options - options for the plotting widget, if null uses default
-
-      -- Plot1.removeDataSet(set)
-         Removes the data set from the plot.
-         EX: removeDataSet(dummyDouble)
-         @param set - Data set to be removed from the plot
-
-      -- Plot1.resetPlot()
-         Resets the plot widget, deletes all the data series but does not
-         destroy the widget window.
-
-      -- Plot1.setOptions(options)
-         Set the options for the plotting widget
-         @param options
-
-      -- Plot1.destroy()
-         Resets the plot widget, deletes all the data series but does not
-         destroy the widget window.
-
-      -- Plot1.setLegend(variable, legend)
-         Sets the legend for a variable
-
-Check our JS documentation for more plot commands_
-
- .. _commands: http://54.200.254.75:8080/org.geppetto.frontend/jsdocs/global.html#Plot
-
-Entity Commands
---------
-*EntityNode represents a general case, to use commands on own entity replace "EntityNode" by the name
-of the entity, you will be able to access commands this way.
-
-.. code-block:: javascript
-
-      -- EntityNode.hide()
-         Hides the entity
-
-      -- EntityNode.show()
-         Shows the entity
-
-      -- EntityNode.unselect()
-         Unselects the entity
-
-      -- EntityNode.select()
-         Selects the entity
-
-      -- EntityNode.zoomTo()
-         Zooms to entity
-
-      -- EntityNode.getId()
-         Get the id associated with entity
-         @returns {String} - ID of entity
-
-      -- EntityNode.getAspects()
-         Get this entity's aspects
-         @returns {List<Aspect>} - List of aspects
-
-      -- EntityNode.getEntities()
-         Get this entity's children entities
-         @returns {List<Aspect>} - List of aspects
-
-Aspect Commands
---------
-*AspectNode represents a general case, to use commands on own aspect replace "AspectNode" by the name
-of the aspect, you will be able to access commands this way.
-
-.. code-block:: javascript
-
-      -- AspectNode.hide()
-         Hides the aspect
-
-      -- AspectNode.show()
-         Shows the aspect
-
-      -- AspectNode.unselect()
-         Unselects the aspect
-
-      -- AspectNode.select()
-         Selects the aspect
-
-      -- AspectNode.getModelTreee()
-         Get the Model Tree for the aspect
-         @returns {Object} - ID of aspect
-
-      -- AspectNode.getSimulationTree()
-         Get formatted simulation watch tree for this aspect.
-         @returns {Object} - ID of aspect
-
-      -- AspectNode.getVisualizationTree()
-         Get the Visualization Tree for the Aspect
-         @returns {Object} - ID of aspect
-
-      -- AspectNode.getId()
-         Get the id associated with aspect
-         @returns {String} - ID of aspect
-
-Simulation Variables Commands
----------
-*VariableNode should be replaced by the full path of the variable to use the commands below.
-
-.. code-block:: javascript
-
-      -- VariableNode.getId()
-         Get the id associated with the VariableNode
-         @returns {String} - ID of variableNode
-
-      -- VariableNode.getName()
-         Get the name associated with the VariableNode
-         @returns {String} - Name of variableNode
-
-      -- VariableNode.getInstancePath()
-         Get the instance path of the variable
-         @returns {String} - InstancePath of variableNode
-
-      -- VariableNode.getValue()
-         Get value of quantity
-         @returns {String} - Value of quantity
-
-      -- VariableNode.getUnit()
-         Get unit of quantity
-         @returns {String} - Unit of quantity
-
-      -- VariableNode.getScalingFactor()
-         Get scaling factor
-         @returns {String} - Scaling Factor for value and unit
-
-The Print Command
----------
-The print() command can be called on objects for printing it out nicely formatted.
-
-For example, to print out the simulation variables that an entity has you can do:
-
-.. code-block:: javascript
-
-      -- AspectNode.SimulationTree.print()
-
-You can do the same for the VisualizationTree and the ModelTree.
-
-Clipboard
----------
-From the console, use the following command to open a clipboard and copy the console history.
-
-.. code-block:: javascript
-
-      -- G.copyHistoryToClipboard()
-         Copies console history to OS clipboard
-
-.. image:: http://i.imgur.com/f0MLjt6.png
-
-Watching State Variables
-------------------------------
-Simulation states can be watched as the simulation is running. It brings the user the possibility to access the value of the variable client side, i.e. drawing their results as part of a Plot, through our Plotting widget interface, showing the information in a tree visualiser widget, etc.
-Once the model has been loaded and before starting the simulation we can set the variables to be watched. In order to do this, firstly we need to populate the simulation tree. Assuming our entity is hhcell and the aspect is electrical we will have to execute the following command:
-
-.. code-block:: javascript
-
-   hhcell.electrical.getSimulationTree();
-   
-This command will populate the simulation tree (hhcell.electrical.SimulationTree) with all the watchable variables. By default the variables are not being watched. To start watching a/some variable/s there are two commands:
-
-.. code-block:: javascript
-
-   hhcell.electrical.SimulationTree.hhpop[0].v.setWatched(true);
-   
-   Simulation.setWatchedVariables([hhcell.electrical.SimulationTree.hhpop[0].v, hhcell.electrical.SimulationTree.hhpop[0].spiking]);
-   
-These commands can be executed before we start running the simulation. However if it is an interactive simulation (e.g. JLems Simulator), not an asynchronous one, we can also modified the variables we are watching on run time using the commands aforementioned.
-
-G.runScript(scriptURL) Example
-------------------------------
-Within Geppetto, it's possible to execute a script consisting of Geppetto commands and
-javascript commands.
-
-Reference a public URL which contains a series of commands, as in the link in this example and
-run the command with that URL_.
- .. _URL: http://raw.github.com/openworm/org.geppetto.testbackend/development/src/main/resources/TestSimulationScript.js
-
-To save a series of executed commands from console:
-* Copy history to clipboard *
-* Copy content of the clipboard to a file and put the file in a public folder *
-* Get the URL of that file *
-* Feed that link to this command. The set of operations specified in the URL will be executed in Geppetto. *
-
-
-Connecting with Geppetto
-========================
-There are two ways to connect with Geppetto.  In the lower right hand screen are two expandable areas. Click on the first will open
-an interface to share via Facebook or Twitter. The second opens a contact form to reach the Geppetto team with questions or comments.
-
-.. image:: http://i.imgur.com/mQAcCxf.png
-
-.. image:: http://i.imgur.com/Y3SbmmQ.png
-
-
-
-Reference
+Dashboard
 =========
 
-Keyboard Short Cuts
+The dashboard is the main entry point to a geppetto based application. The dashboard shows you which projects are available to you. The top right corner indicates which user is logged in for the current session. In the demo deployment of Geppetto this will read "Guest" because there is no peristence database behind it. Geppetto can be configured to work with user accounts.
+
+Projects
+--------
+
+Project
+	A Geppetto project is the container of a geppetto model. For more details about how a geppetto model is defined click here.
+	A project allows you to perform multiple computational experiments on the model associated to the project.
+
+The bar at the top allows you to filter the list of projects, just type in it to search for a specific one.
+The right pane shows which experiments are available in the selected project.
+
+.. image:: images/sshots/experimentDashboard.png
+   :align: center
+   :width: 40%
+
+Experiments
+-----------
+
+Experiment
+	A computational experiment in Geppetto lets you specify what value you want to assign to the parameters available in your model and which variables you wish to record when you run a simulation of your model.
+
+	Recorded variables are called **watched variables** while the parameters are called **model parameters**. An experiment also allows you to specify the **simulation parameters** such as timestep, simulation length and which simulator to use in the given experiment. Watched variables and model/simulation parameters can be edited from the Project workspace (explained later in this tutorial).
+
+An experiment can be in multiple states indicated by a different colour:
+
+Design (Orange)
+	The experiment is in design state and editable, it is possible to selected which variables are going to be watched when the experiment will run and set model/simulation parameters associated with it.
+Queued (Blue)
+	The experiment simulation has been queued and will be executed by the geppetto scheduler as soon as possible (depending on how many experiments are in the queue), from now on the experiment is "read only", you can no longer add variables to the watch list or edit parameter values.
+Running (Yellow)
+	The experiment simulation is currently being executed.
+Complete (Green)
+	The experiment simulation is completed. It is now possible to replay it and visualize the simulation results. Experiment replay and model visualization are accessible from the Project Workspace view (covered later in this document).
+Error (Red)
+	An error occurred while executing the experiment simulation.
+
+
+
+Project workspace
+=================
+
+Double clicking a project from the dashboard will open the project in the project workspace. The project workspace allows the user to visualize the models associated with the project, to create experiments and to simulate them with different available simulators.
+
+The default experiment will be loaded when the project is opened, and it will be highlighted in the "experiments" tab of the console at the bottom of the screen. If there is more than one expriment for the current project multiple rows will appear in the experiments tab. Clicking on the row will reveal experiment details and will let the user edit parameters.
+
+Console interaction
 -------------------
-=================  ================================================================
-   Key Strokes      Action
-=================  ================================================================
-  Ctl - Alt - J     Opens console
-  Ctl - Alt - P     Toggles Plot widget(s). If none exist at time, it creates one.
-=================  ================================================================
+
+.. image:: images/sshots/console.png
+
+The console can be opened by clicking on the at the bottom of the screen and is collapsed by default (once opened, clicling the bar header will function as an expand/collapse toggle). The environment is completely javascript scriptable and any action performed via UI interaction can be reproduced via the javascript console commands. Whenever the user interacts with the UI in the project workspace, the corresponding API commands will be printed in the console at the bottom of the screen (collapsed by default). Playing witht he UI and the looking at the console is an easy practical way to learn more about the Geppetto Javascript API. The console history can be easily exported to text file.
+
+Model visualization
+-------------------
+
+**Morphologies**: When an experiment is loaded (upon opening a project the default experiment is loaded), if a 3D representation of the model morphology is available it will be immediately visualized in the 3D canvas, the main area of the screen. The user can interact with the 3D canvas and the scene in it representing the model with intuitive mouse movements, dragging around with left button for rotation, right button for paninng and mouse wheel for zooming. The camera controls are also available on the top-left bar, including buttons for rotation, panning and zooming. Upon loading Geppetto will make an attempt at centering hte model based on its initial geometries. The control bar also has a "home" button that will bring the model back to the initial centered position.
+
+**Model metadata**: Model metadata can be visualized with various Geppetto widgets. The tree widget is particularly useful to visualize Geppetto entity hierarchies. How to use Geppetto widgets is covered in detail :ref:`here <usingwidgets>`.  
+
+Working with Geppetto entities
+------------------------------
+
+TODO - Concepts to cover: 
+
+* Entities
+* Entities hierarchy
+* Aspects
+* Variables
+* Instance path
+* Entity selection 
+
+New experiment
+--------------
+
+New experiments can only be created if the persistence bundle of Geppetto is installed ina given deployment (note: this is not the case on the live.geppetto.org demo).
+
+A new experiment can be created clicking on the "+" button visible at the top right of the experiments tab, and a row will be added to the experiments table. Editable fields can be edited by clicking on them.
+
+Once the experiment is created the user can:
+
+* Edit the experiment name by clicking on it
+* Expand experiment details by clicking on the experiment row
+* Edit simulation parameter from the experiment details (by clicking on the fields, same as the name), once the row is expanded. (i.e. Simulator --> neuronSimulator Time step --> 0.00005s Length --> 0.3s)
+* Add simulation variables to the watch list (*). This will cause simulation values to be recorded. Without watching any variables nothing will be recorded, so it is useless to run an experiment without any watched variables.
+
+(*) At the moment the only way to add variables to the watch list is via the console, using the Geppetto javascript API.
+
+Simulate experiment 
+-------------------
+
+Once parameters have been set, the experiment can be run by clicking the "run" button, the button with cogs in the top-right control bar. This will cause the experiment simulation to be placed on the Geppetto scheduler queue. The colored circle onthe experiment table will indicated the experiment status. Statuses are explained in the "Experiments" section above.
+
+Replay experiment
+-----------------
+
+Once the experiment status goes to green, the experiment can be replayed clicking the "play" button on the top right control bar. When the experiment is replayed, simulation results for the watched variables are streamed to the client in the form of a Geppetto recording, but this is entirely transparent to the user. A common way to visualize simulation results are plot widgets, tree widgets and value widgets, so the user will typically add the desired widgets to the Geppetto frontend and set the desired "data sources" before hitting "play". More on widgets and how to instantiate them :ref:`here <usingwidgets>`.   

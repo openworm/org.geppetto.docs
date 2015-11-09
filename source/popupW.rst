@@ -4,7 +4,7 @@ Popup Widget
 
 The popup widget allows the user to create a simple widget to display informative text / HTML.
 
-The following code create a widget to add a simple text description to the model:
+The following code creates a widget to add a simple text description to the model:
 
 .. code-block:: javascript
 
@@ -19,7 +19,7 @@ An example is shown below:
 .. code-block:: javascript
 
 	G.addWidget(Widgets.POPUP);
-	Popup2.addCustomNodeHandler(function(path){alert(path.getName());}, 'click');
+	Popup2.addCustomNodeHandler(function(node){alert(node.getName());}, 'click');
 	Popup2.setMessage("Some HTML here linking to a specific entity <a href="#" instancepath="mySuperEntity.myAspect.MyEntity">entity</a>");
 	
 In the example above, when the user clicks on the entity link the custom handler will be invoked. The custom handler takes the entity node as a parameter, coming from the instancepath attribute of the anchor element. If the value in the instancepath attribute does not map to an actual entity in the active Geppetto experiment, the custom handler 'path' parameter will be undefined.

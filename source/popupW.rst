@@ -17,7 +17,8 @@ An example of how this might look like with simple text and HTML is shown below:
 .. image:: images/widgets/popup.png
 
 .. image:: images/widgets/popup2.png
-	
+
+
 Other than for displaying simple text / HTML, the popup widget can be used to let the user interact with the simulation associating scripts to user actions via HTML anchor elements. Anchor elements can point to Geppetto entity nodes via the 'instancepath' attribute, and custom handlers can be associated to user actions (browser events such as 'click', 'dblclick', etc.) via the addCustomNodeHandler method. The entity node will be received as a parameter of the custom handler.
 
 An example is shown below:

@@ -26,8 +26,10 @@ An example is shown below:
 .. code-block:: javascript
 
 	G.addWidget(Widgets.POPUP);
-	Popup2.addCustomNodeHandler(function(node){alert(node.getName());}, 'click');
+	Popup2.addCustomNodeHandler(function(node){alert(node.getName());}, 'click', 'myDomainType');
 	Popup2.setMessage("Some HTML here linking to a specific entity <a href="#" instancepath="mySuperEntity.myAspect.MyEntity">entity</a>");
 	
-In the example above, when the user clicks on the entity link the custom handler will be invoked. The custom handler takes the entity node as a parameter, coming from the instancepath attribute of the anchor element. If the value in the instancepath attribute does not map to an actual entity in the active Geppetto experiment, the custom handler 'path' parameter will be undefined.
+In the example above, when the user clicks on the entity link the custom handler will be invoked if MyEntity is of type myDomainType. The custom handler takes the entity node as a parameter, coming from the instancepath attribute of the anchor element. If the value in the instancepath attribute does not map to an actual entity in the active Geppetto experiment, the custom handler 'path' parameter will be undefined.
+
+The domain type is an optional parameter, if omitted the handler will be applied to all the anchor elements with an 'instancepath' attribute.
 

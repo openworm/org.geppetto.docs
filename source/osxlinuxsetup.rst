@@ -31,7 +31,7 @@ OSX and Linux
 OSX
 ---
 
-* *homebrew* (see `here <http://brew.sh/>`_): ``bash ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"``
+* *homebrew* (see `here <http://brew.sh/>`_): ``ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"``
 
 * *Maven*: ``brew install maven``
 

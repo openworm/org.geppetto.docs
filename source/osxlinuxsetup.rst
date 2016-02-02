@@ -46,6 +46,8 @@ Linux: Debian and variants (e.g. Ubuntu)
 
 This should also work for alternative distributions, by substituting *apt-get* with the appropriate package manager, e.g. *pacman* for Arch, *yum* for Fedora.
 
+* *homebrew* (see `here:https://www.digitalocean.com/community/tutorials/how-to-install-and-use-linuxbrew-on-a-linux-vps"
+
 * *Maven*: ``sudo apt-get install maven``
 
 * *git*: ``sudo apt-get install git``
@@ -73,11 +75,42 @@ You can do this for example in .bashrc with:
 
 	``export JAVA_HOME="$(/usr/libexec/java_home)"``
 
-	``export SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server-3.6.2.RELEASE)"``
+	``export SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server-3.6.3.RELEASE)"``
 
 Maven needs to build with Java 7. If you want to point your JAVA_HOME variable to a different version, create a file *.mavenrc* in your home directory that contains: 
 
 	``export JAVA_HOME="$(/path/to/java7)"``
+
+Note that if you are using Java 8, you may want to install both Java 7 and Java 8 and have a conditional statement to switch between the two.
+	
+	``export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
+
+	``setjdk()
+	``{
+		export JAVA_HOME="$(/usr/libexec/java_home -v $1)"
+	``}
+	
+	``export SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.3.RELEASE)"
+
+When you close your terminal, it is possible that bashrc may reset SERVER_HOME. In order to reset SERVER_HOME, issue the following command from the terminal.
+
+	``SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.3.RELEASE)"
+
+Note that if you're using a Linux system, your directories will look somewhat different. 
+
+	``export MVN_HOME="$(brew --prefix maven)/libexec"
+
+	``JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk
+
+	``export JAVA_HOME
+
+	``SERVER_HOME=/opt/virgo-tomcat-server-3.6.3.RELEASE
+
+	``export SERVER_HOME
+
+The SERVER_HOME directory may be one of the directories that you are prompted to install to. Once you find where virgo tomcat is installed to, use that as your directory.
+
+Also, following the guide above to installing homebrew on Linux, you made need to add extra details to your bashrc file.
 
 OK, that was everything you need, let's get the source code now.
 
@@ -168,6 +201,16 @@ Or shutdown using the command:
 	``virgo shutdown.sh``
 
 For more info on Virgo's control scripts, see `here <http://eclipse.org/virgo/documentation/virgo-documentation-2.1.1.RELEASE/docs/virgo-user-guide/htmlsingle/virgo-user-guide.html>`_.
+
+Note that when you are running on Linux, there may be other services that are using Port 8080. 
+
+Use the command:
+
+	``netstat -plten | grep java
+
+Then identify the process number and issue the following command to kill it:
+
+	``sudo kill -9 <process_number>
 
 With that you are basically done! So, fire up the *startup.bat* file, wait until its output stops, cross your fingers and point your browser to:
 

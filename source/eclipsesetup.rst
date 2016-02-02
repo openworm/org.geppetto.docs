@@ -1,4 +1,4 @@
-Instructions for setting up Geppetto on Eclipse Juno
+Instructions for setting up Geppetto on Eclipse Luna
 ****************************************************
 
 Last Update: Jan 5 2015
@@ -13,31 +13,34 @@ We created `eclipse distributions <http://blog.openworm.org/post/31859097261/ope
 RED PILL
 --------
 
-* Install Eclipse Juno for J2EE
+* Install Eclipse Luna for J2EE
 
-  * `http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/junor <http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/junor>`__
+  * `http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/junor <http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar>`__
   * Taking eclipse from any other repository is discouraged
   
 * Install Spring Source Studio
 
-  * Download this file to your local disk `http://dist.springsource.com/snapshot/TOOLS/composite/e4.2/bookmarks.xml <http://dist.springsource.com/snapshot/TOOLS/composite/e4.2/bookmarks.xml>`__
+  * Download this file to your local disk `http://dist.springsource.com/snapshot/TOOLS/composite/e4.4/bookmarks.xml <http://dist.springsource.com/snapshot/TOOLS/composite/e4.4/bookmarks.xml>`__
   * Go To Help -> Install New Software -> Available Software Sites -> Import and point to the downloaded file to add the required update sites.
-  * Now back to the main dialog select from the dropdown the springsource update site
+  * In the alternative, open Eclipse, click help and then click Eclipse Marketplace.
+  * Then search for STS to find the Spring Tool Suite (STS) and install this to obtain the tools listed below.
+  * Irrespective of the method you use to install the Spring Tool Suite, back to the main dialog select from the dropdown the springsource update site
   * Select the following items and install them:
 
     * Core/Spring IDE
-    * Spring Tool Suite
-    * Extensions (Incubation) / Spring IDE
+    * Spring Tool Suite (installed by default through Spring Tool Suite marketplace)
+    * Extensions (Incubation) / Spring IDE (instlaled with Extensions / Spring IDE below)
     * Extensions / Spring IDE
     * Integrations / Spring IDE
 
 * Install Maven m2e plugin (now it is part of the Eclipse project) 
 
-  * Select the default Juno update site from Install new Software, search for “m2e” and install it
+  * Select the default Luna
+ update site from Install new Software, search for “m2e” and install it
 
 * Install Virgo Tomcat Server
   * `http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.zip <http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.zip>`__
-  * This will depend on your OS, for Ubuntu: download the zip file and do: “sudo unzip virgo-tomcat-server-3.6.2.RELEASE.zip -d /opt/”
+  * This will depend on your OS, for Ubuntu: download the zip file and do: “sudo unzip virgo-tomcat-server-3.6.2.RELEASE.zip -d /opt/”  Make sure that the directory you are installing to matches the directory you have set as the SERVER_HOME path in your .bashrc file.
 
 * Install EGit
 
@@ -75,7 +78,7 @@ Install Virgo Tomcat Server (skip if you have taken the red pill to install Ecli
 
 After all the tools are installed you can import the geppetto bundles you are interested in from GitHub (`https://github.com/openworm <https://github.com/openworm>`__).
 
-To do so go to File -> Import -> Git -> Projects from GitHub repository and type “org.geppetto”, select the bundles and click Finish, this will add all the Geppetto repositories to your workspace.  (Unfortunately it is not possible to select all the bundles at once so they will have to be clones one by one). The bundles needed for Geppetto are:
+To do so go to File -> Import -> Git -> Projects from Git -> GitHub and then type “org.geppetto”, select the bundles and click Finish, this will add all the Geppetto repositories to your workspace.  (Unfortunately it is not possible to select all the bundles at once so they will have to be clones one by one). The bundles needed for Geppetto are:
 
 * Essential
 
@@ -97,6 +100,10 @@ To do so go to File -> Import -> Git -> Projects from GitHub repository and type
     * org.geppetto.simulator.sph
     
 .. image:: http://i.imgur.com/bYJFHgw.png?1
+
+Note that you may need to add each of these repositories one by one.
+
+Also note that as you are adding the repositories to GitHub you may run into problems with 
 
 All the repositories added will be visible  going to the view “Git Repositories” which was installed by EGit (Windows -> Show View -> Other -> Git Repositories). 
 
@@ -130,9 +137,9 @@ Create Virgo Server using Eclipse Virgo tooling
 You now need to create an instance of a Virgo Tomcat Webserver. Here’s how:
 
 * Help -> Install New Software
-* Work With -> “Virgo Tooling”
+* Work With -> “Virgo Tooling” or http://download.eclipse.org/virgo/release/tooling
 * Select all the packages and install them
-* Windows -> Show View -> Servers
+* Then (once you have restarted Eclipse) click on Window -> Show View -> Others -> Servers
 * From the new view create a new Virgo Runtime server (New Servers Wizard -> EclipseRT ->Virgo runtime)
 * Name it anything you like
 * For installation directory use the “ virgo-tomcat-server” folder that was downloaded by the python script (if you used the python script to get it). If not, point to your virgo tomcat server install, eg /opt/virgo-tomcat-serve-VERSION-NUMBER

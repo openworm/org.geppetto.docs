@@ -90,7 +90,10 @@ Model visualization
 
 **Morphologies**: When an experiment is loaded (upon opening a project the default experiment is loaded), if a 3D representation of the model morphology is available it will be immediately visualized in the 3D canvas, the main area of the screen. The user can interact with the 3D canvas and the scene in it representing the model with intuitive mouse movements, dragging around with left button for rotation, right button for paninng and mouse wheel for zooming. The camera controls are also available on the top-left bar, including buttons for rotation, panning and zooming. Upon loading Geppetto will make an attempt at centering hte model based on its initial geometries. The control bar also has a "home" button that will bring the model back to the initial centered position.
 
-**Model metadata**: Model metadata can be visualized with various Geppetto widgets. The tree widget is particularly useful to visualize Geppetto entity hierarchies. How to use Geppetto widgets is covered in detail :ref:`here <usingwidgets>`.  
+Using widgets
+-------------
+
+Model metadata can be visualized with various :ref:`Geppetto widgets <usingwidgets>`. The `tree widget <treevisualizerW>` is particularly useful to visualize Geppetto entity hierarchies. How to use Geppetto widgets is covered in detail :ref:`here <usingwidgets>`.  
 
 Working with Geppetto entities
 ------------------------------

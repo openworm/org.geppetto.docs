@@ -5,7 +5,7 @@ Geppetto Meta-Model
 This section explains the Geppetto Model abstraction, its role in Geppetto and how it can be used to provide support for additional domain-specific formats - in other words, being able to extract information from domain-specific content (e.g. native input files for a given simulator) and interact with that information from Geppetto.
 
 
-The Geppetto Meta-Model is defined in a declarative way using Ecore, a tool for building meta-models from the Eclipse Modeling Framework (). Introductory documentation for EMF can be found at the `eclipse project website <http://www.eclipse.org/modeling/emf/docs/?>`_.
+The Geppetto Meta-Model is defined in a declarative way using Ecore, a tool for building meta-models from the Eclipse Modeling Framework (EMF). Introductory documentation for EMF can be found at the `eclipse project website <http://www.eclipse.org/modeling/emf/docs/?>`_.
 
 **Why EMF?**
 

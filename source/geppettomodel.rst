@@ -24,6 +24,8 @@ These are the main concepts to understand, let's have a look at some examples th
 
 ***Creating a cell***
 
+Let's say we want to create a simple type that represents a biological cell, what would we need to do?
+
 .. code-block:: java
 	
 	SimpleType cellType = TypesFactory.eINSTANCE.createSimpleType();

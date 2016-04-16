@@ -2,20 +2,18 @@
 Geppetto Meta-Model 
 ***********
 
-This section explains the Geppetto Model abstraction, what is its role in Geppetto and how it can be used to add support for new formats.
+This section explains the Geppetto Model abstraction, its role in Geppetto and how it can be used to provide support for additional domain-specific formats - in other words, being able to extract information from domain-specific content (e.g. native input files for a given simulator) and interact with that information from Geppetto.
 
 
-The Geppetto Meta-Model is defined in a declarative way using Ecore, a tool for building meta-models from the Eclipse Modeling Framework.
+The Geppetto Meta-Model is defined in a declarative way using Ecore, a tool for building meta-models from the Eclipse Modeling Framework (EMF). Introductory documentation for EMF can be found at the `eclipse project website <http://www.eclipse.org/modeling/emf/docs/?>`_.
 
 **Why EMF?**
 
 The Eclipse Modelling Framework is an industry grade technology which has been around for more than 15 years and is currently used in thousand of professional software and tools.
-Over the years EMF has solved pretty much every problem related to modeling providing a very generic and powerful abstraction which allows to define meta-models in a  simple and powerful way.
 Ecore allows the developer to specify all the entities (called EClass) and relationships that exist in a given meta-model allowing the developer to define all the constraints (e.g. containment, hierarchy, boundary conditions, etc.) that exist in the model in a declarative way.
-EMF adds the ability to generate, from the model definition, the code to use the model in a moltitude of languages, making pretty much every line of model-related code bug free.
+EMF adds the ability to generate, from the model definition, the code to use the model in a multitude of languages, making pretty much every line of model-related code bug free.
 EMF supports XMI, a dialect of XML, as default serialization standard, making it easy to serialize and deserialize models in a robust way, performing a validation against the schema through every step of the way.   
 Geppetto takes advantage also of EMF-JSON an extension that makes it possible to serialize the models also to JSON.
-For more information about Ecore and EMF see this link.
 
 **Main concepts**
 

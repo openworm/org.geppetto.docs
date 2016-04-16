@@ -130,7 +130,9 @@ ArrayValues can be assigned to variables of type ArrayType and specifies the ind
 
 This package contains the definition of the variable EClass.
 
+
 .. image:: images/model/variables.png
+
 
  **Why EMF?**
 

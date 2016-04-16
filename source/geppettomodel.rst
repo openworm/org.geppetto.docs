@@ -130,11 +130,9 @@ ArrayValues can be assigned to variables of type ArrayType and specifies the ind
 
 This package contains the definition of the variable EClass.
 
-
 .. image:: images/model/variables.png
 
-
- **Why EMF?**
+**Why EMF?**
 
 The Eclipse Modelling Framework is an industry grade technology which has been around for more than 15 years and is currently used in thousand of professional software and tools.
 Ecore allows the developer to specify all the entities (called EClass) and relationships that exist in a given meta-model allowing the developer to define all the constraints (e.g. containment, hierarchy, boundary conditions, etc.) that exist in the model in a declarative way.

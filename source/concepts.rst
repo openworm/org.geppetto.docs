@@ -2,10 +2,6 @@
 Geppetto Concepts
 *****************
 
-Entity
-======
-An Entity is the basic building block of the simulated world. An entity can aggregate other entities and be described by different Models. In the real world an entity could be a cell, a worm, a leaf or a city for instance. Entities are boundary containers which make possible to logically described what needs to be simulated. Geppetto is not strongly typed and an entity is solely described by its models and aggregated entities.
-
 Model
 =====
 A Model describes a specific aspect of an entity. A Model could describe an entity as a particle system, while another model could describe its biophysical properties. A model is simulated by a specific simulator bundle.

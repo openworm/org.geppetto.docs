@@ -101,17 +101,28 @@ In addition, a :ref:`connectivity widget <connectivityW>` (shown above) is parti
 
 How to use Geppetto widgets is covered in detail :ref:`here <usingwidgets>`.
 
-Working with Geppetto entities
-------------------------------
+Spotlight Search
+----------------
 
-TODO - Concepts to cover:
+Geppetto has a spotlight search that allows the user to search for anything in the scene / simulation and to interact with it. 
+The spotlight can be opened with the CTRL+SPACE shortcut or by clicking on the magnifying glass icon on the left side bar 
+(located right under the camera controls), while it can be closed by simply press ESC. 
 
-* Entities
-* Entities hierarchy
-* Aspects
-* Variables
-* Instance path
-* Entity selection
+.. image:: images/sshots/spotlight.png
+
+To use the spotlight after bringing it up, simply type in the text box, or pick from the default options available under the textbox (usually representing the visible elements on the scene). 
+The spotlight will give suggestions in the list below as the user types. 
+ 
+.. image:: images/sshots/spotlight_suggest.png
+
+Once an entity has been selected by the user (by clicking on the list options, or typing and then pressing enter), icons with possible actions for that entity are shown below the text box
+(e.g. if it's a state variable the user can plot it, if it's a visual entity the user can select it or zoom on it etc.).
+The tooltip on the icons lets the user know what the icon means.
+
+.. image:: images/sshots/spotlight_actions.png
+
+The spotlight is also configurable via its API, for example to show a list of suggestions to the user that can be mapped to scripted actions. 
+This will be covered in the developer documentation.
 
 New experiment
 --------------

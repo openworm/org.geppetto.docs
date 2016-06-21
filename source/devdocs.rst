@@ -14,7 +14,6 @@ For Developers
    build
    concepts
    designdocs
-   nodes
    jsdocs
    widgets
    components

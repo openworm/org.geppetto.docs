@@ -124,6 +124,18 @@ The tooltip on the icons lets the user know what the icon means.
 The spotlight is also configurable via its API, for example to show a list of suggestions to the user that can be mapped to scripted actions. 
 This will be covered in the developer documentation.
 
+Control Panel 
+-------------
+
+The Geppetto control panel gives a tabular view of all the entitites in the scene, and provides controls to perform actions on them. 
+The control panel can be opened with the "rows" button under the camera controls on the left side bar, or via the CTRL+P shortcut. It can be closed with the ESC key. 
+
+.. image:: images/sshots/controlpanel.png
+
+The user can filter results with the text box at the top of the grid (only the rows with matching text will be shown), and apply sorting by clicking on the column headers.
+
+The control panel shown in the screenshot above is the Geppetto default, with info, selection, zoom, and color controls, but it can be completely customized via the API (covered in the developer documentation). 
+
 New experiment
 --------------
 

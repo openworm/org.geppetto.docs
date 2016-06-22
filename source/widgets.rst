@@ -12,7 +12,7 @@ Geppetto Widgets Tutorial
 Creating a Widget
 =================
 
- A template for new widgets is available inside /org.geppetto.frontend/src/main/webapp/js/widgets/template. In the template the widget is called WIDGETNAME. Search for WIDGETNAME inside /org.geppetto.frontend/src/main/webapp/js/widgets/ to easily find the places that need to be changed to add a new widget.
+ A template for new widgets is available inside /org.geppetto.frontend/src/main/webapp/js/widgets/template copy and paste that folder and name after the widget you wish to add. In the template the widget is called WIDGETNAME. Search for WIDGETNAME inside /org.geppetto.frontend/src/main/webapp/js/widgets/ to easily find the places that need to be changed to add a new widget.
 
 This tutorial will describe the steps needed start creating your own Geppetto Widget. To begin, you will want to set up a specific file and folder structure. Let’s say you are interested in creating a Geppetto Widget that can plot one or multiple Simulation Variables values in a chart. For example, let’s call it a “Chart” Widget. The first step would be to create the folder structure, which consists of a parent folder named after the Widget and multiple folders inside it for the controllers and vendor libraries.  Your folder structure should look something like this: ::
 

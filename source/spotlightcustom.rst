@@ -12,24 +12,27 @@ Open in Search Flow
 -----------
 
 .. code-block:: javascript
+
 	GEPPETTO.Spotlight.open(GEPPETTO.Resources.SEARCH_FLOW);
-	
+
 This is the default flow that is triggered when the user opens the lightspeed search with the "SEARCH_FLOW" parameter or with no parameters. The search runs on all potential instances in the scene. 
 
 Open in Run Flow 
 --------
 
 .. code-block:: javascript
+
 	GEPPETTO.Spotlight.open(GEPPETTO.Resources.RUN_FLOW);
-	
+
 This flow is triggered when the user hits the run button (or equivalent API command). A default suggestion is added to the spotlight to provide the user with the ability to record all state variables in the current model.
 
 Open in Play Flow 
 ---------
 
 .. code-block:: javascript
+
 	GEPPETTO.Spotlight.open(GEPPETTO.Resources.PLAY_FLOW);
-	
+
 This flow is triggered when the user hits the play button (or equivalent API command). A default suggestion is added to the spotlight to provide the user with the ability to plot all recorded state variables available in the instance tree.
 	
 
@@ -41,6 +44,7 @@ Suggestions can be added to the lightspeed search via the .addSuggestion API met
 Custom actions and icons can be associated to suggestions as shown in the example below (this suggestions will shop up in the list of suggestions when the user  triggers the play flow by clicking the play button or using equivalent API commands):
 
 .. code-block:: javascript
+
     var plotSample = {
         "label": "Plot all recorded variables",
         "actions": [

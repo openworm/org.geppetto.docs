@@ -2,7 +2,11 @@
 Lightspeed Search Customization
 *******************************
 
-The search functionality can be interacted with via its API. The main interaction currently available and exposed to developers is the open command, that combined with various parameters opens the spotlight with various options.
+The lightspeed search lets users search for instances and potential instances in a given geppetto project.
+
+.. image:: images/sshots/spotlight.png
+
+This search functionality can be interacted with via its API. The main interaction currently available and exposed to developers is the open command, that combined with various parameters opens the spotlight with various options.
 
 Open in Search Flow 
 -----------
@@ -53,8 +57,9 @@ What Next?
 
 Currently ongoing:
 
-* add the .addDataSource API method to allow additional datasources to be added via script
+* Add the .addDataSource API method to allow additional datasources to be added via script
 
 Backlog:
 
+* Make capabilities based configuration configurable via script
 * Share capabilities based configuration with the control panel  

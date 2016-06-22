@@ -20,3 +20,4 @@ For Developers
    styling
    devtips
    persistence
+   spotlightcustom

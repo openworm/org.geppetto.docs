@@ -54,7 +54,7 @@ Custom actions and icons can be associated to suggestions as shown in the exampl
         "icon": "fa-area-chart"
     };
     
-	this.addSuggestion(plotSample, GEPPETTO.Resources.PLAY_FLOW);
+    this.addSuggestion(plotSample, GEPPETTO.Resources.PLAY_FLOW);
 
 What Next?
 ----------

@@ -21,3 +21,4 @@ For Developers
    devtips
    persistence
    spotlightcustom
+   controlpanelcustom

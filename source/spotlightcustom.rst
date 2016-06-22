@@ -2,7 +2,7 @@
 Lightspeed Search Customization
 *******************************
 
-The lightspeed search lets users search for instances and potential instances in a given geppetto project.
+The lightspeed search (CTRL+SPACE or the magnifying glass button on the left bar to open) lets users search for instances and potential instances in a given Geppetto project.
 
 .. image:: images/sshots/spotlight.png
 

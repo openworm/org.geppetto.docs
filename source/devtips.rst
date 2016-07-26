@@ -28,11 +28,12 @@ This section provides tips to solve some problems regarding Geppetto deploying i
 
   However, sometimes this folder structure is "corrupted". Therefore, some compilation errors, which make no sense (Eclipse is complaining about a file although the file is in the right path), are reported. Execute a Maven Update to the project and then mvn clean/ install. After executing a mvn update, remember to unclick the Maven Project Builder (**Eclipse command**: Right click Project > Properties > Builders > Unclick Maven Project Builder). Otherwise it can slow down and, eventually, crash your Eclipse.
 
-* In the Virgo server there are four folders you have to cared about if you are having any problem:
+* In the Virgo server there are four folders to focus on if you are having problems:
+
   * pickup: if you are not using any IDE you need to have a geppetto.map. Otherwise, the file can't be here.
   * serviceability/log/log.log: If you have any problem have a look at the logs file and try to figure out what is failing
-  * stage: If you are using an IDE the geppetto bundles will be deployed here. If you are having some problems and you do not know what to do, sometimes it is a good option to delete the content of this folder. It will be regenerated next time the server is started. However, you may need to delete the Virgo server from Eclipse and create it again adding all the bundles. If you are not using Eclipse, this folder shouldn't have any bundle and they have to place in the repository/usr as .jar and .war files
-  * repository/usr: If using an IDE this folder contains all the .jar dependencies from the different bundles (a script can be found in org.geppetto which copies thes files into the Geppetto server). If any library is added or changed, mvn install the geppetto projects and copy the files again.
+  * stage: If you are using an IDE the geppetto bundles will be deployed here. If you are having some problems and you do not know what to do, sometimes it is a good option to delete the content of this folder. It will be regenerated next time the server is started. However, you may need to delete the Virgo server from Eclipse and create it again adding all the bundles. If you are not using Eclipse, this folder shouldn't have any bundles and they have to be placed in the repository/usr as .jar and .war files
+  * repository/usr: If using an IDE, this folder contains all the .jar dependencies from the different bundles (a script can be found in org.geppetto which copies these files into the Geppetto server). If any library is added or changed, mvn install the geppetto projects and copy the files again.
 
 * If you have are starting your Virgo Server for the first time and it is not working try to have a look at the Geppetto folder permissions.
 

@@ -39,16 +39,16 @@ of some of the things you can configure through properties.
 				                   ]
 		};
 
-- 'id': `{String} ID used to find this new button`_
-- 'openByDefault': `{boolean} Drop down opens by default when button is added.`_
-- 'closeOnClick': `{boolean} Drop down closes when an element is clicked`_
-- 'label': `{String} Label that is displayed in button`_
-- 'iconOn': `{String} Class of Font Awesome icon to used and be displayed in button when drop down is open`_
-- 'iconOff': `{String} Class of Font Awesome icon to used and be displayed in button when drop down is closed`_
-- 'menuPositon': `{JSON} Object with properties 'top','bottom','left','right' that gives the drop down menu its position e.g. {top:0,bottom:0,left:0,right:0}`_
-- 'menuSize': `{JSON} Object with properties 'width' and 'height' that gives the drop down menu its size e.g. {width:100,height :100}`_
-- 'onClickHandler': `{function} External Handler that is notified when element from drop down is clicked. See below for more info`_
-- 'menuItems': `{array} Drop down opens by default when button is added.`_
+- 'id': `{String} ID used to find this new button`
+- 'openByDefault': `{boolean} Drop down opens by default when button is added.`
+- 'closeOnClick': `{boolean} Drop down closes when an element is clicked`
+- 'label': `{String} Label that is displayed in button`
+- 'iconOn': `{String} Class of Font Awesome icon to used and be displayed in button when drop down is open`
+- 'iconOff': `{String} Class of Font Awesome icon to used and be displayed in button when drop down is closed`
+- 'menuPositon': `{JSON} Object with properties 'top','bottom','left','right' that gives the drop down menu its position e.g. {top:0,bottom:0,left:0,right:0}`
+- 'menuSize': `{JSON} Object with properties 'width' and 'height' that gives the drop down menu its size e.g. {width:100,height :100}`
+- 'onClickHandler': `{function} External Handler that is notified when element from drop down is clicked. See below for more info`
+- 'menuItems': `{array} Drop down opens by default when button is added.`
 
 Using an External Click Handler
 ------------------

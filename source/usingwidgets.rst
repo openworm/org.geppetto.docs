@@ -56,4 +56,4 @@ If you are interested in contributing a new widget to Geppetto you can follow th
    variablevizW
    connectivityW
    bubarW
-
+   menubutton

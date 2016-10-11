@@ -28,7 +28,9 @@ Getting started with database
 * A file like the one below will need to be added to the {user.home}/geppetto/db.properties
 
     javax.jdo.option.ConnectionURL=jdbc:mysql://localhost/geppetto
+    
     javax.jdo.option.ConnectionDriverName=com.mysql.jdbc.Driver
+    
     javax.jdo.option.ConnectionUserName=user_name
     
     javax.jdo.option.ConnectionPassword=password

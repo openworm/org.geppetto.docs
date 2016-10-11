@@ -14,10 +14,11 @@ For Developers
    build
    concepts
    designdocs
-   nodes
    jsdocs
    widgets
    components
    styling
    devtips
    persistence
+   spotlightcustom
+   controlpanelcustom

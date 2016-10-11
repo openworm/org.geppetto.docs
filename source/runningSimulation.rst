@@ -17,8 +17,8 @@ recorded variables that have been simulated.
 
 If you want to plot a specific variable that you recorded you will be able to do so
 using the search bar to look for that variable and using the "Plot" icon. The list
-of all the variables recorded in a given experiment is available clicking on the
-"Recorded variables" link in the Experiment table.
+of all the variables recorded in a given experiment is available clicking on 
+the "Recorded variables" link in the Experiment table.
 
 ..image:: images/help/recorded_variables_plotted.png
 

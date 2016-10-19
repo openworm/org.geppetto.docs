@@ -15,3 +15,7 @@ For Users
    usingwidgets
    events
    dropbox
+   recordingVariables
+   settingParameters
+   runningSimulation
+   downloadResults

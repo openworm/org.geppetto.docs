@@ -17,7 +17,7 @@ The documentation is split into two main sections: a guide to help you learn how
 ------------
 
 .. image:: images/usr_btn.png
-   :target: ./usinggeppetto.html
+   :target: ./userdocs.html
    :align: center
 
 ------------

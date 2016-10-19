@@ -1,12 +1,9 @@
-***********************
-Recording and replaying
-***********************
+******************
+Recordings for dev
+******************
 
-Note: This is work in progress, input and feedback are very welcome!
 
 A recording stores all the raw data of your simulation run. In Geppetto, a recording is simply a file in the popular binary data format HDF5. 
-
-Geppetto will soon offer a feature to load a recording file and replay it. Then you can see all the magic of your simulation happen again ... and again ... and again.
 
 Furthermore, we developed some handy tools to create Geppetto recordings from NEURON and Brian simulations. Just replay these in Geppetto, and couple your existing models with any other simulations that runs in Geppetto. 
 

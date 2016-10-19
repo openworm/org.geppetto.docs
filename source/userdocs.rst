@@ -4,18 +4,11 @@ For Users
 #########
 
 .. toctree::
-   :maxdepth: 2
-
-   install
+   :maxdepth: 1
    usinggeppetto
-   simtutorial
-   recordingandreplaying
-   connections
-   visualgroups
    usingwidgets
-   events
-   dropbox
    recordingVariables
    settingParameters
    runningSimulation
    downloadResults
+   dropbox

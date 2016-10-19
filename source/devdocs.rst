@@ -1,10 +1,10 @@
 .. _devdocs:
-##############
+############
 For Developers
 ##############
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    overview
    contribute
@@ -22,3 +22,4 @@ For Developers
    persistence
    spotlightcustom
    controlpanelcustom
+   recordingandreplaying

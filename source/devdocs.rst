@@ -1,7 +1,8 @@
 .. _devdocs:
-############
-For Developers
-##############
+
+************************
+Developers documentation
+************************
 
 .. toctree::
    :maxdepth: 1

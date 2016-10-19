@@ -1,7 +1,8 @@
 .. _userdocs:
-#############
-For Users
-#########
+
+******************
+User documentation
+******************
 
 .. toctree::
    :maxdepth: 1

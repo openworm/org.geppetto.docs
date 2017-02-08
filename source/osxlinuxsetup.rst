@@ -2,7 +2,7 @@
 Source Setup on OSX and Linux
 *****************************
 
-This will tell you how to get the Geppetto source code and build it on a OSX and Linux machine (`OSX? Linux? I'm on Windows! <http://docs.geppetto.org/en/latest/osxlinuxsetup.html>`_). 
+This will tell you how to get the Geppetto source code and build it on a OSX and Linux machine (`OSX? Linux? I'm on Windows! <http://docs.geppetto.org/en/latest/windowssetup.html>`_). 
 
 It might be a good idea to test the `release version <http://docs.geppetto.org/en/latest/install.html>`_ of Geppetto on your system before you move on.
 

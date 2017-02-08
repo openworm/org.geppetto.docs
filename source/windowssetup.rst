@@ -4,8 +4,6 @@ Source Setup on Windows
 
 This will tell you how to get the Geppetto source code and build it on a Windows machine (`Windows? I'm on OSX/Linux! <http://docs.geppetto.org/en/latest/osxlinuxsetup.html>`_). 
 
-Already did that? Cool, let's get started!
-
 Psst: If you get stuck at any point, drop us a line at the `OpenWorm-discuss mailing list <https://groups.google.com/forum/#!forum/openworm-discuss>`_ or the contact formular on the `Geppetto website <http://www.geppetto.org/>`_. You can also send us screenshots and log files!
 
 Prerequisite software

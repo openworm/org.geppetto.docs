@@ -25,8 +25,6 @@ You need a bunch of other software to setup Geppetto from sources. The good news
 
 * *pip* for Python 2.7: `Installer <http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip>`_
 
-* *OpenCL*: You can use `GPU Caps viewer <http://www.softpedia.com/get/Tweak/Video-Tweak/GPU-Caps-Viewer.shtml>`_ to check whether OpenCL (version 1.2) is already installed (tip: you can run some nice demos at the bottom of the OpenCL tab). If it is not there, update the driver of your graphics card to the newest version (`Intel <http://www.intel.com/p/en_US/support/detect/graphics>`_ and `Nvidia <http://www.nvidia.com/Download/index.aspx?lang=en-us>`_). Then, install the Intel SDK for OpenCL Applications (`Installer <https://software.intel.com/en-us/vcsource/tools/opencl-sdk>`_). Use GPU Caps viewer again to check that everything works. 
-
 * *Maven*: `ZIP file <http://maven.apache.org/download.cgi>`_, please follow `these instructions <http://maven.apache.org/download.cgi#Installation>`_ - particularly, you have to set the M2 environment variable accordingly (What are environment variables? See below)
 
 * *git*: `Installer <http://git-scm.com/download/win>`_, make sure to select "Use Git from the Windows Command Prompt" during the installation

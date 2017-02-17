@@ -5,7 +5,8 @@ Source Setup on OSX and Linux
 This will tell you how to get the Geppetto source code and build it on a OSX and Linux machine (`OSX? Linux? I'm on Windows! <http://docs.geppetto.org/en/latest/windowssetup.html>`_). 
 
 Note: if you just want to play with a sample Geppetto deployment you don't need to install anything, just visit https://live.geppetto.org.
-If you want to install the latest released sample deployment just download it from `here<https://github.com/openworm/org.geppetto/releases>`_ and run ``./bin/startup.sh``.
+If you want to install the latest released sample deployment just download it from
+`here <https://github.com/openworm/org.geppetto/releases>`_ and run ``./bin/startup.sh``.
 The following instructions are if you want to setup Geppetto from sources.
 
 Psst: If you get stuck at any point, drop us a line at the `OpenWorm-discuss mailing list <https://groups.google.com/forum/#!forum/openworm-discuss>`_ or the contact formular on the `Geppetto website <http://www.geppetto.org/>`_. You can also send us screenshots and log files!

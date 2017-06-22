@@ -15,7 +15,7 @@ Each one of the options is detailed below.
 Layout agnostic options
 =======================
 
-After creating an instance of the Connectivity widget with ``G.addWidget(6)``, data must be bound to it using the ``setData()`` method, which applies to any of the layouts. Additional options for the same method can be used to control visual attributes  -- such as mapping link/node categories onto colours or node weights onto line widths -- in the following manner:
+After creating an instance of the Connectivity widget with ``G.addWidget(GEPPETTO.Widgets.CONNECTIVITY)``, data must be bound to it using the ``setData()`` method, which applies to any of the layouts. Additional options for the same method can be used to control visual attributes  -- such as mapping link/node categories onto colours or node weights onto line widths -- in the following manner:
 
 The ``setData(entity[, options])`` method accepts two arguments:
 
@@ -25,20 +25,24 @@ The ``setData(entity[, options])`` method accepts two arguments:
 
   - *layout*: one of ['matrix', 'hive', 'force', 'chord']. Defaults to 'matrix'.
 
-  - *linkType*: a function that maps each connection *edge* (object of class `ConnectionNode`_) onto *any* type of value (coercible to string) which qualitatively identifies the link category. Defaults to ``function(link): {return 1}`` (i.e., all links are of same 'type' 1). Applies to *matrix*, *force*, *hive* views.
+  - *library*: a Geppetto library, e.g. ``GEPPETTO.ModelFactory.geppettoModel.neuroml`` that supplies a ``network`` type.
 
-  - *linkWeight*: a function that maps each connection *edge* (object of class `ConnectionNode`_) onto a Floating point number, which represents the connection weight. Defaults to ``function(link): {return 1}`` (i.e., all links are of same 'weight' 1, and will be e.g. be drawn as lines with the same width in the *force* view.
+  - *linkType* (optional): a function that maps each connection *edge* (object of class `ConnectionNode`_) onto *any* type of value (coercible to string) which qualitatively identifies the link category. Defaults to ``function(link): {return 1}`` (i.e., all links are of same 'type' 1). Applies to *matrix*, *force*, *hive* views.
 
-  - *nodeType*: a function that maps the connection *source node* (object of class `EntityNode`_ ) onto *any* type of value (coercible to string) which qualitatively identifies the node category. Defaults to ``function(node): {return node.getId().split('_')[0]}`` (i.e., nodes are classified according to part of their 'id' field before the first '_' character). Applies to *force*, *hive* views.
+  - *linkWeight* (optional): a function that maps each connection *edge* (object of class `ConnectionNode`_) onto a Floating point number, which represents the connection weight. Defaults to ``function(link): {return 1}`` (i.e., all links are of same 'weight' 1, and will be e.g. be drawn as lines with the same width in the *force* view.
 
+  - *nodeType* (optional): a function that maps the connection *source node* (object of class `EntityNode`_ ) onto *any* type of value (coercible to string) which qualitatively identifies the node category. Defaults to ``function(node): {return node.getId().split('_')[0]}`` (i.e., nodes are classified according to part of their 'id' field before the first '_' character). Applies to *force*, *hive* views.
+
+  - *colorMapFunction* (optional): a function returning a `d3 scaleOrdinal`_, called when a ``Color_set`` event is raised.
 
 .. _`ConnectionNode`: https://raw.githubusercontent.com/openworm/org.geppetto.frontend/development/src/main/webapp/js/nodes/ConnectionNode.js
 .. _`EntityNode`: https://raw.githubusercontent.com/openworm/org.geppetto.frontend/development/src/main/webapp/js/nodes/EntityNode.js
+.. _`d3 scaleOrdinal`: https://github.com/d3/d3-scale/blob/master/README.md#scaleOrdinal
 
 
 Connectivity Matrix
 ===================
-Draws a square matrix_, where each row [column] correspond to a source [target] node. Therefore, filled squares at  *i,j* denote a directed edge from node *i*  to node *j*. The rows/columns can be sorted by node name, number of incoming connections, and number of outoing connections. Hover over to see node names, click to select the corresponding cells in the Geppetto 3d view.
+Draws a square matrix_, where each row [column] correspond to a source [target] node. Therefore, filled squares at  *i,j* denote a directed edge from node *i*  to node *j*. The rows/columns can be sorted by node name, number of incoming connections, and number of outgoing connections. Coloured dots above each row/column indicate the type of nodes in that row/column. Hover over to see node or type names, click to select the corresponding cells in the Geppetto 3D view.
 
 .. _matrix: http://en.wikipedia.org/wiki/Adjacency_matrix
 

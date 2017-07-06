@@ -10,21 +10,21 @@ Geppetto Build
 Geppetto Configuration
 ============
 
-Geppetto allows configuring your instance with a set of parameters that can be found inside org.geppetto.frontend/src/main/webapp/GeppettoConfiguration.json. This file exposes the following parameters:
+Geppetto lets you configure your deployment with a set of parameters that are defined in org.geppetto.frontend/src/main/webapp/GeppettoConfiguration.json. This file exposes the following parameters:
 
 - contextPath: The context path is the prefix of the URL path to access Geppetto. Typically development contextPath is "org.geppetto.frontend" and "/" for production. Assuming a local development environment with contextPath "org.geppetto.frontend", you will access Geppetto at localhost: localhost:8080/org.geppetto.frontend
 
-- useSsl: Geppetto will be configured to use https calls.
+- useSsl: if true, Geppetto will be configured to use https of http.
 
 - embedded: Geppetto is configured to work as an embedded instance inside an iframe. This means CORS will be enabled, a postMessage channel will be available for the main frame, some layout and href calls customization, etc.
 
-- embbedderURL: URL of the main frame container. For security reasons Geppetto will only accept calls from this URL
+- embbedderURL: if running in embedded mode, this specifies the URL of the main frame container. For security reasons Geppetto will only accept cross-origin calls from this URL.
 
-- noTest: If false, tests will be run as part of the build process.
+- noTest: If true, tests are suppressed during the build process. If false, tests will be run as part of the build process.
 
-- extensions: Geppetto can be customised using JS and LESS/CSS files creating a folder inside the extensions folder (Documentation still under construction) and enabling the extension with this parameter. By default, Gepppetto provides an extension that configures a ready to use instance.
+- extensions: Geppetto can be customised by defining JS and LESS/CSS files dropped in a folder inside the extensions folder. The extension can be enabled using this parameter. By default, Gepppetto provides a default extension (org.geppetto.frontend/src/main/webapp/extensions/geppetto-default) that can be used as an example to build custom extensions.
 
-- themes: Geppetto is configured to use this theme (set of colours). So far we only expose a few parameters. As follow you can find the parameters and its values by default. 
+- themes: defined a geppetto "theme", so far we only expose a few parameters defining colours. Below you can find a list of the parameters exposed that can be overridden by your custom theme file: 
 
     ``@primary_color: #fc6320;``
     
@@ -40,7 +40,7 @@ Geppetto allows configuring your instance with a set of parameters that can be f
     
     ``@background_color_widget: rgb(66, 59, 59);``
 
-In order to implement a new theme, a less file needs to be created defining some or all these parameters and the theme needs to be enabled in the GeppettoConfiguration.json.
+In order to implement a new theme, a less file needs to be created defining some or all these parameters and the theme needs to be specified in the themes and set to true.
 
 This is how the default (and recommended for development environments) GeppettoConfiguration.json looks like:
 ::
@@ -87,7 +87,7 @@ and this is an example of a production environment with a different extension an
 Maven Profiles
 ============
 
-Geppetto is build with Maven, using the command. Maven allows for different build steps to be specified for different environments. Geppetto provides a development and a production profile. When building for a production environment, certain steps are followed that are not desired in a development environment.
+Geppetto is built using Maven, with the "mvn install" command. Maven allows for different build steps to be specified for different environments and Geppetto provides a development and a production profile, see below for how to trigger different builds. Builds can be triggered at the root from the org.geppetto bundle and parameters will be propagated to the children (children bundles are defined in org.geppetto/pom.xml). Maven builds can also be triggered for individual bundles from the specific bundle root that needs to be built. 
 
 
 Building for development
@@ -95,7 +95,7 @@ Building for development
 
 ``mvn install``
 
-When the command "mvn install" is run, none of the optimisation tasks is run. When developing Geppetto, it is not necessary to run these build profiles unless you wish to simulate a production environment.
+When the command "mvn install" is executed, none of the optimisation tasks are run. When doing development, it is not necessary to run the production build unless you wish to simulate a production environment.
 
 
  
@@ -104,12 +104,12 @@ Building for production
 
 ``mvn install -P master``
 
-Some optimisation tasks are perform to optimise Geppetto performance and security.
+Some optimisation tasks are applied to the org.geppetto.frontend bundle to optimise performance and security. To see the difference between profiles havea look at org.geppetto.frontend/src/main/webapp/package.json.
 
 Overriding Geppetto Parameters with mvn
 =========
 
-Geppetto configuration settings can be overwritten by passing the parameters in the mvn install command. Find as follow an example:
+Geppetto configuration settings can be overwritten by passing the parameters to the "mvn install" command. An example follows:
 
 ``mvn install "-DcontextPath=theearth" "-DuseSsl=true" "-Dembedded=true" "-DembedderURL=universe,milkyway"``
 

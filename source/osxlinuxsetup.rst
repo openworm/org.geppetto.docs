@@ -23,9 +23,11 @@ OSX and Linux
 
 * Python 2.7
 
-* Virgo Server for Apache Tomcat: `ZIP file <https://dl.dropboxusercontent.com/u/7538688/virgo-tomcat-server-3.6.3.RELEASE.zip?dl=1>`_, unpack it to your desired location by:
+* Virgo Server for Apache Tomcat: `ZIP file <https://dl.dropboxusercontent.com/u/7538688/virgo-tomcat-server-3.6.3.RELEASE.zip?dl=1>`_, or `_Latest version <https://eclipse.org/virgo/download/>`_, unpack it to your desired location by:
 
-	``gunzip -a virgo-tomcat-server-3.6.3.RELEASE.zip -d <desired directory>``
+	``gunzip -a virgo-tomcat-server-3.6.4.RELEASE.zip -d <desired directory>``
+
+Note that Geppetto currently uses virgo tomcat sever 3.6.4, although the development team is currently moving towards virgo-tomcat-server 3.6.5 and beyond. If you are trying to install 3.6.5, please contact the dev team.
 
 OSX
 ---
@@ -43,7 +45,7 @@ OSX
 Linux: Debian and variants (e.g. Ubuntu)
 ----------------------------------------
 
-This should also work for alternative distributions, by substituting *apt-get* with the appropriate package manager, e.g. *pacman* for Arch, *yum* for Fedora.
+This should also work for alternative distributions, by substituting *apt-get* with the appropriate package manager, e.g. *pacman* for Arch, *yum* for Fedora and so forth.
 
 * *homebrew* (see `here:https://www.digitalocean.com/community/tutorials/how-to-install-and-use-linuxbrew-on-a-linux-vps"
 
@@ -60,6 +62,9 @@ Environment Variables
 
 Environment variables tell your operating system and other programs where you installed certain software. 
 
+Linux Variables
+===============
+
 Create variables with the following names and values, or look if they already exist:
 
 * JAVA_HOME: path to Java SE Development Kit 7
@@ -74,7 +79,7 @@ You can do this for example in .bashrc with:
 
 	``export JAVA_HOME="$(/usr/libexec/java_home)"``
 
-	``export SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server-3.6.3.RELEASE)"``
+	``export SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server-3.6.xx.RELEASE)"``
 
 Maven needs to build with Java 7. If you want to point your JAVA_HOME variable to a different version, create a file *.mavenrc* in your home directory that contains: 
 
@@ -89,13 +94,14 @@ Note that if you are using Java 8, you may want to install both Java 7 and Java 
 		export JAVA_HOME="$(/usr/libexec/java_home -v $1)"
 	``}
 	
-	``export SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.3.RELEASE)"
+	``export SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
 
 When you close your terminal, it is possible that bashrc may reset SERVER_HOME. In order to reset SERVER_HOME, issue the following command from the terminal.
 
-	``SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.3.RELEASE)"
+	``SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
 
-Note that if you're using a Linux system, your directories will look somewhat different. 
+Mac OS X Variables
+==================
 
 	``export MVN_HOME="$(brew --prefix maven)/libexec"
 
@@ -116,15 +122,17 @@ OK, that was everything you need, let's get the source code now.
 Setup Geppetto Repositories
 ===========================
 
-First, create a directory where you want the Geppetto source code to live (geppetto-sources from now on). Open up the shell and navigate to it by typing:
+First, create a directory for the Geppetto source code (geppetto-sources from now on):
 
+	``mkdir geppetto-sources``
+	
 	``cd geppetto-sources``
 
-Once there, clone the org.geppetto repository from GitHub by entering:
+Once there, clone the org.geppetto repository from GitHub:
 
 	``git clone https://github.com/openworm/org.geppetto.git``
 
-Navigate your shell to the source_setup directory by typing:
+Navigate your shell to the source_setup directory:
 
 	``cd org.geppetto/utilities/source_setup``
 
@@ -142,12 +150,28 @@ The source_setup folder contains some handy scripts. First, run the setup.py scr
 	
 	``python setup.py``
 
-This will copy all of the required repositories to geppetto-sources. Make sure that you have writing permissions for it. If a repository is missing, check that it is entered correctly in *config.json*.
+Running this script will prompt you to enter the repositories you want copied to geppetto sources. At present, the repositories are:
+
+	* ``org.geppetto``
+	
+	* ``org.geppetto.core``
+	
+	* ``org.geppetto.frontend``
+	
+	* ``org.geppetto.model``
+	
+	* ``org.geppetto.model.neuroml``
+	
+	** ``org.geppetto.simulation``
+	
+However, you will have the option to select other repositories from this list when you run the install script.
+
+Make sure that your account has permission to write into geppetto-sources. If a repository is missing, check that the url for that repository is entered correctly in *config.json* and *pom.xml*.
 
 Building Geppetto
 =================
 	
-To build Geppetto, navigate your command prompt back to the org.geppetto directory. You can do this simply by entering:
+Navigate back to the org.geppetto directory from utilities/source_setup:
 
 	``cd ../..``
 
@@ -185,7 +209,7 @@ This will copy only dependencies over to %SERVER_HOME%/repository/usr. Geppetto 
 Starting and Stopping Virgo
 ===========================
 
-The Virgo server is started and stopped via shell scripts in $SERVER_HOME/bin. To run these in the terminal, it is easiest to create a function in *.bashrc* that proxies commands to the scripts::
+The Virgo server is started and stopped via shell scripts in $SERVER_HOME/bin. To run these in the terminal, create a function in *.bashrc* that proxies commands to the scripts::
 
 	function virgo() {
     		bash $SERVER_HOME/bin/$1
@@ -203,9 +227,11 @@ For more info on Virgo's control scripts, see `here <http://eclipse.org/virgo/do
 
 Note that when you are running on Linux, there may be other services that are using Port 8080. 
 
-Use the command:
+Use:
 
 	``netstat -plten | grep java
+
+to find the process number on port 8080.
 
 Then identify the process number and issue the following command to kill it:
 

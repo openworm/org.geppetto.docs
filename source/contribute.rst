@@ -46,12 +46,14 @@ Geppetto contribution guidelines
 * Create separate branches per patch or feature.
 * Once done with a patch / feature do not add more commits to a feature branch (pull requests are not repository state snapshots, any change you do in that branch will be included in the pull request).
 * Before opening a pull request:
+
   * If you are adding functionality to the backend of Geppetto add JUnit tests to cover the functionality.
   * If you are adding functionality to the frontend of Geppetto add Casper test coverage.
   * If you are adding functionality for which integration testing is relevant add QUnit tests to cover the whole stack.
   * Run CoreTests.js and UITests.js Casper Tests, make sure they all pass, attach screenshot to pull request
   * Make sure all pre-exisitng JUnit tests and QUnit tests (you can run them at /GeppettoTests.html, e.g. `live.geppetto.org/GeppettoTests.html <http://live.geppetto.org/GeppettoTests.html>`__) are still passing after your changes.
   * Perform a UI smoke test checking that the samples in the frontend still work.
+
 * If you add a new feature it's good to add also an example (both for showing how it's used and for testing it still works after eventual refactorings).
 * If you modify existing code (refactoring / optimization / bug fix), run relevant examples to check they didn't break or that there wasn't some performance regress.
 * If some `GitHub issue <https://github.com/openworm/org.geppetto/issues>`__ is relevant to patch / feature, it's good to mention issue number with hash (e.g. `#41`) in a commit message to get cross-reference in GitHub web interface.

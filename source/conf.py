@@ -102,7 +102,7 @@ pygments_style = 'sphinx'
 html_theme = 'material_design'
 html_theme_options = {
     'pygments_theme': 'algol',
-    'ribbon_bg': 'http://www.geppetto.org/images/bckg2.png'
+    'ribbon_bg': 'images/bckg2.png'
 }
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []

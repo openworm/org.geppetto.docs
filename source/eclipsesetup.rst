@@ -3,7 +3,7 @@ Instructions for setting up Geppetto on Eclipse Neon
 
 Last Update: June 29th 2017
 
-If you have any problems following this documentation please write on `Gitter chat <https://gitter.im/openworm/org.geppetto>`.
+If you have any problems following this documentation please write on the `Gitter chat <https://gitter.im/openworm/org.geppetto>`.
 
 
 * Install Eclipse Neon for J2EE

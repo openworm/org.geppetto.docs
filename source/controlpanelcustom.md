@@ -139,14 +139,12 @@ var myControlsConfiguration = {
         "tooltip": "Info"
     }
 }
+};
+
+GEPPETTO.ControlPanel.setControlsConfig(myControlsConfiguration);
+GEPPETTO.ControlPanel.setControls({"Common": \['info'\],
+"VisualCapability": \['visibility', 'zoom'\]});
 ```
-
-> };
->
-> GEPPETTO.ControlPanel.setControlsConfig(myControlsConfiguration);
-> GEPPETTO.ControlPanel.setControls({"Common": \['info'\],
-> "VisualCapability": \['visibility', 'zoom'\]});
-
 Controls can be grouped by capabilities. If an entity has a given
 capability (VisualCapability in the example above), the controls will be
 added. All controls specified under "Common" will be added for all the

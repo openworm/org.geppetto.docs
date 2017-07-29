@@ -9,7 +9,8 @@ If you have any problems following this documentation please write on the `Gitte
 * Install Eclipse Neon for J2EE
 
   * `http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3 <http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3>`__
-  * Taking eclipse from any other repository is discouraged
+  * Taking eclipse from any other repository is discouraged.
+
 
 * Install Virgo Server and Geppetto Sources
 
@@ -17,8 +18,9 @@ If you have any problems following this documentation please write on the `Gitte
 
 	``./update_server eclipse``
  
-  *  Now we need to import all the bundles that were cloned into Eclipse (File->Import-> “Import Existing project into workspace” and follow the instructions).
-  * You now have all the Geppetto bundles in your workspace, let's add the Virgo Server.
+  *  Now we need to import all the bundles that were cloned into Eclipse, to do so click on File->Import-> “Import Existing project into workspace” and follow the instructions.
+  * You now have all the Geppetto bundles in your workspace, let's add a link to the Virgo Server inside Eclipse. To do this we first need to install the Eclipse Virgo plugin.
+
 
 * Install Virgo IDE Tooling 
 

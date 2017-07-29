@@ -1,4 +1,4 @@
-**********\* Geppetto Meta-Model**********\*
+# The Geppetto Model explained
 
 This section explains the Geppetto Model abstraction, its role in
 Geppetto and how it can be used to provide support for additional

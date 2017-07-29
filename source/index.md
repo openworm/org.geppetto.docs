@@ -79,36 +79,36 @@ Follow us on [Twitter](https://twitter.com/GeppettoEngine) and on our
 Screenshots
 ===========
 
-<img src="images/ss1.png" width="400"/>
+<img src="images/sshots/ss1.png" width="400"/>
 
 **Screenshot 1** - Visualization of the drosophila fly brain superposing
 anatomy and segmented neurons (Model source [Virtual Fly
 Brain](http://virtualflybrain.org/) )
 
-<img src="images/ss2.png" width="400"/>
+<img src="images/sshots/ss2.png" width="400"/>
 
 **Screenshot 2** - Simulation using NEURON of a model of the Auditory
 Cortex from David Beeman, University of Colorado (Model source [Open
 Source Brain](http://opensourcebrain.org/) )
 
-<img src="images/ss3.png" width="400"/>
+<img src="images/sshots/ss3.png" width="400"/>
 
 **Screenshot 3** - Simulation of a single compartment Hodgkin-Huxley
 neuronal model in [NeuroML](http://neuroml.org/) (Model source [Open
 Source Brain](http://opensourcebrain.org/) )
 
-<img src="images/ss4.png" width="400"/>
+<img src="images/sshots/ss4.png" width="400"/>
 
 **Screenshot 4** - Simulation of a network of single compartment neurons
 for the C.elegans built by the OpenWorm project.
 
-<img src="images/ss5.png" width="400"/>
+<img src="images/sshots/ss5.png" width="400"/>
 
 **Screenshot 5** - Visualisation of a Purkinje cell in
 [NeuroML](http://neuroml.org/) from [Open Source
 Brain](http://opensourcebrain.org/projects/purkinjecell)
 
-<img src="images/ss6.png" width="400"/>
+<img src="images/sshots/ss6.png" width="400"/>
 
 **Screenshot 6** - Visualisation of the realistic morphology of a
 Ganglion cell reconstructed using [EyeWire](https://eyewire.org).

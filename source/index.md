@@ -33,12 +33,12 @@ Geppetto is currently used and contributed to by the following groups:
 -   [MetaCell](http://metacell.us)
 -   [Orion Bionetworks](http://www.orionbionetworks.org/)
 
-The following is a list of the websites currently using a custom
-deployment of Geppetto available on the web:
+The following is a list of the applications currently built using Geppetto:
 
 -   [Open Source Brain](http://opensourcebrain.org)
 -   [WormSim](http://wormsim.org)
 -   [Virtual Fly Brain](http://virtualflybrain.org)
+-   [NEURON-UI](https://github.com/MetaCell/NEURON-UI)
 
 ------------------------------------------------------------------------
 

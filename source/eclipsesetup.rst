@@ -12,6 +12,7 @@ If you have any problems following this documentation please write on the `Gitte
   * Taking eclipse from any other repository is discouraged.
 
 
+
 * Install Virgo Server and Geppetto Sources
 
   * Now you need to install Virgo and clone the geppetto sources locally unless you have done those steps already. If not follow the instructions for either `OSX or Linux <http://docs.geppetto.org/en/latest/osxlinuxsetup.html>` or `Windows < http://docs.geppetto.org/en/latest/windowssetup.html>`. Follow the steps until Deploying Geppetto section and make sure to use the eclipse flag when you use the update_server script.
@@ -20,6 +21,7 @@ If you have any problems following this documentation please write on the `Gitte
  
   *  Now we need to import all the bundles that were cloned into Eclipse, to do so click on File->Import-> “Import Existing project into workspace” and follow the instructions.
   * You now have all the Geppetto bundles in your workspace, let's add a link to the Virgo Server inside Eclipse. To do this we first need to install the Eclipse Virgo plugin.
+
 
 
 * Install Virgo IDE Tooling 
@@ -34,6 +36,7 @@ If you have any problems following this documentation please write on the `Gitte
   * Once the server is created right click on it and choose add, select all the bundles you wish to deploy and that’s it, at the end of this step you should have no errors on the bundles. If the bundles don't show you need to add the Virgo Nature to them, you can do so by right clicking on them on the Package Explorer and selecting Virgo -> Add OSGi Bundle Project Nature. Once you added the bundles to Virgo it should look like this:
 
 .. image:: http://i.imgur.com/mucT88s.png?1
+   :align: center
 
 You now have Geppetto configured in your Eclipse, right click on the server and choose debug or start, in the console you will see all the bundles loading up and you should see no errors. At the end of the process your server will be up and running, so just point your browser to: 
 

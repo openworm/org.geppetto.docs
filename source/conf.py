@@ -129,7 +129,7 @@ html_theme_options = {
     # * superhero
     # * united
     # * yeti (v3 only)
-    'bootswatch_theme': "simplex",
+    'bootswatch_theme': "lumen",
 
     # Choose Bootstrap version.
     # Values: "3" (default) or "2" (in quotes)

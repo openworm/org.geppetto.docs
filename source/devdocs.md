@@ -17,7 +17,7 @@ Developers documentation
 #### [How to customise the Search component](./spotlightcustom.html)
 #### [How to customise the Control Panel](./controlpanelcustom.html)
 #### [How to configure the Persistence bundle](./persistence.html)
-
+#### [How to customise the Menu Button component](./menubutton.html)
 
 #### [How to create a Geppetto Recording with Python](./recordingandreplaying.html)
 

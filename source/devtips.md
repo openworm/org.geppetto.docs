@@ -27,17 +27,12 @@ someone else, don't hesitate on adding it to the list.
     clean/install the one that is causing the error. Regarding the third
     command, tipically a maven project has a folder structure like this:
 
-        > main
-        >
-        > > java
-        > >
-        > > resources
-        >
-        > test
-        >
-        > > java
-        > >
-        > > resources
+        main
+            java    
+            resources
+        test    
+            java
+            resources
 
     However, sometimes this folder structure is "corrupted". Therefore,
     some compilation errors, which make no sense (Eclipse is complaining

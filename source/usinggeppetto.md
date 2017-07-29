@@ -48,13 +48,9 @@ with user accounts.
 
 Project
 
-:   A Geppetto project is the container of a geppetto model. For more
-    details about how a geppetto model is defined click here. A project
-    allows you to perform multiple computational experiments on the
-    model associated to the project.
+A Geppetto project contains the project metdata, information about the experiments, information about the state of the workspace and a link to the geppetto model. For more details about how a geppetto model is defined click [here](./geppettomodel.html). A project allows you to perform multiple computational experiments on the model associated to the project.
 
-The bar at the top allows you to filter the list of projects, just type
-in it to search for a specific one. The right pane shows which
+The bar at the top allows you to filter the list of projects, just type in it to search for a specific one. The right pane shows which
 experiments are available in the selected project.
 
 ![image](images/sshots/experimentDashboard.png)

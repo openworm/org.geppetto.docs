@@ -28,14 +28,13 @@ the [Gitter chat](https://gitter.im/openworm/org.geppetto)
         first need to install the Eclipse Virgo plugin.
 
 -   Install Virgo IDE Tooling
-    -   Help -&gt; Install New Software
-    -   Work With -&gt;
-        <http://download.eclipse.org/virgo/release/tooling>
+    -   Help -> Install New Software
+    -   Work With -> <http://download.eclipse.org/virgo/release/tooling>
     -   Select "Eclipse Virgo Tools" and install it, you will be asked
         to restart Eclipse at the end.
-    -   Click on Window -&gt; Show View -&gt; Others -&gt; Servers
+    -   Click on Window -> Show View -> Others -> Servers
     -   From the new view create a new Virgo Runtime server (New Servers
-        Wizard -&gt; EclipseRT -&gt;Virgo runtime)
+        Wizard -> EclipseRT -> Virgo runtime)
     -   Name it anything you like
     -   For installation directory put the folder where you unzipped the
         virgo server above e.g. /opt/virgo-tomcat-serve-VERSION-NUMBER
@@ -49,10 +48,7 @@ the [Gitter chat](https://gitter.im/openworm/org.geppetto)
 
 ![image](http://i.imgur.com/mucT88s.png?1)
 
-You now have Geppetto configured in your Eclipse, right click on the
-server and choose debug or start, in the console you will see all the
-bundles loading up and you should see no errors. At the end of the
-process your server will be up and running, so just point your browser
+You now have Geppetto configured in your Eclipse, right click on the server and choose debug or start, in the console you will see all the bundles loading up and you should see no errors. At the end of the process your server will be up and running, so just point your browser
 to:
 
 [127.0.0.1:8080/org.geppetto.frontend/](http://127.0.0.1:8080/org.geppetto.frontend/)
@@ -61,7 +57,7 @@ If you want to use the Webpack dev server for hot deployment using your
 terminal go to the /org.geppetto.frontend/src/main/webapp/ folder and
 run
 
-> `npm start`
+    npm start
 
 Once the webpack devserver is running you can connect to it using the
 port 8081 instead of 8080. Every change made to the web resources will

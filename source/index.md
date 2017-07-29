@@ -1,22 +1,15 @@
 ![image](images/header.png)
 
-Introduction
-============
 
-Geppetto is a web based platform to **explore, visualize and simulate neuroscience data and models** such as a **cell** or even a **whole brain**.
+Geppetto is a web based platform to build applications that let the user **explore, visualize and simulate neuroscience data and models** such as a **cell** or even a **whole brain**.
 
-Geppetto makes it easy to work in an integrated fashion with different types of data, whether they come from a simulation, an
-experiment or a clinical study.
-
-Geppetto is a web application and users in general don't need to install it in order to use it, however private and local deployments are also possible.
-
-A demo deployment of the latest release of Geppetto is available [here](https://live.geppetto.org) while the binaries are available to
+A demo application using latest release of Geppetto is available [here](https://live.geppetto.org) while the binaries are available to
 [download here](https://github.com/openworm/org.geppetto/releases/).
-
 The documentation is split into two main sections: a guide to help you learn how to use Geppetto and the developers documentation to learn how Geppetto is engineered and how to contribute to it.
 
 [![image](images/usr_btn.png)](./userdocs.html) [![image](images/dev_btn.png)](./devdocs.html)
 
+If you have any problems you can write in the [Gitter Geppetto channel](gitter.im/openworm/org.geppetto), we'll be happy to help you!
 
 Contributions
 =============

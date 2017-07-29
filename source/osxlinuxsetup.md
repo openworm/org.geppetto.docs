@@ -281,18 +281,18 @@ To use it, navigate your shell to the source\_setup folder and type:
 
     ./gitall branches
 
-prints the current branch of each repo
+to print the current branch of each repo
     
     ./gitall checkout <branch>
 
-Checks out <branch> on each repo. Note the branch must exist on each repo.
+to checkout <branch> for each repo. Note the branch must exist on each repo.
 
     ./gitall fetch [remote] [branch]
 
-Performs git fetch on each repo
+to git fetch on each repo
     
     ./gitall pull [remote] [branch]
 
-Performs git pull on each repo
+to git pull on each repo
 
 

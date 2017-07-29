@@ -14,71 +14,70 @@ that are defined in
 org.geppetto.frontend/src/main/webapp/GeppettoConfiguration.json. This
 file exposes the following parameters:
 
--   contextPath: The context path is the prefix of the URL path to
+-   `contextPath`: The context path is the prefix of the URL path to
     access Geppetto. Typically development contextPath is
     "org.geppetto.frontend" and "/" for production. Assuming a local
     development environment with contextPath "org.geppetto.frontend",
     you will access Geppetto at localhost:
     localhost:8080/org.geppetto.frontend
--   useSsl: if true, Geppetto will be configured to use https of http.
--   embedded: Geppetto is configured to work as an embedded instance
+-   `useSsl`: if true, Geppetto will be configured to use https of http.
+-   `embedded`: Geppetto is configured to work as an embedded instance
     inside an iframe. This means CORS will be enabled, a postMessage
     channel will be available for the main frame, some layout and href
     calls customization, etc.
--   embbedderURL: if running in embedded mode, this specifies the URL of
+-   `embbedderURL`: if running in embedded mode, this specifies the URL of
     the main frame container. For security reasons Geppetto will only
     accept cross-origin calls from this URL.
--   noTest: If true, tests are suppressed during the build process. If
+-   `noTest`: If true, tests are suppressed during the build process. If
     false, tests will be run as part of the build process.
--   extensions: Geppetto can be customised by defining JS and LESS/CSS
+-   `extensions`: Geppetto can be customised by defining JS and LESS/CSS
     files dropped in a folder inside the extensions folder. The
     extension can be enabled using this parameter. By default, Gepppetto
     provides a default
     extension (org.geppetto.frontend/src/main/webapp/extensions/geppetto-default)
     that can be used as an example to build custom extensions.
--   themes: defined a geppetto "theme", so far we only expose a few
+-   `themes`: defined a geppetto "theme", so far we only expose a few
     parameters defining colours. Below you can find a list of the
     parameters exposed that can be overridden by your custom theme file:
 
-    > `@primary_color: #fc6320;`
-    >
-    > `@secondary_color: #fc401a;`
-    >
-    > `@background_color_body_0: #141a1e;`
-    >
-    > `@background_color_body_50: #5c6268;`
-    >
-    > `@background_color_body_73: #60666d;`
-    >
-    > `@background_color_body_100: #515359;`
-    >
-    > `@background_color_widget: rgb(66, 59, 59);`
+        @primary_color: #fc6320;
+        @secondary_color: #fc401a;
+        @background_color_body_0: #141a1e;
+        @background_color_body_50: #5c6268;
+        @background_color_body_73: #60666d;
+        @background_color_body_100: #515359;
+        @background_color_widget: rgb(66, 59, 59);
 
 In order to implement a new theme, a less file needs to be created
 defining some or all these parameters and the theme needs to be
 specified in the themes and set to true.
 
 This is how the default (and recommended for development environments)
-GeppettoConfiguration.json looks like: :: { "contextPath":
-"org.geppetto.frontend", "useSsl": false, "embedded": false,
-"embedderURL": \["/"\], "noTest": false, "extensions": {
-"geppetto-default/ComponentsInitialization": true,
-"geppetto-osb/ComponentsInitialization": false,
-"geppetto-vfb/ComponentsInitialization": false,
-"geppetto-neuron/ComponentsInitialization": false,
-"geppetto-hm/ComponentsInitialization": false }, "themes": {
-"geppetto-default/colors": true, "geppetto-hm/pages/styles/colors":
-false } }
+GeppettoConfiguration.json looks like:
+
+        { "contextPath":
+        "org.geppetto.frontend", "useSsl": false, "embedded": false,
+        "embedderURL": \["/"\], "noTest": false, "extensions": {
+        "geppetto-default/ComponentsInitialization": true,
+        "geppetto-osb/ComponentsInitialization": false,
+        "geppetto-vfb/ComponentsInitialization": false,
+        "geppetto-neuron/ComponentsInitialization": false,
+        "geppetto-hm/ComponentsInitialization": false }, "themes": {
+        "geppetto-default/colors": true, "geppetto-hm/pages/styles/colors":
+        false } 
+        }
 
 and this is an example of a production environment with a different
-extension and theme: :: { "contextPath": "/", "useSsl": true,
-"embedded": false, "embedderURL": \["/"\], "noTest": false,
-"extensions": { "geppetto-default/ComponentsInitialization": false,
-"geppetto-osb/ComponentsInitialization": false,
-"geppetto-vfb/ComponentsInitialization": false,
-"geppetto-neuron/ComponentsInitialization": false,
-"geppetto-hm/ComponentsInitialization": true }, "themes": {
-"geppetto-default/colors": true, "geppetto-hm/hm\_theme": true } }
+extension and theme: 
+
+        { "contextPath": "/", "useSsl": true,
+        "embedded": false, "embedderURL": \["/"\], "noTest": false,
+        "extensions": { "geppetto-default/ComponentsInitialization": false,
+        "geppetto-osb/ComponentsInitialization": false,
+        "geppetto-vfb/ComponentsInitialization": false,
+        "geppetto-neuron/ComponentsInitialization": false,
+        "geppetto-hm/ComponentsInitialization": true }, "themes": {
+        "geppetto-default/colors": true, "geppetto-hm/hm\_theme": true } }
 
 Maven Profiles
 ==============

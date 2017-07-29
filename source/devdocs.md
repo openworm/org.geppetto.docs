@@ -11,6 +11,7 @@ Developers documentation
 #### [Having troubles? Tips and tricks](./devtips.html)
 
 
+#### [Geppetto Model description](./geppettomodel.html)
 #### [Configure and build a custom Geppetto deployment](./build.html)
 #### [How to add a new widget](./widgets.html)
 #### [How to customise the Search component](./spotlightcustom.html)

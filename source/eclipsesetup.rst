@@ -37,7 +37,7 @@ If you have any problems following this documentation please write on `Gitter ch
 
 .. image:: http://i.imgur.com/mucT88s.png?1
 
-You now have Geppetto , right click on the server and choose debug or start, you will see in the console all the bundles loading up and you should see no errors. At the end of the process your server will be up and running, so just point your browser to: 
+You now have Geppetto configured in your Eclipse, right click on the server and choose debug or start, in the console you will see all the bundles loading up and you should see no errors. At the end of the process your server will be up and running, so just point your browser to: 
 
 `127.0.0.1:8080/org.geppetto.frontend/ <http://127.0.0.1:8080/org.geppetto.frontend/>`__ 
 

@@ -6,7 +6,8 @@ Geppetto Build
 -   Development Build
 -   Production Build
 
-Geppetto Configuration ============
+Geppetto Configuration
+======================
 
 Geppetto lets you configure your deployment with a set of parameters
 that are defined in
@@ -79,7 +80,8 @@ extension and theme: :: { "contextPath": "/", "useSsl": true,
 "geppetto-hm/ComponentsInitialization": true }, "themes": {
 "geppetto-default/colors": true, "geppetto-hm/hm\_theme": true } }
 
-Maven Profiles ============
+Maven Profiles
+==============
 
 Geppetto is built using Maven, with the "mvn install" command. Maven
 allows for different build steps to be specified for different
@@ -90,7 +92,8 @@ be propagated to the children (children bundles are defined in
 org.geppetto/pom.xml). Maven builds can also be triggered for individual
 bundles from the specific bundle root that needs to be built.
 
-Building for development =========
+Building for development
+========================
 
 `mvn install`
 
@@ -98,7 +101,8 @@ When the command "mvn install" is executed, none of the optimisation
 tasks are run. When doing development, it is not necessary to run the
 production build unless you wish to simulate a production environment.
 
-Building for production =========
+Building for production
+=======================
 
 `mvn install -P master`
 
@@ -107,7 +111,8 @@ to optimise performance and security. To see the difference between
 profiles havea look at
 org.geppetto.frontend/src/main/webapp/package.json.
 
-Overriding Geppetto Parameters with mvn =========
+Overriding Geppetto Parameters with mvn 
+=======================================
 
 Geppetto configuration settings can be overwritten by passing the
 parameters to the "mvn install" command. An example follows:

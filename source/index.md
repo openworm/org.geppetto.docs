@@ -1,20 +1,14 @@
-
-<img src="images/header.png" width="800"/>
+![image](images/header.png)
 
 Introduction
 ============
 
-Geppetto is a web based platform made to empower you to **explore,
-visualize and simulate complex biological models** such as a **cell** or
-even a **whole brain**.
+Geppetto is a web based platform to **explore, visualize and simulate neuroscience data models** such as a **cell** or even a **whole brain**.
 
-Geppetto's goal is to make it easy to work in an integrated fashion with
-different types of data, whether they come from a simulation, an
+Geppetto makes it easy to work in an integrated fashion with different types of data, whether they come from a simulation, an
 experiment or a clinical study.
 
-Since Geppetto is a web application users don't need to install it in
-order to use it, however private and local deployments are also
-possible.
+Geppetto is a web application and users in general don't need to install it in order to use it, however private and local deployments are also possible.
 
 A demo deployment of the latest release of Geppetto is available
 [here](https://live.geppetto.org) while the binaries are available to
@@ -79,36 +73,36 @@ Follow us on [Twitter](https://twitter.com/GeppettoEngine) and on our
 Screenshots
 ===========
 
-<img src="images/sshots/ss1.png" width="400"/>
+![image](images/sshots/ss1.png)
 
 **Screenshot 1** - Visualization of the drosophila fly brain superposing
 anatomy and segmented neurons (Model source [Virtual Fly
 Brain](http://virtualflybrain.org/) )
 
-<img src="images/sshots/ss2.png" width="400"/>
+![image](images/sshots/ss2.png)
 
 **Screenshot 2** - Simulation using NEURON of a model of the Auditory
 Cortex from David Beeman, University of Colorado (Model source [Open
 Source Brain](http://opensourcebrain.org/) )
 
-<img src="images/sshots/ss3.png" width="400"/>
+![image](images/sshots/ss3.png)
 
 **Screenshot 3** - Simulation of a single compartment Hodgkin-Huxley
 neuronal model in [NeuroML](http://neuroml.org/) (Model source [Open
 Source Brain](http://opensourcebrain.org/) )
 
-<img src="images/sshots/ss4.png" width="400"/>
+![image](images/sshots/ss4.png)
 
 **Screenshot 4** - Simulation of a network of single compartment neurons
 for the C.elegans built by the OpenWorm project.
 
-<img src="images/sshots/ss5.png" width="400"/>
+![image](images/sshots/ss5.png)
 
 **Screenshot 5** - Visualisation of a Purkinje cell in
 [NeuroML](http://neuroml.org/) from [Open Source
 Brain](http://opensourcebrain.org/projects/purkinjecell)
 
-<img src="images/sshots/ss6.png" width="400"/>
+![image](images/sshots/ss6.png)
 
 **Screenshot 6** - Visualisation of the realistic morphology of a
 Ganglion cell reconstructed using [EyeWire](https://eyewire.org).
@@ -116,5 +110,3 @@ Ganglion cell reconstructed using [EyeWire](https://eyewire.org).
 ------------------------------------------------------------------------
 
 ![image](images/symbol.png)
-
-|

@@ -1,149 +1,39 @@
-Instructions for setting up Geppetto on Eclipse Luna
+Instructions for setting up Geppetto on Eclipse Neon
 ****************************************************
 
-Last Update: Jan 5 2015
+Last Update: June 29th 2017
 
-If you have any problems following this documentation please email openworm-discuss@googlegroups.com
+If you have any problems following this documentation please write on `Gitter chat <https://gitter.im/openworm/org.geppetto>`.
 
-BLUE PILL
----------
 
-We created `eclipse distributions <http://blog.openworm.org/post/31859097261/openworm-eclipse-distributions-released>`__ for the OpenWorm project with all the plugins already installed. You can download this, skip all the plugin install steps below (except source control plugin EGit) and go straight to `Now you can install Geppetto sources <https://docs.google.com/a/metacell.us/document/d/1UPfS5UbQ9z61EJ4Uf6saivSy8IR4JHoyQO38FY66ifE/edit#bookmark=id.4hjcg1t9izg0>`__.
+* Install Eclipse Neon for J2EE
 
-RED PILL
---------
-
-* Install Eclipse Luna for J2EE
-
-  * `http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/junor <http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/lunar>`__
+  * `http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3 <http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3>`__
   * Taking eclipse from any other repository is discouraged
-  
-* Install Spring Source Studio
 
-  * Download this file to your local disk `http://dist.springsource.com/snapshot/TOOLS/composite/e4.4/bookmarks.xml <http://dist.springsource.com/snapshot/TOOLS/composite/e4.4/bookmarks.xml>`__
-  * Go To Help -> Install New Software -> Available Software Sites -> Import and point to the downloaded file to add the required update sites.
-  * In the alternative, open Eclipse, click help and then click Eclipse Marketplace.
-  * Then search for STS to find the Spring Tool Suite (STS) and install this to obtain the tools listed below.
-  * Irrespective of the method you use to install the Spring Tool Suite, back to the main dialog select from the dropdown the springsource update site
-  * Select the following items and install them:
+* Install Geppetto Sources
 
-    * Core/Spring IDE
-    * Spring Tool Suite (installed by default through Spring Tool Suite marketplace)
-    * Extensions (Incubation) / Spring IDE (instlaled with Extensions / Spring IDE below)
-    * Extensions / Spring IDE
-    * Integrations / Spring IDE
+  * Now you need to clone the geppetto sources locally unless you have them already. If not follow the steps for either `OSX or Linux <http://docs.geppetto.org/en/latest/osxlinuxsetup.html#setup-geppetto-repositories>` or `Windows < http://docs.geppetto.org/en/latest/windowssetup.html#setup-geppetto-repositories>`. Follow the steps until Deploying Geppetto section and make sure to use the eclipse flag when you use the update_server script.
 
-* Install Maven m2e plugin (now it is part of the Eclipse project) 
-
-  * Select the default Luna
- update site from Install new Software, search for “m2e” and install it
+	``./update_server eclipse``
+ 
+  *  Now we need to import all the bundles that were cloned into Eclipse (File->Import-> “Import Existing project into workspace” and follow the instructions).
+  * You now have all the Geppetto bundles in your workspace, let's add the Virgo Server.
 
 * Install Virgo Tomcat Server
-  * `http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.zip <http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.zip>`__
-  * This will depend on your OS, for Ubuntu: download the zip file and do: “sudo unzip virgo-tomcat-server-3.6.2.RELEASE.zip -d /opt/”  Make sure that the directory you are installing to matches the directory you have set as the SERVER_HOME path in your .bashrc file.
-
-* Install EGit
-
-  * Select Install new Software and search for “egit” in the following update site:
-
-    * http://download.eclipse.org/releases/juno
-
-  * Select
-
-    * Eclipse EGit
-    * Eclipse EGit Mylin GitHub Feature
-    * EGit Import Support
+  * `http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.4.RELEASE/virgo-tomcat-server-3.6.4.RELEASE.zip <http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.4.RELEASE/virgo-tomcat-server-3.6.4.RELEASE.zip>`__
+  * This will depend on your OS, for Ubuntu: download the zip file and do: “sudo unzip virgo-tomcat-server-3.6.4.RELEASE.zip -d /opt/”  Make sure that the directory you are installing to matches the directory you have set as the SERVER_HOME path in your .bashrc file.
 
 * Install Virgo IDE Tooling 
 
-  * Update Site: http://download.eclipse.org/virgo/milestone/tooling
-
-Now you can install Geppetto Sources
-
-
-Install Geppetto Sources
-************************
-
-BLUE PILL
----------
-
-We created a Python script to download Virgo Tomcat and clone all the repositories from Git automatically, the script is available here. If you use the script you can skip to here once you have created your Eclipse workspace and manually imported all the bundles into it one by one (File->Import-> “Import Existing project into workspace” and follow the instructions).
-
-RED PILL
---------
-
-Install Virgo Tomcat Server (skip if you have taken the red pill to install Eclipse)
-
-* `http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.zip <http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.2.RELEASE/virgo-tomcat-server-3.6.2.RELEASE.zip>`__
-
-After all the tools are installed you can import the geppetto bundles you are interested in from GitHub (`https://github.com/openworm <https://github.com/openworm>`__).
-
-To do so go to File -> Import -> Git -> Projects from Git -> GitHub and then type “org.geppetto”, select the bundles and click Finish, this will add all the Geppetto repositories to your workspace.  (Unfortunately it is not possible to select all the bundles at once so they will have to be clones one by one). The bundles needed for Geppetto are:
-
-* Essential
-
-  * org.geppetto.core 
-  * org.geppetto.simulation 
-  * org.geppetto.frontend 
-
-* Domain Specific
-
-  * Neuronal simulation
-
-    * org.geppetto.model.neuroml 
-    * org.geppetto.simulator.jlems 
-
-  * Fluid mechanics simulation
-
-    * org.geppetto.model.sph 
-    * org.geppetto.solver.sph 
-    * org.geppetto.simulator.sph
-    
-.. image:: http://i.imgur.com/bYJFHgw.png?1
-
-Note that you may need to add each of these repositories one by one.
-
-Also note that as you are adding the repositories to GitHub you may run into problems with 
-
-All the repositories added will be visible  going to the view “Git Repositories” which was installed by EGit (Windows -> Show View -> Other -> Git Repositories). 
-
-.. image:: http://i.imgur.com/PmGmt5M.png?1
-
-By right clicking on each project it is possible to choose “import” to add the project to your workspace.
-
-
-
-Alternatively you can do it like this:
-
-Make sure you have the head repository (org.geppetto) in the 'git' folder that you will find located on your local drive, probably in your home directory. You will also find the other repositories you have imported located there.
-
-Now from Eclipse click, File -> Import -> Mavern -> Existing Mavern Projects, and point it to the 'git' folder. 
-
-Eclipse will now be able to install all the projects in one go with the correct classpaths and structure already in place.
-
-
-
-We are **almost** there. 
-
-You now have all the Geppetto bundles on your workspace. All the bundles use Maven so we need now to install them so that all dependencies are downloaded and the JAR files created and deployed to the local Maven repository. To do so right click on each one of the project and choose Run As -> Maven install.
-
-.. image:: http://i.imgur.com/WiwWgbB.png?1
-
-Now we need to copy the dependencies JAR required by Geppetto to the Virgo Tomcat Webserver, these JARs have been gathered by Maven during the install step and they can be found in your_git_path/org.geppetto.bundle_you_are interested_in/target/classes/lib. **You need to copy all of them for each one of your bundles into your_virgo_tomcat_path/repository/usr/.** We’ll automate this last step in the future.
-
-Create Virgo Server using Eclipse Virgo tooling
-***********************************************
-
-You now need to create an instance of a Virgo Tomcat Webserver. Here’s how:
-
 * Help -> Install New Software
-* Work With -> “Virgo Tooling” or http://download.eclipse.org/virgo/release/tooling
-* Select all the packages and install them
-* Then (once you have restarted Eclipse) click on Window -> Show View -> Others -> Servers
+* Work With -> http://download.eclipse.org/virgo/release/tooling
+* Select "Eclipse Virgo Tools" and install it, you will be asked to restart Eclipse at the end.
+* Click on Window -> Show View -> Others -> Servers
 * From the new view create a new Virgo Runtime server (New Servers Wizard -> EclipseRT ->Virgo runtime)
 * Name it anything you like
-* For installation directory use the “ virgo-tomcat-server” folder that was downloaded by the python script (if you used the python script to get it). If not, point to your virgo tomcat server install, eg /opt/virgo-tomcat-serve-VERSION-NUMBER
-* Once the server is created right click on it and choose add, select all the bundles you wish to deploy and that’s it, at the end of this step you should have no errors on the bundles.
+* For installation directory put the folder where you unzipped the virgo server above e.g. /opt/virgo-tomcat-serve-VERSION-NUMBER
+* Once the server is created right click on it and choose add, select all the bundles you wish to deploy and that’s it, at the end of this step you should have no errors on the bundles. If the bundles don't show you need to add the Virgo Nature to them, you can do so by right clicking on them on the Package Explorer and selecting Virgo -> Add Virgo Bundle Project Nature. Once you added the bundles to Virgo it should look like this.
 
 .. image:: http://i.imgur.com/mucT88s.png?1
 
@@ -151,14 +41,4 @@ That’s it folks, right click on the server and choose start, you will see in t
 
 `127.0.0.1:8080/org.geppetto.frontend/ <http://127.0.0.1:8080/org.geppetto.frontend/>`__ 
 
-Click the load simulation button and copy-pasting one of the following URLs in the text box (or pick one of the available samples from the drop-down) and then hit load (these are sample fluid dynamics simulations):
-
-* `https://www.dropbox.com/s/72efwkb9nm7mo27/sph-sim-config-test.xml?dl=1 <https://www.dropbox.com/s/72efwkb9nm7mo27/sph-sim-config-test.xml?dl=1>`__ (216 particles, they mostly collapse to one point)
-* `https://www.dropbox.com/s/2oczzgnheple0mk/sph-sim-config.xml?dl=1 <https://www.dropbox.com/s/2oczzgnheple0mk/sph-sim-config.xml?dl=1>`__ (15 particles that never go to rest)
-* Same hosted on Google Drive
-
-  * `https://docs.google.com/uc?export=download&id=0B-GW0T4RUrQ6Umw4MkZwdjVCQzA <https://docs.google.com/uc?export=download&id=0B-GW0T4RUrQ6Umw4MkZwdjVCQzA>`__
-  * `https://docs.google.com/uc?export=download&id=0B-GW0T4RUrQ6ck5QMVpRTkU2Tmc <https://docs.google.com/uc?export=download&id=0B-GW0T4RUrQ6ck5QMVpRTkU2Tmc>`__
-
-After loading, hit “start” and enjoy!
 

@@ -38,15 +38,15 @@ If you have any problems following this documentation please write on the `Gitte
 .. image:: http://i.imgur.com/mucT88s.png?1
    :align: center
    
-   * We now need Virgo to deploy the bundles in the correct order. To do this double click on the Virgo Server, an editor will open. On the right a section called Artefact Deployment Order has all the bundles we added. We can decide on what order they are deployed moving them up and down. The order should be the following. 
+  * We now need Virgo to deploy the bundles in the correct order. To do this double click on the Virgo Server, an editor will open. On the right a section called Artefact Deployment Order has all the bundles we added. We can decide on what order they are deployed moving them up and down. The order should be the following. 
    
-    * org.geppetto.model
-    * org.geppetto.core
-    * org.geppetto.simulation
-    * everything else
-    * org.geppetto.frontend
+   * org.geppetto.model
+   * org.geppetto.core
+   * org.geppetto.simulation
+   * everything else
+   * org.geppetto.frontend
     
-   * Once you are done you need to save the content of the editor (Ctrl+S or cmd+s).
+  * Once you are done you need to save the content of the editor (Ctrl+S or cmd+s).
 
 You now have Geppetto configured in your Eclipse, right click on the server and choose debug or start, in the console you will see all the bundles loading up and you should see no errors. At the end of the process your server will be up and running, so just point your browser to: 
 

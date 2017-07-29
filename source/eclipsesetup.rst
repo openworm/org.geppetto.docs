@@ -11,19 +11,14 @@ If you have any problems following this documentation please write on the `Gitte
   * `http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3 <http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3>`__
   * Taking eclipse from any other repository is discouraged
 
-* Install Geppetto Sources
+* Install Virgo Server and Geppetto Sources
 
-  * Now you need to clone the geppetto sources locally unless you have them already. If not follow the steps for either `OSX or Linux <http://docs.geppetto.org/en/latest/osxlinuxsetup.html#setup-geppetto-repositories>` or `Windows < http://docs.geppetto.org/en/latest/windowssetup.html#setup-geppetto-repositories>`. Follow the steps until Deploying Geppetto section and make sure to use the eclipse flag when you use the update_server script.
+  * Now you need to install Virgo and clone the geppetto sources locally unless you have done those steps already. If not follow the instructions for either `OSX or Linux <http://docs.geppetto.org/en/latest/osxlinuxsetup.html>` or `Windows < http://docs.geppetto.org/en/latest/windowssetup.html>`. Follow the steps until Deploying Geppetto section and make sure to use the eclipse flag when you use the update_server script.
 
 	``./update_server eclipse``
  
   *  Now we need to import all the bundles that were cloned into Eclipse (File->Import-> “Import Existing project into workspace” and follow the instructions).
   * You now have all the Geppetto bundles in your workspace, let's add the Virgo Server.
-
-* Install Virgo Tomcat Server
-
-  * `Download the zip file  <http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.4.RELEASE/virgo-tomcat-server-3.6.4.RELEASE.zip>`__
-  * This will depend on your OS, for Ubuntu: download the zip file and do: “sudo unzip virgo-tomcat-server-3.6.4.RELEASE.zip -d /opt/”  Make sure that the directory you are installing to matches the directory you have set as the SERVER_HOME path in your .bashrc file.
 
 * Install Virgo IDE Tooling 
 

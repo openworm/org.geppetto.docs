@@ -5,7 +5,7 @@ Geppetto is a web based platform to build applications that let the user **explo
 
 A demo application using latest release of Geppetto is available [here](https://live.geppetto.org) while the binaries are available to
 [download here](https://github.com/openworm/org.geppetto/releases/).
-The documentation is split into two main sections: a guide to help you learn how to use Geppetto and the developers documentation to learn how Geppetto is engineered and how to contribute to it.
+The documentation is split into two main sections: a guide to help you learn how to use Geppetto and the developers documentation to learn how Geppetto is engineered, how to build a Geppetto application and how to contribute to the platform.
 
 [![image](images/usr_btn.png)](./userdocs.html) [![image](images/dev_btn.png)](./devdocs.html)
 

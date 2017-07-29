@@ -154,18 +154,18 @@ button that will bring the model back to the initial centered position.
 ### Using widgets
 
 Model metadata can be visualized with various
-Geppetto widgets &lt;usingwidgets&gt;. The
-tree widget &lt;treevisualizerW&gt; is particularly useful to visualize
+Geppetto widgets <usingwidgets>. The
+tree widget <treevisualizerW> is particularly useful to visualize
 Geppetto entity hierarchies.
 
 ![image](images/connectivity/overview.png)
 
-In addition, a connectivity widget &lt;connectivityW&gt; (shown above)
+In addition, a connectivity widget <connectivityW> (shown above)
 is particularly well suited to explorations regarding model neuronal
 networks.
 
 How to use Geppetto widgets is covered in detail
-here &lt;usingwidgets&gt;.
+here <usingwidgets>.
 
 Lightspeed Search ----------------
 
@@ -231,8 +231,8 @@ Once the experiment is created the user can:
 -   Expand experiment details by clicking on the experiment row
 -   Edit simulation parameter from the experiment details (by clicking
     on the fields, same as the name), once the row is expanded. (i.e.
-    Simulator --&gt; neuronSimulator Time step --&gt; 0.00005s Length
-    --&gt; 0.3s)
+    Simulator --> neuronSimulator Time step --> 0.00005s Length
+    --> 0.3s)
 -   Add simulation variables to the watch list (\*). This will cause
     simulation values to be recorded. Without watching any variables
     nothing will be recorded, so it is useless to run an experiment
@@ -260,4 +260,4 @@ entirely transparent to the user. A common way to visualize simulation
 results are plot widgets, tree widgets and value widgets, so the user
 will typically add the desired widgets to the Geppetto frontend and set
 the desired "data sources" before hitting "play". More on widgets and
-how to instantiate them here &lt;usingwidgets&gt;.
+how to instantiate them here <usingwidgets>.

@@ -13,11 +13,7 @@ download it from
 `./bin/startup.sh`. The following instructions are if you want to setup
 Geppetto from sources.
 
-Psst: If you get stuck at any point, drop us a line at the
-[OpenWorm-discuss mailing
-list](https://groups.google.com/forum/#!forum/openworm-discuss) or the
-contact formular on the [Geppetto website](http://www.geppetto.org/).
-You can also send us screenshots and log files!
+Psst: If you get stuck at any point write in the [Gitter chat](https://gitter.im/openworm/org.geppetto), we'll be happy to help you!
 
 Prerequisite software
 ---------------------

@@ -16,8 +16,16 @@ Contributions
 
 Geppetto is open source, released under the MIT license.
 
+The following is a list of applications built using Geppetto:
+
+-   [Open Source Brain](http://opensourcebrain.org)
+-   [WormSim](http://wormsim.org)
+-   [Virtual Fly Brain](http://virtualflybrain.org)
+-   [NEURON-UI](https://github.com/MetaCell/NEURON-UI)
+
 Geppetto is currently used and contributed to by the following groups:
 
+-   [MetaCell](http://metacell.us)
 -   [Wellcome Trust](http://www.wellcome.ac.uk/) via the [Open Source
     Brain](http://www.opensourcebrain.org/) initiative ([Silver Lab,
     University College London](http://www.ucl.ac.uk/silverlab/) )
@@ -30,15 +38,8 @@ Geppetto is currently used and contributed to by the following groups:
     Cambridge](http://www2.mrc-lmb.cam.ac.uk/) , [European
     Bioinformatics Institute (EMBL-EBI)](http://www.ebi.ac.uk/) )
 -   [OpenWorm](http://www.openworm.org/)
--   [MetaCell](http://metacell.us)
 -   [Orion Bionetworks](http://www.orionbionetworks.org/)
 
-The following is a list of the applications currently built using Geppetto:
-
--   [Open Source Brain](http://opensourcebrain.org)
--   [WormSim](http://wormsim.org)
--   [Virtual Fly Brain](http://virtualflybrain.org)
--   [NEURON-UI](https://github.com/MetaCell/NEURON-UI)
 
 ------------------------------------------------------------------------
 

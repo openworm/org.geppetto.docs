@@ -15,7 +15,7 @@ If you have any problems following this documentation please write on the `Gitte
 
 * Install Virgo Server and Geppetto Sources
 
-  * Now you need to install Virgo and clone the geppetto sources locally unless you have done those steps already. If not follow the instructions for either `OSX or Linux <http://docs.geppetto.org/en/latest/osxlinuxsetup.html>`__ or `Windows < http://docs.geppetto.org/en/latest/windowssetup.html>`__. Follow the steps until Deploying Geppetto section and make sure to use the eclipse flag when you use the update_server script.
+  * Now you need to install Virgo and clone the geppetto sources locally unless you have done those steps already. If not follow the instructions for either `OSX or Linux <http://docs.geppetto.org/en/latest/osxlinuxsetup.html>`__ or `Windows <http://docs.geppetto.org/en/latest/windowssetup.html>`__. Follow the steps until Deploying Geppetto section and make sure to use the eclipse flag when you use the update_server script.
 
 	``./update_server eclipse``
  

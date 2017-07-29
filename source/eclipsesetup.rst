@@ -26,19 +26,23 @@ If you have any problems following this documentation please write on `Gitter ch
 
 * Install Virgo IDE Tooling 
 
-* Help -> Install New Software
-* Work With -> http://download.eclipse.org/virgo/release/tooling
-* Select "Eclipse Virgo Tools" and install it, you will be asked to restart Eclipse at the end.
-* Click on Window -> Show View -> Others -> Servers
-* From the new view create a new Virgo Runtime server (New Servers Wizard -> EclipseRT ->Virgo runtime)
-* Name it anything you like
-* For installation directory put the folder where you unzipped the virgo server above e.g. /opt/virgo-tomcat-serve-VERSION-NUMBER
-* Once the server is created right click on it and choose add, select all the bundles you wish to deploy and that’s it, at the end of this step you should have no errors on the bundles. If the bundles don't show you need to add the Virgo Nature to them, you can do so by right clicking on them on the Package Explorer and selecting Virgo -> Add OSGi Bundle Project Nature. Once you added the bundles to Virgo it should look like this.
+  * Help -> Install New Software
+  * Work With -> http://download.eclipse.org/virgo/release/tooling
+  * Select "Eclipse Virgo Tools" and install it, you will be asked to restart Eclipse at the end.
+  * Click on Window -> Show View -> Others -> Servers
+  * From the new view create a new Virgo Runtime server (New Servers Wizard -> EclipseRT ->Virgo runtime)
+  * Name it anything you like
+  * For installation directory put the folder where you unzipped the virgo server above e.g. /opt/virgo-tomcat-serve-VERSION-NUMBER
+  * Once the server is created right click on it and choose add, select all the bundles you wish to deploy and that’s it, at the end of this step you should have no errors on the bundles. If the bundles don't show you need to add the Virgo Nature to them, you can do so by right clicking on them on the Package Explorer and selecting Virgo -> Add OSGi Bundle Project Nature. Once you added the bundles to Virgo it should look like this:
 
 .. image:: http://i.imgur.com/mucT88s.png?1
 
-That’s it folks, right click on the server and choose start, you will see in the console all the bundles getting loaded up and you should see no errors. At the end of the process your server will be up and running, so just point your browser to: 
+You now have Geppetto , right click on the server and choose debug or start, you will see in the console all the bundles loading up and you should see no errors. At the end of the process your server will be up and running, so just point your browser to: 
 
 `127.0.0.1:8080/org.geppetto.frontend/ <http://127.0.0.1:8080/org.geppetto.frontend/>`__ 
 
+If you want to use the Webpack dev server for hot deployment using your terminal go to the /org.geppetto.frontend/src/main/webapp/ folder and run
 
+	``npm start``
+	
+Once the webpack devserver is running you can connect to it using the port 8081 instead of 8080. Every change made to the web resources will refresh automatically the server and update your browser.

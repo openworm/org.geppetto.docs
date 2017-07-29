@@ -11,6 +11,7 @@ If you have any problems following this documentation please write on the `Gitte
   * `Download and install Eclipse Neon <http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3>`__. 
 
 
+
 * Install Virgo Server and Geppetto Sources
 
   * Now we need to install Virgo and clone the geppetto sources locally unless you have done those steps already. If not follow the instructions for either `OSX or Linux <http://docs.geppetto.org/en/latest/osxlinuxsetup.html>`__ or `Windows <http://docs.geppetto.org/en/latest/windowssetup.html>`__. Follow the steps until Deploying Geppetto section and make sure to use the eclipse flag when you use the update_server script.
@@ -36,6 +37,7 @@ If you have any problems following this documentation please write on the `Gitte
 
 .. image:: http://i.imgur.com/mucT88s.png?1
    :align: center
+   
    
 
 You now have Geppetto configured in your Eclipse, right click on the server and choose debug or start, in the console you will see all the bundles loading up and you should see no errors. At the end of the process your server will be up and running, so just point your browser to: 

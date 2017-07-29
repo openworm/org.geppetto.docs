@@ -20,11 +20,7 @@ Geppetto is engineered and how to contribute to it.
 
 ------------------------------------------------------------------------
 
-[![image](images/usr_btn.png)](./userdocs.html)
-
-------------------------------------------------------------------------
-
-[![image](images/dev_btn.png)](./devdocs.html)
+[![image](images/usr_btn.png)](./userdocs.html) [![image](images/dev_btn.png)](./devdocs.html)
 
 ------------------------------------------------------------------------
 

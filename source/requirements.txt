@@ -1,2 +1,2 @@
-sphinx_md_theme
+sphinx-bootstrap-theme==0.4.0
 recommonmark

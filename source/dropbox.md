@@ -1,11 +1,9 @@
 Geppetto and Dropbox
 ====================
 
-> -   Linking Geppetto to Dropbox
-> -   Uploading experiment results to dropbox
+# Linking Geppetto to Dropbox
 
-Linking Geppetto to Dropbox ================= Geppetto can be linked to
-your dropbox account via console's command.
+Geppetto can be linked to your dropbox account via console's command.
 
 Run command:
 
@@ -31,8 +29,9 @@ G.linkDropBox("place_key_code_here");
 If all goes well, console will print out a message saying link to
 DropBox was successful.
 
-Uploading experiment results to dropbox ================= Experiment
-results can be uploaded to your dropbox account, after doing link steps
+# Uploading experiment results to dropbox 
+
+Experiment results can be uploaded to your dropbox account, after doing link steps
 from section above. An experiment must be set to active, and be in
 COMPLETED state in order to upload results. You will need to know id of
 experiment, aspect path where results are stored, and the format of the

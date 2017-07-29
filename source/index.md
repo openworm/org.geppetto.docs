@@ -1,4 +1,4 @@
-![image](images/header.png)
+![image](images/header.png =250x)
 
 Introduction
 ============

@@ -17,11 +17,9 @@ the [Gitter chat](https://gitter.im/openworm/org.geppetto)
         [Windows](http://docs.geppetto.org/en/latest/windowssetup.html).
         Follow the steps until Deploying Geppetto section and make sure
         to use the eclipse flag when you use the update\_server script.
-
-        `./update_server eclipse`
-
+`./update_server eclipse`
     -   Now we need to import all the bundles that were cloned into
-        Eclipse, to do so click on File-&gt;Import-&gt; “Import Existing
+        Eclipse, to do so click on File->Import-> “Import Existing
         project into workspace” and follow the instructions.
     -   You now have all the Geppetto bundles in your workspace, let's
         add a link to the Virgo Server inside Eclipse. To do this we
@@ -43,7 +41,7 @@ the [Gitter chat](https://gitter.im/openworm/org.geppetto)
         end of this step you should have no errors on the bundles. If
         the bundles don't show you need to add the Virgo Nature to them,
         you can do so by right clicking on them on the Package Explorer
-        and selecting Virgo -&gt; Add OSGi Bundle Project Nature. Once
+        and selecting Virgo -> Add OSGi Bundle Project Nature. Once
         you added the bundles to Virgo it should look like this:
 
 ![image](http://i.imgur.com/mucT88s.png?1)

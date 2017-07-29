@@ -71,7 +71,7 @@ Maven needs to build with Java 7. If you want to point your JAVA\_HOME
 variable to a different version, create a file *mavenrc\_pre.bat* in
 your home directory that contains:
 
-> `JAVA_HOME=path\to\Java7`
+    JAVA_HOME=path\to\Java7
 
 Next, you have to modify the PATH variable. This will allow you and
 Geppetto to run several programs from the command prompt. You may see
@@ -95,11 +95,11 @@ First, create a directory where you want the Geppetto source code to
 live (geppetto-sources from here on). Open up the command prompt
 (cmd.exe) and navigate to it by typing:
 
-> `cd geppetto-sources`
+    cd geppetto-sources
 
 Once there, clone the org.geppetto repository from GitHub by entering:
 
-> `git clone https://github.com/openworm/org.geppetto.git`
+    git clone https://github.com/openworm/org.geppetto.git
 
 In Windows Explorer, navigate to
 geppetto-sources\\org.geppetto\\utilities\\source\_setup. Open the
@@ -109,12 +109,12 @@ separators).
 
 Go back to your command prompt and enter:
 
-> `cd org.geppetto\utilities\source_setup`
+    cd org.geppetto\utilities\source_setup
 
 You are now in the source\_setup folder, which contains some handy
 scripts. First, run the setup.py script:
 
-> `python setup.py`
+    python setup.py
 
 This will copy all of the required repositories to geppetto-sources.
 Make sure that you have writing permissions for it. If a repository is
@@ -126,11 +126,11 @@ Building Geppetto
 To build Geppetto, navigate your command prompt back to the org.geppetto
 directory. You can do this simply by entering twice:
 
-> `cd ..`
+    cd ..
 
 Once there, run:
 
-> `mvn install`
+    mvn install
 
 This will build all of the Geppetto modules at once. As you do
 development, you probably don't want to re-build all modules if you only
@@ -138,7 +138,7 @@ worked on a few ones. In this case, you can build the modules
 individually and then re-deploy. To prevent problems caused by old build
 files, you may want to clean before reinstalling by:
 
-> `mvn clean install`
+    mvn clean install
 
 Deploying Geppetto
 ------------------
@@ -146,11 +146,11 @@ Deploying Geppetto
 To deploy Geppetto to the Virgo server, navigate your command prompt
 again to the source\_setup directory by typing:
 
-> `cd utilities\source_setup`
+    cd utilities\source_setup
 
 Then run:
 
-> `python update_server.py`
+    python update_server.py
 
 This will copy all of the built jars and wars over to
 %SERVER\_HOME%\\repository\\usr and the *geppetto.plan* file in
@@ -170,7 +170,7 @@ With that you are basically done! So, fire up the *startup.bat* file,
 wait until its output stops, cross your fingers and point your browser
 to:
 
-> `http://localhost:8080/org.geppetto.frontend`
+    http://localhost:8080/org.geppetto.frontend
 
 You should now see Geppetto starting up. Good job!
 
@@ -189,21 +189,19 @@ many repos required by Geppetto.
 To use it, navigate your command prompt to the source\_setup folder and
 type:
 
-> `python gitall.py branches`:
->
-> :   print the current branch of each repo
->
-> `python gitall.py checkout <branch>`:
->
-> :   Checkout &lt;branch&gt; on each repo. Note the branch must exist
->     on each repo.
->
-> `python gitall.py fetch [remote] [branch]`:
->
-> :   Perform git fetch on each repo
->
-> `python gitall.py pull [remote] [branch]`:
->
-> :   Perform git pull on each repo
->
+    python gitall.py branches
+
+to print the current branch of each repo
+    
+    python gitall.py checkout <branch>
+
+to checkout <branch> on each repo. Note the branch must exist on each repo.
+    
+    python gitall.py fetch [remote] [branch]
+
+to perform git fetch on each repo
+
+    python gitall.py pull [remote] [branch]
+
+to perform git pull on each repo
 

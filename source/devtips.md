@@ -1,7 +1,7 @@
 Tips for developer to configure/deploy Eclipse + Virgo
 ======================================================
 
-Last Update: January 4th 2015
+Last Update: July 29th 2017
 
 This section provides tips to solve some problems regarding Geppetto
 deploying in a Virgo Server (with Eclipse). These tips summarizes the
@@ -15,9 +15,9 @@ someone else, don't hesitate on adding it to the list.
 
 -   Three wise tools.
 
-    -   mvn clean || **Eclipse command**: Run as &gt; mvn clean
-    -   mvn install || **Eclipse command**: Run as &gt; mvn install
-    -   mvn update || **Eclipse command**: Maven &gt; Update Project
+    -   mvn clean || **Eclipse command**: Run as -> mvn clean
+    -   mvn install || **Eclipse command**: Run as -> mvn install
+    -   mvn update || **Eclipse command**: Maven -> Update Project
 
     These three comands are the key tools you will be using during the
     configuration phase. Usually a mvn install from the org.geppetto
@@ -27,25 +27,25 @@ someone else, don't hesitate on adding it to the list.
     clean/install the one that is causing the error. Regarding the third
     command, tipically a maven project has a folder structure like this:
 
-    > main
-    >
-    > > java
-    > >
-    > > resources
-    >
-    > test
-    >
-    > > java
-    > >
-    > > resources
+        > main
+        >
+        > > java
+        > >
+        > > resources
+        >
+        > test
+        >
+        > > java
+        > >
+        > > resources
 
     However, sometimes this folder structure is "corrupted". Therefore,
     some compilation errors, which make no sense (Eclipse is complaining
     about a file although the file is in the right path), are reported.
     Execute a Maven Update to the project and then mvn clean/ install.
     After executing a mvn update, remember to unclick the Maven Project
-    Builder (**Eclipse command**: Right click Project &gt;
-    Properties &gt; Builders &gt; Unclick Maven Project Builder).
+    Builder (**Eclipse command**: Right click Project ->
+    Properties -> Builders -> Unclick Maven Project Builder).
     Otherwise it can slow down and, eventually, crash your Eclipse.
 
 -   In the Virgo server there are four folders to focus on if you are
@@ -75,11 +75,10 @@ someone else, don't hesitate on adding it to the list.
     information about the process. Every time a new module is deployed
     properly a message like this one is displayed:
 
-    ``` {.sourceCode .none}
-    Installed bundle 'org.geppetto.model.neuroml' version '0.2.0'.
-    Starting bundle 'org.geppetto.model.neuroml' version '0.2.0'.
-    Started bundle 'org.geppetto.model.neuroml' version '0.2.0'.
-    ```
+        {.sourceCode .none}
+        Installed bundle 'org.geppetto.model.neuroml' version '0.3.6'.
+        Starting bundle 'org.geppetto.model.neuroml' version '0.3.6'.
+        Started bundle 'org.geppetto.model.neuroml' version '0.3.6'.
 
     However if the module hasn't been deployed properly the version you
     will see is 0.0.0 Double check any compilation or configuration
@@ -101,11 +100,11 @@ someone else, don't hesitate on adding it to the list.
     -   There is no connection between the client and the server. For
         instance, you can't see the geppetto version in the console when
         the main page is loaded. Also if you try to load a simulation it
-        keeps loading forever. -&gt; The spring
+        keeps loading forever. -> The spring
         configuration (META-INF/spring) in the org.geppetto.frontend
         resources hasn't been copied in the server.
     -   When executing aspect.getModel() an exception is raised. In the
-        log you will see a trace that says "FileNotFound" -&gt; You will
+        log you will see a trace that says "FileNotFound" -> You will
         have to copy the main/resources files of the
         org.geppetto.model.neuroml project.
 -   Maven libraries that are downloaded when a mvn install is executed
@@ -119,8 +118,8 @@ someone else, don't hesitate on adding it to the list.
     due to an Eclipse distribution that is missing some components. From
     update site, install the below item:
 
-    ``` {.sourceCode .none}
-    Web, XML, Java EE and OSGi Enterprise Development -> Eclipse Java EE Developer Tools
-    ```
+        {.sourceCode .none}
+        Web, XML, Java EE and OSGi Enterprise Development -> Eclipse Java EE Developer Tools
+    
 
 

@@ -3,7 +3,7 @@ Instructions for setting up Geppetto on Eclipse Neon
 
 Last Update: June 29th 2017
 
-If you have any problems following this documentation please write on the `Gitter chat <https://gitter.im/openworm/org.geppetto>`.
+If you have any problems following this documentation please write on the `Gitter chat <https://gitter.im/openworm/org.geppetto>`__
 
 
 * Install Eclipse Neon for J2EE
@@ -21,7 +21,8 @@ If you have any problems following this documentation please write on the `Gitte
   * You now have all the Geppetto bundles in your workspace, let's add the Virgo Server.
 
 * Install Virgo Tomcat Server
-  * `http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.4.RELEASE/virgo-tomcat-server-3.6.4.RELEASE.zip <http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.4.RELEASE/virgo-tomcat-server-3.6.4.RELEASE.zip>`__
+
+  * `Download the zip file  <http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.4.RELEASE/virgo-tomcat-server-3.6.4.RELEASE.zip>`__
   * This will depend on your OS, for Ubuntu: download the zip file and do: “sudo unzip virgo-tomcat-server-3.6.4.RELEASE.zip -d /opt/”  Make sure that the directory you are installing to matches the directory you have set as the SERVER_HOME path in your .bashrc file.
 
 * Install Virgo IDE Tooling 

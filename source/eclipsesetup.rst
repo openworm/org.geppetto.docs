@@ -33,7 +33,7 @@ If you have any problems following this documentation please write on `Gitter ch
 * From the new view create a new Virgo Runtime server (New Servers Wizard -> EclipseRT ->Virgo runtime)
 * Name it anything you like
 * For installation directory put the folder where you unzipped the virgo server above e.g. /opt/virgo-tomcat-serve-VERSION-NUMBER
-* Once the server is created right click on it and choose add, select all the bundles you wish to deploy and that’s it, at the end of this step you should have no errors on the bundles. If the bundles don't show you need to add the Virgo Nature to them, you can do so by right clicking on them on the Package Explorer and selecting Virgo -> Add Virgo Bundle Project Nature. Once you added the bundles to Virgo it should look like this.
+* Once the server is created right click on it and choose add, select all the bundles you wish to deploy and that’s it, at the end of this step you should have no errors on the bundles. If the bundles don't show you need to add the Virgo Nature to them, you can do so by right clicking on them on the Package Explorer and selecting Virgo -> Add OSGi Bundle Project Nature. Once you added the bundles to Virgo it should look like this.
 
 .. image:: http://i.imgur.com/mucT88s.png?1
 

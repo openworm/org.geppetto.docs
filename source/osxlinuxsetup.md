@@ -34,7 +34,7 @@ good news: You probably have some of this on your machine already!
     or [\_Latest version](https://eclipse.org/virgo/download/), unpack
     it to your desired location by:
 
-    > `gunzip -a virgo-tomcat-server-3.6.4.RELEASE.zip -d <desired directory>`
+    gunzip -a virgo-tomcat-server-3.6.4.RELEASE.zip -d <desired directory>
 
 Note that Geppetto currently uses virgo tomcat sever 3.6.4, although the
 development team is currently moving towards virgo-tomcat-server 3.6.5
@@ -81,41 +81,36 @@ already exist:
 
 You can do this for example in .bashrc with:
 
-> `export MVN_HOME="$(brew --prefix maven)/libexec"`
->
-> `export JAVA_HOME="$(/usr/libexec/java_home)"`
->
-> `export SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server-3.6.xx.RELEASE)"`
+    export MVN_HOME="$(brew --prefix maven)/libexec"
+    export JAVA_HOME="$(/usr/libexec/java_home)"
+    export SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server-3.6.xx.RELEASE)"
 
 Maven needs to build with Java 7. If you want to point your JAVA\_HOME
 variable to a different version, create a file *.mavenrc* in your home
 directory that contains:
 
-> `export JAVA_HOME="$(/path/to/java7)"`
+    export JAVA_HOME="$(/path/to/java7)"
 
 Note that if you are using Java 8, you may want to install both Java 7
 and Java 8 and have a conditional statement to switch between the two.
 
-> `export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"`setjdk()
-> `{     export JAVA_HOME="$(/usr/libexec/java_home -v $1)"`}
->
-> \`\`export
-> SERVER\_HOME="\$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
+    export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
+    setjdk() 
+        {export JAVA_HOME="$(/usr/libexec/java_home -v $1)"}
+    export SERVER\_HOME="\$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
 
 When you close your terminal, it is possible that bashrc may reset
 SERVER\_HOME. In order to reset SERVER\_HOME, issue the following
 command from the terminal.
 
-> \`\`SERVER\_HOME="\$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
+    SERVER\_HOME="\$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
 
 Mac OS X Variables
 ------------------
 
-> `export MVN_HOME="$(brew --prefix maven)/libexec"`
->
-> `export JAVA_HOME="/usr/lib/jvm/java-1.7.0-openjdk"`
->
-> `export SERVER\_HOME="/opt/virgo-tomcat-server-3.6.4.RELEASE"`
+    export MVN_HOME="$(brew --prefix maven)/libexec"
+    export JAVA_HOME="/usr/lib/jvm/java-1.7.0-openjdk"
+    export SERVER\_HOME="/opt/virgo-tomcat-server-3.6.4.RELEASE"
 
 The SERVER\_HOME directory may be one of the directories that you are
 prompted to install to. Once you find where virgo tomcat is installed
@@ -132,22 +127,21 @@ Setup Geppetto Repositories
 First, create a directory for the Geppetto source code (geppetto-sources
 from now on):
 
-> `mkdir geppetto-sources`
->
-> `cd geppetto-sources`
+    mkdir geppetto-sources
+    cd geppetto-sources
 
 Once there, clone the org.geppetto repository from GitHub:
 
-> `git clone https://github.com/openworm/org.geppetto.git`
+    git clone https://github.com/openworm/org.geppetto.git
 
 Navigate your shell to the source\_setup directory:
 
-> `cd org.geppetto/utilities/source_setup`
+    cd org.geppetto/utilities/source_setup
 
 Alternatively, copy the contents of source\_setup to a convenient
 directory of your choice:
 
-> `cp -r org.geppetto/utilities/source_setup/* <some other location>`
+    cp -r org.geppetto/utilities/source_setup/* <some other location>
 
 Open the *config.json* file in a text editor and change the value of the
 *sourcesdir* field to the path of your source directory.
@@ -155,22 +149,21 @@ Open the *config.json* file in a text editor and change the value of the
 The source\_setup folder contains some handy scripts. First, run the
 setup.py script:
 
-> `./setup`
->
-> or
->
-> `python setup.py`
+    ./setup
+
+or
+
+    python setup.py
 
 Running this script will prompt you to enter the repositories you want
 copied to geppetto sources. At present, the repositories are:
 
-> -   `org.geppetto`
-> -   `org.geppetto.core`
-> -   `org.geppetto.frontend`
-> -   `org.geppetto.model`
-> -   `org.geppetto.model.neuroml`
->
-> \*\* `org.geppetto.simulation`
+    org.geppetto
+    org.geppetto.core
+    org.geppetto.frontend
+    org.geppetto.model
+    org.geppetto.model.neuroml
+    org.geppetto.simulation
 
 However, you will have the option to select other repositories from this
 list when you run the install script.
@@ -185,11 +178,11 @@ Building Geppetto
 Navigate back to the org.geppetto directory from
 utilities/source\_setup:
 
-> `cd ../..`
+    cd ../..
 
 Once there, run:
 
-> `mvn install`
+    mvn install
 
 This will build all of the Geppetto modules at once. As you do
 development, you probably don't want to re-build all modules if you only
@@ -197,7 +190,7 @@ worked on a few. In this case, you can build the modules individually
 and then re-deploy. To prevent problems caused by old build files, you
 may want to clean before reinstalling by:
 
-> `mvn clean install`
+    mvn clean install
 
 Deploying Geppetto
 ------------------
@@ -205,15 +198,15 @@ Deploying Geppetto
 To deploy Geppetto to the Virgo server, navigate your shell to the
 source\_setup directory again by typing:
 
-> `cd utilities/source_setup`
+    cd utilities/source_setup
 
 Then run:
 
-> `./update_server`
->
-> or
->
-> `python update_server.py`
+    ./update_server
+
+or
+
+    python update_server.py
 
 This will copy all of the built jars, wars and dependencies over to
 %SERVER\_HOME%/repository/usr and the *geppetto.plan* file in
@@ -222,7 +215,7 @@ org.geppetto to %SERVER\_HOME%/pickup.
 If you plan to start the server from the eclipse environment run the
 update\_server script with the "eclipse" flag:
 
-> `./update_server eclipse`
+    ./update_server eclipse
 
 This will copy only dependencies over to %SERVER\_HOME%/repository/usr.
 Geppetto JARs and WARs will be copied by Eclipse in the Virgo stage
@@ -241,11 +234,11 @@ The Virgo server is started and stopped via shell scripts in
 
 Then Virgo can be started using the command:
 
-> `virgo startup.sh`
+    virgo startup.sh
 
 Or shutdown using the command:
 
-> `virgo shutdown.sh`
+    virgo shutdown.sh
 
 For more info on Virgo's control scripts, see
 [here](http://eclipse.org/virgo/documentation/virgo-documentation-2.1.1.RELEASE/docs/virgo-user-guide/htmlsingle/virgo-user-guide.html).
@@ -255,20 +248,20 @@ that are using Port 8080.
 
 Use:
 
-> `netstat -plten | grep java`
+    netstat -plten | grep java
 
 to find the process number on port 8080.
 
 Then identify the process number and issue the following command to kill
 it:
 
-> `sudo kill -9 &lt;process\_number&gt;`
+    sudo kill -9 <process number>
 
 With that you are basically done! So, fire up the *startup.bat* file,
 wait until its output stops, cross your fingers and point your browser
 to:
 
-> `http://localhost:8080/org.geppetto.frontend`
+    http://localhost:8080/org.geppetto.frontend
 
 You should now see Geppetto starting up. Good job!
 
@@ -286,21 +279,20 @@ many repos required by Geppetto.
 
 To use it, navigate your shell to the source\_setup folder and type:
 
-> `./gitall branches`:
->
-> :   print the current branch of each repo
->
-> `./gitall checkout <branch>`:
->
-> :   Checkout &lt;branch&gt; on each repo. Note the branch must exist
->     on each repo.
->
-> `./gitall fetch [remote] [branch]`:
->
-> :   Perform git fetch on each repo
->
-> `./gitall pull [remote] [branch]`:
->
-> :   Perform git pull on each repo
->
+    ./gitall branches
+
+prints the current branch of each repo
+    
+    ./gitall checkout <branch>
+
+Checks out <branch> on each repo. Note the branch must exist on each repo.
+
+    ./gitall fetch [remote] [branch]
+
+Performs git fetch on each repo
+    
+    ./gitall pull [remote] [branch]
+
+Performs git pull on each repo
+
 

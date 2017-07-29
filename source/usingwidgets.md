@@ -17,7 +17,7 @@ provided UI.
 ## Stack Viewer (Docs TBD)
 ## Big Images Viewer (Docs TBD)
 
-Widgets are normally created using the user interface, to create one manually using the API is the following
+Widgets are normally created using the user interface, to create one manually from the console the following API can be used
 
 ```
 G.addWidget("PLOT")

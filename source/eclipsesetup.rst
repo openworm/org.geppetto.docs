@@ -8,9 +8,7 @@ If you have any problems following this documentation please write on the `Gitte
 
 * Install Eclipse Neon for J2EE
 
-  * `http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3 <http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3>`__
-  * Taking eclipse from any other repository is discouraged.
-
+  * `Download and install Eclipse Neon <http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3>`__. Downloading eclipse from any other source is discouraged.
 
 
 * Install Virgo Server and Geppetto Sources

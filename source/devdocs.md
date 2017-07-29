@@ -1,7 +1,6 @@
 Developers documentation
 ========================
 
-#### [Overview](./overview.html)
 #### [Contribution guidelines](./contribute.html)
 
 

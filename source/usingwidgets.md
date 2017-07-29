@@ -52,4 +52,4 @@ G.addWidget(3)
 
 For more information see the documentation related to each individual
 widget. If you are interested in contributing a new widget to Geppetto
-you can follow this tutorial &lt;contributewidgets&gt;.
+you can follow this tutorial <contributewidgets>.

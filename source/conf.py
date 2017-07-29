@@ -100,41 +100,6 @@ pygments_style = 'sphinx'
 # a list of builtin themes.
 #html_theme = 'default'
 html_theme = 'material_design'
-html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
-
-# Theme options are theme-specific and customize the look and feel of a theme
-# further.  For a list of options available for each theme, see the
-# documentation.
-html_theme_options = {
-
-    # Bootswatch (http://bootswatch.com/) theme.
-    #
-    # Options are nothing with "" (default) or the name of a valid theme such
-    # as "amelia" or "cosmo".
-    #
-    # Themes:
-    # * amelia
-    # * cerulean
-    # * cosmo
-    # * cyborg
-    # * cupid (v3 only)
-    # * flatly
-    # * journal
-    # * lumen (v3 only)
-    # * readable
-    # * simplex
-    # * slate
-    # * spacelab
-    # * spruce (v2 only)
-    # * superhero
-    # * united
-    # * yeti (v3 only)
-    'bootswatch_theme': "simplex",
-
-    # Choose Bootstrap version.
-    # Values: "3" (default) or "2" (in quotes)
-    'bootstrap_version': "3",
-}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []

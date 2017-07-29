@@ -111,11 +111,11 @@ command from the terminal.
 Mac OS X Variables
 ------------------
 
-> `export MVN_HOME="$(brew --prefix maven)/libexec"`JAVA\_HOME=/usr/lib/jvm/java-1.7.0-openjdk
+> `export MVN_HOME="$(brew --prefix maven)/libexec"`
 >
-> `export JAVA_HOME`SERVER\_HOME=/opt/virgo-tomcat-server-3.6.3.RELEASE
+> `export JAVA_HOME="/usr/lib/jvm/java-1.7.0-openjdk"`
 >
-> \`\`export SERVER\_HOME
+> `export SERVER\_HOME="/opt/virgo-tomcat-server-3.6.4.RELEASE"`
 
 The SERVER\_HOME directory may be one of the directories that you are
 prompted to install to. Once you find where virgo tomcat is installed
@@ -255,14 +255,14 @@ that are using Port 8080.
 
 Use:
 
-> \`\`netstat -plten | grep java
+> `netstat -plten | grep java`
 
 to find the process number on port 8080.
 
 Then identify the process number and issue the following command to kill
 it:
 
-> \`\`sudo kill -9 &lt;process\_number&gt;
+> `sudo kill -9 &lt;process\_number&gt;`
 
 With that you are basically done! So, fire up the *startup.bat* file,
 wait until its output stops, cross your fingers and point your browser

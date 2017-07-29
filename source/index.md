@@ -21,7 +21,12 @@ The following is a list of applications built using Geppetto:
 -   [Open Source Brain](http://opensourcebrain.org)
 -   [WormSim](http://wormsim.org)
 -   [Virtual Fly Brain](http://virtualflybrain.org)
+
+[![VFB Video](http://img.youtube.com/vi/XkbauvReJFA/0.jpg)](http://www.youtube.com/watch?v=XkbauvReJFA)
+
 -   [NEURON-UI](https://github.com/MetaCell/NEURON-UI)
+
+[![NEURON Video](http://img.youtube.com/vi/CjoA3lTa25I/0.jpg)](http://www.youtube.com/watch?v=CjoA3lTa25I)
 
 Geppetto is currently used and contributed to by the following groups:
 

@@ -70,7 +70,6 @@ someone else, don't hesitate on adding it to the list.
     information about the process. Every time a new module is deployed
     properly a message like this one is displayed:
 
-        {.sourceCode .none}
         Installed bundle 'org.geppetto.model.neuroml' version '0.3.6'.
         Starting bundle 'org.geppetto.model.neuroml' version '0.3.6'.
         Started bundle 'org.geppetto.model.neuroml' version '0.3.6'.
@@ -102,6 +101,7 @@ someone else, don't hesitate on adding it to the list.
         log you will see a trace that says "FileNotFound" -> You will
         have to copy the main/resources files of the
         org.geppetto.model.neuroml project.
+        
 -   Maven libraries that are downloaded when a mvn install is executed
     for the first time or after a mvn clean, are stored typically in a
     folder called .m2 inside your home folder. If the version of any
@@ -113,7 +113,6 @@ someone else, don't hesitate on adding it to the list.
     due to an Eclipse distribution that is missing some components. From
     update site, install the below item:
 
-        {.sourceCode .none}
         Web, XML, Java EE and OSGi Enterprise Development -> Eclipse Java EE Developer Tools
     
 

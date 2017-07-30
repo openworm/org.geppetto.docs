@@ -92,7 +92,7 @@ and Java 8 and have a conditional statement to switch between the two.
     export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
     setjdk() 
         {export JAVA_HOME="$(/usr/libexec/java_home -v $1)"}
-    export SERVER\_HOME="\$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
+    export SERVER_HOME="\$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
 
 When you close your terminal, it is possible that bashrc may reset
 SERVER\_HOME. In order to reset SERVER\_HOME, issue the following
@@ -105,7 +105,7 @@ Mac OS X Variables
 
     export MVN_HOME="$(brew --prefix maven)/libexec"
     export JAVA_HOME="/usr/lib/jvm/java-1.7.0-openjdk"
-    export SERVER\_HOME="/opt/virgo-tomcat-server-3.6.4.RELEASE"
+    export SERVER_HOME="/opt/virgo-tomcat-server-3.6.4.RELEASE"
 
 The SERVER\_HOME directory may be one of the directories that you are
 prompted to install to. Once you find where virgo tomcat is installed

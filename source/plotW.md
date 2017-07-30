@@ -20,7 +20,7 @@ distinguish it from other variables being drawn.
 In order to plot a Simulation variable, you can use the command
 
 ``` {.sourceCode .javascript}
-Plot1.showLegend(true)
+Plot1.plotData(variable);
 ```
 
 Where "Plot1" is the name of the plotting widget that was returned after

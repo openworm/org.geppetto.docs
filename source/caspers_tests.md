@@ -32,6 +32,12 @@ To run Persistence Tests (Requires the persistence bundle and a running MySQL se
 `casperjs test PersistenceTests.js --engine=slimerjs` to run Geppetto Persistence Tests.
 ```
 
+If the tests were executed succesfully and passed, you'll get something like this in your console.
+
+![image](images/CoreTests.png):
+
+## Settings and Errors
+
 Tests are executed by default on port 8080. If you would like to execute tests on a different port you can change it [here](https://github.com/openworm/org.geppetto.frontend/blob/downloadData/src/main/webapp/js/pages/tests/casperjs/CoreTestsUtility.js#L1).
 
 If you have an error similar to this one:

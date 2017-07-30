@@ -32,8 +32,11 @@ extensions = []
 templates_path = ['_templates']
 
 # The suffix of source filenames.
-source_suffix = '.rst'
+source_suffix = '.md'
 
+source_parsers = {
+   '.md': 'recommonmark.parser.CommonMarkParser',
+}
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
 
@@ -42,7 +45,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Geppetto'
-copyright = u'2013-2016, Geppetto Team'
+copyright = u'2013-2017, Geppetto Team'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -132,7 +135,6 @@ html_theme_options = {
     # Values: "3" (default) or "2" (in quotes)
     'bootstrap_version': "3",
 }
-
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
 

@@ -26,9 +26,8 @@ good news: You probably have some of this on your machine already!
 -   Java SE Development Kit 7
 -   Python 2.7
 -   Virgo Server for Apache Tomcat: [ZIP
-    file](https://dl.dropboxusercontent.com/u/7538688/virgo-tomcat-server-3.6.3.RELEASE.zip?dl=1),
-    or [\_Latest version](https://eclipse.org/virgo/download/), unpack
-    it to your desired location by:
+    file](http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.4.RELEASE/virgo-tomcat-server-3.6.4.RELEASE.zip)
+    unpack it to your desired location by:
 
     gunzip -a virgo-tomcat-server-3.6.4.RELEASE.zip -d <desired directory>
 

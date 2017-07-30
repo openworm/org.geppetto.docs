@@ -35,7 +35,7 @@ reference to see what options you have to modify your plot.
 
 ![image](http://i.imgur.com/Sf9byfH.png)
 
-**Widget Options:**
+**Widget Settings and Options:**
 
 On the top of the Plot Widget you'll find a toolbar, with it you can do:
 -- Reset the widget to its original view with the first icon
@@ -67,7 +67,7 @@ Plot1.downloadImage(type)
 ```
 Where type can be : "JPEG", "PNG" or "SVG"
 
-Setting Options ----------User can modify a Plot Widget settings,
+Settings ----------User can modify a Plot Widget settings,
 including: x and y axis, line plot's visibility of points and lines.
 Create a javascript object in the console specifying the options, and
 use setOptions() with the created object to set the options for the Plot

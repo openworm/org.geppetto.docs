@@ -17,19 +17,19 @@ npm install -g phantomjs casperjs slimerjs
 To test that Casper is properly installed:
 
 ``` {.sourceCode .javascript}
-`casperjs test LiveTests.js --engine=slimerjs` 
+casperjs test LiveTests.js --engine=slimerjs 
 ```
 
 To run Core projects Tests (Requires NOT having the persistence bundle):
 
 ``` {.sourceCode .javascript}
-`casperjs test --includes=CoreTestsUtility.js CoreTests.js --engine=slimerjs`
+casperjs test --includes=CoreTestsUtility.js CoreTests.js --engine=slimerjs
 ```
 
 To run Persistence Tests (Requires the persistence bundle and a running MySQL server):
 
 ``` {.sourceCode .javascript}
-`casperjs test PersistenceTests.js --engine=slimerjs` to run Geppetto Persistence Tests.
+casperjs test PersistenceTests.js --engine=slimerjs
 ```
 
 If the tests were executed succesfully and passed, you'll get something like this in your console.

@@ -45,7 +45,8 @@ the [Gitter chat](https://gitter.im/openworm/org.geppetto)
         you added the bundles to Virgo it should look like this:
 ![image](http://i.imgur.com/mucT88s.png?1)
     -   Before starting the server we need to make sure that the different bundles are deployed in the right order. Double click on the Virg server in the Server view, an editor will open. Look for the Artefacts Deployment Order pane and move the bundles up and down to reflect the following order:
-```org.geppetto.model
+```
+org.geppetto.model
 org.geppetto.core
 org.geppetto.simulation
 *anything else in any order*

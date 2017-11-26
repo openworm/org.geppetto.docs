@@ -1,11 +1,10 @@
 ![image](images/header.png)
 
-
-Geppetto is a web based platform to build applications that let the user **explore, visualize and simulate neuroscience data and models** such as a **cell** or even a **whole brain**.
+Geppetto is a web based platform to build neuroscience applications that let the user  **explore, visualize and simulate neuroscience data and models** such as a **cell** or even a **whole brain**.
 
 A demo application using latest release of Geppetto is available [here](https://live.geppetto.org) while the binaries are available to
 [download here](https://github.com/openworm/org.geppetto/releases/).
-The documentation is split into two main sections: a guide to help you learn how to use Geppetto and the developers documentation to learn how Geppetto is engineered and how to contribute to it.
+The documentation is split into two main sections: a guide to help you learn how to use Geppetto based applications and the developers documentation, to learn how to build applications based on  Geppetto is and how to contribute to it.
 
 [![image](images/usr_btn.png)](./userdocs.html) [![image](images/dev_btn.png)](./devdocs.html)
 
@@ -18,6 +17,7 @@ Geppetto is open source, released under the MIT license.
 
 Geppetto is currently used and contributed to by the following groups:
 
+-   [MetaCell](http://metacell.us)
 -   [Wellcome Trust](http://www.wellcome.ac.uk/) via the [Open Source
     Brain](http://www.opensourcebrain.org/) initiative ([Silver Lab,
     University College London](http://www.ucl.ac.uk/silverlab/) )
@@ -29,16 +29,17 @@ Geppetto is currently used and contributed to by the following groups:
     Laboratory of Molecular Biology,
     Cambridge](http://www2.mrc-lmb.cam.ac.uk/) , [European
     Bioinformatics Institute (EMBL-EBI)](http://www.ebi.ac.uk/) )
+-   [The Brain Observatory](http://thebrainobservatory.org)
 -   [OpenWorm](http://www.openworm.org/)
--   [MetaCell](http://metacell.us)
 -   [Orion Bionetworks](http://www.orionbionetworks.org/)
 
 The following is a list of the websites currently using a custom
 deployment of Geppetto available on the web:
 
 -   [Open Source Brain](http://opensourcebrain.org)
--   [WormSim](http://wormsim.org)
 -   [Virtual Fly Brain](http://virtualflybrain.org)
+-   [Patient H.M.](http://www.patienthm.org)
+-   [WormSim](http://wormsim.org)
 
 ------------------------------------------------------------------------
 

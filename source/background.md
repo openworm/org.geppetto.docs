@@ -1,4 +1,4 @@
-Overview
+Background
 ========
 
 > -   Background
@@ -9,18 +9,6 @@ Overview
 
 Background
 ----------
-
-The decision to build Geppetto came after an analysis of the
-requirements for a platform to support a full-scale simulation of the C.
-elegans and potentially even more complex organisms in times to come.
-Beside the functional requirements, Geppetto's goal is to move away from
-the common monolithic approach usually found in academic software
-projects. Geppetto is an [open source
-project](https://github.com/openworm/org.geppetto/blob/master/README.md)
-and engineers, scientists and developers are welcome to contribute to
-its development by adding functionalities to existing plugins or writing
-new ones without having to deal with millions of lines of code with no
-clearly defined boundaries.
 
 Computational neuroscience has produced software systems, including
 NEURON and Genesis, that are extremely useful for simulating systems of
@@ -36,56 +24,10 @@ single biological model ([Takahashi et al., 2002](http://g.ua/Mhx1),
 [Dada and Mendes, 2007](http://dx.doi.org/10.1007/978-3-642-02879-3) ,
 [Cornelis et al., 2012](http://g.ua/Mhxa) ).
 
-Geppetto aims to address these scientific challenges along with some
-engineering ones. Geppetto's design leverages cutting edge software
+Geppetto aims to address these scientific and engineering challenges. Geppetto's design leverages cutting edge software
 technologies and its architecture and development follows industry
-standards.
+standards. Rather than focusing on a particular class o
 
-The architecture
-----------------
-
-The analysis of the requirements for Geppetto resulted in a clearly
-identified set of architectural features that have driven its
-development:
-
-### *Modular*
-
-Geppetto allows separation of functionality into independent,
-interchangeable modules such that each contains everything necessary to
-execute a given aspect of desired functionality.
-
-### *Scalable*
-
-Geppetto can handle a growing amount of work in a robust fashion by
-being intrinsically distributed, scaling up to accomodate growing load.
-
-### *Extensible*
-
-Geppetto allows for future growth by including hooks and mechanisms for
-expanding/enhancing the system with anticipated capabilities, without
-having to make ad-hoc changes to the system infrastructure.
-
-### *Generic*
-
-Geppetto is not tied to any specific biological simulation, nor to the
-model being simulated or the simulation aspects (neuronal, mechanical,
-etc.) being simulated.
-
-### *Client-Server*
-
-Geppetto is based on a client-server model, where the simulation is
-controlled by a client through a web interface.
-
-### *Distributed*
-
-Geppetto architecture needs to allow separation of the execution of a
-simulation into multiple processes which can be executed by different
-server and which communicate with each other by exchanging messages.
-
-### *Dynamic deployment*
-
-Geppetto components can be deployed, re-deployed, and un-deployed
-without a system (server) restart.
 
 Technology stack
 ----------------

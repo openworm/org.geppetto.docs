@@ -57,16 +57,19 @@ The user interface of a Geppetto applications can be easily customized. As a dev
  - *Add yours*
 
 ## What backends does Geppetto support?
- - JAVA
+
+### JAVA
   - [Source Setup on OSX and Linux](./osxlinuxsetup.html)
   - [Source Setup on Windows](./windowssetup.html)
- - Python
+
+### Python (in development)
   - [Django template](https://github.com/MetaCell/geppetto-django-template)
   - [Tornado Flask template](https://github.com/MetaCell/geppetto-tornado-flask-template)
- - Jupyter Notebook
+
+### Jupyter Notebook (in development)
   - [NEURON-UI Example](https://github.com/MetaCell/NEURON-UI)
- - [Node.js](https://github.com/openworm/org.geppetto.frontend.nodejs)
- - *Add yours*
+
+### [Node.js](https://github.com/openworm/org.geppetto.frontend.nodejs) (protoype)
 
 ## What concepts are covered by the Geppetto Model?
  - 3D primitives
@@ -90,7 +93,8 @@ Although we put our best effort to document Geppetto there might be things that 
 ## Standing on the shoulders of giants
 
 Geppetto uses the following third party libraries:
-- Backend
+
+### Backend
  - [Eclipse Virgo](http://www.eclipse.org/virgo/)
  - [EMF](https://www.eclipse.org/modeling/emf/)
  - [EMF2JSON](http://emfjson.org/)
@@ -102,7 +106,7 @@ Geppetto uses the following third party libraries:
 
   For a full list of our Java dependencies see [core pom.xml](https://github.com/openworm/org.geppetto.core/blob/master/pom.xml) and [frontend pom.xml](https://github.com/openworm/org.geppetto.frontend/blob/master/src/main/webapp/package.json).
 
-- Frontend
+###  Frontend
  - [AMI](https://github.com/FNNDSC/ami)
  - [d3.js](https://d3js.org/)
  - [jQuery](https://jquery.com/)

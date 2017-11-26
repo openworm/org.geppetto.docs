@@ -44,7 +44,7 @@ good news: You probably have some of this on your machine already!
     Downloads](http://tomcat.apache.org/index.html), use the
     32-bit/64-bit Windows Service Installer
 -   *Virgo Server for Apache Tomcat*: [ZIP
-    file](http://www.eclipse.org/virgo/download/), unpack it to your
+    file](http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.4.RELEASE/virgo-tomcat-server-3.6.4.RELEASE.zip), unpack it to your
     desired location
 
 Environment Variables

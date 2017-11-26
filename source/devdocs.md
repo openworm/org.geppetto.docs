@@ -133,3 +133,4 @@ Geppetto uses the following third party libraries:
   - [How to customise the Control Panel](./controlpanelcustom.html)
   - [How to configure the Persistence bundle](./persistence.html)
   - [How to create a Geppetto Recording with Python](./recordingandreplaying.html)
+  - [Hot to run our automated UI tests](./casper_tests.md)

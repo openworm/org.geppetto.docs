@@ -17,7 +17,7 @@ npm install -g phantomjs casperjs slimerjs
 To test that Casper is properly installed:
 
 ``` {.sourceCode .javascript}
-casperjs test LiveTests.js --engine=slimerjs 
+casperjs test LiveTests.js --engine=slimerjs
 ```
 
 To run Core projects Tests (Requires NOT having the persistence bundle):
@@ -49,13 +49,13 @@ It may be due to a new version of Firefox not supported by your current Slimer v
 ## Adding New Tests
 New Tests can be added to the Persistence or CoreTests files found [here](https://github.com/openworm/org.geppetto.frontend/blob/development/src/main/webapp/js/pages/tests/casperjs#L1).
 
-The Persistence tests can only be executed with the persistence bundle on, these tests make sure that 
-the functionality persisting projects/experiments works. 
+The Persistence tests can only be executed with the persistence bundle on, these tests make sure that
+the functionality persisting projects/experiments works.
 
-The Core tests don't need the persistence bundle, these tests are for general Geppetto functionality including: 
+The Core tests don't need the persistence bundle, these tests are for general Geppetto functionality including:
 UI performance, widgets, react components, camera controls and default geppetto projects.
 
-New tests must be encapsulated in casper functions like this: 
+New tests must be encapsulated in casper functions like this:
 ``` {.sourceCode .javascript}
 casper.then(function(){
 	//test code
@@ -73,7 +73,7 @@ casper.then(function(){
 	//test code
 });
 ```
-The evaluate function returns a value, which can be used later for testing. 
+The evaluate function returns a value, which can be used later for testing.
 **Example:**
 ``` {.sourceCode .javascript}
 casper.then(function(){
@@ -84,9 +84,9 @@ casper.then(function(){
 	test.assertEquals(visibility,expectedVisibility,"Visibility correct");
 });
 ```
-In here we are testing the visibility of a 3D Mesh inside Geppetto. The call to Geppetto objects and 
+In here we are testing the visibility of a 3D Mesh inside Geppetto. The call to Geppetto objects and
 functions is done inside the evaluate method, which returns a boolean with the visibility of the mesh.
-The return value is then used to test against the expected state. 
+The return value is then used to test against the expected state.
 
 ## documentation
 

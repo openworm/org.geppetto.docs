@@ -4,7 +4,7 @@ Geppetto is a web based platform to build neuroscience applications that let the
 
 A demo application using latest release of Geppetto is available [here](https://live.geppetto.org) while the binaries are available to
 [download here](https://github.com/openworm/org.geppetto/releases/).
-The documentation is split into two main sections: a guide to help you learn how to use Geppetto based applications and the developers documentation, to learn how to build applications based on  Geppetto is and how to contribute to it.
+The documentation is split into two main sections: a guide to help you learn how to use Geppetto based applications and the developers documentation, to learn how to build applications based on Geppetto and how to contribute to it.
 
 [![image](images/usr_btn.png)](./userdocs.html) [![image](images/dev_btn.png)](./devdocs.html)
 
@@ -14,6 +14,24 @@ Contributions
 =============
 
 Geppetto is open source, released under the MIT license.
+
+The following is a list of applications built using Geppetto:
+
+## [Open Source Brain](http://opensourcebrain.org)
+
+[![OSB Video](http://img.youtube.com/vi/implDpQSSWg/0.jpg)](http://www.youtube.com/watch?v=implDpQSSWg)
+
+## [Virtual Fly Brain](http://virtualflybrain.org)
+
+[![VFB Video](http://img.youtube.com/vi/XkbauvReJFA/0.jpg)](http://www.youtube.com/watch?v=XkbauvReJFA)
+
+## [NEURON-UI](https://github.com/MetaCell/NEURON-UI)
+
+[![NEURON Video](http://img.youtube.com/vi/CjoA3lTa25I/0.jpg)](http://www.youtube.com/watch?v=CjoA3lTa25I)
+
+## [WormSim](http://wormsim.org)
+
+[![WormSim Video](http://img.youtube.com/vi/QaCRNX0hdwU/0.jpg)](http://www.youtube.com/watch?v=QaCRNX0hdwU)
 
 Geppetto is currently used and contributed to by the following groups:
 

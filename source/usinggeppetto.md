@@ -48,13 +48,9 @@ with user accounts.
 
 Project
 
-:   A Geppetto project is the container of a geppetto model. For more
-    details about how a geppetto model is defined click here. A project
-    allows you to perform multiple computational experiments on the
-    model associated to the project.
+A Geppetto project contains the project metdata, information about the experiments, information about the state of the workspace and a link to the geppetto model. For more details about how a geppetto model is defined click [here](./geppettomodel.html). A project allows you to perform multiple computational experiments on the model associated to the project.
 
-The bar at the top allows you to filter the list of projects, just type
-in it to search for a specific one. The right pane shows which
+The bar at the top allows you to filter the list of projects, just type in it to search for a specific one. The right pane shows which
 experiments are available in the selected project.
 
 ![image](images/sshots/experimentDashboard.png)
@@ -63,49 +59,39 @@ experiments are available in the selected project.
 
 Experiment
 
-:   A computational experiment in Geppetto lets you specify what value
-    you want to assign to the parameters available in your model and
-    which variables you wish to record when you run a simulation of
-    your model.
+A computational experiment in Geppetto lets you specify what value you want to assign to the parameters available in your model and
+which variables you wish to record when you run a simulation of your model.
 
-    Recorded variables are called **watched variables** while the
-    parameters are called **model parameters**. An experiment also
-    allows you to specify the **simulation parameters** such as
-    timestep, simulation length and which simulator to use in the
-    given experiment. Watched variables and model/simulation parameters
-    can be edited from the Project workspace (explained later in
-    this tutorial).
+Recorded variables are called **watched variables** while the
+parameters are called **model parameters**. An experiment also
+allows you to specify the **simulation parameters** such as
+timestep, simulation length and which simulator to use in the
+given experiment. Watched variables and model/simulation parameters
+can be edited from the Project workspace (explained later in
+this tutorial).
 
 An experiment can be in multiple states indicated by a different colour:
 
-Design (Orange)
+**Design (Orange)**
 
-:   The experiment is in design state and editable, it is possible to
-    selected which variables are going to be watched when the experiment
-    will run and set model/simulation parameters associated with it.
+The experiment is in design state and editable, it is possible to selected which variables are going to be watched when the experiment will run and set model/simulation parameters associated with it.
 
-Queued (Blue)
+**Queued (Blue)**
 
-:   The experiment simulation has been queued and will be executed by
-    the geppetto scheduler as soon as possible (depending on how many
-    experiments are in the queue), from now on the experiment is "read
-    only", you can no longer add variables to the watch list or edit
-    parameter values.
+The experiment simulation has been queued and will be executed by the geppetto scheduler as soon as possible (depending on how many
+experiments are in the queue), from now on the experiment is "read only", you can no longer add variables to the watch list or edit parameter values.
 
-Running (Yellow)
+**Running (Yellow)**
 
-:   The experiment simulation is currently being executed.
+The experiment simulation is currently being executed.
 
-Complete (Green)
+**Complete (Green)**
 
-:   The experiment simulation is completed. It is now possible to replay
-    it and visualize the simulation results. Experiment replay and model
-    visualization are accessible from the Project Workspace view
-    (covered later in this document).
+The experiment simulation is completed. It is now possible to replay it and visualize the simulation results. Experiment replay and model visualization are accessible from the Project Workspace view (covered later in this document).
 
-Error (Red)
+**Error (Red)**
 
-:   An error occurred while executing the experiment simulation.
+An error occurred while executing the experiment simulation.
 
 Project workspace
 -----------------
@@ -167,7 +153,7 @@ networks.
 How to use Geppetto widgets is covered in detail
 here <usingwidgets>.
 
-Lightspeed Search ----------------
+### Lightspeed Search 
 
 Geppetto has a search feature that allows the user to search for
 anything in the scene / simulation and to interact with it. The search

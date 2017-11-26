@@ -2,7 +2,7 @@ User documentation
 ==================
 
 ## [The basics](./usinggeppetto.html)
-## [Geppetto's widgets](./usingwidgets.html)
+## [Geppetto widgets](./usingwidgets.html)
 ## [Recording variables](./recordingVariables.html)
 ## [Setting model parameters](./settingParameters.html)
 ## [Running an experiment](./runningSimulation.html)

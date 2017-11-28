@@ -44,13 +44,18 @@ Geppetto Extensions Examples
 
 You can achieve virtually any look & feel with a Geppeto extension. We provide below some examples of UIs built as Geppetto extensions (extension code also linked if available as open source software):
 
-[**geppetto-default**](https://github.com/openworm/org.geppetto.frontend/tree/master/src/main/webapp/extensions/geppetto-default): the default geppetto extension we know and love, available on [live.geppetto.org](https://live.geppetto.org/). 
+[**geppetto-default**](https://github.com/openworm/org.geppetto.frontend/tree/master/src/main/webapp/extensions/geppetto-default): the default geppetto extension we know and love, available on [live.geppetto.org](https://live.geppetto.org/).
+![Geppetto default extension](images/default.png)
 
 [**geppetto-osb**](https://github.com/OpenSourceBrain/geppetto-osb/tree/development): Geppetto extension for [Open Source Brain](http://www.opensourcebrain.org/), a repository of open source computational neuroscience models that features a Geppetto based 3D viewer of morphologies and simulation environment.
+![Geppetto OSB extension](images/osb.png)
 
 [**geppetto-vfb**](https://github.com/VirtualFlyBrain/geppetto-vfb/tree/development): Geppetto extension for [Virtual Fly Brain](https://v2a.virtualflybrain.org/), a reference for drosopohila neuroanatomy and ontology. 
+![Geppetto VFB extension](images/osb.png)
 
-**geppetto-hm**: Patiet HM, portal and atlas of all patient HM data antirely built as a Geppetto extension. 
+**geppetto-hm**: Patienthm.org, portal and atlas of all [Patient HM](https://en.wikipedia.org/wiki/Henry_Molaison) imaging data entirely built as a Geppetto extension. 
+![Geppetto HM extension - MRI](images/hm1.png)
+![Geppetto HM extension - Big image viewer](images/hm2.png)
 
 Geppetto Build
 ==============

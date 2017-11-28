@@ -51,9 +51,9 @@ You can achieve virtually any look & feel with a Geppeto extension. We provide b
 ![Geppetto OSB extension](images/osb.png)
 
 [**geppetto-vfb**](https://github.com/VirtualFlyBrain/geppetto-vfb/tree/development): Geppetto extension for [Virtual Fly Brain](https://v2a.virtualflybrain.org/), a reference for drosopohila neuroanatomy and ontology. 
-![Geppetto VFB extension](images/osb.png)
+![Geppetto VFB extension](images/vfb.png)
 
-**geppetto-hm**: Patienthm.org, portal and atlas of all [Patient HM](https://en.wikipedia.org/wiki/Henry_Molaison) imaging data entirely built as a Geppetto extension. 
+**geppetto-hm**: [Patienthm.org](http://patienthm.org/), portal and atlas of all [Patient HM](https://en.wikipedia.org/wiki/Henry_Molaison) imaging data entirely built as a Geppetto extension. 
 ![Geppetto HM extension - MRI](images/hm1.png)
 ![Geppetto HM extension - Big image viewer](images/hm2.png)
 

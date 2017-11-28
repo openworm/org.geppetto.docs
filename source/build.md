@@ -34,6 +34,8 @@ Or as another example the code below is injecting a logo component to the elemen
 ```
 In the examples above we are using DOM elements provided by geppetto by default for conveniency - but nothing stops you from adding your own dom elements with jQuery (or vanilla js) from your component initialization file and then adding components wherever you want. If a DOM element is not specified the component will be added in a floating window (also known as a "Geppetto widget").
 
+*NOTE*: Since Geppetto exposes a dependency to [react.js](https://reactjs.org/) (much of its internals use this framework), if you want you can use React to define your custom components or even just to instantiate Geppetto components from a simple react render method. Just require react and react-dom at the top of your ComponentsInitialization.js. 
+
 Once you have created your own extension, you need to tell geppetto to use it instead of using the default one. This is very simple and achieved by editing the [GeppettoConfiguration.json](https://github.com/openworm/org.geppetto.frontend/blob/master/src/main/webapp/GeppettoConfiguration.json) file located in the same webapp folder. 
 
 Assuming your extension repo/folder is named "geppetto-custom-extension" and you js entry point file is called ComponentsInitialization.js and your css is called theme.css, the GeppettoConfiguration.json should look like this:

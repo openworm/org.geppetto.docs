@@ -1,3 +1,57 @@
+What is a Geppetto Extension?
+==============
+
+A Geppetto extension is a folder with some custom client code you can write to completely customise the Geppetto UI. The minimal extension consists of an entry point js file (normally named ComponentsInitialization.js, but it can be renamed to anything) and a css file. 
+
+- **ComponentsInitialization.js**: This js file defines which components will be present in the Geppetto UI and where they are placed. 
+- **CSS**: The css file is meant to provide styles for your Geppetto application. 
+
+The minimal set is the two files described above but there is no limit to how complex an extension can be. For example you can develop any number of components and import them with require from any other js file in your extension. 
+
+You can use any of the Geppetto dependencies inlcuded in the [package.json](https://github.com/openworm/org.geppetto.frontend/blob/master/src/main/webapp/package.json) in Geppetto, or add your own as static dependencies somewhere in your extensions folder. In the future each extension will have its own package.json file (this feature is on the Geppetto development roadmap). 
+
+How Do I create My Own Geppetto Extension?
+==============
+
+Creating your own Geppetto extension is very simple, as simple as creating a folder with a js file and a css file. You might wanna create a github repo to contain your files and then clone the repo in the org.geppetto.frontend/scr/main/webapp/extensions folder. You will notice that in the extensions folder there is already a [default geppetto extension](https://github.com/openworm/org.geppetto.frontend/tree/master/src/main/webapp/extensions/geppetto-default), which defines the default geppetto ui and provides a first example of what you can do from your custom code to add components to the Geppetto ui. 
+
+Now that you have created your own, you need to tell geppetto to use it instead of using the default one. This is very simple and achieved by editing the [GeppettoConfiguration.json](https://github.com/openworm/org.geppetto.frontend/blob/master/src/main/webapp/GeppettoConfiguration.json) file located in the same webapp folder. 
+
+Assuming your extension repo/folder is named "geppetto-custom-extension" and you js entry point file is called ComponentsInitialization.js and your css is called theme.css, the GeppettoConfiguration.json should look like this:
+
+```
+{
+    "_README" : "http://docs.geppetto.org/en/latest/build.html",
+    "contextPath": "org.geppetto.frontend",
+    "useSsl": false,
+    "embedded": false,
+    "embedderURL": ["/"],
+    "noTest": false,
+    "extensions": {
+        "geppetto-default/ComponentsInitialization": false,
+        "geppetto-custom-extension/ComponentsInitialization": true
+    },
+    "themes": {
+        "geppetto-default/colors": false,
+        "geppetto-custom-extension/theme": true
+    }
+}
+```
+All the other parameters in the json will be discussed under the "Geppetto Build" section of this same document. 
+
+Geppetto Extensions Examples
+==============
+
+You can achieve virtually any look & feel with a Geppeto extension. We provide below some examples of UIs built as Geppetto extensions (extension code also linked if available as open source software):
+
+[**geppetto-default**](https://github.com/openworm/org.geppetto.frontend/tree/master/src/main/webapp/extensions/geppetto-default): the default geppetto extension we know and love, available on [live.geppetto.org](https://live.geppetto.org/). 
+
+[**geppetto-osb**](https://github.com/OpenSourceBrain/geppetto-osb/tree/development): Geppetto extension for Open Source Brain, a repository of open source computational neuroscience models.
+
+[**geppetto-vfb**](https://github.com/VirtualFlyBrain/geppetto-vfb/tree/development): Geppetto extension for [Virtual Fly Brain](https://v2a.virtualflybrain.org/), a reference for drosopohila neuroanatomy and ontology. 
+
+**geppetto-hm**: Patiet HM, portal and atlas of all patient HM data antirely built as a Geppetto extension. 
+
 Geppetto Build
 ==============
 

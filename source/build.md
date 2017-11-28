@@ -15,7 +15,24 @@ How Do I create My Own Geppetto Extension?
 
 Creating your own Geppetto extension is very simple, as simple as creating a folder with a js file and a css file. You might wanna create a github repo to contain your files and then clone the repo in the org.geppetto.frontend/scr/main/webapp/extensions folder. You will notice that in the extensions folder there is already a [default geppetto extension](https://github.com/openworm/org.geppetto.frontend/tree/master/src/main/webapp/extensions/geppetto-default), which defines the default geppetto ui and provides a first example of what you can do from your custom code to add components to the Geppetto ui. 
 
-Now that you have created your own, you need to tell geppetto to use it instead of using the default one. This is very simple and achieved by editing the [GeppettoConfiguration.json](https://github.com/openworm/org.geppetto.frontend/blob/master/src/main/webapp/GeppettoConfiguration.json) file located in the same webapp folder. 
+In the ComponentInitialization file for example you can define your own js functions as needed and interact with the Geppetto api to add components that Geppetto makes available. For example the following code adds the 3D canvas component to the background element with id="sim"(conveniently provided by Geppetto as this is a commonly used component):
+```
+    //Canvas initialisation
+    GEPPETTO.ComponentFactory.addComponent('CANVAS', {}, document.getElementById("sim"), function () {
+        this.displayAllInstances();
+    });
+```
+
+Or as another example the code below is injecting a logo component to the element with id=geppettologo (conveniently provided by geppetto to appear in the top right) and then injecting a Link button component that links to the source code on github specifying a position for the element:
+```
+    //Logo initialization
+	GEPPETTO.ComponentFactory.addComponent('LOGO', {logo: 'gpt-gpt_logo'}, document.getElementById("geppettologo"));
+    //Source code link initialization
+	GEPPETTO.ComponentFactory.addComponent('LINKBUTTON', { left: 41, top: 390, icon: 'fa-github', url: 'https://github.com/openworm/org.geppetto'}, document.getElementById("github-logo"));
+```
+In the examples above we are using DOM elements provided by geppetto by default for conveniency - but nothing stops you from adding your own dom elements with jQuery (or vanilla js) fro your component initialization file and then adding components wherever you want. If a DOM element is not specified the component will be added in a floating window (also known as a "Geppetto widget").
+
+Once you have created your own extension, you need to tell geppetto to use it instead of using the default one. This is very simple and achieved by editing the [GeppettoConfiguration.json](https://github.com/openworm/org.geppetto.frontend/blob/master/src/main/webapp/GeppettoConfiguration.json) file located in the same webapp folder. 
 
 Assuming your extension repo/folder is named "geppetto-custom-extension" and you js entry point file is called ComponentsInitialization.js and your css is called theme.css, the GeppettoConfiguration.json should look like this:
 

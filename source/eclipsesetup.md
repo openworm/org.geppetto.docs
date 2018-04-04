@@ -4,11 +4,14 @@ Instructions for setting up Geppetto on Eclipse Neon
 Last Update: June 29th 2017
 
 If you have any problems following this documentation please write on
-the [Gitter chat](https://gitter.im/openworm/org.geppetto)
+the [Gitter chat](https://gitter.im/openworm/org.geppetto).
+
+Another useful page that you might want to check if you any problems
+with the below is the [Tips for developer to configure/deploy Eclipse + Virgo](http://docs.geppetto.org/en/latest/devtips.html).
 
 -   Install Eclipse Neon for J2EE
     -   [Download and install Eclipse
-        Neon](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/neon3).
+        Neon](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/oxygen3).
 -   Install Virgo Server and Geppetto Sources
     -   Now we need to install Virgo and clone the geppetto sources
         locally unless you have done those steps already. If not follow
@@ -18,6 +21,16 @@ the [Gitter chat](https://gitter.im/openworm/org.geppetto)
         Follow the steps until Deploying Geppetto section and make sure
         to use the eclipse flag when you use the update\_server script.
 `./update_server eclipse`
+        If previously you ran the script without the flag "eclipse" it
+        is possible that Virgo won't be started with success from eclipse
+        due to the JARs and WARs archives already present, when they
+        should be uploaded upon deployment by Eclipse.
+        To avoid this you can follow the steps below:
+        -   Wipe all the content in $SERVER_HOME/repository/usr/*
+        -   Remove the folder $SERVER_HOME/work
+        -   Remove the file $SERVER_HOME/pickup/geppetto.plan
+        -   Run again the script update_server with the flag eclipse
+            (e.g. ./update_server.py eclipse).
     -   Now we need to import all the bundles that were cloned into
         Eclipse, to do so click on File->Import-> “Import Existing
         project into workspace” and follow the instructions.

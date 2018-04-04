@@ -78,6 +78,35 @@ You can achieve virtually any look & feel with a Geppeto extension. We provide b
 ![Geppetto HM extension - MRI](images/hm1.png)
 ![Geppetto HM extension - Big image viewer](images/hm2.png)
 
+How to deploy a Geppetto extension in my Eclipse environment
+==============
+
+In this section we will show you how to deploy a custom extension, [OpenSourceBrain](http://www.opensourcebrain.org/) (shortened with OSB), to your local Geppetto environment.
+The below assumes that you are done with the steps below and you already have your Geppetto and Eclipse environment configured locally:
+-   [Source Setup on OSX and Linux](http://docs.geppetto.org/en/latest/osxlinuxsetup.html) or [Source Setup on Windows](http://docs.geppetto.org/en/latest/windowssetup.html)
+-   [Instructions for setting up Geppetto on Eclipse Neon](http://docs.geppetto.org/en/latest/eclipsesetup.html)
+
+First of all, starting from our home folder we begin cloning the OSB extension repository into the Geppetto Frontend's extension folder, located in the geppetto-sources folder.
+```
+cd geppetto-sources
+cd org.geppetto.frontend/src/main/webapp/extensions/
+git clone https://github.com/OpenSourceBrain/geppetto-osb
+```
+
+The next step will be to edit with our favourite editor or Eclipse the GeppettoConfiguration.json (path below) in order to disable the default extension and to enable the osb extension.
+`
+org.geppetto.frontend/src/main/webapp/GeppettoConfiguration.json
+`
+Here you have a screenshoot of the file pre-change
+![OSB extension pre change](images/osb_extension/osb-ext1.png)
+and post-change.
+![OSB extension post change](images/osb_extension/osb-ext2.png)
+
+Once done, we can move back to Eclipse, we will need to update our org.geppetto.frontend project to take into account the changes done.
+We can start with right click on the bundle org.geppetto.frontend->Maven->Update Project.
+Then, again right click on org.geppetto.frontend->Run As->Maven Install so that it will re-build our bundle and npm automatically will deploy again the frontend to the Virgo server's folder so that we can use the new extension.
+Once the server finish to start all the bundles, we can open with our browser the [geppetto frontend homepage](http://localhost:8080/org.geppetto.frontend/) and load, for example, the [CA1 Pyramidal Cell experiment](http://localhost:8080/org.geppetto.frontend/geppetto?load_project_from_id=3) and see our extension loaded working.
+
 Geppetto Build
 ==============
 

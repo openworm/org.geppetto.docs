@@ -71,6 +71,9 @@ The user interface of a Geppetto applications can be easily customized. As a dev
 
 ### [Node.js](https://github.com/openworm/org.geppetto.frontend.nodejs) (protoype)
 
+## Do you provide additional documentation for the backend?
+The javadocs documentation is available [here](./javadoc/index.html).
+
 ## What concepts are captured by the Geppetto Model abstraction?
  - 3D primitives
  - Compound types (containers of other types)
@@ -138,3 +141,4 @@ Geppetto uses the following third party libraries:
   - [How to configure the Persistence bundle](./persistence.html)
   - [How to create a Geppetto Recording with Python](./recordingandreplaying.html)
   - [Hot to run our automated UI tests](./casper_tests.html)
+  - [Javadocs Backend documentation](./javadoc/index.html)

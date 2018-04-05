@@ -41,13 +41,6 @@ org.geppetto.model.neuroml.utils
 org.geppetto.model.neuroml.visualUtils
 org.geppetto.model.nwb
 org.geppetto.model.nwb.test
-org.geppetto.model.sph
-org.geppetto.model.sph.common
-org.geppetto.model.sph.features
-org.geppetto.model.sph.services
-org.geppetto.model.sph.test
-org.geppetto.model.sph.utils
-org.geppetto.model.sph.x
 org.geppetto.model.swc
 org.geppetto.model.swc.format
 org.geppetto.model.swc.test
@@ -75,11 +68,4 @@ org.geppetto.simulation.visitor
 org.geppetto.simulator.external
 org.geppetto.simulator.external.services
 org.geppetto.simulator.external.tests
-org.geppetto.simulator.jlems
-org.geppetto.simulator.jlems.test
 org.geppetto.simulator.remote.services
-org.geppetto.simulator.sph
-org.geppetto.solver.sph
-org.geppetto.solver.sph.internal
-org.geppetto.testbackend
-org.geppetto.testbackend.test.neuroml

@@ -72,7 +72,7 @@ The user interface of a Geppetto applications can be easily customized. As a dev
 ### [Node.js](https://github.com/openworm/org.geppetto.frontend.nodejs) (protoype)
 
 ## Do you provide additional documentation for the backend?
-The javadocs documentation is available [here](./javadoc/index.html).
+The javadocs documentation is available [here](./_static/javadoc/index.html).
 
 ## What concepts are captured by the Geppetto Model abstraction?
  - 3D primitives

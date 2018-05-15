@@ -141,4 +141,4 @@ Geppetto uses the following third party libraries:
   - [How to configure the Persistence bundle](./persistence.html)
   - [How to create a Geppetto Recording with Python](./recordingandreplaying.html)
   - [Hot to run our automated UI tests](./casper_tests.html)
-  - [Javadocs Backend documentation](./javadoc/index.html)
+  - [Javadocs Backend documentation](./_static/javadoc/index.html)

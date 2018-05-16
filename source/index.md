@@ -8,7 +8,7 @@ The documentation is split into two main sections: a guide to help you learn how
 
 [![image](images/usr_btn.png)](./userdocs.html) [![image](images/dev_btn.png)](./devdocs.html)
 
-If you have any problems you can write in the Slack Geppetto Channel (email to info@geppetto.org to get an invitation), we'll be happy to help you!
+If you have any problems you can write in the Slack Geppetto Channel (email info@geppetto.org to get an invitation), we'll be happy to help you!
 
 Contributions
 =============

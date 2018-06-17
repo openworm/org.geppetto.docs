@@ -4,6 +4,8 @@ Developers documentation
 This guide will show you how to build a Geppetto based application and how to contribute to Geppetto.
 
 ## Why should I use Geppetto?
+**To put it in one sentence you should use Geppetto to save yourself up to five years of development and skip to building only the code specific to your neuroscience application.**
+
 Web applications to visualize neuroscience data and/or simulate computational models come with an intrinsic complexity. Neuroscience data is available in a wide range of formats, whether it represents an MRI, a set of large electromicroscopy images, reconstructed neuron morphologies, a set of electrophysiology traces or a time-varying computational model.
 
 Usually, applications are required to load these different types of data from different repositories. Organizing the data before it can be presented on a unified client is a challenge. Sometimes the data can be accessed from a database, and the application that you are building might be required to perform queries to fetch and lazy load what the user is interested in. If you are working with multimodal data that you need to integrate, then you need to organize the data in a structured, often hierarchical way. You might need to search and query the data from your web application.
@@ -12,11 +14,9 @@ If you are dealing with computational models, then you might want to be able to 
 
 As you are building your frontend application, you might want to build a control to search your data, a control panel to manage every entity that was loaded, and multiple viewers. You might want to have a way to write tests, that can automatically test the backend and the UI of your application, and have them running with every commit.
 
-All of the above comes for free in Geppetto. It's a lot of code, and it took us years to engineer, implement and test. Since it is designed to be agnostic to the specific application you have to build, you can rely on Geppetto's robust infrastructure and instead focus on building the workflows that are specific to your application. You can fully customise the UI to satisfy your needs. You can reuse all the components we have already built and combine them in any way you want. And you can leverage the Geppetto Model to structure your data so that it becomes automatically indexed and programmatically accessible from Javascript.
+**All of the above comes for free in Geppetto.** It's a lot of code, and it took us years to engineer, implement and test. Since it is designed to be agnostic to the specific application you have to build, you can rely on Geppetto's robust infrastructure and instead focus on building the workflows that are specific to your application. You can fully customise the UI to satisfy your needs. You can reuse all the components we have already built and combine them in any way you want. And you can leverage the Geppetto Model to structure your data so that it becomes automatically indexed and programmatically accessible from Javascript.
 
 If you need a persistence layer and user authentication in your application Geppetto offers a persistence bundle that can regulate user authentication and persist user projects using a MySQL database (for more see: [How to configure the Persistence bundle](./persistence.html))
-
-**To put it in one sentence you should use Geppetto to save yourself up to five years of development and skip to building only the code specific to your neuroscience application.**
 
 ## What formats does Geppetto support?
  - [BigTIFF](https://www.awaresystems.be/imaging/tiff/bigtiff.html)

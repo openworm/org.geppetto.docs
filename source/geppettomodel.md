@@ -152,17 +152,16 @@ how that type can visualised in the 3D environment) and an optional
 DomainModel (to specify what domain is declaring that particular type).
 
 The Geppetto Meta-model defines a set of types to represent dynamic
-systems. These types can be used by every developer that wish to extend
+systems. These types can be used by every developer that wishes to extend
 Geppetto to add support for a particular modeling specification.
 
-A Quantity defines the result of a measure. When we associate a Unit to
-a Quantity we obtain a PhysicalQuantity. StateVariableType and
+StateVariableType and
 ParameterType define respectively a state variable and a parameter of a
 system. Dynamics describes the dynamics of the system specifying a
 Function and a PhysicalQuantity as initalCondition. A Function is
 defined as an Expression and a list of Arguments.
 
-An ArrayType defines a type that when instantiated will result A
+An ArrayType defines a type that when instantiated will result in multiple instances of the type of the array to be created. After instantiation each element of the array can be accessed through an index. The type of the Array can be any Geppetto Type. A
 VisualType is an abstract EClass that defines a particular kind of type
 that can be visualised in the 3D environment. A VisualType only allows
 for a VisualValue to be associated to it (e.g. a Cylinder, a Sphere, an
@@ -175,6 +174,8 @@ associated to variables and types.
 
 ![image](images/model/values.png)
 
+A Quantity defines the result of a measure. When we associate a Unit to
+a Quantity we obtain a PhysicalQuantity.
 A special mention to CompositeValue that defines a structure value that
 can be assigned to a variable of type CompositeType. VisualValues can be
 assigned to variables of type VisualType. ArrayValues can be assigned to

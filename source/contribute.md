@@ -89,7 +89,7 @@ Geppetto contribution guidelines
     GitHub web interface.
 -   Format whitespace consistently with the rest of code base (For
     Eclipse users you can use
-    [this](https://github.com/openworm/OpenWorm/blob/master/eclipse/GeppettoFormatter.xml)
+    [this](https://github.com/openworm/org.geppetto/blob/master/eclipse/GeppettoFormatter.xml)
     format template).
 -   If you create new files add
     [License](https://github.com/openworm/org.geppetto/blob/master/LICENSE)

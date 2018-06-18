@@ -140,18 +140,18 @@ button that will bring the model back to the initial centered position.
 ### Using widgets
 
 Model metadata can be visualized with various
-Geppetto widgets <usingwidgets>. The
-tree widget <treevisualizerW> is particularly useful to visualize
+Geppetto [widgets](./usingwidgets.html). The
+[tree widget](./treevisualizerW.html) is particularly useful to visualize
 Geppetto entity hierarchies.
 
 ![image](images/connectivity/overview.png)
 
-In addition, a connectivity widget <connectivityW> (shown above)
+In addition, a [connectivity widget](./connectivityW.html) (shown above)
 is particularly well suited to explorations regarding model neuronal
 networks.
 
 How to use Geppetto widgets is covered in detail
-here <usingwidgets>.
+[here](./usingwidgets.html).
 
 ### Lightspeed Search 
 
@@ -246,4 +246,4 @@ entirely transparent to the user. A common way to visualize simulation
 results are plot widgets, tree widgets and value widgets, so the user
 will typically add the desired widgets to the Geppetto frontend and set
 the desired "data sources" before hitting "play". More on widgets and
-how to instantiate them here <usingwidgets>.
+how to instantiate them [here](./usingwidgets.html).

@@ -52,7 +52,7 @@ API method, and they can be associated with flows that will trigger
 them.
 
 Custom actions and icons can be associated to suggestions as shown in
-the example below (this suggestions will shop up in the list of
+the example below (these suggestions will show up in the list of
 suggestions when the user triggers the play flow by clicking the play
 button or using equivalent API commands):
 

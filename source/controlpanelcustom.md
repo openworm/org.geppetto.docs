@@ -55,7 +55,7 @@ var customColumnMeta = [
 GEPPETTO.ControlPanel.setColumnMeta(customColumnMeta);
 ```
 
-The non-self explanatory fields are explained below:
+The non-self-explanatory fields are explained below:
 
 -   customComponent: for data that is not simple text, custom components
     can be used among those available (list below)
@@ -180,7 +180,7 @@ Refreshing the control panel
 ----------------------------
 
 All the API methods that change the state of the control panel cause the
-control panel to re-render so it not not necessary to trigger manual
+control panel to re-render so it not necessary to trigger manual
 refresh when interacting with the control panel via the API.
 
 However if something has changed in the state of the instances and the

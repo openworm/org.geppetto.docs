@@ -99,7 +99,7 @@ available through the Geppetto Model, we gave it radius 10, and we placed
 it at the origin of our scene. We have then assigned this sphere as the
 initial value of our variable soma. What we created next is
 "morphology", a CompositeVisualType to which we have added the soma we
-just created. The last line assigns this morpholoy to the cell we
+just created. The last line assigns this morphology to the cell we
 created. What would we see if we were to feed this type to the frontend?
 
 ![image](images/model/sphere.png)
@@ -108,7 +108,7 @@ That looks good! However you might be wondering, "Why are we seeing
 anything on screen at all? We just created a cellType; nobody
 instantiated anything. You said this was going to be like any other
 programming language!" Which is all correct: you need to instantiate a
-type if you want it to come into existance, and that is what we did.
+type if you want it to come into existence, and that is what we did.
 We just haven't shown you yet. Here is how you do it:
 
 ``` {.sourceCode .java}
@@ -169,7 +169,7 @@ OBJ, etc.).
 
 **Values**
 
-This package contains the defintion of all the values that can be
+This package contains the definition of all the values that can be
 associated to variables and types.
 
 ![image](images/model/values.png)

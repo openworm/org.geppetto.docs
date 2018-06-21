@@ -16,7 +16,7 @@ Geppetto from sources.
 Psst: If you get stuck at any point, drop us a line at the
 [OpenWorm-discuss mailing
 list](https://groups.google.com/forum/#!forum/openworm-discuss) or the
-contact formular on the [Geppetto website](http://www.geppetto.org/).
+contact form on the [Geppetto website](http://www.geppetto.org/).
 You can also send us screenshots and log files!
 
 Prerequisite software
@@ -78,7 +78,7 @@ Geppetto to run several programs from the command prompt. You may see
 that the PATH variable exists twice: Once as a user variable, once as a
 system variable. Use the one where the variables above belong to (and if
 it doesn't exist, create it). Select it and click on edit. Append the
-following strings to the value field, seperated by semicolons:
+following strings to the value field, separated by semicolons:
 
 -   %JAVA\_HOME%
 -   %JAVA\_HOME%\\bin
@@ -177,7 +177,7 @@ You should now see Geppetto starting up. Good job!
 Not quite there yet? Get in touch with us, we are there to help you! You
 can use the [OpenWorm-discuss mailing
 list](https://groups.google.com/forum/#!forum/openworm-discuss) or the
-contact formular on the [Geppetto website](http://www.geppetto.org/).
+contact form on the [Geppetto website](http://www.geppetto.org/).
 
 Using gitall.py
 ---------------

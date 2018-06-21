@@ -31,7 +31,7 @@ something like this: :
        /controllers
        /vendor
 
-The widget will use a combination of Javascript and CSS files,
+The widget will use a combination of JavaScript and CSS files,
 consisting of a main class, configuration script, controller class and a
 styling CSS file. Below is a brief explanation of the purpose of each of
 these files.
@@ -60,9 +60,9 @@ Recommended files needed for creating a widget:
 
 External libraries and existing plugins can be used as part of your
 widget. Your newly-created widget class should be the one communicating
-and using the external librarie's plugins. For example, if wanted to
+and using the external libraries' plugins. For example, if you wanted to
 create a widget to chart things in Geppetto, and you know of a
-javascript library that does charting, you can use that library as a
+JavaScript library that does charting, you can use that library as a
 dependency for your widget and build on top of it rather than having to
 write charting from scratch.
 
@@ -158,7 +158,7 @@ structure of the widget should look like this: :
 
 The folder named “chart” holds the main widget file “Chart.js” and the
 related CSS file. The “controllers” folder contains the class binding
-Geppetto with the widgets. Tthe “vendor” folder contains the external
+Geppetto with the widgets. The “vendor” folder contains the external
 libraries used to create this widget.
 
 Adding Widget to Geppetto

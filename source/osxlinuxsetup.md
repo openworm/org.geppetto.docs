@@ -263,7 +263,7 @@ You should now see Geppetto starting up. Good job!
 Not quite there yet? Get in touch with us, we are there to help you! You
 can use the [OpenWorm-discuss mailing
 list](https://groups.google.com/forum/#!forum/openworm-discuss) or the
-contact formular on the [Geppetto website](http://www.geppetto.org/).
+contact form on the [Geppetto website](http://www.geppetto.org/).
 
 Using gitall.py
 ---------------

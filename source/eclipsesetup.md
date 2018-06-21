@@ -3,8 +3,10 @@ Instructions for setting up Geppetto on Eclipse Neon
 
 Last Update: June 29th 2017
 
-If you have any problems following this documentation please write on
-the [Gitter chat](https://gitter.im/openworm/org.geppetto).
+If you have any problems following this documentation, please drop us a line at
+[info@geppetto.org](mailto:info@geppetto.org) to receive an invitation to our
+Slack channel, where we can assist you. You can also just send us a quick
+question this way.
 
 Another useful page that you might want to check if you any problems
 with the below is the [Tips for developer to configure/deploy Eclipse + Virgo](http://docs.geppetto.org/en/latest/devtips.html).

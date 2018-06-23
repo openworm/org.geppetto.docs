@@ -13,10 +13,9 @@ download it from
 `/bin/startup.bat`. The following instructions are if you want to setup
 Geppetto from sources.
 
-Psst: If you get stuck at any point, drop us a line at the
-[OpenWorm-discuss mailing
-list](https://groups.google.com/forum/#!forum/openworm-discuss) or the
-contact form on the [Geppetto website](http://www.geppetto.org/).
+Psst: If you get stuck at any point, you can join our Slack channel and we
+will assist you. Send an email to [info@geppetto.org](mailto:info@geppetto.org)
+for an invite or if you just have a quick question.
 You can also send us screenshots and log files!
 
 Prerequisite software
@@ -174,10 +173,9 @@ to:
 
 You should now see Geppetto starting up. Good job!
 
-Not quite there yet? Get in touch with us, we are there to help you! You
-can use the [OpenWorm-discuss mailing
-list](https://groups.google.com/forum/#!forum/openworm-discuss) or the
-contact form on the [Geppetto website](http://www.geppetto.org/).
+Not quite there yet? Get in touch with us, we are there to help you!
+Send an email to [info@geppetto.org](mailto:info@geppetto.org) for an
+invitation to our Slack channel or if you just have a quick question.
 
 Using gitall.py
 ---------------

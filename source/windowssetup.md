@@ -163,7 +163,7 @@ The Virgo server is started and stopped via batch scripts. Simply go to
 and run the *startup.bat* or *shutdown.bat* file.
 
 For more info on Virgo's control scripts, see
-[here](http://eclipse.org/virgo/documentation/virgo-documentation-2.1.1.RELEASE/docs/virgo-user-guide/htmlsingle/virgo-user-guide.html).
+[here](https://www.eclipse.org/virgo/documentation/virgo-documentation-3.6.4.RELEASE/docs/virgo-user-guide/htmlsingle/virgo-user-guide.html).
 
 With that you are basically done! So, fire up the *startup.bat* file,
 wait until its output stops, cross your fingers and point your browser

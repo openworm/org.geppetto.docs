@@ -239,7 +239,7 @@ Or shutdown using the command:
     virgo shutdown.sh
 
 For more info on Virgo's control scripts, see
-[here](http://eclipse.org/virgo/documentation/virgo-documentation-2.1.1.RELEASE/docs/virgo-user-guide/htmlsingle/virgo-user-guide.html).
+[here](https://www.eclipse.org/virgo/documentation/virgo-documentation-3.6.4.RELEASE/docs/virgo-user-guide/htmlsingle/virgo-user-guide.html).
 
 Note that when you are running on Linux, there may be other services
 that are using Port 8080.

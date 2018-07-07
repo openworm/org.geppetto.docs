@@ -55,7 +55,7 @@ This should also work for alternative distributions, by substituting
 *yum* for Fedora and so forth.
 
 -   *homebrew* (see
-    \`here:<https://www.digitalocean.com/community/tutorials/how-to-install-and-use-linuxbrew-on-a-linux-vps>"
+    [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-linuxbrew-on-a-linux-vps))
 -   *Maven*: `sudo apt-get install maven`
 -   *git*: `sudo apt-get install git`
 -   *pip*: `sudo apt-get install python-pip`

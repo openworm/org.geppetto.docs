@@ -33,9 +33,9 @@ good news: You probably have some of this on your machine already!
     [Installer](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip)
 -   *Maven*: [ZIP file](http://maven.apache.org/download.cgi), please
     follow [these
-    instructions](http://maven.apache.org/download.cgi#Installation) -
-    particularly, you have to set the M2 environment variable
-    accordingly (What are environment variables? See below)
+    instructions](https://maven.apache.org/install.html) -
+    particularly, you have to add the bin folder to your PATH environment
+    variable (What are environment variables? See below)
 -   *git*: [Installer](http://git-scm.com/download/win), make sure to
     select "Use Git from the Windows Command Prompt" during the
     installation

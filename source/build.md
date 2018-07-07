@@ -194,7 +194,7 @@ extension and theme:
 Maven Profiles
 ==============
 
-Geppetto is built using Maven, with the "mvn install" command. Maven
+Geppetto is built using Maven, with the "mvn -Dhttps.protocols=TLSv1.2 install" command. Maven
 allows for different build steps to be specified for different
 environments, and Geppetto provides a development and a production
 profile (see below for how to trigger different builds). Builds can be
@@ -206,16 +206,16 @@ bundles from the specific bundle root that needs to be built.
 Building for development
 ========================
 
-`mvn install`
+`mvn -Dhttps.protocols=TLSv1.2 install`
 
-When the command "mvn install" is executed, none of the optimisation
+When the command "mvn -Dhttps.protocols=TLSv1.2 install" is executed, none of the optimisation
 tasks are run. When doing development, it is not necessary to run the
 production build unless you wish to simulate a production environment.
 
 Building for production
 =======================
 
-`mvn install -P master`
+`mvn -Dhttps.protocols=TLSv1.2 install -P master`
 
 Some optimisation tasks are applied to the org.geppetto.frontend bundle
 to optimise performance and security. To see the difference between
@@ -226,6 +226,6 @@ Overriding Geppetto Parameters with mvn
 =======================================
 
 Geppetto configuration settings can be overwritten by passing the
-parameters to the "mvn install" command. An example follows:
+parameters to the "mvn -Dhttps.protocols=TLSv1.2 install" command. An example follows:
 
-`mvn install "-DcontextPath=theearth" "-DuseSsl=true" "-Dembedded=true" "-DembedderURL=universe,milkyway"`
+`mvn -Dhttps.protocols=TLSv1.2 install "-DcontextPath=theearth" "-DuseSsl=true" "-Dembedded=true" "-DembedderURL=universe,milkyway"`

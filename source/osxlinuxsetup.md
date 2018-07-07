@@ -180,7 +180,7 @@ utilities/source\_setup:
 
 Once there, run:
 
-    mvn install
+    mvn -Dhttps.protocols=TLSv1.2 install
 
 This will build all of the Geppetto modules at once. As you do
 development, you probably don't want to re-build all modules if you only
@@ -189,7 +189,7 @@ and then re-deploy. To build an individual module, just run the install
 command from its directory. To prevent problems caused by old build files, you
 may want to clean before reinstalling by:
 
-    mvn clean install
+    mvn -Dhttps.protocols=TLSv1.2 clean install
 
 Deploying Geppetto
 ------------------

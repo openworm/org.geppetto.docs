@@ -25,7 +25,7 @@ You need a bunch of other software to setup Geppetto from sources. The
 good news: You probably have some of this on your machine already!
 
 -   *Java SE Development Kit 7*:
-    [Installer](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+    [Installer](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html), you will need to make an oracle.com account in order to download
 -   *Python 2.7*: [Installer](https://www.python.org/download/)
 -   *setuptools* for Python 2.7:
     [Installer](http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools)

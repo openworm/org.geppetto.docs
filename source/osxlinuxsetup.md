@@ -247,7 +247,7 @@ that are using Port 8080.
 
 Use:
 
-    netstat -plten | grep java
+    netstat -plten | grep 8080
 
 to find the process number on port 8080.
 

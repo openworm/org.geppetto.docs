@@ -95,13 +95,13 @@ and Java 8 and have a conditional statement to switch between the two.
     export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
     setjdk() 
         {export JAVA_HOME="$(/usr/libexec/java_home -v $1)"}
-    export SERVER_HOME="\$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
+    export SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
 
 When you close your terminal, it is possible that bashrc may reset
 SERVER\_HOME. In order to reset SERVER\_HOME, issue the following
 command from the terminal.
 
-    SERVER\_HOME="\$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
+    SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
 
 Mac OS X Variables
 ------------------

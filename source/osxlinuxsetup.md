@@ -81,13 +81,13 @@ You can do this for example in .bashrc with:
 
     export MVN_HOME="$(brew --prefix maven)/libexec"
     export JAVA_HOME="$(/usr/libexec/java_home)"
-    export SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server-3.6.xx.RELEASE)"
+    export SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server-3.6.xx.RELEASE"
 
 Maven needs to build with Java 7. If you want to point your JAVA\_HOME
 variable to a different version, create a file *.mavenrc* in your home
 directory that contains:
 
-    export JAVA_HOME="$(/path/to/java7)"
+    export JAVA_HOME="/path/to/java7"
 
 Note that if you are using Java 8, you may want to install both Java 7
 and Java 8 and have a conditional statement to switch between the two.
@@ -95,13 +95,13 @@ and Java 8 and have a conditional statement to switch between the two.
     export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
     setjdk() 
         {export JAVA_HOME="$(/usr/libexec/java_home -v $1)"}
-    export SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
+    export SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE"
 
 When you close your terminal, it is possible that bashrc may reset
 SERVER\_HOME. In order to reset SERVER\_HOME, issue the following
 command from the terminal.
 
-    SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
+    SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE"
 
 Mac OS X Variables
 ------------------

@@ -76,12 +76,12 @@ Getting started with database
 The biggest issue with all this is related to DataNucleus. There is an
 "enhance" goal in the persistence pom.xml that, when running, it
 enhances the model classes for being supported by DataNucleus. However,
-sometimes mvn clean install, Maven Update are not sufficient. A
+sometimes `mvn -Dhttps.protocols=TLSv1.2 clean install`, Maven Update are not sufficient. A
 right-click on the Virgo Runtime server, followed by "Clean..." usually
 fixes the issue with the classes.
 
 It turns out that not even "Clean..." helps, so the remaining approach
-is to stop the server, run mvn clean install on the persistence bundle,
+is to stop the server, run `mvn -Dhttps.protocols=TLSv1.2 clean install` on the persistence bundle,
 overwrite the stage/org.geppetoo.persistence.jar/org in Virgo with the
 org directory in org.geppetto.persistence/target/classes and try again.
 

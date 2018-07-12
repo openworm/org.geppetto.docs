@@ -55,7 +55,7 @@ This should also work for alternative distributions, by substituting
 *yum* for Fedora and so forth.
 
 -   *homebrew* (see
-    \`here:<https://www.digitalocean.com/community/tutorials/how-to-install-and-use-linuxbrew-on-a-linux-vps>"
+    [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-linuxbrew-on-a-linux-vps))
 -   *Maven*: `sudo apt-get install maven`
 -   *git*: `sudo apt-get install git`
 -   *pip*: `sudo apt-get install python-pip`
@@ -81,13 +81,13 @@ You can do this for example in .bashrc with:
 
     export MVN_HOME="$(brew --prefix maven)/libexec"
     export JAVA_HOME="$(/usr/libexec/java_home)"
-    export SERVER_HOME="$(/usr/local/Cellar/virgo/virgo-tomcat-server-3.6.xx.RELEASE)"
+    export SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server-3.6.xx.RELEASE"
 
 Maven needs to build with Java 7. If you want to point your JAVA\_HOME
 variable to a different version, create a file *.mavenrc* in your home
 directory that contains:
 
-    export JAVA_HOME="$(/path/to/java7)"
+    export JAVA_HOME="/path/to/java7"
 
 Note that if you are using Java 8, you may want to install both Java 7
 and Java 8 and have a conditional statement to switch between the two.
@@ -95,13 +95,13 @@ and Java 8 and have a conditional statement to switch between the two.
     export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
     setjdk() 
         {export JAVA_HOME="$(/usr/libexec/java_home -v $1)"}
-    export SERVER_HOME="\$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
+    export SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE"
 
 When you close your terminal, it is possible that bashrc may reset
 SERVER\_HOME. In order to reset SERVER\_HOME, issue the following
 command from the terminal.
 
-    SERVER\_HOME="\$(/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE)"
+    SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE"
 
 Mac OS X Variables
 ------------------
@@ -180,15 +180,16 @@ utilities/source\_setup:
 
 Once there, run:
 
-    mvn install
+    mvn -Dhttps.protocols=TLSv1.2 install
 
 This will build all of the Geppetto modules at once. As you do
 development, you probably don't want to re-build all modules if you only
 worked on a few. In this case, you can build the modules individually
-and then re-deploy. To prevent problems caused by old build files, you
+and then re-deploy. To build an individual module, just run the install
+command from its directory. To prevent problems caused by old build files, you
 may want to clean before reinstalling by:
 
-    mvn clean install
+    mvn -Dhttps.protocols=TLSv1.2 clean install
 
 Deploying Geppetto
 ------------------
@@ -239,14 +240,14 @@ Or shutdown using the command:
     virgo shutdown.sh
 
 For more info on Virgo's control scripts, see
-[here](http://eclipse.org/virgo/documentation/virgo-documentation-2.1.1.RELEASE/docs/virgo-user-guide/htmlsingle/virgo-user-guide.html).
+[here](https://www.eclipse.org/virgo/documentation/virgo-documentation-3.6.4.RELEASE/docs/virgo-user-guide/htmlsingle/virgo-user-guide.html).
 
 Note that when you are running on Linux, there may be other services
 that are using Port 8080.
 
 Use:
 
-    netstat -plten | grep java
+    netstat -plten | grep 8080
 
 to find the process number on port 8080.
 

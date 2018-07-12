@@ -25,7 +25,7 @@ You need a bunch of other software to setup Geppetto from sources. The
 good news: You probably have some of this on your machine already!
 
 -   *Java SE Development Kit 7*:
-    [Installer](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+    [Installer](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html), you will need to make an oracle.com account in order to download
 -   *Python 2.7*: [Installer](https://www.python.org/download/)
 -   *setuptools* for Python 2.7:
     [Installer](http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools)
@@ -33,9 +33,9 @@ good news: You probably have some of this on your machine already!
     [Installer](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pip)
 -   *Maven*: [ZIP file](http://maven.apache.org/download.cgi), please
     follow [these
-    instructions](http://maven.apache.org/download.cgi#Installation) -
-    particularly, you have to set the M2 environment variable
-    accordingly (What are environment variables? See below)
+    instructions](https://maven.apache.org/install.html) -
+    particularly, you have to add the bin folder to your PATH environment
+    variable (What are environment variables? See below)
 -   *git*: [Installer](http://git-scm.com/download/win), make sure to
     select "Use Git from the Windows Command Prompt" during the
     installation
@@ -129,15 +129,16 @@ directory. You can do this simply by entering twice:
 
 Once there, run:
 
-    mvn install
+    mvn -Dhttps.protocols=TLSv1.2 install
 
 This will build all of the Geppetto modules at once. As you do
 development, you probably don't want to re-build all modules if you only
 worked on a few ones. In this case, you can build the modules
-individually and then re-deploy. To prevent problems caused by old build
+individually and then re-deploy. To build an individual module, just run
+the install command from its directory. To prevent problems caused by old build
 files, you may want to clean before reinstalling by:
 
-    mvn clean install
+    mvn -Dhttps.protocols=TLSv1.2 clean install
 
 Deploying Geppetto
 ------------------
@@ -163,7 +164,7 @@ The Virgo server is started and stopped via batch scripts. Simply go to
 and run the *startup.bat* or *shutdown.bat* file.
 
 For more info on Virgo's control scripts, see
-[here](http://eclipse.org/virgo/documentation/virgo-documentation-2.1.1.RELEASE/docs/virgo-user-guide/htmlsingle/virgo-user-guide.html).
+[here](https://www.eclipse.org/virgo/documentation/virgo-documentation-3.6.4.RELEASE/docs/virgo-user-guide/htmlsingle/virgo-user-guide.html).
 
 With that you are basically done! So, fire up the *startup.bat* file,
 wait until its output stops, cross your fingers and point your browser

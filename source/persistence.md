@@ -99,6 +99,8 @@ Setting up for Amazon S3 support
     >
     > secretKey=the GeppettoDBAdmin secret key
 
+-   Set the S3 bucket name in `org.geppetto.core/src/main/resources/Geppetto.properties`
+
 -   The APIs for handling S3 persistence operations are located in the
-    S3Manager class in the org.geppetto.persistence bundle
+    S3Manager class in the org.geppetto.core bundle
 

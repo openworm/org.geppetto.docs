@@ -1,7 +1,7 @@
 Instructions for setting up Geppetto on Eclipse Neon
 ====================================================
 
-Last Update: June 29th 2017
+Last Update: November 29th 2018
 
 If you have any problems following this documentation, please drop us a line at
 [info@geppetto.org](mailto:info@geppetto.org) to receive an invitation to our
@@ -11,9 +11,9 @@ question this way.
 Another useful page that you might want to check if you any problems
 with the below is the [Tips for developer to configure/deploy Eclipse + Virgo](http://docs.geppetto.org/en/latest/devtips.html).
 
--   Install Eclipse Neon for J2EE
+-   Install Eclipse Oxygen for J2EE
     -   [Download and install Eclipse
-        Neon](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/oxygen3).
+        Oxygen](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/oxygen3).
 -   Install Virgo Server and Geppetto Sources
     -   Now we need to install Virgo and clone the geppetto sources
         locally unless you have done those steps already. If not follow

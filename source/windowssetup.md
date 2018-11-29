@@ -24,8 +24,8 @@ Prerequisite software
 You need a bunch of other software to setup Geppetto from sources. The
 good news: You probably have some of this on your machine already!
 
--   *Java SE Development Kit 7*:
-    [Installer](http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase7-521261.html), you will need to make an oracle.com account in order to download
+-   *Java SE Development Kit 8*:
+    [Installer](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html), you will need to make an oracle.com account in order to download
 -   *Python 2.7*: [Installer](https://www.python.org/download/)
 -   *setuptools* for Python 2.7:
     [Installer](http://www.lfd.uci.edu/~gohlke/pythonlibs/#setuptools)
@@ -39,11 +39,11 @@ good news: You probably have some of this on your machine already!
 -   *git*: [Installer](http://git-scm.com/download/win), make sure to
     select "Use Git from the Windows Command Prompt" during the
     installation
--   *Apache Tomcat*: [All
+-   *Apache Tomcat 8*: [All
     Downloads](http://tomcat.apache.org/index.html), use the
-    32-bit/64-bit Windows Service Installer
+    32-bit/64-bit Windows Service Installer for Tomcat 8.
 -   *Virgo Server for Apache Tomcat*: [ZIP
-    file](http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.4.RELEASE/virgo-tomcat-server-3.6.4.RELEASE.zip), unpack it to your
+    file](http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.7.2.RELEASE/virgo-tomcat-server-3.7.2.RELEASE.zip), unpack it to your
     desired location
 
 Environment Variables
@@ -61,16 +61,16 @@ should generally be a system variable.
 Create variables with the following names and values, or look if they
 already exist:
 
--   JAVA\_HOME: path to Java SE Development Kit 7
+-   JAVA\_HOME: path to Java SE Development Kit 8
 -   PYTHON\_HOME: path to Python 2.7
 -   SERVER\_HOME: path to Virgo Server for Apache Tomcat
 -   MVN\_HOME: path to Maven
 
-Maven needs to build with Java 7. If you want to point your JAVA\_HOME
+Maven needs to build with Java 8. If you want to point your JAVA\_HOME
 variable to a different version, create a file *mavenrc\_pre.bat* in
 your home directory that contains:
 
-    JAVA_HOME=path\to\Java7
+    JAVA_HOME=path\to\Java8
 
 Next, you have to modify the PATH variable. This will allow you and
 Geppetto to run several programs from the command prompt. You may see
@@ -164,7 +164,7 @@ The Virgo server is started and stopped via batch scripts. Simply go to
 and run the *startup.bat* or *shutdown.bat* file.
 
 For more info on Virgo's control scripts, see
-[here](https://www.eclipse.org/virgo/documentation/virgo-documentation-3.6.4.RELEASE/docs/virgo-user-guide/htmlsingle/virgo-user-guide.html).
+[here](https://www.eclipse.org/virgo/documentation/virgo-documentation-3.7.2.RELEASE/docs/virgo-user-guide/htmlsingle/virgo-user-guide.html).
 
 With that you are basically done! So, fire up the *startup.bat* file,
 wait until its output stops, cross your fingers and point your browser

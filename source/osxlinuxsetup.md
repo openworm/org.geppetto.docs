@@ -27,12 +27,17 @@ good news: You probably have some of this on your machine already!
 ### OSX and Linux
 
 -   Java SE Development Kit 8
--   Python 2.7
--   Virgo Server for Apache Tomcat: [ZIP
-    file](http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.7.2.RELEASE/virgo-tomcat-server-3.7.2.RELEASE.zip)
+-   Python 2.7 or Python 3
+-   Virgo Server for Apache Tomcat: [ZIP file](http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.7.2.RELEASE/virgo-tomcat-server-3.7.2.RELEASE.zip)
     unpack it to your desired location by:
 
     gunzip -a virgo-tomcat-server-3.7.2.RELEASE.zip -d <desired directory>
+    
+-   As of Virgo 3.7.2, a couple of extra steps are needed to make it work with Geppetto.
+
+    1) Once virgo has been unzipped, create folder named "usr" inside <virgo_directory>/serviceability
+    
+    2) Replace files "tomcat-server.xml" and "javar-server.profile" in <virgo_directory>/configuration with files of the same name found here [tomcat-server.xml](https://raw.githubusercontent.com/openworm/org.geppetto/update-virgo-test/utilities/docker/geppetto/tomcat-server.xml) and [java-server.profile](https://raw.githubusercontent.com/openworm/org.geppetto/update-virgo-test/utilities/docker/geppetto/java-server.profile)
 
 ### OSX
 

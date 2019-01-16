@@ -26,18 +26,18 @@ good news: You probably have some of this on your machine already!
 
 ### OSX and Linux
 
--   Java SE Development Kit 7
--   Python 2.7
--   Virgo Server for Apache Tomcat: [ZIP
-    file](http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.6.4.RELEASE/virgo-tomcat-server-3.6.4.RELEASE.zip)
+-   Java SE Development Kit 8
+-   Python 2.7 or Python 3
+-   Virgo Server for Apache Tomcat: [ZIP file](http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.7.2.RELEASE/virgo-tomcat-server-3.7.2.RELEASE.zip)
     unpack it to your desired location by:
 
-    gunzip -a virgo-tomcat-server-3.6.4.RELEASE.zip -d <desired directory>
+    gunzip -a virgo-tomcat-server-3.7.2.RELEASE.zip -d <desired directory>
+    
+-   As of Virgo 3.7.2, a couple of extra steps are needed to make it work with Geppetto.
 
-Note that Geppetto currently uses virgo tomcat sever 3.6.4, although the
-development team is currently moving towards virgo-tomcat-server 3.6.5
-and beyond. If you are trying to install 3.6.5, please contact the dev
-team.
+    1) Once virgo has been unzipped, create folder named "usr" inside <virgo_directory>/repository
+    
+    2) Replace files "tomcat-server.xml" and "javar-server.profile" in <virgo_directory>/configuration with files of the same name found here [tomcat-server.xml](https://raw.githubusercontent.com/openworm/org.geppetto/update-virgo-test/utilities/docker/geppetto/tomcat-server.xml) and [java-server.profile](https://raw.githubusercontent.com/openworm/org.geppetto/update-virgo-test/utilities/docker/geppetto/java-server.profile)
 
 ### OSX
 
@@ -59,7 +59,7 @@ This should also work for alternative distributions, by substituting
 -   *Maven*: `sudo apt-get install maven`
 -   *git*: `sudo apt-get install git`
 -   *pip*: `sudo apt-get install python-pip`
--   *Apache Tomcat*: `sudo apt-get install tomcat7`
+-   *Apache Tomcat*: `sudo apt-get install tomcat8`
 
 Environment Variables
 ---------------------
@@ -73,7 +73,7 @@ Linux Variables
 Create variables with the following names and values, or look if they
 already exist:
 
--   JAVA\_HOME: path to Java SE Development Kit 7
+-   JAVA\_HOME: path to Java SE Development Kit 8
 -   SERVER\_HOME: path to Virgo Server for Apache Tomcat
 -   MVN\_HOME: path to Maven
 
@@ -81,34 +81,34 @@ You can do this for example in .bashrc with:
 
     export MVN_HOME="$(brew --prefix maven)/libexec"
     export JAVA_HOME="$(/usr/libexec/java_home)"
-    export SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server-3.6.xx.RELEASE"
+    export SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server-3.7.2.RELEASE"
 
-Maven needs to build with Java 7. If you want to point your JAVA\_HOME
+Maven needs to build with Java 8. If you want to point your JAVA\_HOME
 variable to a different version, create a file *.mavenrc* in your home
 directory that contains:
 
-    export JAVA_HOME="/path/to/java7"
+    export JAVA_HOME="/path/to/java8"
 
-Note that if you are using Java 8, you may want to install both Java 7
-and Java 8 and have a conditional statement to switch between the two.
+Note that if you are using Java 7, you still will need to install Java 8.
+You can have a conditional statement to switch between the two.
 
-    export JAVA_HOME="$(/usr/libexec/java_home -v 1.7)"
+    export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
     setjdk() 
         {export JAVA_HOME="$(/usr/libexec/java_home -v $1)"}
-    export SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE"
+    export SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server.3.7.2.RELEASE"
 
 When you close your terminal, it is possible that bashrc may reset
 SERVER\_HOME. In order to reset SERVER\_HOME, issue the following
 command from the terminal.
 
-    SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server.3.6.xx.RELEASE"
+    SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server.3.7.2.RELEASE"
 
 Mac OS X Variables
 ------------------
 
     export MVN_HOME="$(brew --prefix maven)/libexec"
-    export JAVA_HOME="/usr/lib/jvm/java-1.7.0-openjdk"
-    export SERVER_HOME="/opt/virgo-tomcat-server-3.6.4.RELEASE"
+    export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk"
+    export SERVER_HOME="/opt/virgo-tomcat-server-3.7.2.RELEASE"
 
 The SERVER\_HOME directory may be one of the directories that you are
 prompted to install to. Once you find where virgo tomcat is installed

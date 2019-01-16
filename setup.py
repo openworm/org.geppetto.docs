@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='geppettodocs',
-    version="0.4.0",
+    version="0.4.2",
     license="MIT",
     description='Geppetto documentation',
     author='Geppetto contributors',

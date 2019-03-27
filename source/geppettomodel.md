@@ -11,36 +11,113 @@ tool for building meta-models from the Eclipse Modeling Framework (EMF).
 Introductory documentation for EMF can be found at the [eclipse project
 website](http://www.eclipse.org/modeling/emf/docs/?).
 
-**Main concepts**
+## Main concepts
 
-Every project that is loaded in Geppetto has a Geppetto model associated
-to it. The Geppetto Meta-Model is simply a description of what can be
-found inside a Geppetto model, hence the "Meta". The main concepts to
-understand from the Geppetto Meta-Model are Type, Variable and Value,
-and they will be familiar to pretty much every developer. A Type
+Every project that is loaded in Geppetto has a **Geppetto model** associated
+to it. 
+In other words, Geppetto translates the project specific data into a model with
+fully typed object descriptions.
+When the frontends loads a project, the model is loaded, the declared variables
+are instantiated with the default values which are specified in the model.
+The model comes with a full-featured reflection mechanism, which allows to inspect
+and instantiate values through the Meta-Model specification.
+
+### Geppetto Meta-Model
+The Geppetto Meta-Model is a description of what can be
+found inside a Geppetto model, hence the "Meta".
+The main concepts to
+understand from the Geppetto Meta-Model are **Type**, **Variable** and **Value**,
+and they will be familiar to pretty much every developer.
+A Geppetto model defines variables, which at some point will be instantiated;
+each variable has a value and a
+type. With the use of composite types we can define complex data structures.
+
+#### Type
+A ***Type***
 represents the structure of an entity and therefore defines something that
 can be associated to one of multiple variables. In modern programming
-languages this same concept is often referred to as Class. There are
-different kinds of types defined in the Geppetto meta-model; the
-CompositeType allows the developer to specify structured types which
-contain one or more variables inside it. A variable represents an
+languages this same concept is often referred to as ***Class***. 
+
+There are
+different build-in types defined in the Geppetto Meta-Model; the
+**CompositeType** allows the developer to specify structured types which
+contain one or more variables inside it.
+
+Each type is registered into a geppetto **library**.
+
+#### Variable
+A variable represents an
 instance of a given type. This concept exists in every programming
-language. Geppetto allows a variable to instantiate one or multiple
-types, a feature that makes it possible to support multi-scale
-definitions (imagine a variable that at one scale is defined simply as a
-parameter and at another scale is mapped to a whole computational model
-with sophisticated dynamics). A value is something that can be assigned
+language. 
+Every variable knows its type and initial value.
+
+#### Value
+A value is something that can be assigned
 to a variable or to a type (the default value) a concept that once again
 exists in every programming language. There are different kinds of values
 defined in the Geppetto meta-model and every existing type has pretty
 much a corresponding value defined.
 
-These are the main concepts to understand. Let's have a look at some
+### Model at runtime
+
+The Geppetto model is created on the backend from a EMF specification file (xmi) 
+or it can be generated on the fly from possibly any file type through a specific
+**Model Interpreter**.
+
+Upon receiving a Geppetto Model from the backend, when loading a given Geppetto Project, the frontend will instantiate it.
+
+Instantiated Geppetto Types are mapped to JavaScript objects (e.g. a population of one cell Type would become a JavaScript array containing Instances of that Type) and augmented with specific Capabilities which confer on them the ability to be accessed via a specific API. 
+ 
+
+#### Instances
+
+Variables are defined with a type and a default value. When the Geppetto model
+is loaded on the frontend its top-level variables are instantiated (we don't
+have instances in the backend side).
+Every instance knows its value and variable, each variable knows its type(s).
+A type in turn may have variables (as is the case of CompositeType) 
+that can be instantiated. The instantiation of inner variables is done on demand
+on runtime when needed.
+
+For example, let's start from a model having a top level variable x of type T. The 
+type T is a CompositeType defining the variables t1 and t2.
+When the model is loaded we will have an instance called `x` on our Geppetto runtime.
+So we can:
+* Use that instance `x` in the Geppetto console
+* Access the instance through the global Javascript variable `x`
+* Use the instance sub variables through `x.t1`, `x.t2` from the Geppetto console 
+* Access the instance from Javascript through `Instances.getInstance('x')`
+* Access the instance from Javascript through `Instances.getInstance('x.t1')`
+
+Note that we are not guaranteed to access `x.t1` from Javascript until 
+`Instances.getInstance('x.t1')` is invoked: sub instances are created on demand.
+
+#### Capabilities
+The client will inject *Capabilities* to an instance depending on their type. 
+A capability will confer to the Javascript object an API to interact with the 
+specifics of its type. Thus we have type-specific methods as in OOP languages.
+
+So, for instance, if a Model Interpreter in the backend defined a custom Type including a State Variable, upon instantiation in the frontend, this would become a JavaScript object with an injected StateVariableCapability containing methods specific for state variables, e.g. getUnit(), getInitialValue(), etc.
+
+This has the advantage of giving developers the ability to build UI components that can interact with the Geppetto Model in an object-oriented way, and allow all the user operations to be fully scriptable, reproducible and testable (e.g. a UI button designed to plot a state variable would call `Plot.plotData(myStateVariable.getTimeSeries()`). The same principles apply when a custom Type defining a cell morphology (Values like Sphere and Cylinder are available to this end in the Geppetto Model Abstraction) is sent to the frontend and passed to the 3D Canvas component using its API for display.
+
+#### Instances and UI Components: behaviours
+Some UI component are initialized from instances and use their knowledge of the types and the
+capabilities to initialize the visualization or other behaviours.
+
+* **ControlPanel**: loads by default all Instances of type VisualType
+* **Canvas**: shows Instances of type VisualType on the 3D Canvas
+
+[comment]: <> (TO be completed)
+
+
+## Working on the backend
+Let's have a look at some
 examples that will show how the model abstraction can be used in
 practice. In these examples we will use the JAVA API that is generated
 for us by EMF to create the models.
 
-***Creating a cell***
+### Creating a cell
 
 Let's say we want to create a simple type that represents a biological
 cell. What would we need to do?
@@ -125,7 +202,33 @@ create a variable of the type that we want, cellType in this case, and we
 add it at the root level in the geppettoModel, which in this case
 represents the Java object of our Geppetto Model.
 
-**Model**
+## Working on the frontend
+
+### Visual variables
+
+### Javascript APIs
+
+* GeppettoController
+
+
+
+# Geppetto Meta-model EMF library
+**Why EMF?** 
+The Eclipse Modelling Framework is an industry grade technology which
+has been around for more than 15 years and is currently used in thousands
+of professional software and tools. Ecore allows the developer to
+specify all the entities (called EClass) and relationships that exist in
+a given meta-model allowing the developer to define all the constraints
+(e.g. containment, hierarchy, boundary conditions, etc.) that exist in
+the model in a declarative way. EMF adds the ability to generate, from
+the model definition, the code to use the model in a multitude of
+languages, making pretty much every line of model-related code bug free.
+EMF supports XMI, a dialect of XML, as default serialization standard,
+making it easy to serialize and deserialize models in a robust way,
+performing a validation against the schema through every step of the
+process. Geppetto also takes advantage of EMF-JSON, an extension that makes
+it possible to serialize the models to JSON as well.
+## Model
 
 This is the top-level package and it contains many of the Geppetto
 abstractions.
@@ -138,7 +241,7 @@ which gives the ability to associate an id, a name and a set of Tags to
 every entity. The Geppetto Library is simply a container for types. In a
 Geppetto Model there can be one or multiple libraries defined.
 
-**Types**
+## Types
 
 This package contains the definition of all the types defined in the
 Geppetto Meta-model.
@@ -167,7 +270,7 @@ that can be visualised in the 3D environment. A VisualType only allows
 for a VisualValue to be associated to it (e.g. a Cylinder, a Sphere, an
 OBJ, etc.).
 
-**Values**
+## Values
 
 This package contains the definition of all the values that can be
 associated to variables and types.
@@ -182,25 +285,19 @@ assigned to variables of type VisualType. ArrayValues can be assigned to
 variables of type ArrayType and specifies the index for each one of the
 individual values.
 
-**Variable**
+## Variable
 
 This package contains the definition of the variable EClass.
 
 ![image](images/model/variables.png)
 
-**Why EMF?**
 
-The Eclipse Modelling Framework is an industry grade technology which
-has been around for more than 15 years and is currently used in thousands
-of professional software and tools. Ecore allows the developer to
-specify all the entities (called EClass) and relationships that exist in
-a given meta-model allowing the developer to define all the constraints
-(e.g. containment, hierarchy, boundary conditions, etc.) that exist in
-the model in a declarative way. EMF adds the ability to generate, from
-the model definition, the code to use the model in a multitude of
-languages, making pretty much every line of model-related code bug free.
-EMF supports XMI, a dialect of XML, as default serialization standard,
-making it easy to serialize and deserialize models in a robust way,
-performing a validation against the schema through every step of the
-process. Geppetto also takes advantage of EMF-JSON, an extension that makes
-it possible to serialize the models to JSON as well.
+
+# Advanced 
+
+## Multi-scale definition
+Geppetto allows a ***variable*** to instantiate one or multiple
+types, a feature that makes it possible to support multi-scale
+definitions (imagine a variable that at one scale is defined simply as a
+parameter and at another scale is mapped to a whole computational model
+with sophisticated dynamics).

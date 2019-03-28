@@ -40,8 +40,7 @@ languages this same concept is often referred to as ***Class***.
 
 There are
 different build-in types defined in the Geppetto Meta-Model; the
-**CompositeType** allows the developer to specify structured types which
-contain one or more variables inside it.
+**CompositeType** allows the developer to specify structured types with one or more variables.
 
 Each type is registered into a geppetto **library**.
 
@@ -170,7 +169,7 @@ cellType.setVisualType(morphology);
 ```
 
 So what have we done? We have created a variable we called "soma" and we
-have made it of type VisualType, reusing what comes from the
+have made it of type **VisualType**, reusing what comes from the
 commonLibrary. We have created a Sphere which is one of the VisualValues
 available through the Geppetto Model, we gave it radius 10, and we placed
 it at the origin of our scene. We have then assigned this sphere as the
@@ -208,7 +207,33 @@ represents the Java object of our Geppetto Model.
 
 ### Javascript APIs
 
-* GeppettoController
+#### Instances
+
+Instances is a global service which allows to extract instances from the model.
+An instance is a wrapper for available with inspection capabilities: from an instance we can start the inspection of everyhting that is below.
+
+* `Instances.getInstance(variablePath)`: allows to instantiate a variable if not already instantiated and returns it. After an instance is created it can be accessed from the global scope through its variable name
+* `myInstance.getVariable()`: returns the variable definition for the instance, starting inspection. A typical use is `myInstance.getVariable().getType().getVariables()`, which gives all the available fields for that instance.
+* `myInstance.getPath()`: gets the full path within the model
+
+##### State variable capability
+* `myInstance.getValue()`: returns the actual value for that instance
+
+#### Values
+##### ImportValue
+* `myValue.resolve(callback)`: resolves the current value on runtime
+
+...
+
+#### Variables
+...
+
+#### Manager
+...
+
+#### ModelFactory
+
+* `GEPPETTO.ModelFactory.allPaths`: gets all paths available on the current model
 
 
 

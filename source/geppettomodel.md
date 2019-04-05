@@ -14,13 +14,50 @@ website](http://www.eclipse.org/modeling/emf/docs/?).
 ## Main concepts
 
 Every project that is loaded in Geppetto has a **Geppetto model** associated
-to it. 
-In other words, Geppetto translates the project specific data into a model with
+to it. The Geppetto Model is a dynamic typed abstraction of the data structures we need for
+our project.
+In other words, Geppetto imports the project specific data into a model with
 fully typed object descriptions.
-When the frontends loads a project, the model is loaded, the declared variables
+
+When the frontends loads a project, the model (coming from the backend) is loaded;
+while loading the model, the declared variables
 are instantiated with the default values which are specified in the model.
 The model comes with a full-featured reflection mechanism, which allows to inspect
 and instantiate values through the Meta-Model specification.
+
+### Why the Geppetto Model Abstraction?
+Geppetto was born from the need of describing computational models coming from neuroscience.
+In this context, each model has its own structure and values that can evolve during 
+the experiments we are running upon the model.
+
+#### The Geppetto Model is dynamic
+We can represent the with the usual tools
+that we use in programming to represent data structures: variables, classes, values, parameters
+within a life cycle in which variable values can change and can be represented visually.
+
+Nothing that we cannot do with any programming language, except the fact that all of this 
+definitions in Geppetto are made **dynamically**: when we load a model, we are defining
+a complete new set of typed data structures based on the Geppetto Meta-Model.
+We have no limits on the models we can define, still having a fully typed model
+system.
+
+
+#### The Geppetto Model is fully serializable
+The Geppetto Model can be serialized and is shared and synched between the backend and
+the frontend of the application.
+
+
+#### The Geppetto Model is typed
+There are simpler ways than the Geppetto Model to defined dynamic structures.
+For instance, we could define variables with any structure with a JSON markup.
+JSON markup is not typed though. When we parse a JSON markup we must implicitly
+know its semantics and write a specific manipulation logic consequently.
+By defining the types we are kind of declaratively programming the visualization
+and behaviours which can be automatically associated to the data through Geppetto
+apis and components.
+For example, a visual type can be visualized on the canvas, time series can be plotted, etc.
+On the frontend, instances of different types can have different ***capabilities***,
+i.e. actions that can be activated from the variables of that types.
 
 ### Geppetto Meta-Model
 The Geppetto Meta-Model is a description of what can be

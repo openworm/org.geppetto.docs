@@ -36,7 +36,7 @@ that we use in programming to represent data structures: variables, classes, val
 within a life cycle in which variable values can change and can be represented visually.
 
 Nothing that we cannot do with any programming language, except the fact that all of this 
-definitions in Geppetto are made **dynamically**: when we load a model, we are defining
+definitions in Geppetto are made *dynamically*: when we load a model, we are defining
 a complete new set of typed data structures based on the Geppetto Meta-Model.
 We have no limits on the models we can define, still having a fully typed model
 system.
@@ -96,15 +96,14 @@ much a corresponding value defined.
 
 ### Model at runtime
 
-The Geppetto model is created on the backend from a EMF specification file (xmi) 
-or it can be generated on the fly from possibly any file type through a specific
+The Geppetto model is created on the backend usually from a EMF specification file (xmi).
+Internal types and values can be retrieved from possibly any file type through a specific
 **Model Interpreter**.
 
 Upon receiving a Geppetto Model from the backend, when loading a given Geppetto Project, the frontend will instantiate it.
 
 Instantiated Geppetto Types are mapped to JavaScript objects (e.g. a population of one cell Type would become a JavaScript array containing Instances of that Type) and augmented with specific Capabilities which confer on them the ability to be accessed via a specific API. 
  
-
 #### Instances
 
 Variables are defined with a type and a default value. When the Geppetto model

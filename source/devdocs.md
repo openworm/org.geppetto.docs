@@ -64,21 +64,18 @@ The user interface of a Geppetto application can be easily customized. As a deve
 
 ## What backends does Geppetto support?
 
-### JAVA
+### JAVA (reference implementation)
   - [Source Setup on OSX and Linux](./osxlinuxsetup.html)
   - [Source Setup on Windows](./windowssetup.html)
+  - [Java Docs](./_static/javadoc/index.html)
 
 ### Python (in development)
+  - [Jupyter Extension](https://github.com/openworm/org.geppetto.frontend.jupyter)
   - [Django template](https://github.com/MetaCell/geppetto-django-template)
   - [Tornado Flask template](https://github.com/MetaCell/geppetto-tornado-flask-template)
 
-### Jupyter Notebook (in development)
-  - [NEURON-UI Example](https://github.com/MetaCell/NEURON-UI)
-
-### [Node.js](https://github.com/openworm/org.geppetto.frontend.nodejs) (protoype)
-
-## Do you provide additional documentation for the backend?
-The javadocs documentation is available [here](./_static/javadoc/index.html).
+### [Node.js] (proof of concept)
+  - (https://github.com/openworm/org.geppetto.frontend.nodejs)
 
 ## What concepts are captured by the Geppetto Model abstraction?
  - 3D primitives

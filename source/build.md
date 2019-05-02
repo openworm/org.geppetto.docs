@@ -4,7 +4,7 @@ How Do I create My Own Geppetto Application?
 Creating your own Geppetto application is very simple, as simple as cloning [geppetto-application](https://github.com/openworm/geppetto-application) repository (to use it as a template) and then modifying `./components/Application.js` with your custom code. You might want to create a GitHub repository to contain your files and then replace the content of the folder `org.geppetto.frontend/scr/main/webapp` with the content of your repository. The default Geppetto application repository contains also other files that might be of interest:
 
 - The `.eslintrc.js` file will allow you to configure linting rules on top of the default rules we are already enforcing for the default Geppetto applications. Check the default linting rules we are inheriting from geppetto-client repository [here](https://github.com/openworm/geppetto-client/blob/development/.eslintrc.js).
-- In `GeppettoConfiguration.json` file you will have to specify how are you planning to use the Geppetto application. Is it going to be embedded in an iframe? are you planning to use a context path? Would you like to use a different theme for build-in Geppetto components?
+- In `GeppettoConfiguration.json` file you will have to specify how are you planning to use the Geppetto application. Is it going to be embedded in an iframe? are you planning to use a context path? Would you like to use a different color scheme for built-in Geppetto components?
 - The `package.json` file is installing NPM `geppetto-client` package (which contains all the different npm packages required for the default Geppetto application to work). But you can include extra npm packages there that you are planning to use in your custom Geppetto application.
 - Finally `webpack.config.js` controls the way your custom Geppetto application will be build. 
 
@@ -155,7 +155,7 @@ GeppettoConfiguration.json looks:
 Maven Profiles
 ==============
 
-Geppetto is built using Maven, with the "mvn -Dhttps.protocols=TLSv1.2 install" command. Maven
+The Java based backend of Geppetto is built using Maven, with the "mvn -Dhttps.protocols=TLSv1.2 install" command. Maven
 allows for different build steps to be specified for different
 environments, and Geppetto provides a development and a production
 profile (see below for how to trigger different builds). Builds can be

@@ -31,7 +31,7 @@ In this context, each model has its own structure and values that can evolve dur
 the experiments we are running upon the model.
 
 #### The Geppetto Model is dynamic
-We can represent the with the usual tools
+We can represent the model with the usual tools
 that we use in programming to represent data structures: variables, classes, values, parameters
 within a life cycle in which variable values can change and can be represented visually.
 
@@ -61,7 +61,7 @@ i.e. actions that can be activated from the variables of that types.
 
 ### Geppetto Meta-Model
 The Geppetto Meta-Model is a description of what can be
-found inside a Geppetto model, hence the "Meta".
+found inside a Geppetto model, hence the "meta".
 The main concepts to
 understand from the Geppetto Meta-Model are **Type**, **Variable** and **Value**,
 and they will be familiar to pretty much every developer.
@@ -76,10 +76,10 @@ can be associated to one of multiple variables. In modern programming
 languages this same concept is often referred to as ***Class***. 
 
 There are
-different build-in types defined in the Geppetto Meta-Model; the
+different built-in types defined in the Geppetto Meta-Model; the
 **CompositeType** allows the developer to specify structured types with one or more variables.
 
-Each type is registered into a geppetto **library**.
+Every type belongs to you the Geppetto **library** which contains it.
 
 #### Variable
 A variable represents an
@@ -92,13 +92,12 @@ A value is something that can be assigned
 to a variable or to a type (the default value) a concept that once again
 exists in every programming language. There are different kinds of values
 defined in the Geppetto meta-model and every existing type has pretty
-much a corresponding value defined.
+much one or more corresponding values defined.
 
 ### Model at runtime
 
 The Geppetto model is created on the backend usually from a EMF specification file (xmi).
-Internal types and values can be retrieved from possibly any file type through a specific
-**Model Interpreter**.
+Domain specific Geppetto types and values are created dynamically at runtime from possibly any file format provided a **Model Interpreter** is available for that format.
 
 Upon receiving a Geppetto Model from the backend, when loading a given Geppetto Project, the frontend will instantiate it.
 
@@ -107,12 +106,11 @@ Instantiated Geppetto Types are mapped to JavaScript objects (e.g. a population 
 #### Instances
 
 Variables are defined with a type and a default value. When the Geppetto model
-is loaded on the frontend its top-level variables are instantiated (we don't
-have instances in the backend side).
+is loaded on the frontend its top-level variables are instantiated (the model is only instantiated in the client).
 Every instance knows its value and variable, each variable knows its type(s).
-A type in turn may have variables (as is the case of CompositeType) 
+A type in turn may contain multiple variables (as is the case of CompositeType) 
 that can be instantiated. The instantiation of inner variables is done on demand
-on runtime when needed.
+at runtime when needed.
 
 For example, let's start from a model having a top level variable x of type T. The 
 type T is a CompositeType defining the variables t1 and t2.
@@ -120,9 +118,9 @@ When the model is loaded we will have an instance called `x` on our Geppetto run
 So we can:
 * Use that instance `x` in the Geppetto console
 * Access the instance through the global Javascript variable `x`
+* Create the instance from Javascript through `Instances.getInstance('x')`
+* Create the instance from Javascript through `Instances.getInstance('x.t1')`
 * Use the instance sub variables through `x.t1`, `x.t2` from the Geppetto console 
-* Access the instance from Javascript through `Instances.getInstance('x')`
-* Access the instance from Javascript through `Instances.getInstance('x.t1')`
 
 Note that we are not guaranteed to access `x.t1` from Javascript until 
 `Instances.getInstance('x.t1')` is invoked: sub instances are created on demand.

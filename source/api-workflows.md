@@ -2,19 +2,14 @@ Geppetto API and Workflows
 ==========================
 
 ## High level workflow
-A basic Geppetto workflow starts by loading a project in the frontend.
-After the project is loaded
-we can inspect the visual parts of
-the model through the widgets defined in the project view.
-We can define experiments, run simulations and look at simulation results.
+The Geppetto workflow starts by loading a Geppetto project from the client application. A Geppetto project links to a Geppetto Model. After a project is loaded the model becomes available to the application which in turn can implement specific workflows. 
 
-A **Geppetto application** (former *extension*) can define a custom 
-workflow and components on the frontend.
+A **Geppetto application** (former *extension*) will define a set of custom workflows, e.g. visualize the content of the model, define experiments, control simulations, etc. An application will also define its own user interface reusing any of the Geppetto components or defining custom ones.
 
-Another (old) way to define custom behavior is through project scripts, which are custom
+Another (old and deprecated) way to define custom behavior is through project scripts, which are custom
 Javascript files which are loaded with the project.
 
-The workflow is controlled through messages in the frontend.
+The main Geppetto workflow is controlled through messages in the frontend.
 
 ## Websocket API
 A websocket channel is set up at the client bootstrap.
@@ -29,8 +24,7 @@ The communication is based on JSON format messages with this general structure:
 
 #### geppetto_version
 
-
-Asks for the current geppetto version number. This is automatically called during the bootstrap.
+Asks for the current Geppetto version number. This is automatically called during the bootstrap.
 
 Example request:
 ```JSON
@@ -39,16 +33,16 @@ Example request:
 
 ### user_privileges
 
-Asks for user privileges.
+Asks for user privileges. Used when the backend of Geppetto has a persitence module available which provides support for user authentication and privileges.
 
 
 * notify_user
 * get_script
 * get_data_source_results
 
-### Loading a project and model
+### Loading a Geppetto Project and Model
 
-We have different ways to load a project
+We have different ways to load a project:
 * load_project_from_url
 * load_project_from_id
 * load_project_from_content

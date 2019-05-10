@@ -79,7 +79,7 @@ There are
 different built-in types defined in the Geppetto Meta-Model; the
 **CompositeType** allows the developer to specify structured types with one or more variables.
 
-Every type belongs to you the Geppetto **library** which contains it.
+Every type belongs to the Geppetto **library** which contains it.
 
 #### Variable
 A variable represents an

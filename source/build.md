@@ -173,39 +173,27 @@ When the command "mvn -Dhttps.protocols=TLSv1.2 install" is executed, none of th
 tasks are run. When doing development, it is not necessary to run the
 production build unless you wish to simulate a production environment.
 
-The default Geppetto application relies on `geppetto-client` npm package to bring the Geppetto 
-build-in components to the client. If you need to work on this package, you can clone it 
-from [here](https://github.com/openworm/geppetto-client.git) and then to use npm package `link` to
-create a symlink to your custom Geppetto application as follow:
+The default Geppetto application repository within org.geppetto.frontend relies on `geppetto-client` npm package to bring the Geppetto build-in components to the client. If you neeed a development version of geppetto-client, please follow these steps:
 
-1. `git clone https://github.com/openworm/geppetto-client.git`
-2. `cd geppetto-client`
-3. `npm install` (installs npm packages required by geppetto-client).
-4. `npm link` (creates a symlink from geppetto-client folder to a global folder used by link).
-5. Go to the folder where you have your custom Geppetto application.
-6. `npm link @geppettoengine/geppetto-client` (creates a symlink from the link global folder to yout Geppetto application.)
+1. Go to `org.geppetto.frontend/src/main/webapp`.
+2. Clone geppetto-client `git clone https://github.com/openworm/geppetto-client.git`.
+3. `cd geppetto-client`.
+4. Install the npm packages required by geppetto-client `npm install`.
+5. Create a symlink from geppetto-client folder to a global folder `npm link`.
+6. Go back to org.geppetto/ , you could run `cd ../../../../org.geppetto/`.
+7. Run `mvn -Dhttps.protocols=TLSv1.2 install` in `org.geppetto` (as usual).
+8. Move to the folder utilities/source_setup and copy the files to virgo server `cd utilities/source_setup; python update_server.py` (as usual).
+9. Go to `org.geppetto.frontend/src/main/webapp` with `cd ../../../org.geppetto.frontend/src/main/webapp`
+6. Create a symlink from the global geppetto-client folder to Geppetto application `npm link @geppettoengine/geppetto-client`.
+9. Start virgo `virgo startup.sh` going back to the folder where the server has been installed, using the script within bin/startup.sh (as usual).
+10. From the webapp folder run `npm start`.
+11. Now changes to `/org.geppetto.frontend/src/main/webapp/geppetto-client` files will automatically update `localhost:8081/org.geppetto.frontend`
 
-Now changes to your local geppetto-client folder will be reflected in your geppetto-application folder.
-
-*NOTE*: up to npm version 6.4.0, the `npm install` command removes any symlink to packages from the node_module folder,
-replacing them with what is download from GitHub or NPM registries. This behaviour will be removed in npm@7+ but until then,
-the maven command:
+*NOTE*: up to npm version 6.9.0, the command `npm install` removes all symlinks to packages from the node_module folder. This behaviour will be removed in npm@7+ but until then, the maven command:
 
 `mvn -Dhttps.protocols=TLSv1.2 install`,
 
-will remove your symlink from the Geppetto project. The only workaround right now it to push to GitHub your changes and then,
-specifying your custom geppetto-client package in package.json like this:
-
-```
-{
-    ...,
-    "devDependencies": {
-        // "@geppettoengine/geppetto-client": "openworm/geppetto-client#development"  < -- default
-        "@geppettoengine/geppetto-client": "GitHub_User/Repo_name#Branch_name"        < -- replacement
-    },
-    ...
-}
-```
+will remove your symlink to geppetto-client from org.geppetto.frontend/src/main/webapp.
 
 Building for production
 =======================

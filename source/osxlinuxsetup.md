@@ -30,8 +30,8 @@ good news: You probably have some of this on your machine already!
 -   Python 2.7 or Python 3
 -   Virgo Server for Apache Tomcat: [ZIP file](http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.7.2.RELEASE/virgo-tomcat-server-3.7.2.RELEASE.zip)
     unpack it to your desired location by:
-
-    gunzip -a virgo-tomcat-server-3.7.2.RELEASE.zip -d <desired directory>
+    
+    `unzip virgo-tomcat-server-3.7.2.RELEASE.zip -d <desired directory>`
     
 -   As of Virgo 3.7.2, a couple of extra steps are needed to make it work with Geppetto.
 

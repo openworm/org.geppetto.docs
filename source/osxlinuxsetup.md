@@ -55,11 +55,11 @@ This should also work for alternative distributions, by substituting
 *yum* for Fedora and so forth.
 
 -   *homebrew* (see
-    [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-linuxbrew-on-a-linux-vps))
+    [here](https://docs.brew.sh/Homebrew-on-Linux))
 -   *Maven*: `sudo apt-get install maven`
 -   *git*: `sudo apt-get install git`
 -   *pip*: `sudo apt-get install python-pip`
--   *Apache Tomcat*: `sudo apt-get install tomcat8`
+-   *Apache Tomcat*: `sudo apt-get install tomcat8` or `brew install tomcat@8`
 
 Environment Variables
 ---------------------

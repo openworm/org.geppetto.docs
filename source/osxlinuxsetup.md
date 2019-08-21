@@ -79,9 +79,11 @@ already exist:
 
 You can do this for example in .bashrc with:
 
-    export MVN_HOME="$(brew --prefix maven)/libexec"
-    export JAVA_HOME="$(/usr/libexec/java_home)"
-    export SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server-3.7.2.RELEASE"
+```
+export MVN_HOME="/usr/share/maven"
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+export SERVER_HOME="/path/to/virgo-tomcat-server-3.7.2.RELEASE"
+```
 
 Maven needs to build with Java 8. If you want to point your JAVA\_HOME
 variable to a different version, create a file *.mavenrc* in your home

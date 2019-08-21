@@ -85,26 +85,6 @@ export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 export SERVER_HOME="/path/to/virgo-tomcat-server-3.7.2.RELEASE"
 ```
 
-Maven needs to build with Java 8. If you want to point your JAVA\_HOME
-variable to a different version, create a file *.mavenrc* in your home
-directory that contains:
-
-    export JAVA_HOME="/path/to/java8"
-
-Note that if you are using Java 7, you still will need to install Java 8.
-You can have a conditional statement to switch between the two.
-
-    export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
-    setjdk() 
-        {export JAVA_HOME="$(/usr/libexec/java_home -v $1)"}
-    export SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server.3.7.2.RELEASE"
-
-When you close your terminal, it is possible that bashrc may reset
-SERVER\_HOME. In order to reset SERVER\_HOME, issue the following
-command from the terminal.
-
-    SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server.3.7.2.RELEASE"
-
 Mac OS X Variables
 ------------------
 

@@ -99,6 +99,7 @@ to, use that as your directory.
 Also, following the guide above to installing homebrew on Linux, you
 made need to add extra details to your bashrc file.
 
+<br>
 OK, that was everything you need, let's get the source code now.
 
 Setup Geppetto Repositories
@@ -118,19 +119,10 @@ Navigate your shell to the source\_setup directory:
 
     cd org.geppetto/utilities/source_setup
 
-Alternatively, copy the contents of source\_setup to a convenient
-directory of your choice:
-
-    cp -r org.geppetto/utilities/source_setup/* <some other location>
-
-Open the *config.json* file in a text editor and change the value of the
-*sourcesdir* field to the path of your source directory.
-
 The source\_setup folder contains some handy scripts. First, run the
 setup.py script:
 
     ./setup
-
 or
 
     python setup.py
@@ -155,10 +147,24 @@ that repository is entered correctly in *config.json* and *pom.xml*.
 Building Geppetto
 -----------------
 
+## For development
+Clone geppetto-client inside geppetto-application, 
+```
+cd ../../../org.geppetto.frontend/src/main/webapp
+git clone 
+```
+then change package.json in geppetto-application as follow
+
+```
+"devDependencies": {
+    "@geppettoengine/geppetto-client": "file:./geppetto-client"
+  },
+```
+##
 Navigate back to the org.geppetto directory from
 utilities/source\_setup:
 
-    cd ../..
+    cd ../../../../org.geppetto
 
 Once there, run:
 

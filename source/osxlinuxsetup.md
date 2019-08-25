@@ -256,6 +256,14 @@ Not quite there yet? Get in touch with us, we are there to help you!
 Send an email to [info@geppetto.org](mailto:info@geppetto.org) for an
 invitation to our Slack channel or if you just have a quick question.
 
+How to Update
+---------------------------
+JS/HTML code can be found inside `org.geppetto.frontend/src/main/webapp/.` 
+The code needs to be rebuilt with webpack every time there is a change. 
+The recommended way is to run in `org.geppetto.frontend/src/main/webapp` this command:
+
+`npm run start`
+
 Using gitall.py
 ---------------
 

@@ -153,7 +153,7 @@ git clone https://github.com/openworm/geppetto-client.git
 then change package.json in geppetto-application as follow
 
 ```
-"devDependencies": {
+"dependencies": {
     "@geppettoengine/geppetto-client": "file:./geppetto-client"
   },
 ```

@@ -122,9 +122,6 @@ Navigate your shell to the source\_setup directory:
 The source\_setup folder contains some handy scripts. First, run the
 setup.py script:
 
-    ./setup
-or
-
     python setup.py
 
 Running this script will prompt you to enter the repositories you want
@@ -188,10 +185,6 @@ source\_setup directory again by typing:
     cd utilities/source_setup
 
 Then run:
-
-    ./update_server
-
-or
 
     python update_server.py
 

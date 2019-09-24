@@ -148,14 +148,8 @@ Building Geppetto
 Clone geppetto-client inside geppetto-application, 
 ```
 cd ../../../org.geppetto.frontend/src/main/webapp
+git checkout development
 git clone https://github.com/openworm/geppetto-client.git
-```
-then change package.json in geppetto-application as follow
-
-```
-"dependencies": {
-    "@geppettoengine/geppetto-client": "file:./geppetto-client"
-  },
 ```
 ##
 Navigate back to the org.geppetto directory from

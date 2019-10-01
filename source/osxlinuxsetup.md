@@ -149,7 +149,7 @@ Clone geppetto-client inside geppetto-application,
 ```
 cd ../../../org.geppetto.frontend/src/main/webapp
 git checkout development
-git clone https://github.com/openworm/geppetto-client.git
+git clone -b development https://github.com/openworm/geppetto-client.git
 ```
 ##
 Navigate back to the org.geppetto directory from

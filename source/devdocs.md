@@ -75,7 +75,7 @@ The user interface of a Geppetto application can be easily customized. As a deve
   - [Tornado Flask template](https://github.com/MetaCell/geppetto-tornado-flask-template)
 
 ### [Node.js] (proof of concept)
-  - (https://github.com/openworm/org.geppetto.frontend.nodejs)
+  - [Node Backend](https://github.com/openworm/org.geppetto.frontend.nodejs)
 
 ## What concepts are captured by the Geppetto Model abstraction?
  - 3D primitives

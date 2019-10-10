@@ -30,14 +30,14 @@ good news: You probably have some of this on your machine already!
 -   Python 2.7 or Python 3
 -   Virgo Server for Apache Tomcat: [ZIP file](http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/3.7.2.RELEASE/virgo-tomcat-server-3.7.2.RELEASE.zip)
     unpack it to your desired location by:
-
-    gunzip -a virgo-tomcat-server-3.7.2.RELEASE.zip -d <desired directory>
+    
+    `unzip virgo-tomcat-server-3.7.2.RELEASE.zip -d <desired directory>`
     
 -   As of Virgo 3.7.2, a couple of extra steps are needed to make it work with Geppetto.
 
     1) Once virgo has been unzipped, create folder named "usr" inside <virgo_directory>/repository
     
-    2) Replace files "tomcat-server.xml" and "javar-server.profile" in <virgo_directory>/configuration with files of the same name found here [tomcat-server.xml](https://raw.githubusercontent.com/openworm/org.geppetto/update-virgo-test/utilities/docker/geppetto/tomcat-server.xml) and [java-server.profile](https://raw.githubusercontent.com/openworm/org.geppetto/update-virgo-test/utilities/docker/geppetto/java-server.profile)
+    2) Replace files "tomcat-server.xml" and "javar-server.profile" in <virgo_directory>/configuration with files of the same name found here [tomcat-server.xml](https://raw.githubusercontent.com/openworm/org.geppetto/development/utilities/docker/geppetto/tomcat-server.xml) and [java-server.profile](https://raw.githubusercontent.com/openworm/org.geppetto/development/utilities/docker/geppetto/java-server.profile)
 
 ### OSX
 
@@ -55,11 +55,11 @@ This should also work for alternative distributions, by substituting
 *yum* for Fedora and so forth.
 
 -   *homebrew* (see
-    [here](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-linuxbrew-on-a-linux-vps))
+    [here](https://docs.brew.sh/Homebrew-on-Linux))
 -   *Maven*: `sudo apt-get install maven`
 -   *git*: `sudo apt-get install git`
 -   *pip*: `sudo apt-get install python-pip`
--   *Apache Tomcat*: `sudo apt-get install tomcat8`
+-   *Apache Tomcat*: `sudo apt-get install tomcat8` or `brew install tomcat@8`
 
 Environment Variables
 ---------------------
@@ -79,29 +79,11 @@ already exist:
 
 You can do this for example in .bashrc with:
 
-    export MVN_HOME="$(brew --prefix maven)/libexec"
-    export JAVA_HOME="$(/usr/libexec/java_home)"
-    export SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server-3.7.2.RELEASE"
-
-Maven needs to build with Java 8. If you want to point your JAVA\_HOME
-variable to a different version, create a file *.mavenrc* in your home
-directory that contains:
-
-    export JAVA_HOME="/path/to/java8"
-
-Note that if you are using Java 7, you still will need to install Java 8.
-You can have a conditional statement to switch between the two.
-
-    export JAVA_HOME="$(/usr/libexec/java_home -v 1.8)"
-    setjdk() 
-        {export JAVA_HOME="$(/usr/libexec/java_home -v $1)"}
-    export SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server.3.7.2.RELEASE"
-
-When you close your terminal, it is possible that bashrc may reset
-SERVER\_HOME. In order to reset SERVER\_HOME, issue the following
-command from the terminal.
-
-    SERVER_HOME="/usr/local/Cellar/virgo/virgo-tomcat-server.3.7.2.RELEASE"
+```
+export MVN_HOME="/usr/share/maven"
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
+export SERVER_HOME="/path/to/virgo-tomcat-server-3.7.2.RELEASE"
+```
 
 Mac OS X Variables
 ------------------
@@ -117,6 +99,7 @@ to, use that as your directory.
 Also, following the guide above to installing homebrew on Linux, you
 made need to add extra details to your bashrc file.
 
+<br>
 OK, that was everything you need, let's get the source code now.
 
 Setup Geppetto Repositories
@@ -136,20 +119,8 @@ Navigate your shell to the source\_setup directory:
 
     cd org.geppetto/utilities/source_setup
 
-Alternatively, copy the contents of source\_setup to a convenient
-directory of your choice:
-
-    cp -r org.geppetto/utilities/source_setup/* <some other location>
-
-Open the *config.json* file in a text editor and change the value of the
-*sourcesdir* field to the path of your source directory.
-
 The source\_setup folder contains some handy scripts. First, run the
 setup.py script:
-
-    ./setup
-
-or
 
     python setup.py
 
@@ -173,10 +144,18 @@ that repository is entered correctly in *config.json* and *pom.xml*.
 Building Geppetto
 -----------------
 
+## For development
+Clone geppetto-client inside geppetto-application, 
+```
+cd ../../../org.geppetto.frontend/src/main/webapp
+git checkout development
+git clone -b development https://github.com/openworm/geppetto-client.git
+```
+##
 Navigate back to the org.geppetto directory from
 utilities/source\_setup:
 
-    cd ../..
+    cd ../../../../org.geppetto
 
 Once there, run:
 
@@ -200,10 +179,6 @@ source\_setup directory again by typing:
     cd utilities/source_setup
 
 Then run:
-
-    ./update_server
-
-or
 
     python update_server.py
 
@@ -267,6 +242,14 @@ You should now see Geppetto starting up. Good job!
 Not quite there yet? Get in touch with us, we are there to help you!
 Send an email to [info@geppetto.org](mailto:info@geppetto.org) for an
 invitation to our Slack channel or if you just have a quick question.
+
+How to Update
+---------------------------
+JS/HTML code can be found inside `org.geppetto.frontend/src/main/webapp/.` 
+The code needs to be rebuilt with webpack every time there is a change. 
+The recommended way is to run in `org.geppetto.frontend/src/main/webapp` this command:
+
+`npm run start`
 
 Using gitall.py
 ---------------

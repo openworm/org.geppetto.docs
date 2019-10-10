@@ -1,4 +1,4 @@
-![image](images/header.png)
+![](images/header.png)
 
 Geppetto is a web based platform to build neuroscience applications that let the user  **explore, visualize and simulate neuroscience data and models** such as a **cell** or even a **whole brain**.
 
@@ -6,7 +6,7 @@ A demo application using latest release of Geppetto is available [here](https://
 [download here](https://github.com/openworm/org.geppetto/releases/).
 The documentation is split into two main sections: a guide to help you learn how to use Geppetto based applications and the developers documentation, to learn how to build applications based on Geppetto and how to contribute to it.
 
-[![image](images/usr_btn.png)](./userdocs.html) [![image](images/dev_btn.png)](./devdocs.html)
+[![](images/usr_btn.png)](./userdocs.html) [![](images/dev_btn.png)](./devdocs.html)
 
 If you have any problems you can write in the Slack Geppetto Channel (email info@geppetto.org to get an invitation), we'll be happy to help you!
 
@@ -75,30 +75,30 @@ Follow us on [Twitter](https://twitter.com/GeppettoEngine) and on our
 Screenshots
 ===========
 
-![image](images/sshots/ss1.png)
+![](images/sshots/ss1.png)
 
 **Screenshot 1** - Visualization of the drosophila fly brain superposing
 anatomy and segmented neurons (Model source [Virtual Fly
 Brain](http://virtualflybrain.org/) )
 
-![image](images/sshots/ss2.png)
+![](images/sshots/ss2.png)
 
 **Screenshot 2** - Simulation using NEURON of a model of the Auditory
 Cortex from David Beeman, University of Colorado (Model source [Open
 Source Brain](http://opensourcebrain.org/) )
 
-![image](images/sshots/ss3.png)
+![](images/sshots/ss3.png)
 
 **Screenshot 3** - Simulation of a single compartment Hodgkin-Huxley
 neuronal model in [NeuroML](http://neuroml.org/) (Model source [Open
 Source Brain](http://opensourcebrain.org/) )
 
-![image](images/sshots/ss4.png)
+![](images/sshots/ss4.png)
 
 **Screenshot 4** - Simulation of a network of single compartment neurons
 for the C.elegans built by the OpenWorm project.
 
-![image](images/sshots/ss5.png)
+![](images/sshots/ss5.png)
 
 **Screenshot 5** - Visualisation of a Purkinje cell in
 [NeuroML](http://neuroml.org/) from [Open Source
@@ -111,4 +111,4 @@ Ganglion cell reconstructed using [EyeWire](https://eyewire.org).
 
 ------------------------------------------------------------------------
 
-![image](images/symbol.png)
+![](images/symbol.png)

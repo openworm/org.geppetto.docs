@@ -6,6 +6,7 @@ Contribute
 -   How to report a bug
 -   How to contribute code to Geppetto
 -   Geppetto contribution guidelines
+-   Geppetto code of conduct
 
 Before reporting a bug
 ----------------------

@@ -96,3 +96,76 @@ Geppetto contribution guidelines
     at the top.
 
 *Special thanks to @mrdoob for being of inspiration for this process.*
+
+Geppetto Code of conduct
+------------------------
+					
+All contributors of Geppetto are required to agree with the following code of conduct. Project leads will enforce this code at all times. 		
+			
+## The Deed (aka the short version)
+					
+The Geppetto is dedicated to providing a harassment- free experience for everyone regardless of gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age or religion. We do not tolerate harassment of contributors in any form. Advertisement is not appropriate for any Geppetto channel, including Slack. Sexual language and imagery is not appropriate for any Geppetto channel, including Slack. Conference participants violating these rules may be sanctioned or expelled from the Geppetto at the discretion of the Community Organizers. Additionally, Geppetto reserves the right to deny access to community spaces such as forums, channels or any other Geppetto related venue for conversation at any time and for any reason in its sole discretion.
+					
+## More Detail - Full Policy*
+					
+Harassment includes verbal comments that reinforce social structures of domination related to gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age, religion; sexual images in public spaces; deliberate intimidation; stalking; following; harassing photography or recording; sustained disruption of meetings or other events; inappropriate physical contact; and unwelcome sexual attention. Contributors asked to stop any harassing behavior are expected to comply immediately.
+					
+### Expected Behavior
+					
+The following behaviors are expected and requested of all community members:
+					
+-   Participate in an authentic and active way. In doing so, you contribute to the health and longevity of this community.				
+-   Exercise consideration and respect in your speech and actions.
+-   Attempt collaboration before conflict.
+-   Refrain from demeaning, discriminatory, or harassing behavior and speech.
+-   Be mindful of your surroundings and of your fellow participants. Alert community leaders if you notice a dangerous situation, someone in distress, or violations of this Code of Conduct, even if they seem inconsequential.					
+-   Remember that community spaces (Slack, mailing lists, etc.) are shared with members of the public; please be respectful and inclusive at all times
+					
+### Unacceptable Behavior
+					
+The following behaviors are considered harassment and are unacceptable within our community:
+					
+-   Violence, threats of violence or violent language directed against another person.
+-   Sexist, racist, homophobic, transphobic, ableist or otherwise discriminatory jokes and language.				
+-   Posting advertising material or soliciting business opportunities.
+-   Posting or displaying sexually explicit or violent material.
+-   Posting or threatening to post other people’s personally identifying information ("doxing").
+-   Personal insults, particularly those related to gender, sexual orientation, race, religion, or disability.
+-   Inappropriate photography or recording.
+-   Inappropriate physical contact. You should have someone’s consent before touching them.
+-   Unwelcome sexual attention. This includes, sexualized comments or jokes; inappropriate touching, groping, and unwelcomed sexual advances.
+-   Deliberate intimidation, stalking or following (online or in person).
+-   Advocating for, or encouraging, any of the above behavior.
+-   Sustained disruption of community events, including talks and presentations. 
+
+#### Consequences of Unacceptable Behavior
+Anyone asked to stop unacceptable behavior is expected to comply immediately.
+We expect participants to follow this code of conduct at all conference venues and conference- related social events.
+					
+### Reporting
+					
+If someone makes you or anyone else feel unsafe or unwelcome, please report it as soon as possible. Harassment and other code of conduct violations reduce the value of our event for everyone. We want you to be safe and happy at our event. People like you make our event a better place.
+					
+Unacceptable behavior from any community member, including sponsors and those with decision-making authority, will not be tolerated.
+					
+If a community member engages in unacceptable behavior, the community organizers may take any action they deem appropriate, up to and including a temporary ban or permanent expulsion from the community without warning and without refund.
+					
+You can make a report either personally or anonymously.
+Reporting personally can be done directly to conference staff and volunteers.
+					
+They can be identified by special badges throughout the conference venue.
+									
+Conference staff will help participants contact hotel/venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.
+					
+### Sponsors and exhibitors
+					
+Sponsors and exhibitors are also subject to the anti-harassment policy. In particular, exhibitors are asked to not use sexualized images, activities, or other material, and their staff (including volunteers) should not use sexualized clothing/uniforms/costumes, or otherwise create a sexualized environment.
+					
+This document draws on:
+							
+http://geekfeminism.wikia.com/wiki/Conference_anti-harassment OW-0 http://confcodeofconduct.com/, OW-BY-SA http://citizencodeofconduct.org/ OW-BY-SA
+				
+
+
+
+
